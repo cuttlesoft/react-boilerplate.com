@@ -43,7 +43,8 @@
     "test:update": "cross-env NODE_ENV=test jest --updateSnapshot",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "prettify": "prettier --write",
+    "format": "prettier --write '**/*.{ts,js,css,html}' **/*",
+    "format:test": "prettier --check '**/*.{ts,js,css,html}' **/*",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "generate-readme": "cross-env NODE_ENV=development babel-node --presets @babel/preset-env ./internals/scripts/generate-readme.js"
