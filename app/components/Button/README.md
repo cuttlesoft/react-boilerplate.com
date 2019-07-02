@@ -1,5 +1,5 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-## ButtonWrapper
+## createButton
 A button.
 
 You can provide a single function child that will be called with
@@ -59,7 +59,7 @@ medium
 large
 xlarge
 {
-  bottom:
+  bottom: 
     xxsmall
     xsmall
     small
@@ -67,7 +67,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal:
+  horizontal: 
     xxsmall
     xsmall
     small
@@ -75,7 +75,7 @@ xlarge
     large
     xlarge
     string,
-  left:
+  left: 
     xxsmall
     xsmall
     small
@@ -83,7 +83,7 @@ xlarge
     large
     xlarge
     string,
-  right:
+  right: 
     xxsmall
     xsmall
     small
@@ -91,7 +91,7 @@ xlarge
     large
     xlarge
     string,
-  top:
+  top: 
     xxsmall
     xsmall
     small
@@ -99,7 +99,7 @@ xlarge
     large
     xlarge
     string,
-  vertical:
+  vertical: 
     xxsmall
     xsmall
     small
@@ -169,7 +169,7 @@ boolean
 string
 background
 {
-  background:
+  background: 
     boolean
     string
 }
@@ -227,7 +227,7 @@ node
 **onClick**
 
 Click handler. Not setting this property and not specifying a href
-causes the Button to be disabled. Defaults to `function onClick() {}`.
+causes the Button to be disabled.
 
 ```
 function
@@ -278,14 +278,14 @@ The DOM tag or react component to use for the element.
 string
 function
 ```
-
+  
 ## Intrinsic element
 
 ```
 button
 ```
 ## Theme
-
+  
 **global.hover.color**
 
 The background color when hovering. Expects `string`.

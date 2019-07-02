@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /**
  *
  * Button.js
@@ -8,9 +9,7 @@
 import React from 'react'
 import { Button } from 'grommet'
 
-import { genericProps } from '../../utils/propTypes'
-
-function ButtonWrapper({
+function createButton({
   a11yTitle,
   active,
   alignSelf,
@@ -62,34 +61,10 @@ function ButtonWrapper({
   )
 }
 
-ButtonWrapper.propTypes = {
-  a11yTitle: genericProps.a11yTitle,
-  active: genericProps.active,
-  alignSelf: genericProps.alignSelf,
-  as: genericProps.as,
-  color: genericProps.color,
-  disabled: genericProps.disabled,
-  fill: genericProps.fill,
-  focusIndicator: genericProps.focusIndicator,
-  gap: genericProps.gap,
-  gridArea: genericProps.gridArea,
-  hoverIndicator: genericProps.hoverIndicator,
-  href: genericProps.href,
-  icon: genericProps.icon,
-  margin: genericProps.margin,
-  onClick: genericProps.onClick,
-  plain: genericProps.plain,
-  primary: genericProps.primary,
-  reverse: genericProps.reverse,
-  target: genericProps.target,
-  title: genericProps.title,
-  type: genericProps.type,
+let createButtonWithDoc
+if (process.env.NODE_ENV !== 'production') {
+  createButtonWithDoc = require('./Button.doc').doc(createButton) // eslint-disable-line global-require
 }
 
-ButtonWrapper.defaultProps = {
-  disabled: false,
-  onClick: () => {},
-  title: '',
-}
-
+const ButtonWrapper = createButtonWithDoc || createButton
 export default ButtonWrapper

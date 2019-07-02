@@ -5,7 +5,7 @@
 import React from 'react'
 import { fireEvent, render } from 'react-testing-library'
 
-import Button from './index'
+import Button from './Button'
 
 const handleRoute = () => {}
 const href = 'https://cuttlesoft.com'
@@ -46,7 +46,7 @@ describe('<Button />', () => {
   })
 
   it('should not adopt a type attribute when rendering an <a> tag', () => {
-    const type = 'text/html'
+    const type = 'submit'
     const { container } = renderComponent({ href, type })
     expect(container.querySelector(`a[type="${type}"]`)).toBeNull()
   })
@@ -54,6 +54,6 @@ describe('<Button />', () => {
   it('should not adopt a type attribute when rendering a button', () => {
     const type = 'submit'
     const { container } = renderComponent({ handleRoute, type })
-    expect(container.querySelector('button').getAttribute('type')).toBeNull()
+    expect(container.querySelector(`button[type="${type}"]`)).toBeNull()
   })
 })
