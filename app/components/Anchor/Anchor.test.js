@@ -21,11 +21,14 @@ const renderComponent = (props = {}) =>
     </Anchor>,
   )
 
-describe('<Anchor />', () => {
-  it('should handle click events', () => {
-    const onClickSpy = jest.fn()
-    const { container } = renderComponent({ onClick: onClickSpy })
-    fireEvent.click(container.querySelector('a'))
-    expect(onClickSpy).toHaveBeenCalled()
-  })
+test('it should handle click events', () => {
+  const onClickSpy = jest.fn()
+  const { container } = renderComponent({ onClick: onClickSpy })
+  fireEvent.click(container.querySelector('a'))
+  expect(onClickSpy).toHaveBeenCalled()
+})
+
+test('it should have children', () => {
+  const { container } = renderComponent()
+  expect(container.querySelector('a').children).toHaveLength(1)
 })

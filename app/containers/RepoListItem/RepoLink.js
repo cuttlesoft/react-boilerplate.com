@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import NormalA from 'components/A'
+import Anchor from 'components/Anchor'
 
-const RepoLink = styled(NormalA)`
+const RepoLink = styled(Anchor)`
   height: 100%;
   color: black;
   display: flex;

@@ -25,8 +25,8 @@ text:
 ```javascript
 // Button.js
 
-import React from 'react';
-import CheckmarkIcon from './CheckmarkIcon';
+import React from 'react'
+import CheckmarkIcon from './CheckmarkIcon'
 
 function Button(props) {
   return (
@@ -34,10 +34,10 @@ function Button(props) {
       <CheckmarkIcon />
       {React.Children.only(props.children)}
     </button>
-  );
+  )
 }
 
-export default Button;
+export default Button
 ```
 
 _Note: This is a [state**less** ("dumb") component](../js/README.md#architecture-components-and-containers)_
@@ -47,10 +47,10 @@ It might be used in another component like this:
 ```javascript
 // HomePage.js
 
-import Button from './Button';
+import Button from './Button'
 
 function HomePage() {
-  return <Button onClick={this.doSomething}>Click me!</Button>;
+  return <Button onClick={this.doSomething}>Click me!</Button>
 }
 ```
 
@@ -61,20 +61,28 @@ be the HTML output
 (_Comments added in parallel to compare structures in HTML from JSX source_):
 
 ```html
-<button>                           <!-- <Button>             -->
-  <i class="fa fa-checkmark"></i>  <!--   <CheckmarkIcon />  -->
-  Click Me!                        <!--   { props.children } -->
-</button>                          <!-- </Button>            -->
+<button>
+  <!-- <Button>             -->
+  <i class="fa fa-checkmark"></i>
+  <!--   <CheckmarkIcon />  -->
+  Click Me!
+  <!--   { props.children } -->
+</button>
+<!-- </Button>            -->
 ```
 
 Conversely, when rendered with the shallow renderer, we'll get a String
 containing this "HTML":
 
 ```html
-<button>              <!-- <Button>             -->
-  <CheckmarkIcon />   <!--   NOT RENDERED!      -->
-  Click Me!           <!--   { props.children } -->
-</button>             <!-- </Button>            -->
+<button>
+  <!-- <Button>             -->
+  <CheckmarkIcon />
+  <!--   NOT RENDERED!      -->
+  Click Me!
+  <!--   { props.children } -->
+</button>
+<!-- </Button>            -->
 ```
 
 If we test our `Button` with the normal renderer and there's a problem
@@ -98,15 +106,15 @@ children, if any, and second that it handles clicks.
 This is our test setup:
 
 ```javascript
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import Button from '../Button';
+import React from 'react'
+import { render, fireEvent } from '@testing-library/react'
+import Button from '../Button'
 
 describe('<Button />', () => {
-  it('renders and matches the snapshot', () => {});
+  it('renders and matches the snapshot', () => {})
 
-  it('handles clicks', () => {});
-});
+  it('handles clicks', () => {})
+})
 ```
 
 ### Snapshot testing
@@ -117,17 +125,17 @@ successfully tested.
 We will do so by rendering it and creating a _[snapshot](https://jestjs.io/docs/en/snapshot-testing)_
 which can be compared with a previously committed snapshot. If no snapshot exists, a new one is created.
 
-For this, we first call `render`. This will render our `<Button />` component into a _container_, by default a 
+For this, we first call `render`. This will render our `<Button />` component into a _container_, by default a
 `<div>`, which is appended to `document.body`. We then create a snapshot and `expect` that this snapshot is the same as
 the existing snapshot, taken in a previous run of this test and committed to the repository.
 
 ```javascript
 it('renders and matches the snapshot', () => {
-  const text = 'Click me!';
-  const { container } = render(<Button>{text}</Button>);
+  const text = 'Click me!'
+  const { container } = render(<Button>{text}</Button>)
 
-  expect(container.firstChild).toMatchSnapshot();
-});
+  expect(container.firstChild).toMatchSnapshot()
+})
 ```
 
 `render` returns an object that has a property `container` and yes, this is the container our
@@ -146,43 +154,44 @@ changed.
 Onwards to our last and most advanced test: checking that our `<Button />` handles clicks correctly.
 
 We'll use a [mock function](https://jestjs.io/docs/en/mock-functions) for this. A mock function is a function that
-keeps track of _if_, _how often_, and _with what arguments_ it has been called. We pass this function as the `onClick` handler to our component, 
+keeps track of _if_, _how often_, and _with what arguments_ it has been called. We pass this function as the `onClick` handler to our component,
 simulate a click and, lastly, check that our mock function was called:
 
 ```javascript
 it('handles clicks', () => {
-  const onClickMock = jest.fn();
-  const text = 'Click me!';
-  const { getByText } = render(<Button onClick={onClickMock}>{text}</Button>);
+  const onClickMock = jest.fn()
+  const text = 'Click me!'
+  const { getByText } = render(<Button onClick={onClickMock}>{text}</Button>)
 
-  fireEvent.click(getByText(text));
-  expect(onClickSpy).toHaveBeenCalledTimes(1);
-});
+  fireEvent.click(getByText(text))
+  expect(onClickSpy).toHaveBeenCalledTimes(1)
+})
 ```
+
 Our finished test file looks like this:
 
 ```javascript
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import Button from '../Button';
+import React from 'react'
+import { render, fireEvent } from '@testing-library/react'
+import Button from '../Button'
 
 describe('<Button />', () => {
   it('renders and matches the snapshot', () => {
-    const text = 'Click me!';
-    const { container } = render(<Button>{text}</Button>);
+    const text = 'Click me!'
+    const { container } = render(<Button>{text}</Button>)
 
-    expect(container.firstChild).toMatchSnapshot();
-  });
+    expect(container.firstChild).toMatchSnapshot()
+  })
 
   it('handles clicks', () => {
-    const onClickMock = jest.fn();
-    const text = 'Click me!';
-    const { getByText } = render(<Button onClick={onClickMock}>{text}</Button>);
-  
-    fireEvent.click(getByText(text));
-    expect(onClickSpy).toHaveBeenCalledTimes(1);
-  });
-});
+    const onClickMock = jest.fn()
+    const text = 'Click me!'
+    const { getByText } = render(<Button onClick={onClickMock}>{text}</Button>)
+
+    fireEvent.click(getByText(text))
+    expect(onClickSpy).toHaveBeenCalledTimes(1)
+  })
+})
 ```
 
 And that's how you unit test your components and make sure they work correctly!
