@@ -46,18 +46,39 @@ module.exports = {
     },
   ],
   actions: data => {
-    // Generate index.js and index.test.js
+    // Generate export file
     const actions = [
       {
         type: 'add',
         path: '../../app/components/{{properCase name}}/index.js',
+        templateFile: './component/export.js.hbs',
+        abortOnFail: true,
+      },
+      // Generate ComponentName.js
+      {
+        type: 'add',
+        path: '../../app/components/{{properCase name}}/{{properCase name}}.js',
         templateFile: './component/index.js.hbs',
         abortOnFail: true,
       },
+      // Generate Component.doc.js
       {
         type: 'add',
-        path: '../../app/components/{{properCase name}}/tests/index.test.js',
+        path: '../../app/components/{{properCase name}}/{{properCase name}}.doc.js',
+        abortOnFail: true,
+      },
+      // Generate Component.test.js
+      {
+        type: 'add',
+        path: '../../app/components/{{properCase name}}/{{properCase name}}.test.js',
         templateFile: './component/test.js.hbs',
+        abortOnFail: true,
+      },
+      // Generate Component.stories.js
+      {
+        type: 'add',
+        path: '../../app/components/{{properCase name}}/stories/{{properCase name}}.stories.js',
+        templateFile: './component/stories.js.hbs',
         abortOnFail: true,
       },
     ];
