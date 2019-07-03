@@ -20,9 +20,9 @@ const MultipleCheckboxes = props => {
 
   const items = [
     {
-      name: 'Appels',
+      name: 'Apples',
       key: 'checkBox1',
-      label: 'Appels',
+      label: 'Apples',
     },
     {
       name: 'Bananas',
