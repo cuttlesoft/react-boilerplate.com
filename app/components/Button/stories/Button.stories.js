@@ -1,12 +1,14 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { grommet, Box, Grommet } from 'grommet' /** @todo: replace with custom wrappers */
+import { grommet } from 'grommet' /** @todo: replace with custom wrappers */
+import { Container } from '../../Container'
 
+import { Box } from '../../Box'
 import Button from '../Button'
 
 const BasicButtons = props => (
-  <Grommet theme={grommet}>
+  <Container theme={grommet}>
     <Box align="center" pad="medium">
       <Button title="Default" onClick={action('clicked')} {...props} />
     </Box>
@@ -19,7 +21,7 @@ const BasicButtons = props => (
     <Box align="center" pad="medium">
       <Button primary title="Primary" onClick={action('clicked')} {...props} />
     </Box>
-  </Grommet>
+  </Container>
 )
 
 storiesOf('Button', module).add('Basic', () => <BasicButtons />)

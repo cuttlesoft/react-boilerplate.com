@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet, Box, Grommet, Text } from 'grommet' /** @todo: replace with custom wrappers */
+import { grommet, Text } from 'grommet' /** @todo: replace with custom wrappers */
 
+import { Box } from '../../Box'
+import { Container } from '../../Container'
 import Button from '../Button'
 import { genericProps } from '../../../utils/propTypes'
 
@@ -25,7 +27,7 @@ SidebarButton.propTypes = {
 const SidebarButtons = () => {
   const [active, setActive] = useState()
   return (
-    <Grommet full theme={grommet}>
+    <Container full theme={grommet}>
       <Box fill direction="row">
         <Box background="neutral-1">
           {['Dashboard', 'Devices', 'Settings'].map(label => (
@@ -38,7 +40,7 @@ const SidebarButtons = () => {
           ))}
         </Box>
       </Box>
-    </Grommet>
+    </Container>
   )
 }
 

@@ -1,7 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet, Box, Grommet } from 'grommet' /** @todo: replace with custom wrappers */
+import { grommet } from 'grommet' /** @todo: replace with custom wrappers */
 import { deepMerge } from 'grommet/utils'
+import { Box } from '../../Box'
+import { Container } from '../../Container'
 
 import Button from '../Button'
 
@@ -15,7 +17,7 @@ const customButtonColor = deepMerge(grommet, {
 })
 
 const Colored = props => (
-  <Grommet theme={customButtonColor}>
+  <Container theme={customButtonColor}>
     <Box align="center" pad="large" gap="small">
       <Button primary title="Submit" onClick={() => {}} />
       <Button primary color="dark-1" title="custom theme text colored" onClick={() => {}} />
@@ -25,7 +27,7 @@ const Colored = props => (
       <Button plain color="red" title="plain red" onClick={() => {}} {...props} />
       <Button plain title="plain inherit" onClick={() => {}} {...props} />
     </Box>
-  </Grommet>
+  </Container>
 )
 
 storiesOf('Button', module).add('Colored', () => <Colored />)

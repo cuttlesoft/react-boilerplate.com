@@ -11,7 +11,7 @@ export const doc = Button => {
       of the Button in those cases.`,
     )
     .usage(
-      `import { Button } from 'grommet';
+      `import { Button } from 'components/Button';
 <Button primary label='Label' />`,
     )
     .intrinsicElement('button')

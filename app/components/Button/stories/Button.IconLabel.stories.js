@@ -1,13 +1,14 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Box, Grommet } from 'grommet' /** @todo: replace with custom wrappers */
 import { grommet } from 'grommet/themes'
 import { Add } from 'grommet-icons'
 
+import { Container } from '../../Container'
+import { Box } from '../../Box'
 import Button from '../Button'
 
 const IconLabel = () => (
-  <Grommet theme={grommet}>
+  <Container theme={grommet}>
     <Box align="center" pad="large">
       <Box round="full" overflow="hidden" background="neutral-1">
         <Button icon={<Add />} hoverIndicator onClick={() => {}} />
@@ -19,7 +20,7 @@ const IconLabel = () => (
         <Button icon={<Add />} title="500px gap" gap="500px" onClick={() => {}} />
       </Box>
     </Box>
-  </Grommet>
+  </Container>
 )
 
 storiesOf('Button', module).add('Icon Label', () => <IconLabel />)

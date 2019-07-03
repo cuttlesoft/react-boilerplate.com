@@ -1,13 +1,15 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Box, Grommet, Text } from 'grommet' /** @todo: replace with custom wrappers */
+import { Text } from 'grommet' /** @todo: replace with custom wrappers */
 import { grommet } from 'grommet/themes'
 import { Add } from 'grommet-icons'
+import { Box } from '../../Box'
+import { Container } from '../../Container'
 
 import Button from '../Button'
 
 const PlainButton = props => (
-  <Grommet theme={grommet}>
+  <Container theme={grommet}>
     <Box align="center" pad="large">
       <Button hoverIndicator="light-1" onClick={() => {}} {...props}>
         <Box pad="small" direction="row" align="center" gap="small">
@@ -16,7 +18,7 @@ const PlainButton = props => (
         </Box>
       </Button>
     </Box>
-  </Grommet>
+  </Container>
 )
 
 storiesOf('Button', module)

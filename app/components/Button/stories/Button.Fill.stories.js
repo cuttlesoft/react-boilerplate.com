@@ -1,11 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet, Box, Grommet } from 'grommet' /** @todo: replace with custom wrappers */
-
+import { grommet } from 'grommet'
+import { Container } from '../../Container'
+import { Box } from '../../Box'
 import Button from '../Button'
 
 const FillButtons = props => (
-  <Grommet theme={grommet}>
+  <Container theme={grommet}>
     <Box pad="medium" justify="center" direction="row">
       <Box justify="center" align="center" pad="medium" gap="medium">
         <Box border justify="center" align="center" height="100px" width="300px">
@@ -29,7 +30,7 @@ const FillButtons = props => (
         <Button title="Vertical" fill="vertical" onClick={() => {}} {...props} />
       </Box>
     </Box>
-  </Grommet>
+  </Container>
 )
 
 storiesOf('Button', module).add('Fill', () => <FillButtons />)

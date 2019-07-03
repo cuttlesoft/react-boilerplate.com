@@ -1,13 +1,16 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Box, Grommet, Text } from 'grommet' /** @todo: replace with custom wrappers */
+import { Text } from 'grommet' /** @todo: replace with custom wrappers */
+
 import { grommet } from 'grommet/themes'
 import { Close, Send, User } from 'grommet-icons'
 
+import { Container } from '../../Container'
+import { Box } from '../../Box'
 import Button from '../Button'
 
 const IconPlain = () => (
-  <Grommet theme={grommet}>
+  <Container theme={grommet}>
     <Box align="center" pad="large">
       <Text margin="small"> plain=true (no padding, no border) </Text>
       <Box direction="row">
@@ -32,7 +35,7 @@ const IconPlain = () => (
         <Button icon={<User />} onClick={() => {}} />
       </Box>
     </Box>
-  </Grommet>
+  </Container>
 )
 
 storiesOf('Button', module).add('Icon Plain', () => <IconPlain />)

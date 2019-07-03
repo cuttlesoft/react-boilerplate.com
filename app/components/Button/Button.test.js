@@ -51,3 +51,8 @@ test('it should not adopt a type attribute when rendering a button', () => {
   const { container } = renderComponent({ handleRoute, type })
   expect(container.querySelector(`button[type="${type}"]`)).toBeNull()
 })
+
+test('it renders and matches snapshot', () => {
+  const { container } = renderComponent()
+  expect(container).toMatchSnapshot()
+})
