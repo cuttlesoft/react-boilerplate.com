@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders and matches snapshot 1`] = `
+<div>
+  <table
+    class="StyledTable-sc-1m3u5g-6 fGUmP"
+    label="Table"
+  />
+</div>
+`;

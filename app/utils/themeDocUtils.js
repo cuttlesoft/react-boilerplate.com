@@ -86,4 +86,11 @@ export const themeDocUtils = {
     }`,
     },
   }),
+  responsiveBreakpoint: description => ({
+    'global.edgeSize.responsiveBreakpoint': {
+      description,
+      type: 'string',
+      defaultValue: 'small',
+    },
+  }),
 }
