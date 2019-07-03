@@ -4,14 +4,13 @@ import { colorPropType, genericProps } from '../../utils/propTypes'
 import { themeDocUtils } from '../../utils/themeDocUtils'
 export const doc = Anchor => {
   const DocumentedAnchor = describe(Anchor)
-    // .availableAt(getAvailableAtBadge('Anchor'))
     .description('A text link.')
     .details(
       `We have a separate component from the browser
 base so we can style it. You can either set the icon and/or label properties
 or just use children.`,
     )
-    .usage("import { Anchor } from 'grommet';\n<Anchor href={location} label='Label' />")
+    .usage("import { Anchor } from 'components/Anchor';\n<Anchor href={location} label='Label' />")
     .intrinsicElement('a')
 
   DocumentedAnchor.propTypes = {
