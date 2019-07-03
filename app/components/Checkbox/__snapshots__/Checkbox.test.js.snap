@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders and matches snapshot 1`] = `
+<div>
+  <label
+    class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 bVmNDQ"
+  >
+    <div
+      class="StyledCheckBox-sc-1dbk5ju-6 jXdLin StyledBox-sc-13pk1d4-0 emCRMK"
+    >
+      <input
+        class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dmEAHg"
+        type="checkbox"
+      />
+      <div
+        class="StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 fxKnpz StyledBox-sc-13pk1d4-0 jFlQDV"
+      />
+    </div>
+    <span>
+      Choice
+    </span>
+  </label>
+</div>
+`;
