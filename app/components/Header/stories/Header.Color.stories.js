@@ -1,12 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Grommet } from 'grommet'
 import { grommet } from 'grommet/themes'
+import { Container } from '../../Container'
 import Header from '../Header'
 
 storiesOf('Header', module).add('Color', () => (
-  <Grommet theme={grommet}>
+  <Container theme={grommet}>
     <Header level="1" size="small" color="accent-1">
       This is level 1 header
     </Header>
@@ -19,5 +19,5 @@ storiesOf('Header', module).add('Color', () => (
     <Header size="xlarge" color="neutral-2">
       This is level 1 header
     </Header>
-  </Grommet>
+  </Container>
 ))

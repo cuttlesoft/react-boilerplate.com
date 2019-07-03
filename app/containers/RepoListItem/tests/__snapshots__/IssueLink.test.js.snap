@@ -1,8 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IssueLink /> should match the snapshot 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-size: inherit;
+  line-height: inherit;
+  color: #7D4CDB;
+  font-weight: 600;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 .c0 {
-  color: #41addd;
   height: 100%;
   color: black;
   display: -webkit-box;
@@ -20,11 +36,9 @@ exports[`<IssueLink /> should match the snapshot 1`] = `
   white-space: nowrap;
 }
 
-.c0:hover {
-  color: #6cc0e5;
-}
-
 <a
-  className="c0"
+  className="c0 c1"
+  onBlur={[Function]}
+  onFocus={[Function]}
 />
 `;

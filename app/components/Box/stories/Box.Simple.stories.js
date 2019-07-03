@@ -1,15 +1,15 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Grommet } from 'grommet' /** @todo: replace with custom wrappers */
 import { grommet } from 'grommet/themes'
 import { Attraction, Car } from 'grommet-icons'
 
+import { Container } from '../../Container'
 import Box from '../Box'
 import { Anchor } from '../../Anchor'
 import { Button } from '../../Button'
 
 storiesOf('Box', module).add('Simple', () => (
-  <Grommet theme={grommet}>
+  <Container theme={grommet}>
     <Box
       direction="row-responsive"
       justify="center"
@@ -37,5 +37,5 @@ storiesOf('Box', module).add('Simple', () => (
         <Button label="Button" onClick={() => {}} />
       </Box>
     </Box>
-  </Grommet>
+  </Container>
 ))

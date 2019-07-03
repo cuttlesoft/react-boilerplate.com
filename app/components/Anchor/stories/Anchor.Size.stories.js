@@ -1,12 +1,13 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { grommet } from 'grommet/themes'
-import { Box, Grommet } from 'grommet' /** @todo: replace with custom wrappers */
+import { Container } from '../../Container'
+import { Box } from '../../Box'
 
 import Anchor from '../Anchor'
 
 storiesOf('Anchor', module).add('Size', () => (
-  <Grommet theme={grommet}>
+  <Container theme={grommet}>
     <Box align="center" pad="large">
       {['xxlarge', 'xlarge', 'large', 'medium', 'small', 'xsmall'].map(size => (
         <Box key={size} margin="small">
@@ -14,5 +15,5 @@ storiesOf('Anchor', module).add('Size', () => (
         </Box>
       ))}
     </Box>
-  </Grommet>
+  </Container>
 ))

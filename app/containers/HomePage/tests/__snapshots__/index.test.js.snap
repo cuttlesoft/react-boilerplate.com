@@ -7,7 +7,7 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
       class="Section-sc-1eulrsm-0 CenteredSection-sc-6zy0wx-0 imGCbL"
     >
       <h2
-        class="H2-egphza-0 HsCXl"
+        class="StyledHeading-sc-1rdh4aw-0 yhirM"
       >
         <span>
           Start your next react project in seconds
@@ -22,13 +22,13 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
     <section
       class="Section-sc-1eulrsm-0 eTEsZl"
     >
-      <h2
-        class="H2-egphza-0 HsCXl"
+      <h1
+        class="StyledHeading-sc-1rdh4aw-0 rfVJR"
       >
         <span>
           Try me!
         </span>
-      </h2>
+      </h1>
       <form
         class="Form-dmhz4x-0 ZClLh"
       >

@@ -15,7 +15,7 @@ import { createStructuredSelector } from 'reselect'
 import { useInjectReducer } from 'utils/injectReducer'
 import { useInjectSaga } from 'utils/injectSaga'
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors'
-import H2 from 'components/H2'
+import { Header } from 'components/Header'
 import ReposList from 'components/ReposList'
 import AtPrefix from './AtPrefix'
 import CenteredSection from './CenteredSection'
@@ -54,17 +54,17 @@ export function HomePage({ username, loading, error, repos, onSubmitForm, onChan
       </Helmet>
       <div>
         <CenteredSection>
-          <H2>
+          <Header level="2">
             <FormattedMessage {...messages.startProjectHeader} />
-          </H2>
+          </Header>
           <p>
             <FormattedMessage {...messages.startProjectMessage} />
           </p>
         </CenteredSection>
         <Section>
-          <H2>
+          <Header lever="2">
             <FormattedMessage {...messages.trymeHeader} />
-          </H2>
+          </Header>
           <Form onSubmit={onSubmitForm}>
             <label htmlFor="username">
               <FormattedMessage {...messages.trymeMessage} />

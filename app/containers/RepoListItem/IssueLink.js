@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Anchor from 'components/Anchor'
+import { Anchor } from 'components/Anchor'
 
 const IssueLink = styled(Anchor)`
   height: 100%;

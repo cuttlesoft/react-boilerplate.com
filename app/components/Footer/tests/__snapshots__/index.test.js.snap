@@ -36,8 +36,10 @@ exports[`<Footer /> should render and match the snapshot 1`] = `
       
       Made with love by 
       <a
-        className="A-br8h0y-0 dwVNvo"
+        className="StyledAnchor-sc-1rp7lwl-0 jgeOSx"
         href="https://twitter.com/mxstbr"
+        onBlur={[Function]}
+        onFocus={[Function]}
       >
         Max Stoiber
       </a>
