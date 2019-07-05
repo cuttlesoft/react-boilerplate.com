@@ -12,4 +12,5 @@ export class LocaleStore {
   }
 }
 
-export const LocaleStoreContext = createContext(new LocaleStore())
+export const locale = new LocaleStore()
+export const LocaleStoreContext = createContext(locale)

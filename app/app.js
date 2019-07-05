@@ -28,6 +28,7 @@ import '!file-loader?name=[name].[ext]!./images/favicon.ico'
 import 'file-loader?name=.htaccess!./.htaccess' // eslint-disable-line import/extensions
 
 import configureStore from './configureStore'
+import trunk from './configureMobxStore'
 
 // Import i18n messages
 import { translationMessages } from './i18n'
@@ -47,16 +48,18 @@ const store = configureStore(initialState, history)
 const MOUNT_NODE = document.getElementById('app')
 
 const render = messages => {
-  ReactDOM.render(
-    <Provider store={store}>
-      <LanguageProvider messages={messages}>
-        <ConnectedRouter history={history}>
-          <App />
-        </ConnectedRouter>
-      </LanguageProvider>
-    </Provider>,
-    MOUNT_NODE,
-  )
+  trunk.init().then(() => {
+    ReactDOM.render(
+      <Provider store={store}>
+        <LanguageProvider messages={messages}>
+          <ConnectedRouter history={history}>
+            <App />
+          </ConnectedRouter>
+        </LanguageProvider>
+      </Provider>,
+      MOUNT_NODE,
+    )
+  })
 }
 
 if (module.hot) {
