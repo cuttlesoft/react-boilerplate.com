@@ -17,6 +17,20 @@ describe('selectGlobal', () => {
   })
 })
 
+describe('setDefaultState', () => {
+  it('should default the global state to initial state', () => {
+    const username = 'mxstbr'
+    const globalState = undefined
+    const initialState = {
+      currentUser: username,
+    }
+    const mockedState = {
+      global: globalState || initialState,
+    }
+    expect(selectGlobal(mockedState)).toEqual(initialState)
+  })
+})
+
 describe('makeSelectCurrentUser', () => {
   const currentUserSelector = makeSelectCurrentUser()
   it('should select the current user', () => {

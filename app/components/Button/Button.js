@@ -8,6 +8,8 @@
 
 import React from 'react'
 import { Button } from 'grommet'
+import { doc } from './Button.doc'
+import helpers from '../../utils/helpers'
 
 function createButton({
   a11yTitle,
@@ -61,10 +63,8 @@ function createButton({
   )
 }
 
-let createButtonWithDoc
-if (process.env.NODE_ENV !== 'production') {
-  createButtonWithDoc = require('./Button.doc').doc(createButton) // eslint-disable-line global-require
-}
-
-const ButtonWrapper = createButtonWithDoc || createButton
-export default ButtonWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createButton,
+})

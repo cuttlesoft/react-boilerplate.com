@@ -7,6 +7,8 @@
 
 import React from 'react'
 import { Box } from 'grommet'
+import { doc } from './Box.doc'
+import helpers from '../../utils/helpers'
 
 function createBox({
   a11yTitle,
@@ -69,11 +71,8 @@ function createBox({
   )
 }
 
-let createBoxWithDoc
-
-if (process.env.NODE_ENV !== 'production') {
-  createBoxWithDoc = require('./Box.doc').doc(createBox) // eslint-disable-line global-require
-}
-
-const BoxWrapper = createBoxWithDoc || createBox
-export default BoxWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createBox,
+})

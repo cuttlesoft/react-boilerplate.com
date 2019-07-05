@@ -7,6 +7,8 @@
 
 import React from 'react'
 import { Heading } from 'grommet'
+import { doc } from './Header.doc'
+import helpers from '../../utils/helpers'
 
 function createHeader({
   color,
@@ -41,11 +43,8 @@ function createHeader({
   )
 }
 
-let createHeaderWithDoc
-
-if (process.env.NODE_ENV !== 'production') {
-  createHeaderWithDoc = require('./Header.doc').doc(createHeader) // eslint-disable-line global-require
-}
-
-const HeaderWrapper = createHeaderWithDoc || createHeader
-export default HeaderWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createHeader,
+})

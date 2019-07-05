@@ -7,6 +7,8 @@
 
 import React from 'react'
 import { Grommet } from 'grommet'
+import { doc } from './Container.doc'
+import helpers from '../../utils/helpers'
 
 function createContainer({ cssVars, children, full, plain, theme, userAgent }) {
   return (
@@ -16,10 +18,8 @@ function createContainer({ cssVars, children, full, plain, theme, userAgent }) {
   )
 }
 
-let createContainerWithDoc
-if (process.env.NODE_ENV !== 'production') {
-  createContainerWithDoc = require('./Container.doc').doc(createContainer) // eslint-disable-line global-require
-}
-
-const ContainerWrapper = createContainerWithDoc || createContainer
-export default ContainerWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createContainer,
+})

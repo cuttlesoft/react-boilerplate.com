@@ -7,6 +7,8 @@
 
 import React from 'react'
 import { Anchor } from 'grommet'
+import { doc } from './Anchor.doc'
+import helpers from '../../utils/helpers'
 
 function createAnchor({
   a11yTitle,
@@ -21,6 +23,7 @@ function createAnchor({
   onClick,
   reverse,
   theme,
+  size,
   ...rest
 }) {
   return (
@@ -36,6 +39,7 @@ function createAnchor({
       onClick={onClick}
       reverse={reverse}
       theme={theme}
+      size={size}
       {...rest}
     >
       {children}
@@ -43,11 +47,8 @@ function createAnchor({
   )
 }
 
-let createAnchorWithDoc
-
-if (process.env.NODE_ENV !== 'production') {
-  createAnchorWithDoc = require('./Anchor.doc').doc(createAnchor) // eslint-disable-line global-require
-}
-
-const AnchorWrapper = createAnchorWithDoc || createAnchor
-export default AnchorWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createAnchor,
+})

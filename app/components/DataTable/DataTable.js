@@ -7,6 +7,8 @@
 
 import React from 'react'
 import { DataTable } from 'grommet'
+import { doc } from './DataTable.doc'
+import helpers from '../../utils/helpers'
 
 function createDataTable({
   a11yTitle,
@@ -40,11 +42,8 @@ function createDataTable({
   )
 }
 
-let createDataTableWithDoc
-
-if (process.env.NODE_ENV !== 'production') {
-  createDataTableWithDoc = require('./DataTable.doc').doc(createDataTable) // eslint-disable-line global-require
-}
-
-const DataTableWrapper = createDataTableWithDoc || createDataTable
-export default DataTableWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createDataTable,
+})

@@ -7,16 +7,15 @@
 
 import React from 'react'
 import { TableFooter } from 'grommet'
+import { doc } from './TableFooter.doc'
+import helpers from '../../utils/helpers'
 
 function createTableFooter({ children, ...props }) {
   return <TableFooter {...props}>{children}</TableFooter>
 }
 
-let createTableFooterWithDoc
-
-if (process.env.NODE_ENV !== 'production') {
-  createTableFooterWithDoc = require('./TableFooter.doc').doc(createTableFooter) // eslint-disable-line global-require
-}
-
-const TableFooterWrapper = createTableFooterWithDoc || createTableFooter
-export default TableFooterWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createTableFooter,
+})

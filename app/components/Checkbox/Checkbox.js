@@ -7,6 +7,8 @@
 
 import React from 'react'
 import { CheckBox } from 'grommet'
+import { doc } from './Checkbox.doc'
+import helpers from '../../utils/helpers'
 
 function createCheckbox({ checked, disabled, id, label, name, onChange, reverse, toggle }) {
   return (
@@ -23,11 +25,8 @@ function createCheckbox({ checked, disabled, id, label, name, onChange, reverse,
   )
 }
 
-let createCheckboxWithDoc
-
-if (process.env.NODE_ENV !== 'production') {
-  createCheckboxWithDoc = require('./Checkbox.doc').doc(createCheckbox) // eslint-disable-line global-require
-}
-
-const CheckboxWrapper = createCheckboxWithDoc || createCheckbox
-export default CheckboxWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createCheckbox,
+})

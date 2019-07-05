@@ -9,12 +9,25 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
 import 'jest-styled-components'
+import { Add } from 'grommet-icons'
 
 import Anchor from './Anchor'
 
 const children = <h1>Test</h1>
 const href = 'https://cuttlesoft.com'
-const renderComponent = (props = {}) =>
+
+const additionalProps = {
+  a11yTitle: 'string',
+  color: 'blue',
+  disabled: false,
+  icon: <Add />,
+  label: 'Clickme',
+  onClick: () => {},
+  reverse: false,
+  size: 'small',
+}
+
+const renderComponent = props =>
   render(
     <Anchor href={href} {...props}>
       {children}
@@ -28,7 +41,7 @@ test('it should handle click events', () => {
   expect(onClickSpy).toHaveBeenCalled()
 })
 
-test('it should have children', () => {
-  const { container } = renderComponent()
-  expect(container.querySelector('a').children).toHaveLength(1)
+test('it renders and matches snapshot', () => {
+  const { container } = renderComponent(additionalProps)
+  expect(container).toMatchSnapshot()
 })

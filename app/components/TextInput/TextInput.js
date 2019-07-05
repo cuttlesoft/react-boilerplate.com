@@ -7,6 +7,8 @@
 
 import React from 'react'
 import { TextInput } from 'grommet'
+import { doc } from './TextInput.doc'
+import helpers from '../../utils/helpers'
 
 function createTextInput({
   dropAlign,
@@ -46,11 +48,8 @@ function createTextInput({
   )
 }
 
-let createTextInputWithDoc
-
-if (process.env.NODE_ENV !== 'production') {
-  createTextInputWithDoc = require('./TextInput.doc').doc(createTextInput) // eslint-disable-line global-require
-}
-
-const TextInputWrapper = createTextInputWithDoc || createTextInput
-export default TextInputWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createTextInput,
+})

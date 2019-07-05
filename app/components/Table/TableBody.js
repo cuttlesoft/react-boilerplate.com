@@ -7,16 +7,15 @@
 
 import React from 'react'
 import { TableBody } from 'grommet'
+import { doc } from './TableBody.doc'
+import helpers from '../../utils/helpers'
 
 function createTableBody({ children, ...props }) {
   return <TableBody {...props}>{children}</TableBody>
 }
 
-let createTableBodyWithDoc
-
-if (process.env.NODE_ENV !== 'production') {
-  createTableBodyWithDoc = require('./TableBody.doc').doc(createTableBody) // eslint-disable-line global-require
-}
-
-const TableBodyWrapper = createTableBodyWithDoc || createTableBody
-export default TableBodyWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createTableBody,
+})

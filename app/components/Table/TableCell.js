@@ -7,6 +7,8 @@
 
 import React from 'react'
 import { TableCell } from 'grommet'
+import { doc } from './TableCell.doc'
+import helpers from '../../utils/helpers'
 
 function createTableCell({ children, plain, scope, size, verticalAlign, ...props }) {
   return (
@@ -16,11 +18,8 @@ function createTableCell({ children, plain, scope, size, verticalAlign, ...props
   )
 }
 
-let createTableCellWithDoc
-
-if (process.env.NODE_ENV !== 'production') {
-  createTableCellWithDoc = require('./TableCell.doc').doc(createTableCell) // eslint-disable-line global-require
-}
-
-const TableCellWrapper = createTableCellWithDoc || createTableCell
-export default TableCellWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createTableCell,
+})

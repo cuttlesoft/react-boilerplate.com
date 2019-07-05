@@ -7,6 +7,8 @@
 
 import React from 'react'
 import { Image } from 'grommet'
+import { doc } from './Image.doc'
+import helpers from '../../utils/helpers'
 
 function createImage({ a11yTitle, alignSelf, fallback, fit, gridArea, margin, opacity, src }) {
   return (
@@ -23,11 +25,8 @@ function createImage({ a11yTitle, alignSelf, fallback, fit, gridArea, margin, op
   )
 }
 
-let createImageWithDoc
-
-if (process.env.NODE_ENV !== 'production') {
-  createImageWithDoc = require('./Image.doc').doc(createImage) // eslint-disable-line global-require
-}
-
-const ImageWrapper = createImageWithDoc || createImage
-export default ImageWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createImage,
+})

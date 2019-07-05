@@ -7,6 +7,8 @@
 
 import React from 'react'
 import { Select } from 'grommet'
+import { doc } from './Select.doc'
+import helpers from '../../utils/helpers'
 
 function createSelect({
   a11yTitle,
@@ -78,11 +80,8 @@ function createSelect({
   )
 }
 
-let createSelectWithDoc
-
-if (process.env.NODE_ENV !== 'production') {
-  createSelectWithDoc = require('./Select.doc').doc(createSelect) // eslint-disable-line global-require
-}
-
-const SelectWrapper = createSelectWithDoc || createSelect
-export default SelectWrapper
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: createSelect,
+})
