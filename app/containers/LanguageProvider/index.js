@@ -6,21 +6,25 @@
  * IntlProvider component and i18n messages (loaded from `app/translations`)
  */
 
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { createSelector } from 'reselect'
 import { IntlProvider } from 'react-intl'
+import { observer } from 'mobx-react'
+import { LocaleStoreContext } from '../../stores/LocaleStore'
 
-import { makeSelectLocale } from './selectors'
+export const LanguageProvider = observer(props => {
+  const localStore = useContext(LocaleStoreContext)
 
-export function LanguageProvider(props) {
   return (
-    <IntlProvider locale={props.locale} key={props.locale} messages={props.messages[props.locale]}>
+    <IntlProvider
+      locale={localStore.locale}
+      key={localStore.locale}
+      messages={props.messages[localStore.locale]}
+    >
       {React.Children.only(props.children)}
     </IntlProvider>
   )
-}
+})
 
 LanguageProvider.propTypes = {
   locale: PropTypes.string,
@@ -28,11 +32,4 @@ LanguageProvider.propTypes = {
   children: PropTypes.element.isRequired,
 }
 
-const mapStateToProps = createSelector(
-  makeSelectLocale(),
-  locale => ({
-    locale,
-  }),
-)
-
-export default connect(mapStateToProps)(LanguageProvider)
+export default LanguageProvider

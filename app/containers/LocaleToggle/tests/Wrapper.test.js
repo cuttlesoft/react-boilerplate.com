@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import Wrapper from '../Wrapper'
+import Wrapper from '..'
 
 describe('<Wrapper />', () => {
   it('should render an <div> tag', () => {
