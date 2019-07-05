@@ -4,7 +4,6 @@ exports[`it renders and matches snapshot 1`] = `
 <div>
   <table
     class="StyledDataTable-xrlyjm-0 tpKnu StyledTable-sc-1m3u5g-6 fGUmP"
-    label="DataTable"
   >
     <thead
       class="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"

@@ -57,12 +57,12 @@ export function HomePage({ username, loading, error, repos, onSubmitForm, onChan
           <Header level="2">
             <FormattedMessage {...messages.startProjectHeader} />
           </Header>
-          <p>
+          <Header level="2">
             <FormattedMessage {...messages.startProjectMessage} />
-          </p>
+          </Header>
         </CenteredSection>
         <Section>
-          <Header lever="2">
+          <Header level="2">
             <FormattedMessage {...messages.trymeHeader} />
           </Header>
           <Form onSubmit={onSubmitForm}>

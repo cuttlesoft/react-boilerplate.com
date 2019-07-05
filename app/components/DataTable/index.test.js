@@ -12,9 +12,7 @@ import { render } from '@testing-library/react'
 
 import DataTable from './DataTable'
 
-const options = ['one', 'two', 'three']
-const renderComponent = (props = {}) =>
-  render(<DataTable label="DataTable" {...props} options={options} />)
+const renderComponent = (props = {}) => render(<DataTable {...props} />)
 
 test('it renders and matches snapshot', () => {
   const { container } = renderComponent()
