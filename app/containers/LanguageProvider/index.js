@@ -2,7 +2,7 @@
  *
  * LanguageProvider
  *
- * this component connects the redux state language locale to the
+ * this component connects the MobX state context language locale to the
  * IntlProvider component and i18n messages (loaded from `app/translations`)
  */
 
@@ -13,13 +13,13 @@ import { observer } from 'mobx-react'
 import { LocaleStoreContext } from '../../stores/LocaleStore'
 
 export const LanguageProvider = observer(props => {
-  const localStore = useContext(LocaleStoreContext)
+  const localeStore = useContext(LocaleStoreContext)
 
   return (
     <IntlProvider
-      locale={localStore.locale}
-      key={localStore.locale}
-      messages={props.messages[localStore.locale]}
+      locale={localeStore.locale}
+      key={localeStore.locale}
+      messages={props.messages[localeStore.locale]}
     >
       {React.Children.only(props.children)}
     </IntlProvider>

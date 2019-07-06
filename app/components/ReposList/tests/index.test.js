@@ -1,11 +1,11 @@
 import React from 'react'
 import { IntlProvider } from 'react-intl'
-import { Provider } from 'react-redux'
-import { browserHistory } from 'react-router-dom'
-import { render } from '@testing-library/react'
+import { Provider } from 'mobx-react'
+import { RouterStore } from 'mobx-react-router'
+import { render } from 'react-testing-library'
 
 import ReposList from '../index'
-import configureStore from '../../../configureStore'
+import trunk from '../../../configureStore'
 
 describe('<ReposList />', () => {
   it('should render the loading indicator when its loading', () => {
@@ -23,7 +23,14 @@ describe('<ReposList />', () => {
   })
 
   it('should render the repositories if loading was successful', () => {
-    const store = configureStore({ global: { currentUser: 'mxstbr' } }, browserHistory)
+    /** @todo mock initial state */
+    // const store = configureStore({ global: { currentUser: 'mxstbr' } }, browserHistory)
+    const routingStore = new RouterStore()
+    const stores = {
+      routing: routingStore,
+    }
+    trunk.init()
+
     const repos = [
       {
         owner: {
@@ -36,7 +43,7 @@ describe('<ReposList />', () => {
       },
     ]
     const { container } = render(
-      <Provider store={store}>
+      <Provider {...stores}>
         <IntlProvider locale="en">
           <ReposList repos={repos} error={false} />
         </IntlProvider>

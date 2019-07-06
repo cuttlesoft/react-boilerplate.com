@@ -1,25 +1,30 @@
 import React from 'react'
-import { Provider } from 'react-redux'
-import { browserHistory } from 'react-router-dom'
-import { render } from '@testing-library/react'
+import { Provider } from 'mobx-react'
+import { RouterStore } from 'mobx-react-router'
+import { render } from 'react-testing-library'
 
-import LocaleToggle, { mapDispatchToProps } from '../index'
-import { changeLocale } from '../../LanguageProvider/actions'
+import LocaleToggle from '../index'
 import LanguageProvider from '../../LanguageProvider'
 
-import configureStore from '../../../configureStore'
+import trunk from '../../../configureStore'
 import { translationMessages } from '../../../i18n'
 
 describe('<LocaleToggle />', () => {
-  let store
+  let stores
 
   beforeAll(() => {
-    store = configureStore({}, browserHistory)
+    const routingStore = new RouterStore()
+
+    stores = {
+      routing: routingStore,
+    }
+
+    trunk.init()
   })
 
   it('should match the snapshot', () => {
     const { container } = render(
-      <Provider store={store}>
+      <Provider {...stores}>
         <LanguageProvider messages={translationMessages}>
           <LocaleToggle />
         </LanguageProvider>
@@ -30,31 +35,12 @@ describe('<LocaleToggle />', () => {
 
   it('should present the default `en` english language option', () => {
     const { container } = render(
-      <Provider store={store}>
+      <Provider {...stores}>
         <LanguageProvider messages={translationMessages}>
           <LocaleToggle />
         </LanguageProvider>
       </Provider>,
     )
     expect(container.querySelector('option[value="en"]')).not.toBeNull()
-  })
-
-  describe('mapDispatchToProps', () => {
-    describe('onLocaleToggle', () => {
-      it('should be injected', () => {
-        const dispatch = jest.fn()
-        const result = mapDispatchToProps(dispatch)
-        expect(result.onLocaleToggle).toBeDefined()
-      })
-
-      it('should dispatch changeLocale when called', () => {
-        const dispatch = jest.fn()
-        const result = mapDispatchToProps(dispatch)
-        const locale = 'de'
-        const evt = { target: { value: locale } }
-        result.onLocaleToggle(evt)
-        expect(dispatch).toHaveBeenCalledWith(changeLocale(locale))
-      })
-    })
   })
 })

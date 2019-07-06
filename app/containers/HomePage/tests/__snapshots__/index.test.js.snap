@@ -35,7 +35,7 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
         class="Form-dmhz4x-0 ZClLh"
       >
         <label
-          for="username"
+          for="searchTerm"
         >
           <span>
             Show Github repositories by
@@ -49,7 +49,7 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
           </span>
           <input
             class="Input-sc-19rkjmi-0 gyJaEd"
-            id="username"
+            id="searchTerm"
             placeholder="mxstbr"
             type="text"
             value=""

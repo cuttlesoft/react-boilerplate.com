@@ -5,16 +5,17 @@
  * code.
  */
 
-// Needed for redux-saga es6 generator support
+// Needed for async support
 import '@babel/polyfill'
 
 // Import all the third party stuff
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import { ConnectedRouter } from 'connected-react-router'
+import { createBrowserHistory } from 'history'
+import { Provider } from 'mobx-react'
+import { RouterStore, syncHistoryWithStore } from 'mobx-react-router'
+import { Router } from 'react-router'
 import FontFaceObserver from 'fontfaceobserver'
-import history from 'utils/history'
 import 'sanitize.css/sanitize.css'
 
 // Import root app
@@ -27,8 +28,7 @@ import LanguageProvider from 'containers/LanguageProvider'
 import '!file-loader?name=[name].[ext]!./images/favicon.ico'
 import 'file-loader?name=.htaccess!./.htaccess' // eslint-disable-line import/extensions
 
-import configureStore from './configureStore'
-import trunk from './configureMobxStore'
+import trunk from './configureStore'
 
 // Import i18n messages
 import { translationMessages } from './i18n'
@@ -42,21 +42,27 @@ openSansObserver.load().then(() => {
   document.body.classList.add('fontLoaded')
 })
 
-// Create redux store with history
-const initialState = {}
-const store = configureStore(initialState, history)
 const MOUNT_NODE = document.getElementById('app')
+
+// Create MobX store with history
+const browserHistory = createBrowserHistory()
+const routingStore = new RouterStore()
+const stores = {
+  routing: routingStore,
+}
+
+const history = syncHistoryWithStore(browserHistory, routingStore)
 
 const render = messages => {
   trunk.init().then(() => {
     ReactDOM.render(
-      <Provider store={store}>
-        <LanguageProvider messages={messages}>
-          <ConnectedRouter history={history}>
+      <LanguageProvider messages={messages}>
+        <Provider {...stores}>
+          <Router history={history}>
             <App />
-          </ConnectedRouter>
-        </LanguageProvider>
-      </Provider>,
+          </Router>
+        </Provider>
+      </LanguageProvider>,
       MOUNT_NODE,
     )
   })
