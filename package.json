@@ -64,7 +64,12 @@
       "git add --force"
     ]
   },
-  "pre-commit": "lint:staged",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:staged",
+      "commit-msg": "python3 validate_commit_message.py"
+    }
+  },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
   },
@@ -79,6 +84,7 @@
     "grommet": "^2.7.1",
     "history": "4.9.0",
     "hoist-non-react-statics": "3.3.0",
+    "husky": "^3.0.0",
     "immer": "3.0.0",
     "intl": "1.2.5",
     "invariant": "2.2.4",
@@ -154,7 +160,6 @@
     "null-loader": "0.1.1",
     "offline-plugin": "5.0.6",
     "plop": "2.3.0",
-    "pre-commit": "1.2.2",
     "prettier": "1.17.0",
     "react-app-polyfill": "0.2.2",
     "react-desc": "^4.1.2",
