@@ -8,7 +8,7 @@ import { IntlProvider } from 'react-intl'
 import { Provider } from 'mobx-react'
 import { RouterStore } from 'mobx-react-router'
 
-import { HomePage } from '../index'
+import { HomePage } from '../HomePage'
 import trunk from '../../../configureStore'
 
 describe('<HomePage />', () => {

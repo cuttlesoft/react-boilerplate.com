@@ -3,8 +3,8 @@ import { Provider } from 'mobx-react'
 import { RouterStore } from 'mobx-react-router'
 import { render } from 'react-testing-library'
 
-import LocaleToggle from '../index'
-import LanguageProvider from '../../LanguageProvider'
+import LocaleToggle from '../LocaleToggle'
+import { LanguageProvider } from '../../LanguageProvider'
 
 import trunk from '../../../configureStore'
 import { translationMessages } from '../../../i18n'

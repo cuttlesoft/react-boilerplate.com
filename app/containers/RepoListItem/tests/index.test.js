@@ -6,7 +6,7 @@ import React from 'react'
 import { getByText, render } from '@testing-library/react'
 import { IntlProvider } from 'react-intl'
 
-import { RepoListItem } from '../index'
+import { RepoListItem } from '../RepoListItem'
 
 const renderComponent = (props = {}) =>
   render(

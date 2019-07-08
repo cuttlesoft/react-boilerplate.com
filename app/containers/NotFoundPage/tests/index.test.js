@@ -6,8 +6,8 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import { IntlProvider } from 'react-intl'
 
-import NotFound from '../index'
-import messages from '../messages'
+import NotFound from '../NotFoundPage'
+import messages from '../NotFoundPage.messages'
 
 describe('<NotFound />', () => {
   it('should render the Page Not Found text', () => {

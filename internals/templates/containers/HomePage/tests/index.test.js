@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import { IntlProvider } from 'react-intl'
 
-import HomePage from '../index'
+import HomePage from '../HomePage'
 
 describe('<HomePage />', () => {
   it('should render and match the snapshot', () => {

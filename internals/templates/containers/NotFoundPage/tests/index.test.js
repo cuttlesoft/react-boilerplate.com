@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import { IntlProvider } from 'react-intl'
 
-import NotFoundPage from '../index'
+import NotFoundPage from '../NotFoundPage'
 
 describe('<NotFoundPage />', () => {
   it('should render and match the snapshot', () => {

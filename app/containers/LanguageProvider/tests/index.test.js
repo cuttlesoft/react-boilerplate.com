@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-testing-library'
 import { defineMessages } from 'react-intl'
 
-import { LanguageProvider } from '../index'
+import { LanguageProvider } from '../LanguageProvider'
 
 const messages = defineMessages({
   someMessage: {
