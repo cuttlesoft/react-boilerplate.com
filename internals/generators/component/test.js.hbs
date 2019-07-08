@@ -8,9 +8,13 @@
 
 import React from 'react'
 import { render } from '@testing-library/react'
+import { IntlProvider } from 'react-intl';
 // import 'jest-dom/extend-expect'; // add some helpful assertions
 
 import {{ properCase name}} from './{{ properCase name }}'
+{{#if wantMessages}}
+import { DEFAULT_LOCALE } from '../../../i18n';
+{{/if}}
 
 const renderComponent = (props = {}) =>
 render(
@@ -19,4 +23,23 @@ render(
 test('it renders and matches snapshot', () => {
 const { container } = renderComponent()
 expect(container).toMatchSnapshot()
+})
+
+test('It does not log errors in console', () => {
+const spy = jest.spyOn(global.console, 'error')
+{{#if wantMessages}}
+render(
+<IntlProvider locale={DEFAULT_LOCALE}>
+    <{{ properCase name }} />
+</IntlProvider>,
+)
+{{else}}
+render(
+<{{ properCase name }} />)
+{{/if}}
+expect(spy).not.toHaveBeenCalled()
+})
+
+test('Expect to have additional unit tests specified', () => {
+expect(true).toEqual(false)
 })

@@ -51,20 +51,21 @@ module.exports = {
       {
         type: 'add',
         path: '../../app/components/{{properCase name}}/index.js',
-        templateFile: './component/export.js.hbs',
+        templateFile: './component/index.js.hbs',
         abortOnFail: true,
       },
       // Generate ComponentName.js
       {
         type: 'add',
         path: '../../app/components/{{properCase name}}/{{properCase name}}.js',
-        templateFile: './component/index.js.hbs',
+        templateFile: './component/Component.js.hbs',
         abortOnFail: true,
       },
       // Generate Component.doc.js
       {
         type: 'add',
         path: '../../app/components/{{properCase name}}/{{properCase name}}.doc.js',
+        templateFile: './component/Component.doc.js.hbs',
         abortOnFail: true,
       },
       // Generate Component.test.js
@@ -87,8 +88,8 @@ module.exports = {
     if (data.wantMessages) {
       actions.push({
         type: 'add',
-        path: '../../app/components/{{properCase name}}/messages.js',
-        templateFile: './component/messages.js.hbs',
+        path: '../../app/components/{{properCase name}}/{{properCase name}}.messages.js',
+        templateFile: './component/Component.messages.js.hbs',
         abortOnFail: true,
       });
     }
@@ -97,14 +98,14 @@ module.exports = {
     if (data.wantLoadable) {
       actions.push({
         type: 'add',
-        path: '../../app/components/{{properCase name}}/Loadable.js',
-        templateFile: './component/loadable.js.hbs',
+        path: '../../app/components/{{properCase name}}/{{properCase name}}.loadable.js',
+        templateFile: './component/Component.loadable.js.hbs',
         abortOnFail: true,
       });
     }
 
     actions.push({
-      type: 'prettify',
+      type: 'format',
       path: '/components/',
     });
 

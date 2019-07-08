@@ -33,7 +33,7 @@ module.exports = plop => {
     }
   });
   plop.addHelper('curly', (object, open) => (open ? '{' : '}'));
-  plop.setActionType('prettify', (answers, config) => {
+  plop.setActionType('format', (answers, config) => {
     const folderPath = `${path.join(
       __dirname,
       '/../../app/',
@@ -44,7 +44,7 @@ module.exports = plop => {
     )}`;
 
     try {
-      execSync(`npm run prettify -- "${folderPath}"`);
+      execSync(`npm run format -- "${folderPath}"`);
       return folderPath;
     } catch (err) {
       throw err;
