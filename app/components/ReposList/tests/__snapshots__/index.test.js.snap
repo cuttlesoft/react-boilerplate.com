@@ -68,14 +68,14 @@ exports[`<ReposList /> should render the repositories if loading was successful 
           class="styles__Wrapper-sc-1s0kipr-0 cExRFD"
         >
           <a
-            class="A-br8h0y-0 styles__RepoLink-sc-1s0kipr-3 juyZkx"
+            class="styles__RepoLink-sc-1s0kipr-3 ivXlYf StyledAnchor-sc-1rp7lwl-0 jgeOSx"
             href="https://github.com/react-boilerplate/react-boilerplate"
             target="_blank"
           >
             mxstbr/react-boilerplate
           </a>
           <a
-            class="A-br8h0y-0 styles__IssueLink-sc-1s0kipr-2 hqcSfn"
+            class="styles__IssueLink-sc-1s0kipr-2 ciIEHa StyledAnchor-sc-1rp7lwl-0 jgeOSx"
             href="https://github.com/react-boilerplate/react-boilerplate/issues"
             target="_blank"
           >

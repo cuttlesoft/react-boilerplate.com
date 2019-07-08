@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'mobx-react'
 import { RouterStore } from 'mobx-react-router'
-import { render } from 'react-testing-library'
+import { render } from '@testing-library/react'
 
 import LocaleToggle from '../LocaleToggle'
 import { LanguageProvider } from '../../LanguageProvider'

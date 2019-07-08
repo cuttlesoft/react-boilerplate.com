@@ -13,13 +13,11 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
           Start your next react project in seconds
         </span>
       </h2>
-      <h2
-        class="StyledHeading-sc-1rdh4aw-0 yhirM"
-      >
+      <p>
         <span>
           A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices
         </span>
-      </h2>
+      </p>
     </section>
     <section
       class="styles__Section-w51kdb-3 ktSOjr"
