@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import NormalIssueIcon from 'components/IssueIcon'
-import NormalA from 'components/A'
+import { Anchor } from 'components/Anchor'
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -14,7 +14,7 @@ export const IssueIcon = styled(NormalIssueIcon)`
   margin-right: 0.25em;
 `
 
-export const IssueLink = styled(NormalA)`
+export const IssueLink = styled(Anchor)`
   height: 100%;
   color: black;
   display: flex;
@@ -23,7 +23,7 @@ export const IssueLink = styled(NormalA)`
   white-space: nowrap;
 `
 
-export const RepoLink = styled(NormalA)`
+export const RepoLink = styled(Anchor)`
   height: 100%;
   color: black;
   display: flex;

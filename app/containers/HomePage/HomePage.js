@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet'
 import { FormattedMessage } from 'react-intl'
 import { observer } from 'mobx-react'
 
-import H2 from 'components/H2'
+import { Header } from 'components/Header'
 import ReposList from 'components/ReposList'
 import { AtPrefix, CenteredSection, Form, Input, Section } from './styles'
 import messages from './HomePage.messages'
@@ -39,17 +39,17 @@ export const HomePage = observer(() => {
       </Helmet>
       <div>
         <CenteredSection>
-          <H2>
+          <Header level="2">
             <FormattedMessage {...messages.startProjectHeader} />
-          </H2>
+          </Header>
           <p>
             <FormattedMessage {...messages.startProjectMessage} />
           </p>
         </CenteredSection>
         <Section>
-          <H2>
+          <Header level="2">
             <FormattedMessage {...messages.trymeHeader} />
-          </H2>
+          </Header>
           <Form onSubmit={onSubmitForm}>
             <label htmlFor="searchTerm">
               <FormattedMessage {...messages.trymeMessage} />
