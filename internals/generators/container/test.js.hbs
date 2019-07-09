@@ -6,60 +6,37 @@
 *
 */
 
-import React from 'react';
-import { render } from '@testing-library/react';
+import React from 'react'
+import { render } from '@testing-library/react'
 {{#if wantMessages}}
-import { IntlProvider } from 'react-intl';
+import { IntlProvider } from 'react-intl'
 {{/if}}
-// import 'jest-dom/extend-expect'; // add some helpful assertions
+// import 'jest-dom/extend-expect' // add some helpful assertions
 
-import { {{ properCase name }} } from '../index';
+import { {{ properCase name }} } from '../index'
 {{#if wantMessages}}
-import { DEFAULT_LOCALE } from '../../../i18n';
+import { DEFAULT_LOCALE } from '../../../i18n'
 {{/if}}
 
-describe('
-<{{ properCase name }} />', () => {
-it('Expect to not log errors in console', () => {
-const spy = jest.spyOn(global.console, 'error');
-const dispatch = jest.fn();
-{{#if wantMessages}}
+const renderComponent = (props = {}) =>
 render(
-<IntlProvider locale={DEFAULT_LOCALE}>
-  <{{ properCase name }} dispatch={dispatch} />
-</IntlProvider>,
-);
-{{else}}
-render(
-<{{ properCase name }} dispatch={dispatch} />);
-{{/if}}
-expect(spy).not.toHaveBeenCalled();
-});
+  < {{ properCase name }} {...props} />)
 
-it('Expect to have additional unit tests specified', () => {
-expect(true).toEqual(false);
-});
+test('it renders and matches snapshot', () => {
+  const { container } = renderComponent()
+  expect(container).toMatchSnapshot()
+})
 
-/**
-* Unskip this test to use it
-*
-* @see {@link https://jestjs.io/docs/en/api#testskipname-fn}
-*/
-it.skip('Should render and match the snapshot', () => {
-{{#if wantMessages}}
-const {
-container: { firstChild },
-} = render(
-<IntlProvider locale={DEFAULT_LOCALE}>
-  <{{ properCase name }} />
-</IntlProvider>,
-);
-{{else}}
-const {
-container: { firstChild },
-} = render(
-<{{ properCase name }} />);
-{{/if}}
-expect(firstChild).toMatchSnapshot();
-});
-});
+test('It does not log errors in console', () => {
+  const spy = jest.spyOn(global.console, 'error')
+  render(
+    <IntlProvider locale={DEFAULT_LOCALE}>
+      <Testing />
+    </IntlProvider>,
+  )
+  expect(spy).not.toHaveBeenCalled()
+})
+
+test('Expect to have additional unit tests specified', () => {
+  expect(true).toEqual(false)
+})
