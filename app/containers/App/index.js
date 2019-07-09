@@ -12,7 +12,7 @@ import styled from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 
 import HomePage from 'containers/HomePage/HomePage.loadable'
-import FeaturePage from 'containers/FeaturePage/Loadable'
+import FeaturePage from 'containers/FeaturePage/FeaturePage.loadable'
 import NotFoundPage from 'containers/NotFoundPage/NotFoundPage.loadable'
 import { TemplateHeader } from 'components/TemplateHeader'
 import Footer from 'components/Footer'

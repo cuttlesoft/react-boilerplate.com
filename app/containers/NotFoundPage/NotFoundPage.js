@@ -7,7 +7,7 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import Header from 'components/Header'
+import { Header } from 'components/Header'
 import messages from './NotFoundPage.messages'
 
 export default function NotFound() {

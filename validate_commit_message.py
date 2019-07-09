@@ -7,7 +7,7 @@ import sys
 
 
 def isCommitMessageValid(commit_message):
-    pattern = r"\[#\d+\] [\u0000-\ufe0f]+ \([a-zA-Z\s\-]+\) .+"
+    pattern = pattern = r"\[#\d+\] [✨,🚑,🔄,📚,💄,📝,🏗,☁,🤝,🎨,🔨,🧹,☔,🔥,👕,⬆,⬇,💎,⚙,🏦,🌱,🚜,💚,🚧,🍒,🎉,🏎,🚀,🐎,🐞,🔖,🔬,🔈,🔇,🐳,🔬,🔒,⏩,⏪,♿,🌐,⚡,💡,🐧,🍎,🏁,🥚,🎡,🐘,🐬]+ \([a-zA-Z\s\-]+\) .+"
     m = re.match(pattern, commit_message)
     return m is not None
 
