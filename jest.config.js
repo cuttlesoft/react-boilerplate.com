@@ -9,7 +9,7 @@ module.exports = {
     '!app/*/RbGenerated*/*.{js,jsx}',
     '!app/app.js',
     '!app/global-styles.js',
-    '!app/*/*/Loadable.{js,jsx}',
+    '!app/*/*/index.{js,jsx}',
   ],
   coverageThreshold: {
     global: {

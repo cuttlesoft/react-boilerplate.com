@@ -3,7 +3,8 @@
  */
 
 import React from 'react'
-import { render } from '@testing-library/react'
+import 'jest-dom/extend-expect'
+import { render, fireEvent } from '@testing-library/react'
 import { IntlProvider } from 'react-intl'
 import { Provider } from 'mobx-react'
 import { RouterStore } from 'mobx-react-router'
@@ -35,4 +36,12 @@ describe('<HomePage />', () => {
     )
     expect(firstChild).toMatchSnapshot()
   })
+})
+
+test('it should fire onChange event', () => {
+  render(<HomePage />)
+  const input = document.getElementById('searchTerm')
+  expect(input.value).toBe('')
+  fireEvent.change(input, { target: { value: 'mxstbr' } })
+  expect(input.value).toBe('mxstbr')
 })

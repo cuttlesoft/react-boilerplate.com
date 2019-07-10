@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should lazy load and match the snapshot 1`] = `
+<div>
+  <article>
+    <h1
+      class="StyledHeading-sc-1rdh4aw-0 rfVJR"
+    >
+      <span>
+        Page not found.
+      </span>
+    </h1>
+  </article>
+</div>
+`;
