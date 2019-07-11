@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# v1.0.0-husky
+# v1.0.2-husky
 import os
 import re
 import sys
 
 
 def isCommitMessageValid(commit_message):
-    pattern = pattern = r"\[#\d+\] [✨,🚑,🔄,📚,💄,📝,🏗,☁,🤝,🎨,🔨,🧹,☔,🔥,👕,⬆,⬇,💎,⚙,🏦,🌱,🚜,💚,🚧,🍒,🎉,🏎,🚀,🐎,🐞,🔖,🔬,🔈,🔇,🐳,🔬,🔒,⏩,⏪,♿,🌐,⚡,💡,🐧,🍎,🏁,🥚,🎡,🐘,🐬]+ \([a-zA-Z\s\-]+\) .+"
+    pattern = r"\[#\d+\] [✨,🚑,🔄,📚,💄,📝,🏗,☁,🤝,🎨,🔨,🧹,☔,🔥,👕,⬆,⬇,💎,⚙,🏦,🌱,🚜,💚,🚧,🍒,🎉,🏎,🚀,🐎,🐞,🔖,🔬,🔈,🔇,🐳,🔬,🔒,⏩,⏪,♿,🌐,⚡,💡,🐧,🍎,🏁,🥚,🎡,🐘,🐬]+ \([a-zA-Z\s\-]+\) .+"
     m = re.match(pattern, commit_message)
     return m is not None
 
@@ -24,8 +24,8 @@ def removeMessageComments(commit_message):
 
 
 def main():
-    filename = os.environ['HUSKY_GIT_PARAMS']
-    commit_message = open(filename, "r").read()
+    filename = os.environ["HUSKY_GIT_PARAMS"]
+    commit_message = open(filename, "r", encoding="utf-8").read()
     commit_message = removeMessageComments(commit_message)
 
     if not isCommitMessageValid(commit_message):
