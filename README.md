@@ -54,6 +54,28 @@ There’s also a <a href="https://vimeo.com/168648012">fantastic video</a> on ho
 
 <sub><i>Keywords: React.js, Redux, Hot Reloading, ESNext, Babel, react-router, Offline First, ServiceWorker, `styled-components`, redux-saga, FontFaceObserver</i></sub>
 
+## 🔐 Secrets
+
+This project uses [dotenv](https://github.com/motdotla/dotenv) to expose config variables to React through webpack. You can store API keys and other sensitive information in a `.env` file:
+
+```env
+API_BASE_URL=https://myapi.com
+GOOGLE_MAPS_API_KEY=abcdefgh
+```
+
+dotenv will make them globally available through webpack.definePlugin
+
+```javascript
+process.env.API_BASE_URL // 'https://myapi.com'
+process.env.GOOGLE_MAPS_API_KEY // 'abcdefgh'
+```
+
+### Get started
+
+1.  Copy .env.example to .env
+2.  Add your config variables
+3.  Done!
+
 ## Quick start
 
 1.  Make sure that you have Node.js v8.15.1 and npm v5 or above installed.

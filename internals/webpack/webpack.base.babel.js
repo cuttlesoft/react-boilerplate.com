@@ -4,6 +4,7 @@
 
 const path = require('path')
 const webpack = require('webpack')
+const envKeys = require('./envKeys')()
 
 module.exports = options => ({
   mode: options.mode,
@@ -111,9 +112,7 @@ module.exports = options => ({
     // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
     // inside your code for any environment checks; Terser will automatically
     // drop any unreachable code.
-    new webpack.EnvironmentPlugin({
-      NODE_ENV: 'development',
-    }),
+    new webpack.DefinePlugin(envKeys),
   ]),
   resolve: {
     modules: ['node_modules', 'app'],
