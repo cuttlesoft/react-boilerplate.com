@@ -37,6 +37,7 @@ function createBox({
   tag,
   width,
   wrap,
+  ...rest
 }) {
   return (
     <Box
@@ -65,6 +66,7 @@ function createBox({
       tag={tag}
       width={width}
       wrap={wrap}
+      {...rest}
     >
       {children}
     </Box>
