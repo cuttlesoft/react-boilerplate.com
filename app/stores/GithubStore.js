@@ -6,7 +6,7 @@ import { getRepos } from '../services/github.service'
 export class GitHubStore {
   @ignore @observable repos = []
 
-  @ignore @observable currentUser = ''
+  @observable currentUser = ''
 
   @ignore @observable isLoading = false
 

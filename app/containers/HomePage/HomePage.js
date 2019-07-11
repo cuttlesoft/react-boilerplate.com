@@ -21,14 +21,16 @@ export const HomePage = observer(() => {
   const [searchTerm, setSearchTerm] = useState('')
 
   const onSubmitForm = evt => {
-    if (evt !== undefined && evt.preventDefault) evt.preventDefault()
+    evt.preventDefault()
     gitHubStore.getRepos(searchTerm)
   }
 
   useEffect(() => {
     // When initial state username is not null, submit the form to load repos
-    if (gitHubStore.currentUser && gitHubStore.currentUser.trim().length > 0)
-      onSubmitForm(gitHubStore.currentUser)
+    if (gitHubStore.currentUser && gitHubStore.currentUser.trim().length > 0) {
+      setSearchTerm(gitHubStore.currentUser)
+      gitHubStore.getRepos(gitHubStore.currentUser)
+    }
   }, [])
 
   return (
@@ -50,7 +52,7 @@ export const HomePage = observer(() => {
           <Header level="2">
             <FormattedMessage {...messages.trymeHeader} />
           </Header>
-          <Form onSubmit={onSubmitForm}>
+          <Form data-testid="search-form" onSubmit={onSubmitForm}>
             <label htmlFor="searchTerm">
               <FormattedMessage {...messages.trymeMessage} />
               <AtPrefix>
