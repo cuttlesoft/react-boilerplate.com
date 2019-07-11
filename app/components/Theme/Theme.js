@@ -12,9 +12,6 @@ const Theme = ({ theme, children }) => (
   <ThemeContext.Extend
     value={{
       global: {
-        colors: {
-          CuttleBlue: '#18C0DD',
-        },
         ...theme,
       },
     }}

@@ -48,6 +48,7 @@ const customThemeValues = {
 
 const ThemedButton = styled.button`
   font-size: 1em;
+  font-family: ${props => props.theme.global.font.family} 
   margin: 1em;
   padding: 0.25em 1em;
   border-radius: 3px;
