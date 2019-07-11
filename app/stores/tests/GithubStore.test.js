@@ -2,11 +2,11 @@ import { cleanup } from '@testing-library/react'
 import 'jest-dom/extend-expect'
 import MockAdapter from 'axios-mock-adapter'
 import axios from '../../services/instance'
-import { GitHub } from '../GithubStore'
+import { GitHubStore } from '../GithubStore'
 afterEach(cleanup)
 
 test('getRepos creates an axios call and assigns repos to the store', async () => {
-  const githubStore = new GitHub()
+  const githubStore = new GitHubStore()
   const url = `/users/mxstbr/repos?type=all&sort=updated`
   const axiosMock = new MockAdapter(axios)
   const mockData = [
@@ -27,7 +27,7 @@ test('getRepos creates an axios call and assigns repos to the store', async () =
 })
 
 test('getRepos catches an error', async () => {
-  const githubStore = new GitHub()
+  const githubStore = new GitHubStore()
   const url = `/users/mxstbr/repos?type=all&sort=updated`
   const axiosMock = new MockAdapter(axios)
   const errorMessage = 'Error'
