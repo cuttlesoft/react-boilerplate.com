@@ -21,7 +21,8 @@ module.exports = () => {
   const envExists = fs.existsSync(finalPath)
 
   if (!envExists) {
-    throw new Error(`No ENV file found for environment - ${process.env.NODE_ENV}`)
+    /* eslint-disable-next-line no-console */
+    console.warn(`⚠️  No ENV file found for environment - ${process.env.NODE_ENV}`)
   }
 
   // Set the path parameter in the dotenv config
