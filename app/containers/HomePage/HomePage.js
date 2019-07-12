@@ -39,41 +39,45 @@ export const HomePage = observer(() => {
         <title>Home Page</title>
         <meta name="description" content="A React.js Boilerplate application homepage" />
       </Helmet>
-      <div>
-        <CenteredSection>
-          <Header level="2">
-            <FormattedMessage {...messages.startProjectHeader} />
-          </Header>
-          <p>
-            <FormattedMessage {...messages.startProjectMessage} />
-          </p>
-        </CenteredSection>
-        <Section>
-          <Header level="2">
-            <FormattedMessage {...messages.trymeHeader} />
-          </Header>
-          <Form data-testid="search-form" onSubmit={onSubmitForm}>
-            <label htmlFor="searchTerm">
-              <FormattedMessage {...messages.trymeMessage} />
-              <AtPrefix>
-                <FormattedMessage {...messages.trymeAtPrefix} />
-              </AtPrefix>
-              <Input
-                id="searchTerm"
-                type="text"
-                placeholder="mxstbr"
-                value={searchTerm}
-                onChange={e => setSearchTerm(e.target.value)}
-              />
-            </label>
-          </Form>
-          <ReposList
-            loading={gitHubStore.isLoading}
-            error={gitHubStore.hasError}
-            repos={gitHubStore.repos}
-          />
-        </Section>
-      </div>
+
+      <CenteredSection>
+        <Header level="2">
+          <FormattedMessage {...messages.startProjectHeader} />
+        </Header>
+        <p>
+          <FormattedMessage {...messages.startProjectMessage} />
+        </p>
+      </CenteredSection>
+
+      <Section>
+        <Header level="2">
+          <FormattedMessage {...messages.trymeHeader} />
+        </Header>
+
+        <Form data-testid="search-form" onSubmit={onSubmitForm}>
+          <label htmlFor="searchTerm">
+            <FormattedMessage {...messages.trymeMessage} />
+
+            <AtPrefix>
+              <FormattedMessage {...messages.trymeAtPrefix} />
+            </AtPrefix>
+
+            <Input
+              id="searchTerm"
+              type="text"
+              placeholder="mxstbr"
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+            />
+          </label>
+        </Form>
+
+        <ReposList
+          loading={gitHubStore.isLoading}
+          error={gitHubStore.hasError}
+          repos={gitHubStore.repos}
+        />
+      </Section>
     </article>
   )
 })
