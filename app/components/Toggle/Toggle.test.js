@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import { IntlProvider, defineMessages } from 'react-intl'
 
-import Toggle from '../index'
+import Toggle from './Toggle'
 
 describe('<Toggle />', () => {
   it('should contain default text', () => {

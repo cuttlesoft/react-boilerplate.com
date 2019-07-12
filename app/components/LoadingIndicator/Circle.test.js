@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import Circle from '../Circle'
+import Circle from './Circle'
 
 describe('<Circle />', () => {
   it('should render an <div> tag', () => {

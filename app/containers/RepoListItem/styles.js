@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import NormalIssueIcon from 'components/IssueIcon'
+import { IssueIcon as NormalIssueIcon } from 'components/IssueIcon'
 import { Anchor } from 'components/Anchor'
 
 export const Wrapper = styled.div`

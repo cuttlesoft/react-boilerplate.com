@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import 'jest-dom/extend-expect'
 
-import ListItem from '../index'
+import ListItem from './ListItem'
 
 describe('<ListItem />', () => {
   it('should have a class', () => {

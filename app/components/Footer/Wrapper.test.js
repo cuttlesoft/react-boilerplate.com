@@ -1,30 +1,27 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import Wrapper from '../Wrapper'
+import Wrapper from './Wrapper'
 
 describe('<Wrapper />', () => {
-  it('should render an <div> tag', () => {
+  it('should render an <footer> tag', () => {
     const { container } = render(<Wrapper />)
-    expect(container.firstElementChild.tagName).toEqual('DIV')
+    expect(container.querySelector('footer')).not.toBeNull()
   })
 
   it('should have a class attribute', () => {
     const { container } = render(<Wrapper />)
-    const element = container.firstElementChild
-    expect(element.hasAttribute('class')).toBe(true)
+    expect(container.querySelector('footer').hasAttribute('class')).toBe(true)
   })
 
   it('should adopt a valid attribute', () => {
     const id = 'test'
     const { container } = render(<Wrapper id={id} />)
-    const element = container.firstElementChild
-    expect(element.id).toEqual(id)
+    expect(container.querySelector('footer').id).toEqual(id)
   })
 
   it('should not adopt an invalid attribute', () => {
     const { container } = render(<Wrapper attribute="test" />)
-    const element = container.firstElementChild
-    expect(element.hasAttribute('attribute')).toBe(false)
+    expect(container.querySelector('footer').getAttribute('attribute')).toBeNull()
   })
 })

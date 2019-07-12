@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 import { FormattedNumber } from 'react-intl'
 import { observer } from 'mobx-react'
 
-import ListItem from 'components/ListItem'
+import { ListItem } from 'components/ListItem'
 import { Wrapper, IssueIcon, IssueLink, RepoLink } from './styles'
 import { GitHubStoreContext } from '../../stores/GithubStore'
 

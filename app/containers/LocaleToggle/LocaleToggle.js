@@ -6,7 +6,7 @@
 
 import React, { useContext } from 'react'
 
-import Toggle from 'components/Toggle'
+import { Toggle } from 'components/Toggle'
 import messages from './LocaleToggle.messages'
 import { appLocales } from '../../i18n'
 import { LocaleStoreContext } from '../../stores/LocaleStore'

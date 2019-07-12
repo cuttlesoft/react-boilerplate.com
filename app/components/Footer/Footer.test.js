@@ -4,8 +4,8 @@ import { IntlProvider } from 'react-intl'
 import { Provider } from 'mobx-react'
 import { RouterStore } from 'mobx-react-router'
 
-import Footer from '../index'
-import trunk from '../../../configureStore'
+import Footer from './Footer'
+import trunk from '../../configureStore'
 
 describe('<Footer />', () => {
   let stores

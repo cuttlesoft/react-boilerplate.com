@@ -4,8 +4,8 @@ import { Provider } from 'mobx-react'
 import { RouterStore } from 'mobx-react-router'
 import { render } from '@testing-library/react'
 
-import ReposList from '../index'
-import trunk from '../../../configureStore'
+import ReposList from './ReposList'
+import trunk from '../../configureStore'
 
 describe('<ReposList />', () => {
   it('should render the loading indicator when its loading', () => {

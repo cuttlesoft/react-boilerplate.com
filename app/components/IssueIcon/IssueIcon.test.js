@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import IssueIcon from '../index'
+import IssueIcon from './IssueIcon'
 
 describe('<IssueIcon />', () => {
   it('should render a SVG', () => {

@@ -1,27 +1,28 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import Select from '../Select'
+import Item from './Item'
 
-describe('<Select />', () => {
-  it('should render an <select> tag', () => {
-    const { container } = render(<Select />)
-    expect(container.firstChild.tagName).toEqual('SELECT')
+describe('<Item />', () => {
+  it('should render an <div> tag', () => {
+    const { container } = render(<Item />)
+    expect(container.firstChild.tagName).toEqual('DIV')
   })
 
   it('should have a class attribute', () => {
-    const { container } = render(<Select />)
+    const { container } = render(<Item />)
     expect(container.firstChild.hasAttribute('class')).toBe(true)
   })
 
   it('should adopt a valid attribute', () => {
     const id = 'test'
-    const { container } = render(<Select id={id} />)
+    const { container } = render(<Item id={id} />)
+    expect(container.firstChild.hasAttribute('id')).toBe(true)
     expect(container.firstChild.id).toEqual(id)
   })
 
   it('should not adopt an invalid attribute', () => {
-    const { container } = render(<Select attribute="test" />)
+    const { container } = render(<Item attribute="test" />)
     expect(container.firstChild.hasAttribute('attribute')).toBe(false)
   })
 })

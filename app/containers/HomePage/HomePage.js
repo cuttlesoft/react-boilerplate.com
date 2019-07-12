@@ -6,7 +6,7 @@ import { observer } from 'mobx-react'
 
 // Components
 import { Header } from 'components/Header'
-import ReposList from 'components/ReposList'
+import { ReposList } from 'components/ReposList'
 
 // Styles
 import { AtPrefix, CenteredSection, Form, Input, Section } from './styles'
