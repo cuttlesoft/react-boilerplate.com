@@ -35,7 +35,7 @@ describe('<HomePage />', () => {
   let stores = null
   let gitHubStore = null
 
-  const testUser = 'cuttlesoft'
+  const TEST_USER = 'cuttlesoft'
 
   beforeAll(() => {
     // Create MobX Routing store
@@ -65,7 +65,7 @@ describe('<HomePage />', () => {
 
   it('should successfully load the repository list when a user inputs a username and submits the form', async () => {
     // Configure Axios to mock a successful call for retrieving repos
-    const url = `/users/${testUser}/repos?type=all&sort=updated`
+    const url = `/users/${TEST_USER}/repos?type=all&sort=updated`
     const axiosMock = new MockAdapter(axios)
     const mockData = getReposSuccess
     axiosMock.onGet(url).reply(200, mockData)
@@ -87,8 +87,8 @@ describe('<HomePage />', () => {
     expect(input.value).toBe('')
 
     // Add text to the search field
-    fireEvent.change(input, { target: { value: testUser } })
-    expect(input.value).toBe(testUser)
+    fireEvent.change(input, { target: { value: TEST_USER } })
+    expect(input.value).toBe(TEST_USER)
 
     // Submit the form
     fireEvent.submit(getByTestId('search-form'))
@@ -106,13 +106,13 @@ describe('<HomePage />', () => {
 
   it('should automatically load the repository list when a username is preloaded', async () => {
     // Configure Axios to mock a successful call for retrieving repos
-    const url = `/users/${testUser}/repos?type=all&sort=updated`
+    const url = `/users/${TEST_USER}/repos?type=all&sort=updated`
     const axiosMock = new MockAdapter(axios)
     const mockData = getReposSuccess
     axiosMock.onGet(url).reply(200, mockData)
 
     // Set the intial state on the store to preload a username
-    gitHubStore.currentUser = testUser
+    gitHubStore.currentUser = TEST_USER
 
     const getReposSpy = jest.spyOn(gitHubStore, 'getRepos')
 
@@ -127,7 +127,7 @@ describe('<HomePage />', () => {
     )
 
     const input = document.getElementById('searchTerm')
-    expect(input.value).toBe(testUser)
+    expect(input.value).toBe(TEST_USER)
     expect(getReposSpy).toHaveBeenCalled()
 
     // Ensure that the loading indicator is shown
@@ -142,13 +142,13 @@ describe('<HomePage />', () => {
 
   it('should display a message if the user does not have any repos', async () => {
     // Configure Axios to mock a successful call for retrieving repos
-    const url = `/users/${testUser}/repos?type=all&sort=updated`
+    const url = `/users/${TEST_USER}/repos?type=all&sort=updated`
     const axiosMock = new MockAdapter(axios)
     const mockData = []
     axiosMock.onGet(url).reply(200, mockData)
 
     // Set the intial state on the store to preload a username
-    gitHubStore.currentUser = testUser
+    gitHubStore.currentUser = TEST_USER
 
     const getReposSpy = jest.spyOn(gitHubStore, 'getRepos')
 
@@ -163,7 +163,7 @@ describe('<HomePage />', () => {
     )
 
     const input = document.getElementById('searchTerm')
-    expect(input.value).toBe(testUser)
+    expect(input.value).toBe(TEST_USER)
     expect(getReposSpy).toHaveBeenCalled()
 
     // Ensure that the loading indicator is shown
@@ -179,13 +179,13 @@ describe('<HomePage />', () => {
 
   it('should display an error message if repos cannot be loaded', async () => {
     // Configure Axios to mock a successful call for retrieving repos
-    const url = `/users/${testUser}/repos?type=all&sort=updated`
+    const url = `/users/${TEST_USER}/repos?type=all&sort=updated`
     const axiosMock = new MockAdapter(axios)
     const mockData = getReposSuccess
     axiosMock.onGet(url).reply(500, mockData)
 
     // Set the intial state on the store to preload a username
-    gitHubStore.currentUser = testUser
+    gitHubStore.currentUser = TEST_USER
 
     const getReposSpy = jest.spyOn(gitHubStore, 'getRepos')
 
@@ -200,7 +200,7 @@ describe('<HomePage />', () => {
     )
 
     const input = document.getElementById('searchTerm')
-    expect(input.value).toBe(testUser)
+    expect(input.value).toBe(TEST_USER)
     expect(getReposSpy).toHaveBeenCalled()
 
     // Ensure that the loading indicator is shown
