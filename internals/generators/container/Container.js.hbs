@@ -5,22 +5,34 @@
 */
 
 {{#if memo}}
+{{#if connectToStore}}
 import React, { useContext, memo } from 'react'
 {{else}}
-import React, { useContext} from 'react'
+import React, { memo } from 'react'
 {{/if}}
+{{else if connectToStore}}
+import React, {useContext} from 'react'
+{{else}}
+import React from 'react'
+{{/if}}
+
 // import PropTypes from 'prop-types'
+
 {{#if connectToStore}}
 import { observer } from 'mobx-react'
 {{/if}}
+
 {{#if wantHeaders}}
 import { Helmet } from 'react-helmet'
 {{/if}}
+
 {{#if wantMessages}}
 import { FormattedMessage } from 'react-intl'
 {{/if}}
+
 import { Header } from 'components/Header'
 import { Section } from './styles'
+
 {{#if wantMessages}}
 import messages from './{{ properCase name }}.messages'
 {{/if}}
@@ -29,21 +41,15 @@ import messages from './{{ properCase name }}.messages'
 import { GitHubStoreContext } from '../../stores/GithubStore'
 {{/if}}
 
+
 {{#if connectToStore}}
 const {{ properCase name }} = observer(() => {
 const gitHubStore = useContext(GitHubStoreContext)
-const {isLoading} = gitHubStore
+const {currentUser} = gitHubStore
 
-const RenderMessage = () =>
-    isLoading ? (
-      <FormattedMessage {...messages.loading} />
-    ) : (
-      <FormattedMessage {...messages.header} />
-    )
-
-  {{else}}
-  const {{ properCase name}} = () => {
-  {{/if}}
+{{else}}
+const {{ properCase name}} = () => {
+{{/if}}
   return (
   <article>
     {{#if wantHeaders}}
@@ -52,19 +58,31 @@ const RenderMessage = () =>
       <meta name="description" content="Description of {{properCase name}}" />
     </Helmet>
     {{/if}}
-    {{#if wantMessages}}
+
+    
     <Section>
       <Header level='2'>
-        <RenderMessage />
+        {{#if wantMessages}}
+        <FormattedMessage {...messages.header} />
+        {{/if}}
+        {{#if connectToStore}}
+        {`current user: ${currentUser}`}
+        {{/if}}
       </Header>
     </Section>
-    {{/if}}
+    
   </article>
   )
-  })
 
-  {{#if memo}}
-  export default memo({{ properCase name }})
-  {{else}}
-  export default {{ properCase name }}
-  {{/if}}
+{{#if connectToStore}}
+})
+{{else}}
+}
+{{/if}}
+
+
+{{#if memo}}
+export default memo({{ properCase name }})
+{{else}}
+export default {{ properCase name }}
+{{/if}}

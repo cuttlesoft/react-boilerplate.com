@@ -31,7 +31,7 @@ test('It does not log errors in console', () => {
   const spy = jest.spyOn(global.console, 'error')
   render(
     <IntlProvider locale={DEFAULT_LOCALE}>
-      <Testing />
+      < {{ properCase name }} />
     </IntlProvider>,
   )
   expect(spy).not.toHaveBeenCalled()

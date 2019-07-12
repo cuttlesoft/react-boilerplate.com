@@ -39,7 +39,7 @@ module.exports = {
       name: 'connectToStore',
       default: false,
       message:
-        'Do you want a store for this container?',
+        'Do you want to connect this container to store?',
     },
     {
       type: 'confirm',
