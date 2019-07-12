@@ -2,66 +2,76 @@
 
 exports[`<HomePage /> should render and match the snapshot 1`] = `
 <article>
-  <div>
-    <section
-      class="styles__Section-w51kdb-3 styles__CenteredSection-w51kdb-4 hZTVSk"
+  <section
+    class="styles__Section-w51kdb-3 styles__CenteredSection-w51kdb-4 hZTVSk"
+  >
+    <h2
+      class="StyledHeading-sc-1rdh4aw-0 yhirM"
     >
-      <h2
-        class="StyledHeading-sc-1rdh4aw-0 yhirM"
-      >
-        <span>
-          Start your next react project in seconds
-        </span>
-      </h2>
-      <p>
-        <span>
-          A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices
-        </span>
-      </p>
-    </section>
-    <section
-      class="styles__Section-w51kdb-3 ktSOjr"
+      <span>
+        Start your next react project in seconds
+      </span>
+    </h2>
+    <p>
+      <span>
+        A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices
+      </span>
+    </p>
+  </section>
+  <section
+    class="styles__Section-w51kdb-3 ktSOjr"
+  >
+    <h2
+      class="StyledHeading-sc-1rdh4aw-0 yhirM"
     >
-      <h2
-        class="StyledHeading-sc-1rdh4aw-0 yhirM"
+      <span>
+        Try me!
+      </span>
+    </h2>
+    <form
+      class="styles__Form-w51kdb-1 hMNxRg"
+      data-testid="search-form"
+    >
+      <label
+        for="searchTerm"
       >
         <span>
-          Try me!
+          Show Github repositories by
         </span>
-      </h2>
-      <form
-        class="styles__Form-w51kdb-1 hMNxRg"
-      >
-        <label
-          for="searchTerm"
+        <span
+          class="styles__AtPrefix-w51kdb-0 cRLVte"
         >
           <span>
-            Show Github repositories by
+            @
           </span>
-          <span
-            class="styles__AtPrefix-w51kdb-0 cRLVte"
-          >
-            <span>
-              @
-            </span>
-          </span>
-          <input
-            class="styles__Input-w51kdb-2 hEplru"
-            id="searchTerm"
-            placeholder="mxstbr"
-            type="text"
-            value=""
-          />
-        </label>
-      </form>
-      <div
-        class="Wrapper-sc-1umgotm-0 laCwDT"
-      >
-        <ul
-          class="Ul-mwnq6h-0 jcxXFy"
+        </span>
+        <input
+          class="styles__Input-w51kdb-2 hEplru"
+          id="searchTerm"
+          placeholder="mxstbr"
+          type="text"
+          value=""
         />
-      </div>
-    </section>
-  </div>
+      </label>
+    </form>
+    <div
+      class="Wrapper-sc-1umgotm-0 laCwDT"
+      data-testid="repo-list-not-found"
+    >
+      <ul
+        class="Ul-mwnq6h-0 jcxXFy"
+      >
+        <li
+          class="Wrapper-euo0oy-0 jLvxtc"
+        >
+          <div
+            class="Item-sc-3y9mie-0 fKXSkT"
+          >
+            The user could not be found or does not have any repositories.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 </article>
 `;
