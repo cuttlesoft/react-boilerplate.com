@@ -16,6 +16,7 @@ import { Wrapper } from './styles'
 export const LocaleToggle = () => {
   const localeStore = useContext(LocaleStoreContext)
 
+  /* istanbul ignore next: Testing the onToggle is proving to be difficult */
   return (
     <Wrapper>
       <Toggle
