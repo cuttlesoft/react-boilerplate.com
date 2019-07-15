@@ -6,7 +6,7 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
     class="styles__Section-w51kdb-3 styles__CenteredSection-w51kdb-4 hZTVSk"
   >
     <h2
-      class="StyledHeading-sc-1rdh4aw-0 yhirM"
+      class="StyledHeading-sc-1rdh4aw-0 eSPceH"
     >
       <span>
         Start your next react project in seconds
