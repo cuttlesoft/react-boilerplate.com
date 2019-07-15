@@ -2,7 +2,8 @@
 *
 * Tests for {{ properCase name }}
 *
-* @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
+* @see
+https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
 *
 */
 
@@ -20,23 +21,24 @@ import { DEFAULT_LOCALE } from '../../../i18n'
 
 const renderComponent = (props = {}) =>
 render(
-  < {{ properCase name }} {...props} />)
+< {{ properCase name }}
+  {...props} />)
 
 test('it renders and matches snapshot', () => {
-  const { container } = renderComponent()
-  expect(container).toMatchSnapshot()
+const { container } = renderComponent()
+expect(container).toMatchSnapshot()
 })
 
 test('It does not log errors in console', () => {
-  const spy = jest.spyOn(global.console, 'error')
-  render(
-    <IntlProvider locale={DEFAULT_LOCALE}>
-      < {{ properCase name }} />
-    </IntlProvider>,
-  )
-  expect(spy).not.toHaveBeenCalled()
+const spy = jest.spyOn(global.console, 'error')
+render(
+<IntlProvider locale={DEFAULT_LOCALE}>
+  < {{ properCase name }} />
+</IntlProvider>,
+)
+expect(spy).not.toHaveBeenCalled()
 })
 
 test('Expect to have additional unit tests specified', () => {
-  expect(true).toEqual(false)
+expect(true).toEqual(false)
 })

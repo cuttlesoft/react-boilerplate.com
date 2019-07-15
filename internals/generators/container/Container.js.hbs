@@ -31,7 +31,7 @@ import { FormattedMessage } from 'react-intl'
 {{/if}}
 
 import { Header } from 'components/Header'
-import { Section } from './styles'
+import { Section } from './{{properCase name}}.styles'
 
 {{#if wantMessages}}
 import messages from './{{ properCase name }}.messages'
@@ -43,41 +43,42 @@ import { GitHubStoreContext } from '../../stores/GithubStore'
 
 
 {{#if connectToStore}}
-const {{ properCase name }} = observer(() => {
+const Login = observer(() => {
 const gitHubStore = useContext(GitHubStoreContext)
 const {currentUser} = gitHubStore
 
-{{else}}
-const {{ properCase name}} = () => {
-{{/if}}
-  return (
-  <article>
-    {{#if wantHeaders}}
-    <Helmet>
-      <title>{{properCase name}}</title>
-      <meta name="description" content="Description of {{properCase name}}" />
-    </Helmet>
-    {{/if}}
+return (
 
-    
-    <Section>
-      <Header level='2'>
-        {{#if wantMessages}}
-        <FormattedMessage {...messages.header} />
-        {{/if}}
-        {{#if connectToStore}}
-        {`current user: ${currentUser}`}
-        {{/if}}
-      </Header>
-    </Section>
-    
-  </article>
-  )
+{{else}}
+const {{ properCase name}} = () =>
+{{/if}}
+(
+<article>
+  {{#if wantHeaders}}
+  <Helmet>
+    <title>{{properCase name}}</title>
+    <meta name="description"
+      content="Description of {{properCase name}}" />
+  </Helmet>
+  {{/if}}
+
+
+  <Section>
+    <Header level='2'>
+      {{#if wantMessages}}
+      <FormattedMessage {...messages.header} />
+      {{/if}}
+      {{#if connectToStore}}
+      {`current user: ${currentUser}`}
+      {{/if}}
+    </Header>
+  </Section>
+
+</article>
+)
 
 {{#if connectToStore}}
-})
-{{else}}
-}
+)})
 {{/if}}
 
 

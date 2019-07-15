@@ -71,14 +71,14 @@ module.exports = {
       },
       {
         type: 'add',
-        path: '../../app/containers/{{properCase name}}/styles.js',
-        templateFile: './container/styles.js.hbs',
+        path: '../../app/containers/{{properCase name}}/{{properCase name}}.styles.js',
+        templateFile: './container/Container.styles.js.hbs',
         abortOnFail: true,
       },
       {
         type: 'add',
         path: '../../app/containers/{{properCase name}}/tests/{{properCase name}}.test.js',
-        templateFile: './container/test.js.hbs',
+        templateFile: './container/Container.test.js.hbs',
         abortOnFail: true,
       },
     ];
