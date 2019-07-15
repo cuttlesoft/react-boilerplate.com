@@ -68,7 +68,7 @@ export const HomePage = observer(() => {
       </Helmet>
 
       <CenteredSection>
-        <Header level="2">
+        <Header level="2" color="brand">
           <FormattedMessage {...messages.startProjectHeader} />
         </Header>
         <p>
