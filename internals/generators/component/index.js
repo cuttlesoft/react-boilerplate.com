@@ -72,14 +72,14 @@ module.exports = {
       {
         type: 'add',
         path: '../../app/components/{{properCase name}}/{{properCase name}}.test.js',
-        templateFile: './component/test.js.hbs',
+        templateFile: './component/Component.test.js.hbs',
         abortOnFail: true,
       },
       // Generate Component.stories.js
       {
         type: 'add',
         path: '../../app/components/{{properCase name}}/stories/{{properCase name}}.stories.js',
-        templateFile: './component/stories.js.hbs',
+        templateFile: './component/Component.stories.js.hbs',
         abortOnFail: true,
       },
     ];
