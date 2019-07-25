@@ -1,12 +1,19 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { grommet } from 'grommet/themes'
+
 import { Box } from '../../Box'
 import { Container } from '../../Container'
+import { Checkbox } from '..'
+import README from '../README.md'
 
-import Checkbox from '../Checkbox'
-
-storiesOf('Checkbox', module).add('Multi', () => <MultipleCheckboxes />)
+storiesOf('Checkbox', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Multi', () => <MultipleCheckboxes />)
 
 const MultipleCheckboxes = props => {
   const [checkedItems, setCheckedItems] = useState([])

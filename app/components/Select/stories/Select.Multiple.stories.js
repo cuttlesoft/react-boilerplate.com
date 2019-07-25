@@ -1,19 +1,24 @@
 import React, { Component } from 'react'
 import { storiesOf } from '@storybook/react'
-
 import { FormClose } from 'grommet-icons'
-
 import { Text } from 'grommet'
-
 import { grommet } from 'grommet/themes'
 
 import { Box } from '../../Box'
 import { Button } from '../../Button'
 import { Container } from '../../Container'
-import Select from '../Select'
-const allOptions = ['S01', 'S02', 'S03', 'S04', 'S05', 'S06', 'S07', 'S08', 'S09', 'S10']
+import { Select } from '..'
+import README from '../README.md'
 
-storiesOf('Select', module).add('Multi', () => <MultiSelect />)
+const ALL_OPTIONS = ['S01', 'S02', 'S03', 'S04', 'S05', 'S06', 'S07', 'S08', 'S09', 'S10']
+
+storiesOf('Select', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Multi', () => <MultiSelect />)
 
 class MultiSelect extends Component {
   state = { selected: [] }
@@ -21,7 +26,7 @@ class MultiSelect extends Component {
   onRemoveOption = option => {
     const { selected } = this.state
     const nextSelected = [...selected]
-    nextSelected.splice(nextSelected.indexOf(allOptions.indexOf(option)), 1)
+    nextSelected.splice(nextSelected.indexOf(ALL_OPTIONS.indexOf(option)), 1)
     this.setState({ selected: nextSelected })
   }
 
@@ -72,7 +77,7 @@ class MultiSelect extends Component {
             value={
               <Box wrap direction="row" width="small">
                 {selected && selected.length ? (
-                  selected.map(index => this.renderOptions(allOptions[index]))
+                  selected.map(index => this.renderOptions(ALL_OPTIONS[index]))
                 ) : (
                   <Box pad={{ vertical: 'xsmall', horizontal: 'small' }} margin="xsmall">
                     Select Option
@@ -80,7 +85,7 @@ class MultiSelect extends Component {
                 )}
               </Box>
             }
-            options={allOptions}
+            options={ALL_OPTIONS}
             selected={selected}
             disabled={[2, 6]}
             onChange={({ selected: nextSelected }) => {

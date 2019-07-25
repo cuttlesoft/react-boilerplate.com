@@ -2,11 +2,18 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { FormLock, View } from 'grommet-icons'
 
-import { Button } from '../../Button'
 import { Box } from '../../Box'
-import TextInput from '../TextInput'
+import { Button } from '../../Button'
+import { TextInput } from '..'
+import README from '../README.md'
 
-storiesOf('TextInput', module).add('Password', () => <PasswordInput />)
+storiesOf('TextInput', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Password', () => <PasswordInput />)
 
 // eslint-disable-next-line react/prop-types
 const PasswordInput = ({ value, ...rest }) => {

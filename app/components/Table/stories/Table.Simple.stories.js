@@ -2,9 +2,11 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { grommet } from 'grommet/themes'
 import { Text } from 'grommet'
+
 import { Box } from '../../Box'
 import { Container } from '../../Container'
-import { Table, TableBody, TableCell, TableFooter, TableHeader, TableRow } from '../index'
+import { Table, TableBody, TableCell, TableFooter, TableHeader, TableRow } from '..'
+import README from '../README.md'
 
 const columns = [
   {
@@ -48,7 +50,13 @@ const data = [
   },
 ]
 
-storiesOf('Table', module).add('Simple', () => <DefaultTable />)
+storiesOf('Table', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Simple', () => <DefaultTable />)
 const DefaultTable = () => (
   <Container theme={grommet}>
     <Box align="center" pad="large">

@@ -1,9 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { grommet } from 'grommet'
-import { Container } from '../../Container'
+
 import { Box } from '../../Box'
-import Button from '../Button'
+import { Container } from '../../Container'
+import { Button } from '..'
+import README from '../README.md'
 
 const FillButtons = props => (
   <Container theme={grommet}>
@@ -33,4 +35,10 @@ const FillButtons = props => (
   </Container>
 )
 
-storiesOf('Button', module).add('Fill', () => <FillButtons />)
+storiesOf('Button', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Fill', () => <FillButtons />)

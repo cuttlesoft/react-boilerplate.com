@@ -1,9 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { grommet } from 'grommet' /** @todo: replace with custom wrappers */
-import { Container } from '../../Container'
+
 import { Box } from '../../Box'
-import Button from '../Button'
+import { Container } from '../../Container'
+import { Button } from '..'
+import README from '../README.md'
 
 const customTheme = {
   global: {
@@ -56,4 +58,10 @@ const CustomTheme = () => (
   </React.Fragment>
 )
 
-storiesOf('Button', module).add('Custom', () => <CustomTheme />)
+storiesOf('Button', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Custom', () => <CustomTheme />)

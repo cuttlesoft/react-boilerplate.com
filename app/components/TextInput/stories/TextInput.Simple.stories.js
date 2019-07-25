@@ -1,12 +1,19 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
-
 import { grommet } from 'grommet/themes'
+
 import { Box } from '../../Box'
 import { Container } from '../../Container'
-import TextInput from '../TextInput'
+import { TextInput } from '..'
+import README from '../README.md'
 
-storiesOf('TextInput', module).add('Simple', () => <SimpleTextInput />)
+storiesOf('TextInput', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Simple', () => <SimpleTextInput />)
 
 const SimpleTextInput = props => {
   const [inputValue, setInputValue] = useState('')

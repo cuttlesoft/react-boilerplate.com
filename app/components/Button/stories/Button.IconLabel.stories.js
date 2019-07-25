@@ -3,9 +3,10 @@ import { storiesOf } from '@storybook/react'
 import { grommet } from 'grommet/themes'
 import { Add } from 'grommet-icons'
 
-import { Container } from '../../Container'
 import { Box } from '../../Box'
-import Button from '../Button'
+import { Container } from '../../Container'
+import { Button } from '..'
+import README from '../README.md'
 
 const IconLabel = () => (
   <Container theme={grommet}>
@@ -23,4 +24,10 @@ const IconLabel = () => (
   </Container>
 )
 
-storiesOf('Button', module).add('Icon Label', () => <IconLabel />)
+storiesOf('Button', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Icon Label', () => <IconLabel />)

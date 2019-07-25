@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { grommet, Text } from 'grommet' /** @todo: replace with custom wrappers */
 
+import { genericProps } from '../../../utils/propTypes'
 import { Box } from '../../Box'
 import { Container } from '../../Container'
-import Button from '../Button'
-import { genericProps } from '../../../utils/propTypes'
+import { Button } from '..'
+import README from '../README.md'
 
 const SidebarButton = ({ title, ...rest }) => (
   <Button plain {...rest}>
@@ -44,4 +45,10 @@ const SidebarButtons = () => {
   )
 }
 
-storiesOf('Button', module).add('Sidebar', () => <SidebarButtons />)
+storiesOf('Button', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Sidebar', () => <SidebarButtons />)

@@ -3,9 +3,10 @@ import { storiesOf } from '@storybook/react'
 import { grommet } from 'grommet/themes'
 import { Add } from 'grommet-icons'
 
-import { Container } from '../../Container'
 import { Box } from '../../Box'
-import Button from '../Button'
+import { Container } from '../../Container'
+import { Button } from '..'
+import README from '../README.md'
 
 const MultipleButton = () => (
   <Container theme={grommet}>
@@ -36,4 +37,10 @@ const MultipleButton = () => (
   </Container>
 )
 
-storiesOf('Button', module).add('Multiple', () => <MultipleButton />)
+storiesOf('Button', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Multiple', () => <MultipleButton />)

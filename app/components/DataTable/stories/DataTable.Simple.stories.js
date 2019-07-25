@@ -1,13 +1,20 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-
 import { grommet } from 'grommet/themes'
+
 import { Box } from '../../Box'
 import { Container } from '../../Container'
-import DataTable from '../DataTable'
+import { DataTable } from '..'
+import README from '../README.md'
 import { columns, DATA } from './data'
 
-storiesOf('DataTable', module).add('Simple', () => <SimpleDataTable />)
+storiesOf('DataTable', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Simple', () => <SimpleDataTable />)
 
 const SimpleDataTable = () => (
   <Container theme={grommet}>

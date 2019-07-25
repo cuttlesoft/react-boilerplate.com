@@ -1,12 +1,19 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
-
 import { grommet } from 'grommet/themes'
-import { Container } from '../../Container'
-import { Box } from '../../Box'
-import Checkbox from '../Checkbox'
 
-storiesOf('Checkbox', module).add('Simple', () => <SimpleCheckbox />)
+import { Box } from '../../Box'
+import { Container } from '../../Container'
+import { Checkbox } from '..'
+import README from '../README.md'
+
+storiesOf('Checkbox', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Simple', () => <SimpleCheckbox />)
 
 const SimpleCheckbox = props => {
   const [checked, toggleChecked] = useState(false)

@@ -1,10 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-
 import { grommet } from 'grommet/themes'
 import { deepMerge } from 'grommet/utils'
-import Header from '../Header'
+
 import { Container } from '../../Container'
+import { Header } from '..'
+import README from '../README.md'
 
 const customlevel = deepMerge(grommet, {
   heading: {
@@ -28,8 +29,14 @@ const customlevel = deepMerge(grommet, {
   },
 })
 
-storiesOf('Header', module).add('Custom', () => (
-  <Container theme={customlevel}>
-    <Header level={5}> Heading level 5 </Header>
-  </Container>
-))
+storiesOf('Header', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Custom', () => (
+    <Container theme={customlevel}>
+      <Header level={5}> Heading level 5 </Header>
+    </Container>
+  ))

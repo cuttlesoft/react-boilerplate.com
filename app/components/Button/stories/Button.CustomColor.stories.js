@@ -2,10 +2,11 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { grommet } from 'grommet' /** @todo: replace with custom wrappers */
 import { deepMerge } from 'grommet/utils'
+
 import { Box } from '../../Box'
 import { Container } from '../../Container'
-
-import Button from '../Button'
+import { Button } from '..'
+import README from '../README.md'
 
 const customButtonColor = deepMerge(grommet, {
   button: {
@@ -30,4 +31,10 @@ const Colored = props => (
   </Container>
 )
 
-storiesOf('Button', module).add('Colored', () => <Colored />)
+storiesOf('Button', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Colored', () => <Colored />)
