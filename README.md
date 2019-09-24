@@ -5,7 +5,7 @@
 [![Airbnb Style
 Guide](https://badgen.net/badge/code%20style/Airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
 
-## Features
+## ✨ Features
 
 <dl>
   <dt>Quick scaffolding</dt>
@@ -54,6 +54,40 @@ There’s also a <a href="https://vimeo.com/168648012">fantastic video</a> on ho
 
 <sub><i>Keywords: React.js, Redux, Hot Reloading, ESNext, Babel, react-router, Offline First, ServiceWorker, `styled-components`, redux-saga, FontFaceObserver</i></sub>
 
+### Get started
+
+1.  Copy .env.example to .env
+2.  Add your config variables
+3.  Done!
+
+## ⬆️ Quick start
+
+1.  Make sure that you have Node.js v10.16.0 and npm v4 or above installed.
+2.  Clone this repo using `git clone --depth=1 https://github.com/cuttlesoft/react-boilerplate.git <YOUR_PROJECT_NAME>`
+3.  Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.<br />
+4.  Run `npm run setup` in order to install dependencies and clean the git repo.<br />
+    _At this point you can run `npm start` to see the example app at `http://localhost:3000`._
+5.  Run `npm run clean` to delete the example app.
+
+Now you're ready to rumble!
+
+> Please note that this boilerplate is **production-ready and not meant for beginners**! If you're just starting out with react or redux, please refer to https://github.com/petehunt/react-howto instead. If you want a solid, battle-tested base to build your next product upon and have some experience with react, this is the perfect start for you.
+
+## ▶️ Advanced
+
+- [**The Hitchhiker's Guide to `react-boilerplate`**](docs/general/introduction.md): An introduction for newcomers to this boilerplate.
+- [Overview](docs/general): A short overview of the included tools
+- [**Commands**](docs/general/commands.md): Getting the most out of this boilerplate
+- [Testing](docs/testing): How to work with the built-in test harness
+- [Styling](docs/css): How to work with the CSS tooling
+- [Your app](docs/js): Supercharging your app with Routing, Redux, simple
+  asynchronicity helpers, etc.
+- [**Troubleshooting**](docs/general/gotchas.md): Solutions to common problems faced by developers.
+
+## 🚫 Airbnb Style Guide Compliant
+
+This project adheres to the Airbnb Style Guide. Our CI enforces this, so we suggest you enable linting and auto-formatting to keep your project compliant during development.
+
 ## 🔐 Secrets
 
 This project uses [dotenv](https://github.com/motdotla/dotenv) to expose config variables to React through webpack. You can store API keys and other sensitive information in a `.env` file:
@@ -69,33 +103,3 @@ dotenv will make them globally available through webpack.definePlugin
 process.env.API_BASE_URL // 'https://myapi.com'
 process.env.GOOGLE_MAPS_API_KEY // 'abcdefgh'
 ```
-
-### Get started
-
-1.  Copy .env.example to .env
-2.  Add your config variables
-3.  Done!
-
-## Quick start
-
-1.  Make sure that you have Node.js v8.15.1 and npm v5 or above installed.
-2.  Clone this repo using `git clone --depth=1 https://github.com/cuttlesoft/react-boilerplate.git <YOUR_PROJECT_NAME>`
-3.  Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.<br />
-4.  Run `npm run setup` in order to install dependencies and clean the git repo.<br />
-    _At this point you can run `npm start` to see the example app at `http://localhost:3000`._
-5.  Run `npm run clean` to delete the example app.
-
-Now you're ready to rumble!
-
-> Please note that this boilerplate is **production-ready and not meant for beginners**! If you're just starting out with react or redux, please refer to https://github.com/petehunt/react-howto instead. If you want a solid, battle-tested base to build your next product upon and have some experience with react, this is the perfect start for you.
-
-## Documentation
-
-- [**The Hitchhiker's Guide to `react-boilerplate`**](docs/general/introduction.md): An introduction for newcomers to this boilerplate.
-- [Overview](docs/general): A short overview of the included tools
-- [**Commands**](docs/general/commands.md): Getting the most out of this boilerplate
-- [Testing](docs/testing): How to work with the built-in test harness
-- [Styling](docs/css): How to work with the CSS tooling
-- [Your app](docs/js): Supercharging your app with Routing, Redux, simple
-  asynchronicity helpers, etc.
-- [**Troubleshooting**](docs/general/gotchas.md): Solutions to common problems faced by developers.
