@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
+import React from 'react'
+import { Heading } from 'grommet'
+
+import { doc } from './Header.doc'
+import helpers from '../../utils/helpers'
+
 /**
  *
  * Header
  *
  */
-
-import React from 'react'
-import { Heading } from 'grommet'
-import { doc } from './Header.doc'
-import helpers from '../../utils/helpers'
-
 function createHeader({
   color,
   children,

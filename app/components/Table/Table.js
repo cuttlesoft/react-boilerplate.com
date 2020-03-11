@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
+import React from 'react'
+import { Table } from 'grommet'
+
+import { doc } from './Table.doc'
+import helpers from '../../utils/helpers'
+
 /**
  *
  * Table
  *
  */
-
-import React from 'react'
-import { Table } from 'grommet'
-import { doc } from './Table.doc'
-import helpers from '../../utils/helpers'
-
 function createTable({ a11lyTitle, alignSelf, caption, children, margin, ...rest }) {
   return (
     <Table

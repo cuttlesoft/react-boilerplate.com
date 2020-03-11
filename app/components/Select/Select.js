@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
+import React from 'react'
+import { Select } from 'grommet'
+
+import { doc } from './Select.doc'
+import helpers from '../../utils/helpers'
+
 /**
  *
  * Select
  *
  */
-
-import React from 'react'
-import { Select } from 'grommet'
-import { doc } from './Select.doc'
-import helpers from '../../utils/helpers'
-
 function createSelect({
   a11yTitle,
   alignSelf,

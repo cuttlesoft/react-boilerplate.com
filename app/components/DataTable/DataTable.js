@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
+import React from 'react'
+import { DataTable } from 'grommet'
+
+import { doc } from './DataTable.doc'
+import helpers from '../../utils/helpers'
+
 /**
  *
  * DataTable
  *
  */
-
-import React from 'react'
-import { DataTable } from 'grommet'
-import { doc } from './DataTable.doc'
-import helpers from '../../utils/helpers'
-
 function createDataTable({
   a11yTitle,
   alignSelf,

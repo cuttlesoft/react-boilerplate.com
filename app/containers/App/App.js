@@ -6,9 +6,12 @@ import { Switch, Route } from 'react-router-dom'
 import HomePage from 'containers/HomePage/HomePage.loadable'
 import FeaturePage from 'containers/FeaturePage/FeaturePage.loadable'
 import NotFoundPage from 'containers/NotFoundPage/NotFoundPage.loadable'
+
+// Components
 import { TemplateHeader } from 'components/TemplateHeader'
 import { Footer } from 'components/Footer'
 
+// Styles
 import GlobalStyle from '../../global-styles'
 
 const AppWrapper = styled.div`

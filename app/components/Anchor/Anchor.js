@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
+import React from 'react'
+import { Anchor } from 'grommet'
+
+import { doc } from './Anchor.doc'
+import helpers from '../../utils/helpers'
+
 /**
  *
  * Anchor
  *
  */
-
-import React from 'react'
-import { Anchor } from 'grommet'
-import { doc } from './Anchor.doc'
-import helpers from '../../utils/helpers'
-
 function createAnchor({
   a11yTitle,
   children,

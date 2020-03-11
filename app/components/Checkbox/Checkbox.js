@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
+import React from 'react'
+import { CheckBox } from 'grommet'
+
+import { doc } from './Checkbox.doc'
+import helpers from '../../utils/helpers'
+
 /**
  *
  * Chexbox
  *
  */
-
-import React from 'react'
-import { CheckBox } from 'grommet'
-import { doc } from './Checkbox.doc'
-import helpers from '../../utils/helpers'
-
 function createCheckbox({ checked, disabled, id, label, name, onChange, reverse, toggle }) {
   return (
     <CheckBox

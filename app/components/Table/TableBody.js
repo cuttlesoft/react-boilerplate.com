@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
+import React from 'react'
+import { TableBody } from 'grommet'
+
+import { doc } from './TableBody.doc'
+import helpers from '../../utils/helpers'
+
 /**
  *
  * TableBody
  *
  */
-
-import React from 'react'
-import { TableBody } from 'grommet'
-import { doc } from './TableBody.doc'
-import helpers from '../../utils/helpers'
-
 function createTableBody({ children, ...props }) {
   return <TableBody {...props}>{children}</TableBody>
 }

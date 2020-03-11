@@ -2,9 +2,13 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { FormattedMessage } from 'react-intl'
 
+// Components
 import { Header } from 'components/Header'
 
+// Messages
 import messages from './FeaturePage.messages'
+
+// Styles
 import { List, ListItem, ListItemTitle } from './styles'
 
 /*

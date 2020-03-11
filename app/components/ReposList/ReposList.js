@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+// Components
 import { List } from 'components/List'
 import { ListItem } from 'components/ListItem'
 import { LoadingIndicator } from 'components/LoadingIndicator'
+
+// Containers
 import { RepoListItem } from 'containers/RepoListItem'
 
 function ReposList({ loading, error, repos }) {

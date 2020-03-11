@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
+import React from 'react'
+import { Image } from 'grommet'
+
+import { doc } from './Image.doc'
+import helpers from '../../utils/helpers'
+
 /**
  *
  * Image
  *
  */
-
-import React from 'react'
-import { Image } from 'grommet'
-import { doc } from './Image.doc'
-import helpers from '../../utils/helpers'
-
 function createImage({ a11yTitle, alignSelf, fallback, fit, gridArea, margin, opacity, src }) {
   return (
     <Image

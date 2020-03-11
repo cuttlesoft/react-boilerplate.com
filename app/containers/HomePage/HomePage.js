@@ -8,11 +8,11 @@ import { observer } from 'mobx-react'
 import { Header } from 'components/Header'
 import { ReposList } from 'components/ReposList'
 
-// Styles
-import { AtPrefix, CenteredSection, Form, Input, Section } from './styles'
-
 // Messages
 import messages from './HomePage.messages'
+
+// Styles
+import { AtPrefix, CenteredSection, Form, Input, Section } from './styles'
 
 // Context / Stores
 import { GitHubStoreContext } from '../../stores/GithubStore'

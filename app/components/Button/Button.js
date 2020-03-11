@@ -1,16 +1,16 @@
 /* eslint-disable react/prop-types */
+import React from 'react'
+import { Button } from 'grommet'
+
+import { doc } from './Button.doc'
+import helpers from '../../utils/helpers'
+
 /**
  *
  * Button.js
  *
  * A common button
  */
-
-import React from 'react'
-import { Button } from 'grommet'
-import { doc } from './Button.doc'
-import helpers from '../../utils/helpers'
-
 function createButton({
   a11yTitle,
   active,

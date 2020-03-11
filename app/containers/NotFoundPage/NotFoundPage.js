@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 // Components
 import { Header } from 'components/Header'
 
-// Utils, Services & Messages
+// Messages
 import messages from './NotFoundPage.messages'
 
 /**

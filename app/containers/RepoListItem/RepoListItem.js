@@ -3,9 +3,13 @@ import PropTypes from 'prop-types'
 import { FormattedNumber } from 'react-intl'
 import { observer } from 'mobx-react'
 
+// Components
 import { ListItem } from 'components/ListItem'
 
+// Styles
 import { Wrapper, IssueIcon, IssueLink, RepoLink } from './styles'
+
+// Store
 import { GitHubStoreContext } from '../../stores/GithubStore'
 
 /**

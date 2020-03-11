@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
+import React from 'react'
+import { Box } from 'grommet'
+
+import { doc } from './Box.doc'
+import helpers from '../../utils/helpers'
+
 /**
  *
  * Box
  *
  */
-
-import React from 'react'
-import { Box } from 'grommet'
-import { doc } from './Box.doc'
-import helpers from '../../utils/helpers'
-
 function createBox({
   a11yTitle,
   align,

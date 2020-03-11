@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
+import React from 'react'
+import { TextInput } from 'grommet'
+
+import { doc } from './TextInput.doc'
+import helpers from '../../utils/helpers'
+
 /**
  *
  * TextInput
  *
  */
-
-import React from 'react'
-import { TextInput } from 'grommet'
-import { doc } from './TextInput.doc'
-import helpers from '../../utils/helpers'
-
 function createTextInput({
   dropAlign,
   dropHeight,

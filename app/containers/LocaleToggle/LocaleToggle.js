@@ -3,12 +3,12 @@ import React, { useContext } from 'react'
 // Components
 import { Toggle } from 'components/Toggle'
 
-// Styles
-import { Wrapper } from './styles'
-
 // Utils, Services & Messages
 import messages from './LocaleToggle.messages'
 import { appLocales } from '../../i18n'
+
+// Styles
+import { Wrapper } from './styles'
 
 // Store
 import { LocaleStoreContext } from '../../stores/LocaleStore'

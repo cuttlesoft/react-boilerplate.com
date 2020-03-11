@@ -3,9 +3,10 @@ import { FormattedMessage } from 'react-intl'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { Anchor } from '../Anchor'
-import { Image } from '../Image'
-import { Box } from '../Box'
+// Components
+import { Anchor } from 'components/Anchor'
+import { Image } from 'components/Image'
+import { Box } from 'components/Box'
 
 import Banner from '../../images/icon-512x512.png'
 import messages from './messages'

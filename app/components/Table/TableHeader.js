@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
+import React from 'react'
+import { TableHeader } from 'grommet'
+
+import { doc } from './TableFooter.doc'
+import helpers from '../../utils/helpers'
+
 /**
  *
  * TableHeader
  *
  */
-
-import React from 'react'
-import { TableHeader } from 'grommet'
-import { doc } from './TableFooter.doc'
-import helpers from '../../utils/helpers'
-
 function createTableHeader({ children, ...props }) {
   return <TableHeader {...props}>{children}</TableHeader>
 }
