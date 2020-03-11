@@ -95,7 +95,10 @@ const renderComponent = (props = {}) =>
     </Table>,
   )
 
-test('it renders and matches snapshot', () => {
-  const { container } = renderComponent()
-  expect(container).toMatchSnapshot()
+describe('Table', () => {
+  it('renders and matches snapshot', () => {
+    const { container } = renderComponent()
+
+    expect(container).toMatchSnapshot()
+  })
 })

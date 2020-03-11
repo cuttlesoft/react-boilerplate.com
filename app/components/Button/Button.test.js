@@ -19,40 +19,49 @@ const renderComponent = (props = {}) =>
 
 afterEach(cleanup)
 
-test('it renders a <a> tag if no route is provided', () => {
-  const { container } = renderComponent({ href })
-  expect(container.querySelector('a')).not.toBeNull()
-})
+describe('Button', () => {
+  it('renders a <a> tag if no route is provided', () => {
+    const { container } = renderComponent({ href })
 
-test('it renders a <button> tag to change route if the handleRoute prop is specified', () => {
-  const { container } = renderComponent({ handleRoute })
-  expect(container.querySelector('button')).toBeDefined()
-})
+    expect(container.querySelector('a')).not.toBeNull()
+  })
 
-test('it fires of a click event', () => {
-  const onClickSpy = jest.fn()
-  const { container } = renderComponent({ onClick: onClickSpy })
-  fireEvent.click(container.querySelector('a'))
-  expect(onClickSpy).toHaveBeenCalled()
-})
+  it('renders a <button> tag to change route if the handleRoute prop is specified', () => {
+    const { container } = renderComponent({ handleRoute })
 
-test('it has children', () => {
-  const { container } = renderComponent()
-  expect(container.querySelector('a').children).toHaveLength(1)
-})
+    expect(container.querySelector('button')).toBeDefined()
+  })
 
-test('it should have a class attribute', () => {
-  const { container } = renderComponent()
-  expect(container.querySelector('a').hasAttribute('class')).toBe(true)
-})
+  it('fires of a click event', () => {
+    const onClickSpy = jest.fn()
+    const { container } = renderComponent({ onClick: onClickSpy })
+    fireEvent.click(container.querySelector('a'))
 
-test('it should not adopt a type attribute when rendering a button', () => {
-  const type = 'submit'
-  const { container } = renderComponent({ handleRoute, type })
-  expect(container.querySelector(`button[type="${type}"]`)).toBeNull()
-})
+    expect(onClickSpy).toHaveBeenCalled()
+  })
 
-test('it renders and matches snapshot', () => {
-  const { container } = renderComponent()
-  expect(container).toMatchSnapshot()
+  it('has children', () => {
+    const { container } = renderComponent()
+
+    expect(container.querySelector('a').children).toHaveLength(1)
+  })
+
+  it('should have a class attribute', () => {
+    const { container } = renderComponent()
+
+    expect(container.querySelector('a').hasAttribute('class')).toBe(true)
+  })
+
+  it('should not adopt a type attribute when rendering a button', () => {
+    const type = 'submit'
+    const { container } = renderComponent({ handleRoute, type })
+
+    expect(container.querySelector(`button[type="${type}"]`)).toBeNull()
+  })
+
+  it('renders and matches snapshot', () => {
+    const { container } = renderComponent()
+
+    expect(container).toMatchSnapshot()
+  })
 })

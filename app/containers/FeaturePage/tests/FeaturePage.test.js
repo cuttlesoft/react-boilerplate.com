@@ -4,7 +4,7 @@ import { IntlProvider } from 'react-intl'
 
 import FeaturePage from '../FeaturePage'
 
-describe('<FeaturePage />', () => {
+describe('FeaturePage', () => {
   it('should render its heading', () => {
     const {
       container: { firstChild },

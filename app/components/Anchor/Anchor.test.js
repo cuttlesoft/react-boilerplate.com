@@ -34,14 +34,18 @@ const renderComponent = props =>
     </Anchor>,
   )
 
-test('it should handle click events', () => {
-  const onClickSpy = jest.fn()
-  const { container } = renderComponent({ onClick: onClickSpy })
-  fireEvent.click(container.querySelector('a'))
-  expect(onClickSpy).toHaveBeenCalled()
-})
+describe('Anchor', () => {
+  it('should handle click events', () => {
+    const onClickSpy = jest.fn()
+    const { container } = renderComponent({ onClick: onClickSpy })
+    fireEvent.click(container.querySelector('a'))
 
-test('it renders and matches snapshot', () => {
-  const { container } = renderComponent(additionalProps)
-  expect(container).toMatchSnapshot()
+    expect(onClickSpy).toHaveBeenCalled()
+  })
+
+  it('renders and matches snapshot', () => {
+    const { container } = renderComponent(additionalProps)
+
+    expect(container).toMatchSnapshot()
+  })
 })

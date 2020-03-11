@@ -7,7 +7,7 @@ import { RouterStore } from 'mobx-react-router'
 import Footer from './Footer'
 import trunk from '../../configureStore'
 
-describe('<Footer />', () => {
+describe('Footer', () => {
   let stores
 
   beforeAll(() => {

@@ -22,14 +22,20 @@ const setup = () => {
   }
 }
 
-test('it renders and matches snapshot', () => {
-  const { container } = renderComponent()
-  expect(container).toMatchSnapshot()
-})
+describe('TextInput', () => {
+  it('renders and matches snapshot', () => {
+    const { container } = renderComponent()
 
-test('It should update value on input', () => {
-  const { input } = setup()
-  expect(input.value).toBe('') // empty before
-  fireEvent.change(input, { target: { value: 'Good Day' } })
-  expect(input.value).toBe('Good Day')
+    expect(container).toMatchSnapshot()
+  })
+
+  it('should update value on input', () => {
+    const { input } = setup()
+
+    expect(input.value).toBe('') // empty before
+
+    fireEvent.change(input, { target: { value: 'Good Day' } })
+
+    expect(input.value).toBe('Good Day')
+  })
 })

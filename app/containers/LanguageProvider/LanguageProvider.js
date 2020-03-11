@@ -1,3 +1,11 @@
+import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
+import { IntlProvider } from 'react-intl'
+import { observer } from 'mobx-react'
+
+// Stores
+import { LocaleStoreContext } from '../../stores/LocaleStore'
+
 /*
  *
  * LanguageProvider
@@ -5,13 +13,6 @@
  * this component connects the MobX state context language locale to the
  * IntlProvider component and i18n messages (loaded from `app/translations`)
  */
-
-import React, { useContext } from 'react'
-import PropTypes from 'prop-types'
-import { IntlProvider } from 'react-intl'
-import { observer } from 'mobx-react'
-import { LocaleStoreContext } from '../../stores/LocaleStore'
-
 export const LanguageProvider = observer(props => {
   const localeStore = useContext(LocaleStoreContext)
 

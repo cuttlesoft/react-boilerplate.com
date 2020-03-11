@@ -21,7 +21,10 @@ const renderComponent = (props = {}) =>
     </BrowserRouter>,
   )
 
-test('it renders and matches snapshot', () => {
-  const { container } = renderComponent()
-  expect(container).toMatchSnapshot()
+describe('TemplateHeader', () => {
+  it('renders and matches snapshot', () => {
+    const { container } = renderComponent()
+
+    expect(container).toMatchSnapshot()
+  })
 })

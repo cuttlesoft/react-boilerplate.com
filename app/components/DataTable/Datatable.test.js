@@ -14,7 +14,10 @@ import DataTable from './DataTable'
 
 const renderComponent = (props = {}) => render(<DataTable {...props} />)
 
-test('it renders and matches snapshot', () => {
-  const { container } = renderComponent()
-  expect(container).toMatchSnapshot()
+describe('DataTable', () => {
+  it('renders and matches snapshot', () => {
+    const { container } = renderComponent()
+
+    expect(container).toMatchSnapshot()
+  })
 })

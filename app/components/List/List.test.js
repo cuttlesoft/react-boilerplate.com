@@ -3,10 +3,11 @@ import { render } from '@testing-library/react'
 
 import List from './List'
 
-describe('<List />', () => {
+describe('List', () => {
   it('should render the passed component if no items are passed', () => {
     const component = () => <li>test</li> // eslint-disable-line react/prop-types
     const { container } = render(<List component={component} />)
+
     expect(container.querySelector('li')).not.toBeNull()
   })
 
@@ -17,6 +18,7 @@ describe('<List />', () => {
 
     const { container, getByText } = render(<List items={items} component={component} />)
     const elements = container.querySelectorAll('li')
+
     expect(elements).toHaveLength(2)
     expect(getByText(items[0].name)).not.toBeNull()
     expect(getByText(items[1].name)).not.toBeNull()

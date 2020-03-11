@@ -1,18 +1,18 @@
-/**
- * RepoListItem
- *
- * Lists the name and the issue count of a repository
- */
-
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { FormattedNumber } from 'react-intl'
 import { observer } from 'mobx-react'
 
 import { ListItem } from 'components/ListItem'
+
 import { Wrapper, IssueIcon, IssueLink, RepoLink } from './styles'
 import { GitHubStoreContext } from '../../stores/GithubStore'
 
+/**
+ * RepoListItem
+ *
+ * Lists the name and the issue count of a repository
+ */
 export const RepoListItem = observer(props => {
   const gitHubStore = useContext(GitHubStoreContext)
 

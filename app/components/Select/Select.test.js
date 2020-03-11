@@ -25,14 +25,20 @@ const setup = () => {
   }
 }
 
-test('it renders and matches snapshot', () => {
-  const { container } = renderComponent()
-  expect(container).toMatchSnapshot()
-})
+describe('Select', () => {
+  it('renders and matches snapshot', () => {
+    const { container } = renderComponent()
 
-test('It should update value on select', () => {
-  const { select } = setup()
-  expect(select.value).toBe('') // empty before
-  fireEvent.select(select, { target: { value: 'one' } })
-  expect(select.value).toBe('one')
+    expect(container).toMatchSnapshot()
+  })
+
+  it('should update value on select', () => {
+    const { select } = setup()
+
+    expect(select.value).toBe('') // empty before
+
+    fireEvent.select(select, { target: { value: 'one' } })
+
+    expect(select.value).toBe('one')
+  })
 })

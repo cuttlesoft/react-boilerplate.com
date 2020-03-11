@@ -1,15 +1,19 @@
 import React from 'react'
+import { render } from '@testing-library/react'
 import { Provider } from 'mobx-react'
 import { RouterStore } from 'mobx-react-router'
-import { render } from '@testing-library/react'
 
+// Components
 import LocaleToggle from '../LocaleToggle'
 import { LanguageProvider } from '../../LanguageProvider'
 
-import trunk from '../../../configureStore'
+// Utils, Services & Messages
 import { translationMessages } from '../../../i18n'
 
-describe('<LocaleToggle />', () => {
+// Stores
+import trunk from '../../../configureStore'
+
+describe('LocaleToggle', () => {
   let stores
 
   beforeAll(() => {
@@ -30,6 +34,7 @@ describe('<LocaleToggle />', () => {
         </LanguageProvider>
       </Provider>,
     )
+
     expect(container.firstChild).toMatchSnapshot()
   })
 
@@ -41,6 +46,7 @@ describe('<LocaleToggle />', () => {
         </LanguageProvider>
       </Provider>,
     )
+
     expect(container.querySelector('option[value="en"]')).not.toBeNull()
   })
 })

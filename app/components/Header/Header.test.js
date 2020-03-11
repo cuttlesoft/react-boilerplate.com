@@ -14,7 +14,10 @@ import Header from './Header'
 
 const renderComponent = (props = {}) => render(<Header {...props}>TESTING</Header>)
 
-test('it renders and matches snapshot', () => {
-  const { container } = renderComponent()
-  expect(container).toMatchSnapshot()
+describe('Header', () => {
+  it('renders and matches snapshot', () => {
+    const { container } = renderComponent()
+
+    expect(container).toMatchSnapshot()
+  })
 })

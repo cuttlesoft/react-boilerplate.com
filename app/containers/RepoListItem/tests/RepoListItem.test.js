@@ -1,7 +1,3 @@
-/**
- * Test the repo list item
- */
-
 import React from 'react'
 import { getByText, render } from '@testing-library/react'
 import { IntlProvider } from 'react-intl'
@@ -15,7 +11,7 @@ const renderComponent = (props = {}) =>
     </IntlProvider>,
   )
 
-describe('<RepoListItem />', () => {
+describe('RepoListItem', () => {
   let item
 
   // Before each test reset the item data for safety
@@ -33,6 +29,7 @@ describe('<RepoListItem />', () => {
 
   it('should render a ListItem', () => {
     const { container } = renderComponent({ item })
+
     expect(container.firstChild).toMatchSnapshot()
   })
 
@@ -41,6 +38,7 @@ describe('<RepoListItem />', () => {
       item,
       currentUser: item.owner.login,
     })
+
     expect(queryByText(item.owner.login)).toBeNull()
   })
 
@@ -49,21 +47,25 @@ describe('<RepoListItem />', () => {
       item,
       currentUser: 'nikgraf',
     })
+
     expect(getByText(container, content => content.startsWith(item.owner.login))).not.toBeNull()
   })
 
   it('should render the repo name', () => {
     const { container } = renderComponent({ item })
+
     expect(getByText(container, content => content.endsWith(item.name))).not.toBeNull()
   })
 
   it('should render the issue count', () => {
     const { container } = renderComponent({ item })
+
     expect(getByText(container, item.open_issues_count.toString(10))).not.toBeNull()
   })
 
   it('should render the IssueIcon', () => {
     const { container } = renderComponent({ item })
+
     expect(container.querySelector('svg')).not.toBeNull()
   })
 })

@@ -4,7 +4,7 @@ import { IntlProvider, defineMessages } from 'react-intl'
 
 import ToggleOption from './ToggleOption'
 
-describe('<ToggleOption />', () => {
+describe('ToggleOption', () => {
   it('should render default language messages', () => {
     const defaultEnMessage = 'someContent'
     const message = defineMessages({
@@ -18,6 +18,7 @@ describe('<ToggleOption />', () => {
         <ToggleOption value="en" message={message.enMessage} />
       </IntlProvider>,
     )
+
     expect(container.firstChild).toMatchSnapshot()
   })
 
@@ -27,6 +28,7 @@ describe('<ToggleOption />', () => {
         <ToggleOption value="de" />
       </IntlProvider>,
     )
+
     expect(queryByText('de')).toBeDefined()
   })
 })

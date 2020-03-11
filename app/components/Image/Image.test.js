@@ -14,7 +14,10 @@ import Image from './Image'
 
 const renderComponent = (props = {}) => render(<Image {...props} />)
 
-test('it renders and matches snapshot', () => {
-  const { container } = renderComponent()
-  expect(container).toMatchSnapshot()
+describe('Image', () => {
+  it('renders and matches snapshot', () => {
+    const { container } = renderComponent()
+
+    expect(container).toMatchSnapshot()
+  })
 })

@@ -4,9 +4,10 @@ import 'jest-styled-components'
 
 import LoadingIndicator from './LoadingIndicator'
 
-describe('<LoadingIndicator />', () => {
+describe('LoadingIndicator', () => {
   it('should match the snapshot', () => {
     const renderedComponent = renderer.create(<LoadingIndicator />).toJSON()
+
     expect(renderedComponent).toMatchSnapshot()
   })
 })

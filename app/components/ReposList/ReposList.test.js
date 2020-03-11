@@ -7,9 +7,10 @@ import { render } from '@testing-library/react'
 import ReposList from './ReposList'
 import trunk from '../../configureStore'
 
-describe('<ReposList />', () => {
+describe('ReposList', () => {
   it('should render the loading indicator when its loading', () => {
     const { container } = render(<ReposList loading />)
+
     expect(container.firstChild).toMatchSnapshot()
   })
 
@@ -19,6 +20,7 @@ describe('<ReposList />', () => {
         <ReposList loading={false} error={{ message: 'Loading failed!' }} />
       </IntlProvider>,
     )
+
     expect(queryByText(/Something went wrong/)).not.toBeNull()
   })
 

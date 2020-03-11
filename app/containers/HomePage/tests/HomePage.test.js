@@ -30,7 +30,7 @@ import { getReposSuccess } from '../../../services/mocks/github.service.mock'
 import trunk from '../../../configureStore'
 import { GitHubStore, GitHubStoreContext } from '../../../stores/GithubStore'
 
-describe('<HomePage />', () => {
+describe('HomePage', () => {
   // Allow stores to be accessed in tests
   let stores = null
   let gitHubStore = null
@@ -60,6 +60,7 @@ describe('<HomePage />', () => {
         </IntlProvider>
       </Provider>,
     )
+
     expect(firstChild).toMatchSnapshot()
   })
 

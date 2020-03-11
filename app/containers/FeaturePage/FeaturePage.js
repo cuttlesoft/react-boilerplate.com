@@ -1,16 +1,17 @@
-/*
- * FeaturePage
- *
- * List all the features
- */
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { FormattedMessage } from 'react-intl'
 
 import { Header } from 'components/Header'
+
 import messages from './FeaturePage.messages'
 import { List, ListItem, ListItemTitle } from './styles'
 
+/*
+ * FeaturePage
+ *
+ * List all the features
+ */
 export default function FeaturePage() {
   return (
     <div>
