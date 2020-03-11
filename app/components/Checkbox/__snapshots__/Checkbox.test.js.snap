@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`it renders and matches snapshot 1`] = `
+exports[`Checkbox renders and matches snapshot 1`] = `
 <div>
   <label
     class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 bVmNDQ"

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`it renders and matches snapshot 1`] = `
+exports[`DataTable renders and matches snapshot 1`] = `
 <div>
   <table
     class="StyledDataTable-xrlyjm-0 tpKnu StyledTable-sc-1m3u5g-6 fGUmP"

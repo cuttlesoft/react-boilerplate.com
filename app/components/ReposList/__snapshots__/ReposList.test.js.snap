@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ReposList /> should render the loading indicator when its loading 1`] = `
+exports[`ReposList should render the loading indicator when its loading 1`] = `
 <div
   class="Wrapper-sc-1umgotm-0 laCwDT"
   data-testid="repo-list-loading"
@@ -52,7 +52,7 @@ exports[`<ReposList /> should render the loading indicator when its loading 1`] 
 </div>
 `;
 
-exports[`<ReposList /> should render the repositories if loading was successful 1`] = `
+exports[`ReposList should render the repositories if loading was successful 1`] = `
 <div
   class="Wrapper-sc-1umgotm-0 laCwDT"
   data-testid="repo-list"
