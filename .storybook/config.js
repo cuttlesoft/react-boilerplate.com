@@ -1,9 +1,17 @@
-import { addDecorator, configure } from '@storybook/react'
+import { addDecorator, addParameters, configure } from '@storybook/react'
 import { addReadme } from 'storybook-readme'
+
+addParameters({
+  // `addDecorator(addReadme)` fails if options is not defined
+  options: {},
+  readme: {
+    codeTheme: 'github',
+  },
+})
 
 addDecorator(addReadme)
 
-// automatically import all files ending in *.stories.js
+// Automatically import all files ending in *.stories.js
 const req = require.context('../app/components', true, /\.stories\.js$/)
 function loadStories() {
   req.keys().forEach(filename => req(filename))
