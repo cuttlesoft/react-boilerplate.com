@@ -3,7 +3,7 @@
 exports[`HomePage should render and match the snapshot 1`] = `
 <article>
   <section
-    class="styles__Section-w51kdb-3 styles__CenteredSection-w51kdb-4 hZTVSk"
+    class="HomePagestyles__Section-okrkb4-3 HomePagestyles__CenteredSection-okrkb4-4 cKPsNb"
   >
     <h2
       class="StyledHeading-sc-1rdh4aw-0 eSPceH"
@@ -19,7 +19,7 @@ exports[`HomePage should render and match the snapshot 1`] = `
     </p>
   </section>
   <section
-    class="styles__Section-w51kdb-3 ktSOjr"
+    class="HomePagestyles__Section-okrkb4-3 dQnIBs"
   >
     <h2
       class="StyledHeading-sc-1rdh4aw-0 yhirM"
@@ -29,7 +29,7 @@ exports[`HomePage should render and match the snapshot 1`] = `
       </span>
     </h2>
     <form
-      class="styles__Form-w51kdb-1 hMNxRg"
+      class="HomePagestyles__Form-okrkb4-1 hhStis"
       data-testid="search-form"
     >
       <label
@@ -39,14 +39,14 @@ exports[`HomePage should render and match the snapshot 1`] = `
           Show Github repositories by
         </span>
         <span
-          class="styles__AtPrefix-w51kdb-0 cRLVte"
+          class="HomePagestyles__AtPrefix-okrkb4-0 iQeUoL"
         >
           <span>
             @
           </span>
         </span>
         <input
-          class="styles__Input-w51kdb-2 hEplru"
+          class="HomePagestyles__Input-okrkb4-2 bwtIXM"
           id="searchTerm"
           placeholder="mxstbr"
           type="text"

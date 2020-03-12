@@ -11,13 +11,13 @@ exports[`should lazy load and match the snapshot 1`] = `
       </span>
     </h1>
     <ul
-      class="styles__List-q6xto8-0 jzlwhT"
+      class="FeaturePagestyles__List-sc-1hgx1yj-0 ffNoYX"
     >
       <li
-        class="styles__ListItem-q6xto8-1 cPdsgX"
+        class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
       >
         <p
-          class="styles__ListItemTitle-q6xto8-2 gAgLlF"
+          class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
         >
           <span>
             Quick scaffolding
@@ -31,10 +31,10 @@ exports[`should lazy load and match the snapshot 1`] = `
         </p>
       </li>
       <li
-        class="styles__ListItem-q6xto8-1 cPdsgX"
+        class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
       >
         <p
-          class="styles__ListItemTitle-q6xto8-2 gAgLlF"
+          class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
         >
           <span>
             Instant feedback
@@ -52,10 +52,10 @@ exports[`should lazy load and match the snapshot 1`] = `
         </p>
       </li>
       <li
-        class="styles__ListItem-q6xto8-1 cPdsgX"
+        class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
       >
         <p
-          class="styles__ListItemTitle-q6xto8-2 gAgLlF"
+          class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
         >
           <span>
             Industry-standard routing
@@ -73,10 +73,10 @@ exports[`should lazy load and match the snapshot 1`] = `
         </p>
       </li>
       <li
-        class="styles__ListItem-q6xto8-1 cPdsgX"
+        class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
       >
         <p
-          class="styles__ListItemTitle-q6xto8-2 gAgLlF"
+          class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
         >
           <span>
             Offline-first
@@ -92,10 +92,10 @@ exports[`should lazy load and match the snapshot 1`] = `
         </p>
       </li>
       <li
-        class="styles__ListItem-q6xto8-1 cPdsgX"
+        class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
       >
         <p
-          class="styles__ListItemTitle-q6xto8-2 gAgLlF"
+          class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
         >
           <span>
             Complete i18n Standard Internationalization & Pluralization

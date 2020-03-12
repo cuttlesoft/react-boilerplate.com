@@ -11,7 +11,7 @@ exports[`Footer should render and match the snapshot 1`] = `
   </section>
   <section>
     <div
-      className="styles__Wrapper-gw8d9h-0 hMaTPt"
+      className="LocaleTogglestyles__Wrapper-sc-1ugarqm-0 IkChD"
     >
       <select
         className="Select-sc-1sm01tk-0 wIjFa"
