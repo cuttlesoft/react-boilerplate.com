@@ -3,27 +3,27 @@
 exports[`Checkbox renders and matches snapshot 1`] = `
 <div>
   <label
-    class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 bVmNDQ"
+    class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 PHOTu"
     for="checkbox-1"
   >
     <span>
       New Label
     </span>
     <div
-      class="StyledCheckBox-sc-1dbk5ju-6 jXdLin StyledBox-sc-13pk1d4-0 hDcpDz"
+      class="StyledBox-sc-13pk1d4-0 hXzPDn StyledCheckBox-sc-1dbk5ju-6 CBoMo"
     >
       <input
         checked=""
-        class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dmEAHg"
+        class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 ljjPfS"
         id="checkbox-1"
         name="Some name"
         type="checkbox"
       />
       <span
-        class="StyledCheckBox__StyledCheckBoxToggle-sc-1dbk5ju-4 dxNLkr"
+        class="StyledCheckBox__StyledCheckBoxToggle-sc-1dbk5ju-4 hqYniG"
       >
         <span
-          class="StyledCheckBox__StyledCheckBoxKnob-sc-1dbk5ju-5 cUXtfC"
+          class="StyledCheckBox__StyledCheckBoxKnob-sc-1dbk5ju-5 bVGQgu"
         />
       </span>
     </div>

@@ -3,20 +3,20 @@
 exports[`FeaturePage should render its heading 1`] = `
 <div>
   <h1
-    class="StyledHeading-sc-1rdh4aw-0 rfVJR"
+    class="StyledHeading-sc-1rdh4aw-0 kZPGVt"
   >
     <span>
       Features
     </span>
   </h1>
   <ul
-    class="FeaturePagestyles__List-sc-1hgx1yj-0 ffNoYX"
+    class="FeaturePagestyles__List-sc-1hgx1yj-0 ipghKt"
   >
     <li
-      class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
+      class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 eitokx"
     >
       <p
-        class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
+        class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 fRZFZK"
       >
         <span>
           Quick scaffolding
@@ -30,10 +30,10 @@ exports[`FeaturePage should render its heading 1`] = `
       </p>
     </li>
     <li
-      class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
+      class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 eitokx"
     >
       <p
-        class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
+        class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 fRZFZK"
       >
         <span>
           Instant feedback
@@ -51,10 +51,10 @@ exports[`FeaturePage should render its heading 1`] = `
       </p>
     </li>
     <li
-      class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
+      class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 eitokx"
     >
       <p
-        class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
+        class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 fRZFZK"
       >
         <span>
           Industry-standard routing
@@ -72,10 +72,10 @@ exports[`FeaturePage should render its heading 1`] = `
       </p>
     </li>
     <li
-      class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
+      class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 eitokx"
     >
       <p
-        class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
+        class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 fRZFZK"
       >
         <span>
           Offline-first
@@ -91,10 +91,10 @@ exports[`FeaturePage should render its heading 1`] = `
       </p>
     </li>
     <li
-      class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
+      class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 eitokx"
     >
       <p
-        class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
+        class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 fRZFZK"
       >
         <span>
           Complete i18n Standard Internationalization & Pluralization

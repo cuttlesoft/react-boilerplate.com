@@ -3,17 +3,17 @@
 exports[`DataTable renders and matches snapshot 1`] = `
 <div>
   <table
-    class="StyledDataTable-xrlyjm-0 tpKnu StyledTable-sc-1m3u5g-6 fGUmP"
+    class="StyledTable-sc-1m3u5g-6 bJymoW StyledDataTable-xrlyjm-0 hJcOxq"
   >
     <thead
-      class="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
+      class="StyledTable__StyledTableHeader-sc-1m3u5g-4 kdPLsZ StyledDataTable__StyledDataTableHeader-xrlyjm-3 hOGMbn"
     >
       <tr
-        class="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg StyledDataTable__StyledDataTableRow-xrlyjm-1 jKzMJr"
       />
     </thead>
     <tbody
-      class="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY StyledTable__StyledTableBody-sc-1m3u5g-3 dwInxx"
+      class="StyledTable__StyledTableBody-sc-1m3u5g-3 bMdIOJ StyledDataTable__StyledDataTableBody-xrlyjm-2 bkHhvy"
     />
   </table>
 </div>

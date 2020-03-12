@@ -4,21 +4,21 @@ exports[`Select renders and matches snapshot 1`] = `
 <div>
   <button
     aria-label="Open Drop"
-    class="Select__StyledSelectDropButton-sc-17idtfo-1 dloaWS StyledButton-sc-323bzc-0 jfbKsv"
+    class="StyledButton-sc-323bzc-0 dnCEuz Select__StyledSelectDropButton-sc-17idtfo-1 ksCGpf"
     type="button"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 erazuK"
+      class="StyledBox-sc-13pk1d4-0 kDANyu"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 XINUX"
+        class="StyledBox-sc-13pk1d4-0 fBosDE"
       >
         <div
-          class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 kYQCpm"
+          class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
         >
           <input
             autocomplete="off"
-            class="Select__SelectTextInput-sc-17idtfo-0 lmyIUy StyledTextInput-sc-1x30a0s-0 duvNfq"
+            class="StyledTextInput-sc-1x30a0s-0 bnTxRt Select__SelectTextInput-sc-17idtfo-0 hWmVID"
             label="Select"
             readonly=""
             tabindex="-1"
@@ -28,12 +28,12 @@ exports[`Select renders and matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 eLQtUu"
+        class="StyledBox-sc-13pk1d4-0 bmLwcd"
         style="min-width: auto;"
       >
         <svg
           aria-label="FormDown"
-          class="StyledIcon-ofa7kd-0 dSllCE"
+          class="StyledIcon-ofa7kd-0 kbXEEj"
           viewBox="0 0 24 24"
         >
           <polyline
@@ -47,4 +47,53 @@ exports[`Select renders and matches snapshot 1`] = `
     </div>
   </button>
 </div>
+`;
+
+exports[`Select selects an option with enter 1`] = `
+<button
+  aria-label="Open Drop"
+  class="StyledButton-sc-323bzc-0 dnCEuz Select__StyledSelectDropButton-sc-17idtfo-1 ksCGpf"
+  id="test-select"
+  type="button"
+>
+  <div
+    class="StyledBox-sc-13pk1d4-0 kDANyu"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 fBosDE"
+    >
+      <div
+        class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
+      >
+        <input
+          autocomplete="off"
+          class="StyledTextInput-sc-1x30a0s-0 bnTxRt Select__SelectTextInput-sc-17idtfo-0 hWmVID"
+          id="test-select__input"
+          placeholder="test select"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="StyledBox-sc-13pk1d4-0 bmLwcd"
+      style="min-width: auto;"
+    >
+      <svg
+        aria-label="FormDown"
+        class="StyledIcon-ofa7kd-0 kbXEEj"
+        viewBox="0 0 24 24"
+      >
+        <polyline
+          fill="none"
+          points="18 9 12 15 6 9"
+          stroke="#000"
+          stroke-width="2"
+        />
+      </svg>
+    </div>
+  </div>
+</button>
 `;

@@ -3,238 +3,178 @@
 exports[`Table renders and matches snapshot 1`] = `
 <div>
   <table
-    class="StyledTable-sc-1m3u5g-6 fGUmP"
+    class="StyledTable-sc-1m3u5g-6 bJymoW"
   >
     <thead
-      class="StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
+      class="StyledTable__StyledTableHeader-sc-1m3u5g-4 kdPLsZ"
     >
       <tr
-        class="StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
       >
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gsRqPi"
           scope="col"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eoKPJA"
+          <h4
+            class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
           >
-            <h4
-              class="StyledHeading-sc-1rdh4aw-0 dOVRRX"
-            >
-              Name
-            </h4>
-          </div>
+            Name
+          </h4>
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gsRqPi"
           scope="col"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eoKPJA"
+          <h4
+            class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
           >
-            <h4
-              class="StyledHeading-sc-1rdh4aw-0 dOVRRX"
-            >
-              Email
-            </h4>
-          </div>
+            Email
+          </h4>
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gsRqPi"
           scope="col"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eoKPJA"
+          <h4
+            class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
           >
-            <h4
-              class="StyledHeading-sc-1rdh4aw-0 dOVRRX"
-            >
-              Amount
-            </h4>
-          </div>
+            Amount
+          </h4>
         </th>
       </tr>
     </thead>
     <tbody
-      class="StyledTable__StyledTableBody-sc-1m3u5g-3 dwInxx"
+      class="StyledTable__StyledTableBody-sc-1m3u5g-3 bMdIOJ"
     >
       <tr
-        class="StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
       >
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
           scope="col"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eAAZJM"
+          <h5
+            class="StyledHeading-sc-1rdh4aw-0 hetXvW"
           >
-            <h5
-              class="StyledHeading-sc-1rdh4aw-0 jDZxiw"
-            >
-              Eric
-            </h5>
-          </div>
+            Eric
+          </h5>
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
           scope="col"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eAAZJM"
+          <h5
+            class="StyledHeading-sc-1rdh4aw-0 hetXvW"
           >
-            <h5
-              class="StyledHeading-sc-1rdh4aw-0 jDZxiw"
-            >
-              eric@gmail.com
-            </h5>
-          </div>
+            eric@gmail.com
+          </h5>
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
           scope="col"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eAAZJM"
+          <h5
+            class="StyledHeading-sc-1rdh4aw-0 hetXvW"
           >
-            <h5
-              class="StyledHeading-sc-1rdh4aw-0 jDZxiw"
-            >
-              $45
-            </h5>
-          </div>
+            $45
+          </h5>
         </th>
       </tr>
       <tr
-        class="StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
       >
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
           scope="col"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eAAZJM"
+          <h5
+            class="StyledHeading-sc-1rdh4aw-0 hetXvW"
           >
-            <h5
-              class="StyledHeading-sc-1rdh4aw-0 jDZxiw"
-            >
-              Chris
-            </h5>
-          </div>
+            Chris
+          </h5>
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
           scope="col"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eAAZJM"
+          <h5
+            class="StyledHeading-sc-1rdh4aw-0 hetXvW"
           >
-            <h5
-              class="StyledHeading-sc-1rdh4aw-0 jDZxiw"
-            >
-              chris@gmail.com
-            </h5>
-          </div>
+            chris@gmail.com
+          </h5>
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
           scope="col"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eAAZJM"
+          <h5
+            class="StyledHeading-sc-1rdh4aw-0 hetXvW"
           >
-            <h5
-              class="StyledHeading-sc-1rdh4aw-0 jDZxiw"
-            >
-              $45
-            </h5>
-          </div>
+            $45
+          </h5>
         </th>
       </tr>
       <tr
-        class="StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
       >
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
           scope="col"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eAAZJM"
+          <h5
+            class="StyledHeading-sc-1rdh4aw-0 hetXvW"
           >
-            <h5
-              class="StyledHeading-sc-1rdh4aw-0 jDZxiw"
-            >
-              Shanna
-            </h5>
-          </div>
+            Shanna
+          </h5>
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
           scope="col"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eAAZJM"
+          <h5
+            class="StyledHeading-sc-1rdh4aw-0 hetXvW"
           >
-            <h5
-              class="StyledHeading-sc-1rdh4aw-0 jDZxiw"
-            >
-              shanna@gmail.com
-            </h5>
-          </div>
+            shanna@gmail.com
+          </h5>
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
           scope="col"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eAAZJM"
+          <h5
+            class="StyledHeading-sc-1rdh4aw-0 hetXvW"
           >
-            <h5
-              class="StyledHeading-sc-1rdh4aw-0 jDZxiw"
-            >
-              $45
-            </h5>
-          </div>
+            $45
+          </h5>
         </th>
       </tr>
     </tbody>
     <tfoot
-      class="StyledTable__StyledTableFooter-sc-1m3u5g-5 zMIVX"
+      class="StyledTable__StyledTableFooter-sc-1m3u5g-5 iKFIhK"
     >
       <tr
-        class="StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 edcjKh"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kgsbPu"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 bGwdLS"
-          >
-            <h4
-              class="StyledHeading-sc-1rdh4aw-0 dOVRRX"
-            />
-          </div>
+          <h4
+            class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
+          />
         </td>
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 edcjKh"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kgsbPu"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 bGwdLS"
-          >
-            <h4
-              class="StyledHeading-sc-1rdh4aw-0 dOVRRX"
-            />
-          </div>
+          <h4
+            class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
+          />
         </td>
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 edcjKh"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kgsbPu"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 bGwdLS"
-          >
-            <h4
-              class="StyledHeading-sc-1rdh4aw-0 dOVRRX"
-            />
-          </div>
+          <h4
+            class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
+          />
         </td>
       </tr>
     </tfoot>

@@ -103,25 +103,6 @@ exports[`Grommet custom theme 1`] = `
   stroke: none;
 }
 
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  outline: none;
-  max-width: 100%;
-  margin: 0px;
-  background: #333333;
-  color: #f8f8f8;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 0px;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -130,13 +111,11 @@ exports[`Grommet custom theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c3 {
@@ -147,7 +126,6 @@ exports[`Grommet custom theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -157,7 +135,23 @@ exports[`Grommet custom theme 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding: 0px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  background: #333333;
+  color: #f8f8f8;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .c5 {
@@ -227,42 +221,6 @@ exports[`Grommet custom theme 1`] = `
   -ms-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-@media only screen and (max-width:768px) {
-  .c8 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c8 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c1 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c1 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c3 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c3 {
-    padding: 0px;
-  }
 }
 
 <div
@@ -412,7 +370,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #FD6FFF;
   color: #444444;
   min-width: 0;
@@ -420,102 +377,6 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  outline: none;
-  max-width: 100%;
-  margin: 0px;
-  background: #999999;
-  color: #444444;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 0px;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  outline: none;
-  max-width: 100%;
-  margin: 0px;
-  background: #F8F8F8;
-  color: #444444;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 0px;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  outline: none;
-  max-width: 100%;
-  margin: 0px;
-  background: #F2F2F2;
-  color: #444444;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 0px;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  outline: none;
-  max-width: 100%;
-  margin: 0px;
-  background: #EDEDED;
-  color: #444444;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 0px;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  outline: none;
-  max-width: 100%;
-  margin: 0px;
-  background: #DADADA;
-  color: #444444;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 0px;
 }
 
 .c3 {
@@ -526,7 +387,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #60EB9F;
   color: #444444;
   min-width: 0;
@@ -534,7 +394,6 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c4 {
@@ -545,7 +404,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #60EBE1;
   color: #444444;
   min-width: 0;
@@ -553,7 +411,6 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c5 {
@@ -564,7 +421,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #333333;
   color: #eeeeee;
   min-width: 0;
@@ -572,7 +428,6 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c6 {
@@ -583,7 +438,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #555555;
   color: #eeeeee;
   min-width: 0;
@@ -591,7 +445,6 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c7 {
@@ -602,7 +455,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #777777;
   color: #eeeeee;
   min-width: 0;
@@ -610,7 +462,23 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  background: #999999;
+  color: #444444;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .c9 {
@@ -621,7 +489,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #FFCA58;
   color: #444444;
   min-width: 0;
@@ -629,7 +496,74 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  background: #F8F8F8;
+  color: #444444;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  background: #F2F2F2;
+  color: #444444;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  background: #EDEDED;
+  color: #444444;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  background: #DADADA;
+  color: #444444;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .c14 {
@@ -640,7 +574,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #EB6060;
   color: #444444;
   min-width: 0;
@@ -648,7 +581,6 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c15 {
@@ -659,7 +591,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #01C781;
   color: #444444;
   min-width: 0;
@@ -667,7 +598,6 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c16 {
@@ -678,7 +608,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #6095EB;
   color: #444444;
   min-width: 0;
@@ -686,7 +615,6 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c17 {
@@ -697,7 +625,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #FF3333;
   color: #eeeeee;
   min-width: 0;
@@ -705,7 +632,6 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c18 {
@@ -716,7 +642,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #a8a8a8;
   color: #444444;
   min-width: 0;
@@ -724,7 +649,6 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c19 {
@@ -735,7 +659,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #7DD892;
   color: #444444;
   min-width: 0;
@@ -743,7 +666,6 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c20 {
@@ -754,7 +676,6 @@ exports[`Grommet dark theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #F7E464;
   color: #444444;
   min-width: 0;
@@ -762,7 +683,6 @@ exports[`Grommet dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c2 {
@@ -783,234 +703,6 @@ exports[`Grommet dark theme 1`] = `
   -ms-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-@media only screen and (max-width:768px) {
-  .c1 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c1 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c8 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c8 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c10 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c10 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c11 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c11 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c12 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c12 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c13 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c13 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c3 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c3 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c4 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c4 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c5 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c5 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c6 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c6 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c7 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c7 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c9 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c9 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c14 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c14 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c15 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c15 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c16 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c16 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c17 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c17 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c18 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c18 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c19 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c19 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c20 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c20 {
-    padding: 0px;
-  }
 }
 
 @media only screen and (max-width:768px) {
@@ -1261,7 +953,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #6FFFB0;
   color: #444444;
   min-width: 0;
@@ -1269,7 +960,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c3 {
@@ -1280,7 +970,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #FD6FFF;
   color: #444444;
   min-width: 0;
@@ -1288,7 +977,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c4 {
@@ -1299,7 +987,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #81FCED;
   color: #444444;
   min-width: 0;
@@ -1307,7 +994,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c5 {
@@ -1318,7 +1004,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #7D4CDB;
   color: #f8f8f8;
   min-width: 0;
@@ -1326,7 +1011,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c6 {
@@ -1337,7 +1021,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #333333;
   color: #f8f8f8;
   min-width: 0;
@@ -1345,7 +1028,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c7 {
@@ -1356,7 +1038,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #555555;
   color: #f8f8f8;
   min-width: 0;
@@ -1364,7 +1045,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c8 {
@@ -1375,7 +1055,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #777777;
   color: #f8f8f8;
   min-width: 0;
@@ -1383,7 +1062,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c9 {
@@ -1394,7 +1072,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #999999;
   color: #444444;
   min-width: 0;
@@ -1402,7 +1079,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c10 {
@@ -1413,7 +1089,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #F8F8F8;
   color: #444444;
   min-width: 0;
@@ -1421,7 +1096,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c11 {
@@ -1432,7 +1106,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #F2F2F2;
   color: #444444;
   min-width: 0;
@@ -1440,7 +1113,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c12 {
@@ -1451,7 +1123,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #EDEDED;
   color: #444444;
   min-width: 0;
@@ -1459,7 +1130,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c13 {
@@ -1470,7 +1140,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #DADADA;
   color: #444444;
   min-width: 0;
@@ -1478,7 +1147,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c14 {
@@ -1489,7 +1157,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #00873D;
   color: #f8f8f8;
   min-width: 0;
@@ -1497,7 +1164,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c15 {
@@ -1508,7 +1174,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #3D138D;
   color: #f8f8f8;
   min-width: 0;
@@ -1516,7 +1181,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c16 {
@@ -1527,7 +1191,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #00739D;
   color: #f8f8f8;
   min-width: 0;
@@ -1535,7 +1198,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c17 {
@@ -1546,7 +1208,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #FF4040;
   color: #f8f8f8;
   min-width: 0;
@@ -1554,7 +1215,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c18 {
@@ -1565,7 +1225,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #CCCCCC;
   color: #444444;
   min-width: 0;
@@ -1573,7 +1232,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c19 {
@@ -1584,7 +1242,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #00C781;
   color: #444444;
   min-width: 0;
@@ -1592,7 +1249,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c20 {
@@ -1603,7 +1259,6 @@ exports[`Grommet default theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   background: #FFAA15;
   color: #444444;
   min-width: 0;
@@ -1611,7 +1266,6 @@ exports[`Grommet default theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
 .c2 {
@@ -1629,234 +1283,6 @@ exports[`Grommet default theme 1`] = `
   -ms-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-@media only screen and (max-width:768px) {
-  .c1 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c1 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c3 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c3 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c4 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c4 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c5 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c5 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c6 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c6 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c7 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c7 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c8 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c8 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c9 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c9 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c10 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c10 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c11 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c11 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c12 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c12 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c13 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c13 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c14 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c14 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c15 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c15 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c16 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c16 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c17 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c17 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c18 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c18 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c19 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c19 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c20 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c20 {
-    padding: 0px;
-  }
 }
 
 @media only screen and (max-width:768px) {

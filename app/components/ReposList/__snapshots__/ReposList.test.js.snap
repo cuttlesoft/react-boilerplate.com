@@ -2,50 +2,61 @@
 
 exports[`ReposList should render the loading indicator when its loading 1`] = `
 <div
-  class="Wrapper-sc-1umgotm-0 laCwDT"
+  class="Wrapper-sc-1umgotm-0 eAscws"
   data-testid="repo-list-loading"
 >
   <ul
-    class="Ul-mwnq6h-0 jcxXFy"
+    class="Ul-mwnq6h-0 dkRQrN"
   >
     <div
-      class="Wrapper-sc-12uw37d-0 bTWIVF"
+      class="Wrapper-sc-12uw37d-0 cyDAiv"
     >
       <div
-        class="Circle__CirclePrimitive-ww56dy-0 enQIMS"
+        class="Circle__CirclePrimitive-ww56dy-0 fUyYna"
       />
       <div
-        class="Circle__CirclePrimitive-ww56dy-0 jCxmwS"
+        class="Circle__CirclePrimitive-ww56dy-0 diOPOW"
+        rotate="30"
       />
       <div
-        class="Circle__CirclePrimitive-ww56dy-0 dyFXB"
+        class="Circle__CirclePrimitive-ww56dy-0 fUMtxj"
+        rotate="60"
       />
       <div
-        class="Circle__CirclePrimitive-ww56dy-0 ikwUeP"
+        class="Circle__CirclePrimitive-ww56dy-0 lkIQiQ"
+        rotate="90"
       />
       <div
-        class="Circle__CirclePrimitive-ww56dy-0 hwlQRz"
+        class="Circle__CirclePrimitive-ww56dy-0 hezFzS"
+        rotate="120"
       />
       <div
-        class="Circle__CirclePrimitive-ww56dy-0 jjXxyb"
+        class="Circle__CirclePrimitive-ww56dy-0 iMQpMp"
+        rotate="150"
       />
       <div
-        class="Circle__CirclePrimitive-ww56dy-0 jVExkJ"
+        class="Circle__CirclePrimitive-ww56dy-0 kboFDM"
+        rotate="180"
       />
       <div
-        class="Circle__CirclePrimitive-ww56dy-0 haCVIz"
+        class="Circle__CirclePrimitive-ww56dy-0 gdFpMO"
+        rotate="210"
       />
       <div
-        class="Circle__CirclePrimitive-ww56dy-0 ghhiLZ"
+        class="Circle__CirclePrimitive-ww56dy-0 gDjBjr"
+        rotate="240"
       />
       <div
-        class="Circle__CirclePrimitive-ww56dy-0 bCbqdt"
+        class="Circle__CirclePrimitive-ww56dy-0 ihJMIo"
+        rotate="270"
       />
       <div
-        class="Circle__CirclePrimitive-ww56dy-0 hZPQMA"
+        class="Circle__CirclePrimitive-ww56dy-0 eCUgy"
+        rotate="300"
       />
       <div
-        class="Circle__CirclePrimitive-ww56dy-0 fsGOmP"
+        class="Circle__CirclePrimitive-ww56dy-0 cqJrGJ"
+        rotate="330"
       />
     </div>
   </ul>
@@ -54,35 +65,35 @@ exports[`ReposList should render the loading indicator when its loading 1`] = `
 
 exports[`ReposList should render the repositories if loading was successful 1`] = `
 <div
-  class="Wrapper-sc-1umgotm-0 laCwDT"
+  class="Wrapper-sc-1umgotm-0 eAscws"
   data-testid="repo-list"
 >
   <ul
-    class="Ul-mwnq6h-0 jcxXFy"
+    class="Ul-mwnq6h-0 dkRQrN"
   >
     <li
-      class="Wrapper-euo0oy-0 jLvxtc"
+      class="Wrapper-euo0oy-0 bmJhkI"
     >
       <div
-        class="Item-sc-3y9mie-0 fKXSkT"
+        class="Item-sc-3y9mie-0 kSkLLA"
       >
         <div
-          class="RepoListItemstyles__Wrapper-hnjcas-0 jJYpPv"
+          class="RepoListItemstyles__Wrapper-hnjcas-0 glCGab"
         >
           <a
-            class="RepoListItemstyles__RepoLink-hnjcas-3 NhiyN StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+            class="StyledAnchor-sc-1rp7lwl-0 gzrmWK RepoListItemstyles__RepoLink-hnjcas-3 eWwfaA"
             href="https://github.com/react-boilerplate/react-boilerplate"
             target="_blank"
           >
             mxstbr/react-boilerplate
           </a>
           <a
-            class="RepoListItemstyles__IssueLink-hnjcas-2 iGbIbf StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+            class="StyledAnchor-sc-1rp7lwl-0 gzrmWK RepoListItemstyles__IssueLink-hnjcas-2 bgtpPp"
             href="https://github.com/react-boilerplate/react-boilerplate/issues"
             target="_blank"
           >
             <svg
-              class="RepoListItemstyles__IssueIcon-hnjcas-1 bKYCyN"
+              class="RepoListItemstyles__IssueIcon-hnjcas-1 WbSjP"
               height="1em"
               width="0.875em"
             >

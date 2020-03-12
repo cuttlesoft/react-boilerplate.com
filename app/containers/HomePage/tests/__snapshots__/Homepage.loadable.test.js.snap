@@ -2,78 +2,56 @@
 
 exports[`should lazy load and match the snapshot 1`] = `
 <div>
-  <article>
-    <section
-      class="HomePagestyles__Section-okrkb4-3 HomePagestyles__CenteredSection-okrkb4-4 cKPsNb"
-    >
-      <h2
-        class="StyledHeading-sc-1rdh4aw-0 eSPceH"
-      >
-        <span>
-          Start your next react project in seconds
-        </span>
-      </h2>
-      <p>
-        <span>
-          A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices
-        </span>
-      </p>
-    </section>
-    <section
-      class="HomePagestyles__Section-okrkb4-3 dQnIBs"
-    >
-      <h2
-        class="StyledHeading-sc-1rdh4aw-0 yhirM"
-      >
-        <span>
-          Try me!
-        </span>
-      </h2>
-      <form
-        class="HomePagestyles__Form-okrkb4-1 hhStis"
-        data-testid="search-form"
-      >
-        <label
-          for="searchTerm"
-        >
-          <span>
-            Show Github repositories by
-          </span>
-          <span
-            class="HomePagestyles__AtPrefix-okrkb4-0 iQeUoL"
-          >
-            <span>
-              @
-            </span>
-          </span>
-          <input
-            class="HomePagestyles__Input-okrkb4-2 bwtIXM"
-            id="searchTerm"
-            placeholder="mxstbr"
-            type="text"
-            value=""
-          />
-        </label>
-      </form>
-      <div
-        class="Wrapper-sc-1umgotm-0 laCwDT"
-        data-testid="repo-list-not-found"
-      >
-        <ul
-          class="Ul-mwnq6h-0 jcxXFy"
-        >
-          <li
-            class="Wrapper-euo0oy-0 jLvxtc"
-          >
-            <div
-              class="Item-sc-3y9mie-0 fKXSkT"
-            >
-              The user could not be found or does not have any repositories.
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </article>
+  <div
+    class="Wrapper-sc-12uw37d-0 cyDAiv"
+  >
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 fUyYna"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 diOPOW"
+      rotate="30"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 fUMtxj"
+      rotate="60"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 lkIQiQ"
+      rotate="90"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 hezFzS"
+      rotate="120"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 iMQpMp"
+      rotate="150"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 kboFDM"
+      rotate="180"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 gdFpMO"
+      rotate="210"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 gDjBjr"
+      rotate="240"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 ihJMIo"
+      rotate="270"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 eCUgy"
+      rotate="300"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 cqJrGJ"
+      rotate="330"
+    />
+  </div>
 </div>
 `;

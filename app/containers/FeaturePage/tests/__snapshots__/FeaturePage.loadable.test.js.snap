@@ -2,112 +2,56 @@
 
 exports[`should lazy load and match the snapshot 1`] = `
 <div>
-  <div>
-    <h1
-      class="StyledHeading-sc-1rdh4aw-0 rfVJR"
-    >
-      <span>
-        Features
-      </span>
-    </h1>
-    <ul
-      class="FeaturePagestyles__List-sc-1hgx1yj-0 ffNoYX"
-    >
-      <li
-        class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
-      >
-        <p
-          class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
-        >
-          <span>
-            Quick scaffolding
-          </span>
-        </p>
-        <p>
-          <span>
-            Automate the creation of components, containers, routes, selectors
-  and sagas - and their tests - right from the CLI!
-          </span>
-        </p>
-      </li>
-      <li
-        class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
-      >
-        <p
-          class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
-        >
-          <span>
-            Instant feedback
-          </span>
-        </p>
-        <p>
-          <span>
-            
-      Enjoy the best DX and code your app at the speed of thought! Your
-    saved changes to the CSS and JS are reflected instantaneously
-    without refreshing the page. Preserve application state even when
-    you update something in the underlying code!
-    
-          </span>
-        </p>
-      </li>
-      <li
-        class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
-      >
-        <p
-          class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
-        >
-          <span>
-            Industry-standard routing
-          </span>
-        </p>
-        <p>
-          <span>
-            
-      Write composable CSS that's co-located with your components for
-    complete modularity. Unique generated class names keep the
-    specificity low while eliminating style clashes. Ship only the
-    styles that are on the page for the best performance.
-    
-          </span>
-        </p>
-      </li>
-      <li
-        class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
-      >
-        <p
-          class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
-        >
-          <span>
-            Offline-first
-          </span>
-        </p>
-        <p>
-          <span>
-            
-      The next frontier in performant web apps: availability without a
-      network connection from the instant your users load the app.
-    
-          </span>
-        </p>
-      </li>
-      <li
-        class="FeaturePagestyles__ListItem-sc-1hgx1yj-1 dnGWRt"
-      >
-        <p
-          class="FeaturePagestyles__ListItemTitle-sc-1hgx1yj-2 iLPrSL"
-        >
-          <span>
-            Complete i18n Standard Internationalization & Pluralization
-          </span>
-        </p>
-        <p>
-          <span>
-            Scalable apps need to support multiple languages, easily add and support multiple languages with \`react-intl\`.
-          </span>
-        </p>
-      </li>
-    </ul>
+  <div
+    class="Wrapper-sc-12uw37d-0 cyDAiv"
+  >
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 fUyYna"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 diOPOW"
+      rotate="30"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 fUMtxj"
+      rotate="60"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 lkIQiQ"
+      rotate="90"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 hezFzS"
+      rotate="120"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 iMQpMp"
+      rotate="150"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 kboFDM"
+      rotate="180"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 gdFpMO"
+      rotate="210"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 gDjBjr"
+      rotate="240"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 ihJMIo"
+      rotate="270"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 eCUgy"
+      rotate="300"
+    />
+    <div
+      class="Circle__CirclePrimitive-ww56dy-0 cqJrGJ"
+      rotate="330"
+    />
   </div>
 </div>
 `;

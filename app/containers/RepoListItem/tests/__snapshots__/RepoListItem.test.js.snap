@@ -2,28 +2,28 @@
 
 exports[`RepoListItem should render a ListItem 1`] = `
 <li
-  class="Wrapper-euo0oy-0 jLvxtc"
+  class="Wrapper-euo0oy-0 bmJhkI"
 >
   <div
-    class="Item-sc-3y9mie-0 fKXSkT"
+    class="Item-sc-3y9mie-0 kSkLLA"
   >
     <div
-      class="RepoListItemstyles__Wrapper-hnjcas-0 jJYpPv"
+      class="RepoListItemstyles__Wrapper-hnjcas-0 glCGab"
     >
       <a
-        class="RepoListItemstyles__RepoLink-hnjcas-3 NhiyN StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+        class="StyledAnchor-sc-1rp7lwl-0 gzrmWK RepoListItemstyles__RepoLink-hnjcas-3 eWwfaA"
         href="https://github.com/react-boilerplate/react-boilerplate"
         target="_blank"
       >
         mxstbr/react-boilerplate
       </a>
       <a
-        class="RepoListItemstyles__IssueLink-hnjcas-2 iGbIbf StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+        class="StyledAnchor-sc-1rp7lwl-0 gzrmWK RepoListItemstyles__IssueLink-hnjcas-2 bgtpPp"
         href="https://github.com/react-boilerplate/react-boilerplate/issues"
         target="_blank"
       >
         <svg
-          class="RepoListItemstyles__IssueIcon-hnjcas-1 bKYCyN"
+          class="RepoListItemstyles__IssueIcon-hnjcas-1 WbSjP"
           height="1em"
           width="0.875em"
         >

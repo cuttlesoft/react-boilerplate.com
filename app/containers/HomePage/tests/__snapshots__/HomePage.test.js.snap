@@ -3,10 +3,10 @@
 exports[`HomePage should render and match the snapshot 1`] = `
 <article>
   <section
-    class="HomePagestyles__Section-okrkb4-3 HomePagestyles__CenteredSection-okrkb4-4 cKPsNb"
+    class="HomePagestyles__Section-okrkb4-3 HomePagestyles__CenteredSection-okrkb4-4 kWoWkk"
   >
     <h2
-      class="StyledHeading-sc-1rdh4aw-0 eSPceH"
+      class="StyledHeading-sc-1rdh4aw-0 jpdBNw"
     >
       <span>
         Start your next react project in seconds
@@ -19,17 +19,17 @@ exports[`HomePage should render and match the snapshot 1`] = `
     </p>
   </section>
   <section
-    class="HomePagestyles__Section-okrkb4-3 dQnIBs"
+    class="HomePagestyles__Section-okrkb4-3 iXduoH"
   >
     <h2
-      class="StyledHeading-sc-1rdh4aw-0 yhirM"
+      class="StyledHeading-sc-1rdh4aw-0 jMKEAN"
     >
       <span>
         Try me!
       </span>
     </h2>
     <form
-      class="HomePagestyles__Form-okrkb4-1 hhStis"
+      class="HomePagestyles__Form-okrkb4-1 gqbTVP"
       data-testid="search-form"
     >
       <label
@@ -39,14 +39,14 @@ exports[`HomePage should render and match the snapshot 1`] = `
           Show Github repositories by
         </span>
         <span
-          class="HomePagestyles__AtPrefix-okrkb4-0 iQeUoL"
+          class="HomePagestyles__AtPrefix-okrkb4-0 krQbyt"
         >
           <span>
             @
           </span>
         </span>
         <input
-          class="HomePagestyles__Input-okrkb4-2 bwtIXM"
+          class="HomePagestyles__Input-okrkb4-2 jjdzUj"
           id="searchTerm"
           placeholder="mxstbr"
           type="text"
@@ -55,17 +55,17 @@ exports[`HomePage should render and match the snapshot 1`] = `
       </label>
     </form>
     <div
-      class="Wrapper-sc-1umgotm-0 laCwDT"
+      class="Wrapper-sc-1umgotm-0 eAscws"
       data-testid="repo-list-not-found"
     >
       <ul
-        class="Ul-mwnq6h-0 jcxXFy"
+        class="Ul-mwnq6h-0 dkRQrN"
       >
         <li
-          class="Wrapper-euo0oy-0 jLvxtc"
+          class="Wrapper-euo0oy-0 bmJhkI"
         >
           <div
-            class="Item-sc-3y9mie-0 fKXSkT"
+            class="Item-sc-3y9mie-0 kSkLLA"
           >
             The user could not be found or does not have any repositories.
           </div>
