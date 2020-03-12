@@ -1,4 +1,5 @@
 import React from 'react'
+import { IntlProvider } from 'react-intl'
 
 import loadable from 'utils/loadable'
 import { LoadingIndicator } from 'components/LoadingIndicator'
@@ -7,5 +8,9 @@ import { LoadingIndicator } from 'components/LoadingIndicator'
  * Asynchronously loads the component for FeaturePage
  */
 export default loadable(() => import('./FeaturePage'), {
-  fallback: <LoadingIndicator />,
+  fallback: (
+    <IntlProvider locale="en">
+      <LoadingIndicator />
+    </IntlProvider>
+  ),
 })

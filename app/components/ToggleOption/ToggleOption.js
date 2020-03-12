@@ -1,5 +1,5 @@
 import React from 'react'
-import { injectIntl, intlShape } from 'react-intl'
+import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
 
 /**
@@ -14,7 +14,7 @@ const ToggleOption = ({ value, message, intl }) => (
 ToggleOption.propTypes = {
   value: PropTypes.string.isRequired,
   message: PropTypes.object,
-  intl: intlShape.isRequired,
+  intl: PropTypes.object.isRequired,
 }
 
 export default injectIntl(ToggleOption)

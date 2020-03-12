@@ -1,4 +1,5 @@
 import React from 'react'
+import { IntlProvider } from 'react-intl'
 import { BrowserRouter } from 'react-router-dom'
 import { render } from '@testing-library/react'
 import 'jest-styled-components'
@@ -14,9 +15,11 @@ import TemplateHeader from './TemplateHeader'
  */
 const renderComponent = (props = {}) =>
   render(
-    <BrowserRouter>
-      <TemplateHeader {...props} />)
-    </BrowserRouter>,
+    <IntlProvider locale="en">
+      <BrowserRouter>
+        <TemplateHeader {...props} />)
+      </BrowserRouter>
+    </IntlProvider>,
   )
 
 describe('TemplateHeader', () => {
