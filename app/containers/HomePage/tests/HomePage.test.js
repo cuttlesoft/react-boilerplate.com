@@ -1,5 +1,5 @@
 import React from 'react'
-import 'jest-dom/extend-expect'
+import '@testing-library/jest-dom/extend-expect'
 import { fireEvent, render, waitForElement } from '@testing-library/react'
 import { IntlProvider } from 'react-intl'
 import { Provider } from 'mobx-react'

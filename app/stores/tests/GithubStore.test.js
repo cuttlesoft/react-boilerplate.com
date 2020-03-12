@@ -1,5 +1,5 @@
 import { cleanup } from '@testing-library/react'
-import 'jest-dom/extend-expect'
+import '@testing-library/jest-dom/extend-expect'
 import MockAdapter from 'axios-mock-adapter'
 
 import axios from '../../services/instance'
