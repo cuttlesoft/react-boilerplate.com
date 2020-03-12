@@ -62,7 +62,7 @@ There’s also a <a href="https://vimeo.com/168648012">fantastic video</a> on ho
 
 ## ⬆️ Quick start
 
-1.  Make sure that you have Node.js v10.16.0 and npm v4 or above installed.
+1.  Make sure that you have Node.js v12.16.0 and npm v6 or above installed.
 2.  Clone this repo using `git clone --depth=1 https://github.com/cuttlesoft/react-boilerplate.git <YOUR_PROJECT_NAME>`
 3.  Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.<br />
 4.  Run `npm run setup` in order to install dependencies and clean the git repo.<br />
