@@ -8,8 +8,9 @@ import { Anchor } from 'components/Anchor'
 import { Image } from 'components/Image'
 import { Box } from 'components/Box'
 
+// Utils, Services & Messages
 import Banner from '../../images/icon-512x512.png'
-import messages from './messages'
+import messages from './TemplateHeader.messages'
 
 function TemplateHeader() {
   return (
@@ -21,10 +22,12 @@ function TemplateHeader() {
           </Box>
         </Anchor>
       </Box>
+
       <Box justify="center" direction="row">
         <HeaderLink to="/">
           <FormattedMessage {...messages.home} />
         </HeaderLink>
+
         <HeaderLink to="/features">
           <FormattedMessage {...messages.features} />
         </HeaderLink>

@@ -1,4 +1,3 @@
-// Libraries
 import React, { useContext, useEffect, useState, memo } from 'react'
 import { Helmet } from 'react-helmet'
 import { FormattedMessage } from 'react-intl'
@@ -12,7 +11,7 @@ import { ReposList } from 'components/ReposList'
 import messages from './HomePage.messages'
 
 // Styles
-import { AtPrefix, CenteredSection, Form, Input, Section } from './styles'
+import { AtPrefix, CenteredSection, Form, Input, Section } from './HomePage.styles'
 
 // Context / Stores
 import { GitHubStoreContext } from '../../stores/GithubStore'

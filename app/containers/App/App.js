@@ -1,13 +1,12 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import styled from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
+import styled from 'styled-components'
 
+// Components
 import HomePage from 'containers/HomePage/HomePage.loadable'
 import FeaturePage from 'containers/FeaturePage/FeaturePage.loadable'
 import NotFoundPage from 'containers/NotFoundPage/NotFoundPage.loadable'
-
-// Components
 import { TemplateHeader } from 'components/TemplateHeader'
 import { Footer } from 'components/Footer'
 

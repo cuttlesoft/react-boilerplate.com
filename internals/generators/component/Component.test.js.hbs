@@ -1,11 +1,3 @@
-/**
-*
-* Tests for {{ properCase name }}
-*
-* @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
-*
-*/
-
 import React from 'react'
 import { render } from '@testing-library/react'
 {{#if wantMessages}}
@@ -22,26 +14,35 @@ const renderComponent = (props = {}) =>
 render(
 < {{ properCase name }} {...props} />)
 
-test('it renders and matches snapshot', () => {
-const { container } = renderComponent()
-expect(container).toMatchSnapshot()
-})
+/**
+*
+* Tests for {{ properCase name }}
+*
+* @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
+*
+*/
+describe('{{ properCase name }}', () => {
+  it('renders and matches snapshot', () => {
+    const { container } = renderComponent()
+    expect(container).toMatchSnapshot()
+  })
 
-test('It does not log errors in console', () => {
-const spy = jest.spyOn(global.console, 'error')
-{{#if wantMessages}}
-render(
-<IntlProvider locale={DEFAULT_LOCALE}>
-    <{{ properCase name }} />
-</IntlProvider>,
-)
-{{else}}
-render(
-<{{ properCase name }} />)
-{{/if}}
-expect(spy).not.toHaveBeenCalled()
-})
+  it('does not log errors in console', () => {
+    const spy = jest.spyOn(global.console, 'error')
+    {{#if wantMessages}}
+    render(
+    <IntlProvider locale={DEFAULT_LOCALE}>
+        <{{ properCase name }} />
+    </IntlProvider>,
+    )
+    {{else}}
+    render(
+    <{{ properCase name }} />)
+    {{/if}}
+    expect(spy).not.toHaveBeenCalled()
+  })
 
-test('Expect to have additional unit tests specified', () => {
-expect(true).toEqual(false)
+  it('has additional unit tests specified', () => {
+    expect(true).toEqual(false)
+  })
 })

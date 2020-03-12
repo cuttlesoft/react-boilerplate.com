@@ -17,8 +17,11 @@ storiesOf('Header', module)
       <Header level="1" size="small">
         This is level 1 header
       </Header>
+
       <Header size="medium">This is level 1 header</Header>
+
       <Header size="large">This is level 1 header</Header>
+
       <Header size="xlarge">This is level 1 header</Header>
     </Container>
   ))

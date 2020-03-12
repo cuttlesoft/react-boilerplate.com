@@ -1,3 +1,22 @@
+import React from 'react'
+import 'jest-dom/extend-expect'
+import { fireEvent, render, waitForElement } from '@testing-library/react'
+import { IntlProvider } from 'react-intl'
+import { Provider } from 'mobx-react'
+import { RouterStore } from 'mobx-react-router'
+import MockAdapter from 'axios-mock-adapter'
+
+// Components
+import { HomePage } from '../HomePage'
+
+// Services
+import axios from '../../../services/instance'
+import { getReposSuccess } from '../../../services/mocks/github.service.mock'
+
+// Context / Stores
+import trunk from '../../../configureStore'
+import { GitHubStore, GitHubStoreContext } from '../../../stores/GithubStore'
+
 /**
  * HomePage Test Criteria
  *
@@ -9,27 +28,6 @@
  *     - If an error occurs, an error message should be displayed
  *     - If no repositories are found, a not found message should be displayed
  */
-
-// Libraries
-import React from 'react'
-import 'jest-dom/extend-expect'
-import { fireEvent, render, waitForElement } from '@testing-library/react'
-import { IntlProvider } from 'react-intl'
-import { Provider } from 'mobx-react'
-import { RouterStore } from 'mobx-react-router'
-import MockAdapter from 'axios-mock-adapter'
-
-// Components / Pages
-import { HomePage } from '../HomePage'
-
-// Services
-import axios from '../../../services/instance'
-import { getReposSuccess } from '../../../services/mocks/github.service.mock'
-
-// Context / Stores
-import trunk from '../../../configureStore'
-import { GitHubStore, GitHubStoreContext } from '../../../stores/GithubStore'
-
 describe('HomePage', () => {
   // Allow stores to be accessed in tests
   let stores = null

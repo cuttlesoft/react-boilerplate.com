@@ -8,7 +8,7 @@ import messages from './LocaleToggle.messages'
 import { appLocales } from '../../i18n'
 
 // Styles
-import { Wrapper } from './styles'
+import { Wrapper } from './LocaleToggle.styles'
 
 // Store
 import { LocaleStoreContext } from '../../stores/LocaleStore'

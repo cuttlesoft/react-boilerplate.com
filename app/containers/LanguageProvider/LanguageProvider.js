@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import PropTypes from 'prop-types'
 import { IntlProvider } from 'react-intl'
 import { observer } from 'mobx-react'
+import PropTypes from 'prop-types'
 
 // Stores
 import { LocaleStoreContext } from '../../stores/LocaleStore'

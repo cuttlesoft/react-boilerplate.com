@@ -7,7 +7,7 @@ import { observer } from 'mobx-react'
 import { ListItem } from 'components/ListItem'
 
 // Styles
-import { Wrapper, IssueIcon, IssueLink, RepoLink } from './styles'
+import { Wrapper, IssueIcon, IssueLink, RepoLink } from './RepoListItem.styles'
 
 // Store
 import { GitHubStoreContext } from '../../stores/GithubStore'

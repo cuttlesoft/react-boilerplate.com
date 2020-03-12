@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { IssueIcon as NormalIssueIcon } from 'components/IssueIcon'
 import { Anchor } from 'components/Anchor'
 

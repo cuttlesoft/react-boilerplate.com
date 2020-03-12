@@ -1,18 +1,10 @@
-/**
- *
- * Tests for Chexbox
- *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
- */
-
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
-// import 'jest-dom/extend-expect'; // add some helpful assertions
 
 import TextInput from './TextInput'
 
 const renderComponent = (props = {}) => render(<TextInput {...props} value="" />)
+
 const setup = () => {
   const utils = render(<TextInput placeholder="text-input" />)
   const input = utils.getByPlaceholderText('text-input')
@@ -22,6 +14,13 @@ const setup = () => {
   }
 }
 
+/**
+ *
+ * Tests for Chexbox
+ *
+ * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
+ *
+ */
 describe('TextInput', () => {
   it('renders and matches snapshot', () => {
     const { container } = renderComponent()

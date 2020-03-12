@@ -1,9 +1,3 @@
-/**
-*
-* {{properCase name }}
-*
-*/
-
 {{#if memo}}
 {{#if connectToStore}}
 import React, { useContext, memo } from 'react'
@@ -15,33 +9,39 @@ import React, {useContext} from 'react'
 {{else}}
 import React from 'react'
 {{/if}}
-
-// import PropTypes from 'prop-types'
-
-{{#if connectToStore}}
-import { observer } from 'mobx-react'
-{{/if}}
-
 {{#if wantHeaders}}
 import { Helmet } from 'react-helmet'
 {{/if}}
-
 {{#if wantMessages}}
 import { FormattedMessage } from 'react-intl'
 {{/if}}
+{{#if connectToStore}}
+import { observer } from 'mobx-react'
+{{/if}}
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
+// Components
 import { Header } from 'components/Header'
+
+// Styles
 import { Section } from './{{properCase name}}.styles'
 
 {{#if wantMessages}}
+// Utils, Services & Messages
 import messages from './{{ properCase name }}.messages'
 {{/if}}
 
 {{#if connectToStore}}
+// Stores
 import { GitHubStoreContext } from '../../stores/GithubStore'
 {{/if}}
 
-
+/**
+*
+* {{properCase name }}
+*
+*/
 {{#if connectToStore}}
 const Login = observer(() => {
 const gitHubStore = useContext(GitHubStoreContext)

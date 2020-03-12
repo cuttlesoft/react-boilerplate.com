@@ -1,14 +1,5 @@
-/**
- *
- * Tests for Select
- *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
- */
-
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
-// import 'jest-dom/extend-expect'; // add some helpful assertions
 
 import Select from './Select'
 
@@ -25,6 +16,13 @@ const setup = () => {
   }
 }
 
+/**
+ *
+ * Tests for Select
+ *
+ * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
+ *
+ */
 describe('Select', () => {
   it('renders and matches snapshot', () => {
     const { container } = renderComponent()
@@ -35,7 +33,7 @@ describe('Select', () => {
   it('should update value on select', () => {
     const { select } = setup()
 
-    expect(select.value).toBe('') // empty before
+    expect(select.value).toBe('')
 
     fireEvent.select(select, { target: { value: 'one' } })
 

@@ -1,7 +1,3 @@
-/**
- * Testing our Button component
- */
-
 import React from 'react'
 import { fireEvent, render, cleanup } from '@testing-library/react'
 

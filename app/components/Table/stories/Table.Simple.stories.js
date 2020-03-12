@@ -70,6 +70,7 @@ const DefaultTable = () => (
             ))}
           </TableRow>
         </TableHeader>
+
         <TableBody>
           {data.map(datum => (
             <TableRow key={datum.id}>
@@ -81,6 +82,7 @@ const DefaultTable = () => (
             </TableRow>
           ))}
         </TableBody>
+
         <TableFooter>
           <TableRow>
             {columns.map(c => (

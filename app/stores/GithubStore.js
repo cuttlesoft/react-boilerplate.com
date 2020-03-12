@@ -1,6 +1,7 @@
+import { createContext } from 'react'
 import { action, observable } from 'mobx'
 import { ignore } from 'mobx-sync'
-import { createContext } from 'react'
+
 import { getRepos } from '../services/github.service'
 
 export class GitHubStore {

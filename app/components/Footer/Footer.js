@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 import { LocaleToggle } from 'containers/LocaleToggle'
 import { Anchor } from '../Anchor'
 import Wrapper from './Wrapper'
-import messages from './messages'
+import messages from './Footer.messages'
 
 function Footer() {
   return (
@@ -12,9 +12,11 @@ function Footer() {
       <section>
         <FormattedMessage {...messages.licenseMessage} />
       </section>
+
       <section>
         <LocaleToggle />
       </section>
+
       <section>
         <FormattedMessage
           {...messages.authorMessage}

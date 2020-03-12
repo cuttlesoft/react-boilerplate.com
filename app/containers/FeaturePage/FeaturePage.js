@@ -9,7 +9,7 @@ import { Header } from 'components/Header'
 import messages from './FeaturePage.messages'
 
 // Styles
-import { List, ListItem, ListItemTitle } from './styles'
+import { List, ListItem, ListItemTitle } from './FeaturePage.styles'
 
 /*
  * FeaturePage
@@ -23,14 +23,17 @@ export default function FeaturePage() {
         <title>Feature Page</title>
         <meta name="description" content="Feature page of React.js Boilerplate application" />
       </Helmet>
+
       <Header>
         <FormattedMessage {...messages.header} />
       </Header>
+
       <List>
         <ListItem>
           <ListItemTitle>
             <FormattedMessage {...messages.scaffoldingHeader} />
           </ListItemTitle>
+
           <p>
             <FormattedMessage {...messages.scaffoldingMessage} />
           </p>
@@ -40,6 +43,7 @@ export default function FeaturePage() {
           <ListItemTitle>
             <FormattedMessage {...messages.feedbackHeader} />
           </ListItemTitle>
+
           <p>
             <FormattedMessage {...messages.feedbackMessage} />
           </p>
@@ -49,6 +53,7 @@ export default function FeaturePage() {
           <ListItemTitle>
             <FormattedMessage {...messages.routingHeader} />
           </ListItemTitle>
+
           <p>
             <FormattedMessage {...messages.routingMessage} />
           </p>
@@ -58,6 +63,7 @@ export default function FeaturePage() {
           <ListItemTitle>
             <FormattedMessage {...messages.networkHeader} />
           </ListItemTitle>
+
           <p>
             <FormattedMessage {...messages.networkMessage} />
           </p>
@@ -67,6 +73,7 @@ export default function FeaturePage() {
           <ListItemTitle>
             <FormattedMessage {...messages.intlHeader} />
           </ListItemTitle>
+
           <p>
             <FormattedMessage {...messages.intlMessage} />
           </p>
