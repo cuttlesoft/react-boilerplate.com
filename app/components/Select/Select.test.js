@@ -3,18 +3,8 @@ import { render, fireEvent } from '@testing-library/react'
 
 import Select from './Select'
 
-const options = ['one', 'two', 'three']
 const renderComponent = (props = {}) =>
-  render(<Select label="Select" {...props} options={options} />)
-
-const setup = () => {
-  const utils = render(<Select placeholder="select" options={options} />)
-  const select = utils.getByPlaceholderText('select')
-  return {
-    select,
-    ...utils,
-  }
-}
+  render(<Select label="Select" {...props} options={['one', 'two', 'three']} />)
 
 /**
  *
@@ -30,13 +20,37 @@ describe('Select', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('should update value on select', () => {
-    const { select } = setup()
+  it('selects an option with enter', () => {
+    window.scrollTo = jest.fn()
+    const onChange = jest.fn()
+    const { getByPlaceholderText, container } = render(
+      <Select
+        id="test-select"
+        placeholder="test select"
+        options={['one', 'two']}
+        onChange={onChange}
+      />,
+    )
+    expect(container.firstChild).toMatchSnapshot()
 
-    expect(select.value).toBe('')
+    fireEvent.click(getByPlaceholderText('test select'))
 
-    fireEvent.select(select, { target: { value: 'one' } })
-
-    expect(select.value).toBe('one')
+    fireEvent.keyDown(document.getElementById('test-select__select-drop'), {
+      key: 'Down',
+      keyCode: 40,
+      which: 40,
+    })
+    fireEvent.keyDown(document.getElementById('test-select__select-drop'), {
+      key: 'Up',
+      keyCode: 38,
+      which: 38,
+    })
+    fireEvent.keyDown(document.getElementById('test-select__select-drop'), {
+      key: 'Enter',
+      keyCode: 13,
+      which: 13,
+    })
+    expect(onChange).toBeCalledWith(expect.objectContaining({ value: 'one' }))
+    expect(window.scrollTo).toBeCalled()
   })
 })
