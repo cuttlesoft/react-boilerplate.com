@@ -1,7 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { Grommet } from 'grommet'
 
+import theme from '../../../utils/theme'
 import {{ properCase name }} from '../{{ properCase name }}'
 
-storiesOf("{{ properCase name }}", module).add("Default", () =>
-< {{ properCase name }} />)
+storiesOf("{{ properCase name }}", module).add("Default", () => (
+<Grommet theme={theme}>
+    <{{ properCase name }} />
+</Grommet>
+))
