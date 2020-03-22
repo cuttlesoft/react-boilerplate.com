@@ -1,13 +1,13 @@
 import React from 'react'
 import ShallowRenderer from 'react-test-renderer/shallow'
 
-import { App } from '..'
+import { Routes } from '..'
 
 const renderer = new ShallowRenderer()
 
-describe('App', () => {
+describe('Routes', () => {
   it('should render and match the snapshot', () => {
-    renderer.render(<App />)
+    renderer.render(<Routes />)
 
     const renderedOutput = renderer.getRenderOutput()
 

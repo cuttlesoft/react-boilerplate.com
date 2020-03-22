@@ -18,7 +18,7 @@ import { Router } from 'react-router'
 import FontFaceObserver from 'fontfaceobserver'
 import 'sanitize.css/sanitize.css'
 
-import { App } from 'containers/App'
+import { Routes } from 'containers/Routes'
 
 import { LanguageProvider } from 'containers/LanguageProvider'
 import trunk from './configureStore'
@@ -56,7 +56,7 @@ const render = messages => {
         <Provider {...stores}>
           <Router history={history}>
             <Grommet theme={theme}>
-              <App />
+              <Routes />
             </Grommet>
           </Router>
         </Provider>
@@ -72,7 +72,7 @@ if (module.hot) {
    * modules.hot.accept does not accept dynamic dependencies,
    * have to be constants at compile-time
    */
-  module.hot.accept(['./i18n', 'containers/App'], () => {
+  module.hot.accept(['./i18n', 'containers/Routes'], () => {
     ReactDOM.unmountComponentAtNode(MOUNT_NODE)
     render(translationMessages)
   })
