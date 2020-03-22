@@ -26,7 +26,7 @@ import theme from './utils/theme'
 import { translationMessages } from './i18n'
 
 // Load the favicon and the .htaccess file
-import '!file-loader?name=[name].[ext]!./images/favicon.ico'
+import '!file-loader?name=[name].[ext]!./assets/images/favicon.ico'
 import 'file-loader?name=.htaccess!./.htaccess' // eslint-disable-line import/extensions
 
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in

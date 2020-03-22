@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { grommet } from 'grommet/themes'
 
-import sampleImg from '../../../images/sample_image.jpg'
+import sampleImg from '../../../assets/images/sample_image.jpg'
 import { Container } from '../../Container'
 import { Image } from '..'
 import README from '../README.md'

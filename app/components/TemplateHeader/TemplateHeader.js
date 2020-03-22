@@ -9,7 +9,7 @@ import { Image } from 'components/Image'
 import { Box } from 'components/Box'
 
 // Utils, Services & Messages
-import Banner from '../../images/icon-512x512.png'
+import Banner from '../../assets/images/icon-512x512.png'
 import messages from './TemplateHeader.messages'
 
 function TemplateHeader() {
