@@ -3,7 +3,7 @@
 exports[`Button renders and matches snapshot 1`] = `
 <div>
   <a
-    class="StyledButton-sc-323bzc-0 dnCEuz"
+    class="StyledButton-sc-323bzc-0 dnCEuz Button__StyledGrommetButton-sc-5cxguj-0 dKGxUf"
     href="https://cuttlesoft.com"
   >
     <h1>
