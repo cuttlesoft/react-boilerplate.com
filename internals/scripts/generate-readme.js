@@ -37,19 +37,25 @@ const components = folder =>
 const FOLDER = path.resolve('app/components')
 
 components(FOLDER).forEach(component => {
-  /* eslint-disable */
-  const { doc, themeDoc } = require(path.join(FOLDER, component, `${component}.doc.js`))
-  const componentModule = require(path.join(FOLDER, component, 'index.js'))
-  // we use the second array element since the first is '__esModule'.
-  const Component = componentModule[Object.keys(componentModule).filter(k => k === component)[0]]
-  /* eslint-enable */
+  try {
+    /* eslint-disable */
+    const { doc, themeDoc } = require(path.join(FOLDER, component, `${component}.doc.js`))
+    const componentModule = require(path.join(FOLDER, component, 'index.js'))
+    /* eslint-enable */
 
-  const readmeDestination = path.join(FOLDER, component, 'README.md')
+    // we use the second array element since the first is '__esModule'.
+    const Component = componentModule[Object.keys(componentModule).filter(k => k === component)[0]]
 
-  const DocumentedComponent = doc(Component)
+    const readmeDestination = path.join(FOLDER, component, 'README.md')
 
-  const readmeContent = themeDoc
-    ? `${warning}${replaceHoc(DocumentedComponent.toMarkdown())}\n${toMarkdown(themeDoc)}`
-    : `${warning}${replaceHoc(DocumentedComponent.toMarkdown())}`
-  del(readmeDestination).then(() => fs.writeFileSync(readmeDestination, readmeContent))
+    const DocumentedComponent = doc(Component)
+
+    const readmeContent = themeDoc
+      ? `${warning}${replaceHoc(DocumentedComponent.toMarkdown())}\n${toMarkdown(themeDoc)}`
+      : `${warning}${replaceHoc(DocumentedComponent.toMarkdown())}`
+    del(readmeDestination).then(() => fs.writeFileSync(readmeDestination, readmeContent))
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(`Could not generate README for ${component}: ${error}`)
+  }
 })
