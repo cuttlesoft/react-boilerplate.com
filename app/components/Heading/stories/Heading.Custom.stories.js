@@ -4,7 +4,7 @@ import { grommet } from 'grommet/themes'
 import { deepMerge } from 'grommet/utils'
 
 import { Container } from '../../Container'
-import { Header } from '..'
+import { Heading } from '..'
 import README from '../README.md'
 
 const customlevel = deepMerge(grommet, {
@@ -29,7 +29,7 @@ const customlevel = deepMerge(grommet, {
   },
 })
 
-storiesOf('Header', module)
+storiesOf('Heading', module)
   .addParameters({
     readme: {
       sidebar: README,
@@ -37,6 +37,6 @@ storiesOf('Header', module)
   })
   .add('Custom', () => (
     <Container theme={customlevel}>
-      <Header level={5}> Heading level 5 </Header>
+      <Heading level={5}> Heading level 5 </Heading>
     </Container>
   ))

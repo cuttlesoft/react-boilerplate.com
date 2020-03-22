@@ -1,12 +1,14 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-## createHeader
+
+## createHeading
+
 Heading text structed in levels.
 
 ## Usage
 
 ```javascript
-import { Heading } from 'grommet';
-<Heading />
+import { Heading } from 'grommet'
+;<Heading />
 ```
 
 ## Properties
@@ -22,7 +24,7 @@ string
 **alignSelf**
 
 How to align along the cross axis when contained in
-      a Box or along the column axis when contained in a Grid.
+a Box or along the column axis when contained in a Grid.
 
 ```
 start
@@ -34,7 +36,7 @@ stretch
 **gridArea**
 
 The name of the area to place
-    this inside a parent Grid.
+this inside a parent Grid.
 
 ```
 string
@@ -43,8 +45,8 @@ string
 **margin**
 
 The amount of margin around the component. An object can
-      be specified to distinguish horizontal margin, vertical margin, and
-      margin on a particular side.
+be specified to distinguish horizontal margin, vertical margin, and
+margin on a particular side.
 
 ```
 none
@@ -55,7 +57,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -63,7 +65,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -71,7 +73,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -79,7 +81,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -87,7 +89,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -95,7 +97,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -143,7 +145,7 @@ The sizing can be further adjusted using the size property. Defaults to `1`.
 **responsive**
 
 Whether the font size should be scaled for
-      mobile environments. Defaults to `true`.
+mobile environments. Defaults to `true`.
 
 ```
 boolean
@@ -182,14 +184,15 @@ is too long to all fit.
 ```
 boolean
 ```
-  
+
 ## Intrinsic element
 
 ```
 h1,h2,h3,h4
 ```
+
 ## Theme
-  
+
 **global.breakpoints**
 
 The possible breakpoints that could affect font-size and max-width Expects `object`.

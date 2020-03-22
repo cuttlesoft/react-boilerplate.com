@@ -54,11 +54,11 @@ However, you can integrate the following by using the guides below:
 ## styled-components
 
 Below creates two styled react components (`<Title>`, `<Wrapper>`) and renders them
-as children of the `<Header>` component:
+as children of the `<Heading>` component:
 
 ```jsx
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 // Create a <Title> react component that renders an <h1> which is
 // centered, palevioletred and sized at 1.5em
@@ -66,25 +66,23 @@ const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
   color: palevioletred;
-`;
+`
 
 // Create a <Wrapper> react component that renders a <section> with
 // some padding and a papayawhip background
 const Wrapper = styled.section`
   padding: 4em;
   background: papayawhip;
-`;
+`
 
 // Use them like any other React component – except they're styled!
 function Button() {
   return (
     <Wrapper>
-      <Title>
-        Hello {this.props.name}, this is your first styled component!
-      </Title>
+      <Title>Hello {this.props.name}, this is your first styled component!</Title>
       ...
     </Wrapper>
-  );
+  )
 }
 ```
 
@@ -109,12 +107,12 @@ into a JavaScript:
 **`Button.js`**
 
 ```js
-import React from 'react';
-import './Button.css'; // Tell Webpack that Button.js uses these styles
+import React from 'react'
+import './Button.css' // Tell Webpack that Button.js uses these styles
 
 function Button() {
   // You can use them as regular CSS styles
-  return <button className="danger">Click me</button>;
+  return <button className="danger">Click me</button>
 }
 ```
 
@@ -161,12 +159,12 @@ The key difference in CSS Modules is that you import styles to a variable.
 **`Button.js`**
 
 ```js
-import React from 'react';
-import styles from './Button.css'; // different import compared to stylesheets
+import React from 'react'
+import styles from './Button.css' // different import compared to stylesheets
 
 function Button() {
   // different usage to stylesheets
-  return <button className={styles.danger}>Click me</button>;
+  return <button className={styles.danger}>Click me</button>
 }
 ```
 
@@ -213,11 +211,11 @@ $error-color: red;
 **`Button.js`**
 
 ```js
-import React from 'react';
-import './Button.scss';
+import React from 'react'
+import './Button.scss'
 
 function Button() {
-  return <button className="danger">Click me</button>;
+  return <button className="danger">Click me</button>
 }
 ```
 
@@ -270,11 +268,11 @@ to look like:
 **`Button.js`**
 
 ```js
-import React from 'react';
-import './Button.less';
+import React from 'react'
+import './Button.less'
 
 function Button() {
-  return <button className="danger">Click me</button>;
+  return <button className="danger">Click me</button>
 }
 ```
 

@@ -1,6 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { Heading } from 'grommet'
+import { Header as GrommetHeader } from 'grommet'
+
+// Components
+import { Anchor } from '../Anchor'
+import { Box } from '../Box'
 
 import { doc } from './Header.doc'
 import helpers from '../../utils/helpers'
@@ -10,41 +14,21 @@ import helpers from '../../utils/helpers'
  * Header
  *
  */
-function createHeader({
-  color,
-  children,
-  level,
-  a11yTitle,
-  gridArea,
-  margin,
-  alignSelf,
-  responseive,
-  size,
-  textAlign,
-  truncate,
-  ...rest
-}) {
+function Header({ children, ...rest }) {
   return (
-    <Heading
-      color={color}
-      level={level}
-      a11yTitle={a11yTitle}
-      gridArea={gridArea}
-      margin={margin}
-      alignSelf={alignSelf}
-      responseive={responseive}
-      size={size}
-      textAlign={textAlign}
-      truncate={truncate}
-      {...rest}
-    >
+    <GrommetHeader background="light-2" pad="small" {...rest} style={{ width: '100vw' }}>
+      <Box>
+        <Anchor href="/" size="large">
+          React Boilerplate
+        </Anchor>
+      </Box>
       {children}
-    </Heading>
+    </GrommetHeader>
   )
 }
 
 export default helpers.createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
-  component: createHeader,
+  component: Header,
 })

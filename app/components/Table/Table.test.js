@@ -8,7 +8,7 @@ import TableHeader from './TableHeader'
 import TableFooter from './TableFooter'
 import TableRow from './TableRow'
 import TableCell from './TableCell'
-import { Header } from '../Header'
+import { Heading } from '../Heading'
 
 const columns = [
   {
@@ -59,7 +59,7 @@ const renderComponent = (props = {}) =>
         <TableRow>
           {columns.map(c => (
             <TableCell key={c.property} scope="col" align={c.align}>
-              <Header level="4">{c.label}</Header>
+              <Heading level="4">{c.label}</Heading>
             </TableCell>
           ))}
         </TableRow>
@@ -69,7 +69,7 @@ const renderComponent = (props = {}) =>
           <TableRow key={datum.id}>
             {columns.map(c => (
               <TableCell key={c.property} scope={c.dataScope} align={c.align}>
-                <Header level="5">{c.format ? c.format(datum) : datum[c.property]}</Header>
+                <Heading level="5">{c.format ? c.format(datum) : datum[c.property]}</Heading>
               </TableCell>
             ))}
           </TableRow>
@@ -79,7 +79,7 @@ const renderComponent = (props = {}) =>
         <TableRow>
           {columns.map(c => (
             <TableCell key={c.property} align={c.align}>
-              <Header level="4">{c.footer}</Header>
+              <Heading level="4">{c.footer}</Heading>
             </TableCell>
           ))}
         </TableRow>

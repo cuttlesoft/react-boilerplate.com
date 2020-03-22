@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Grommet, grommet } from 'grommet'
 import { Box } from '../../Box'
-import { Header } from '../../Header'
+import { Heading } from '../../Heading'
 import { Button } from '../../Button'
 
 import Grid from '../Grid'
@@ -40,14 +40,14 @@ const Layout = () => (
         {['First', 'Second', 'Third'].map(name => (
           <Button key={name} href="#" hoverIndicator>
             <Box pad={{ horizontal: 'medium', vertical: 'small' }}>
-              <Header level="4">{name}</Header>
+              <Heading level="4">{name}</Heading>
             </Box>
           </Button>
         ))}
       </Box>
 
       <Box gridArea="main" justify="center" align="center">
-        <Header level="4">main</Header>
+        <Heading level="4">main</Heading>
       </Box>
     </Grid>
   </Grommet>

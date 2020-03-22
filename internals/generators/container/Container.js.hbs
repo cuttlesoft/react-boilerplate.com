@@ -22,7 +22,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 // Components
-import { Header } from 'components/Header'
+import { Heading } from 'components/Heading'
 
 // Styles
 import { Section } from './{{properCase name}}.styles'
@@ -64,14 +64,14 @@ const {{ properCase name}} = () =>
 
 
   <Section>
-    <Header level='2'>
+    <Heading level='2'>
       {{#if wantMessages}}
       <FormattedMessage {...messages.header} />
       {{/if}}
       {{#if connectToStore}}
       {`current user: ${currentUser}`}
       {{/if}}
-    </Header>
+    </Heading>
   </Section>
 
 </article>

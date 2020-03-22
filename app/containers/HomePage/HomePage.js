@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 import { observer } from 'mobx-react'
 
 // Components
-import { Header } from 'components/Header'
+import { Heading } from 'components/Heading'
 import { ReposList } from 'components/ReposList'
 
 // Messages
@@ -67,18 +67,18 @@ export const HomePage = observer(() => {
       </Helmet>
 
       <CenteredSection>
-        <Header level="2" color="brand">
+        <Heading level="2" color="brand">
           <FormattedMessage {...messages.startProjectHeader} />
-        </Header>
+        </Heading>
         <p>
           <FormattedMessage {...messages.startProjectMessage} />
         </p>
       </CenteredSection>
 
       <Section>
-        <Header level="2">
+        <Heading level="2">
           <FormattedMessage {...messages.trymeHeader} />
-        </Header>
+        </Heading>
 
         <Form data-testid="search-form" onSubmit={onSubmitForm}>
           <label htmlFor="searchTerm">

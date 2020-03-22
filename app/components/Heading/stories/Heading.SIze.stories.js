@@ -3,10 +3,10 @@ import { storiesOf } from '@storybook/react'
 import { grommet } from 'grommet/themes'
 
 import { Container } from '../../Container'
-import { Header } from '..'
+import { Heading } from '..'
 import README from '../README.md'
 
-storiesOf('Header', module)
+storiesOf('Heading', module)
   .addParameters({
     readme: {
       sidebar: README,
@@ -14,14 +14,14 @@ storiesOf('Header', module)
   })
   .add('Size', () => (
     <Container theme={grommet}>
-      <Header level="1" size="small">
+      <Heading level="1" size="small">
         This is level 1 header
-      </Header>
+      </Heading>
 
-      <Header size="medium">This is level 1 header</Header>
+      <Heading size="medium">This is level 1 header</Heading>
 
-      <Header size="large">This is level 1 header</Header>
+      <Heading size="large">This is level 1 header</Heading>
 
-      <Header size="xlarge">This is level 1 header</Header>
+      <Heading size="xlarge">This is level 1 header</Heading>
     </Container>
   ))

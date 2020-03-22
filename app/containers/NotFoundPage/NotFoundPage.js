@@ -2,7 +2,7 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
 // Components
-import { Header } from 'components/Header'
+import { Heading } from 'components/Heading'
 
 // Messages
 import messages from './NotFoundPage.messages'
@@ -14,10 +14,10 @@ import messages from './NotFoundPage.messages'
  */
 export default function NotFound() {
   return (
-    <article>
-      <Header level="1">
+    <>
+      <Heading level="2" textAlign="center">
         <FormattedMessage {...messages.header} />
-      </Header>
-    </article>
+      </Heading>
+    </>
   )
 }

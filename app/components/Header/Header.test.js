@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import 'jest-styled-components'
+// import ''@testing-library/jest-dom/extend-expect' // add some helpful assertions
 
 import Header from './Header'
 
-const renderComponent = (props = {}) => render(<Header {...props}>TESTING</Header>)
+const renderComponent = (props = {}) => render(<Header {...props} />)
 
 /**
  *
@@ -16,7 +16,12 @@ const renderComponent = (props = {}) => render(<Header {...props}>TESTING</Heade
 describe('Header', () => {
   it('renders and matches snapshot', () => {
     const { container } = renderComponent()
-
     expect(container).toMatchSnapshot()
+  })
+
+  it('does not log errors in console', () => {
+    const spy = jest.spyOn(global.console, 'error')
+    render(<Header />)
+    expect(spy).not.toHaveBeenCalled()
   })
 })

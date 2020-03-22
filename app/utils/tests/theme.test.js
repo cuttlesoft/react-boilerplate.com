@@ -7,7 +7,7 @@ import { Add } from 'grommet-icons'
 
 import { Anchor } from '../../components/Anchor'
 import { Box } from '../../components/Box'
-import { Header } from '../../components/Header'
+import { Heading } from '../../components/Heading'
 import theme from '../theme'
 
 const colors = [
@@ -44,7 +44,7 @@ describe('Grommet', () => {
       <Grommet>
         {colors.map(color => (
           <Box key={color} background={color}>
-            <Header>{color}</Header>
+            <Heading>{color}</Heading>
           </Box>
         ))}
       </Grommet>,
@@ -58,7 +58,7 @@ describe('Grommet', () => {
       <Grommet theme={dark}>
         {colors.map(color => (
           <Box key={color} background={color}>
-            <Header>{color}</Header>
+            <Heading>{color}</Heading>
           </Box>
         ))}
       </Grommet>,
