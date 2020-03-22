@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+// Components
 import Select from './Select'
 import ToggleOption from '../ToggleOption/ToggleOption'
 
 /**
  *
- * LocaleToggle
+ * Toggle
  *
  */
-function Toggle(props) {
+const Toggle = props => {
   let content = <option>--</option>
 
   if (props.values) {

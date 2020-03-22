@@ -1,39 +1,23 @@
 /* eslint-disable react/prop-types */
-/**
- * Form
- */
-
 import React from 'react'
-import { Form } from 'grommet'
+
+// Components
+import { Form as GrommetForm } from 'grommet'
+
+// Helpers
 import { doc } from './Form.doc'
 import helpers from '../../utils/helpers'
 
-const createForm = ({
-  errors,
-  messages,
-  onChange,
-  onReset,
-  onSubmit,
-  value,
-  children,
-  style,
-  ...rest
-}) => (
-  <Form
-    errors={errors}
-    messages={messages}
-    onChange={onChange}
-    onReset={onReset}
-    onSubmit={onSubmit}
-    value={value}
-    style={{ maxWidth: '70vw', margin: 'auto', ...style }}
-    {...rest}
-  >
+/**
+ * Form
+ */
+const Form = ({ children, style, ...rest }) => (
+  <GrommetForm style={{ maxWidth: '70vw', margin: 'auto', ...style }} {...rest}>
     {children}
-  </Form>
+  </GrommetForm>
 )
 
 export default helpers.createWithDoc({
   docFunction: doc,
-  component: createForm,
+  component: Form,
 })

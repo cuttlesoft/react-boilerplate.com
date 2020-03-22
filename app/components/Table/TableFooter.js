@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { TableFooter } from 'grommet'
 
+// Components
+import { TableFooter as GrommetTableFooter } from 'grommet'
+
+// Helpers
 import { doc } from './TableFooter.doc'
 import helpers from '../../utils/helpers'
 
@@ -10,12 +13,12 @@ import helpers from '../../utils/helpers'
  * TableFooter
  *
  */
-function createTableFooter({ children, ...props }) {
-  return <TableFooter {...props}>{children}</TableFooter>
-}
+const TableFooter = ({ children, ...props }) => (
+  <GrommetTableFooter {...props}>{children}</GrommetTableFooter>
+)
 
 export default helpers.createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
-  component: createTableFooter,
+  component: TableFooter,
 })

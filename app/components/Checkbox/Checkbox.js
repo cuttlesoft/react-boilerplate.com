@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { CheckBox } from 'grommet'
 
+// Components
+import { CheckBox as GrommetCheckbox } from 'grommet'
+
+// Helpers
 import { doc } from './Checkbox.doc'
 import helpers from '../../utils/helpers'
 
@@ -10,23 +13,10 @@ import helpers from '../../utils/helpers'
  * Chexbox
  *
  */
-function createCheckbox({ checked, disabled, id, label, name, onChange, reverse, toggle }) {
-  return (
-    <CheckBox
-      checked={checked}
-      disabled={disabled}
-      id={id}
-      label={label}
-      name={name}
-      onChange={onChange}
-      reverse={reverse}
-      toggle={toggle}
-    />
-  )
-}
+const Checkbox = ({ ...rest }) => <GrommetCheckbox {...rest} />
 
 export default helpers.createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
-  component: createCheckbox,
+  component: Checkbox,
 })

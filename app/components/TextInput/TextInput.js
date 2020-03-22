@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
+
+// Components
 import { TextInput as GrommetTextInput } from 'grommet'
 
+// Helpers
 import { doc } from './TextInput.doc'
 import helpers from '../../utils/helpers'
 
@@ -10,9 +13,9 @@ import helpers from '../../utils/helpers'
  * TextInput
  *
  */
-function TextInput({ name, type, ...rest }) {
-  return <GrommetTextInput name={name} type={type} style={{ border: 'none' }} {...rest} />
-}
+const TextInput = ({ name, type, ...rest }) => (
+  <GrommetTextInput name={name} type={type} style={{ border: 'none' }} {...rest} />
+)
 
 export default helpers.createWithDoc({
   envName: process.env.NODE_ENV,

@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { Image } from 'grommet'
 
+// Components
+import { Image as GrommetImage } from 'grommet'
+
+// Helpers
 import { doc } from './Image.doc'
 import helpers from '../../utils/helpers'
 
@@ -10,23 +13,10 @@ import helpers from '../../utils/helpers'
  * Image
  *
  */
-function createImage({ a11yTitle, alignSelf, fallback, fit, gridArea, margin, opacity, src }) {
-  return (
-    <Image
-      a11yTitle={a11yTitle}
-      alignSelf={alignSelf}
-      fallback={fallback}
-      fit={fit}
-      gridArea={gridArea}
-      margin={margin}
-      opacity={opacity}
-      src={src}
-    />
-  )
-}
+const Image = ({ ...rest }) => <GrommetImage {...rest} />
 
 export default helpers.createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
-  component: createImage,
+  component: Image,
 })

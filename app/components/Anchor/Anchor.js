@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { Anchor } from 'grommet'
 
+// Components
+import { Anchor as GrommetAnchor } from 'grommet'
+
+// Helpers
 import { doc } from './Anchor.doc'
 import helpers from '../../utils/helpers'
 
@@ -10,45 +13,10 @@ import helpers from '../../utils/helpers'
  * Anchor
  *
  */
-function createAnchor({
-  a11yTitle,
-  children,
-  color,
-  disabled,
-  forwardRef,
-  href,
-  icon,
-  focus,
-  label,
-  onClick,
-  reverse,
-  theme,
-  size,
-  ...rest
-}) {
-  return (
-    <Anchor
-      a11yTitle={a11yTitle}
-      color={color}
-      disabled={disabled}
-      forwardRef={forwardRef}
-      href={href}
-      icon={icon}
-      focus={focus}
-      label={label}
-      onClick={onClick}
-      reverse={reverse}
-      theme={theme}
-      size={size}
-      {...rest}
-    >
-      {children}
-    </Anchor>
-  )
-}
+const Anchor = ({ children, ...rest }) => <GrommetAnchor {...rest}>{children}</GrommetAnchor>
 
 export default helpers.createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
-  component: createAnchor,
+  component: Anchor,
 })

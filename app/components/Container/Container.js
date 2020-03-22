@@ -2,7 +2,9 @@
 import React from 'react'
 import { Grommet } from 'grommet'
 
+// Helpers
 import { doc } from './Container.doc'
+import theme from '../../utils/theme'
 import helpers from '../../utils/helpers'
 
 /**
@@ -10,16 +12,14 @@ import helpers from '../../utils/helpers'
  * Container
  *
  */
-function createContainer({ cssVars, children, full, plain, theme, userAgent }) {
-  return (
-    <Grommet cssVars={cssVars} full={full} plain={plain} theme={theme} userAgent={userAgent}>
-      {children}
-    </Grommet>
-  )
-}
+const Container = ({ children, ...rest }) => (
+  <Grommet theme={theme} {...rest}>
+    {children}
+  </Grommet>
+)
 
 export default helpers.createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
-  component: createContainer,
+  component: Container,
 })

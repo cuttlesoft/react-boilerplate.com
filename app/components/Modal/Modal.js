@@ -11,14 +11,15 @@ import { Text } from '../Text'
 /**
  *  A higher order component to render content inside a modal.
  */
-export const Modal = ({ children, showModal, setShowModal, title }) =>
+export const Modal = ({ children, showModal, setShowModal, title, ...rest }) =>
   showModal ? (
     <Layer
-      onEsc={() => setShowModal(false)}
-      onClickOutside={() => setShowModal(false)}
       margin="small"
       modal
+      onClickOutside={() => setShowModal(false)}
+      onEsc={() => setShowModal(false)}
       style={{ width: '80vw' }}
+      {...rest}
     >
       <Header pad="small" background="light-2">
         <Text color="brand" size="large" weight="bold">

@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { TableCell } from 'grommet'
 
+// Components
+import { TableCell as GrommetTableCell } from 'grommet'
+
+// Helpers
 import { doc } from './TableCell.doc'
 import helpers from '../../utils/helpers'
 
@@ -10,16 +13,12 @@ import helpers from '../../utils/helpers'
  * TableCell
  *
  */
-function createTableCell({ children, plain, scope, size, verticalAlign, ...props }) {
-  return (
-    <TableCell plain={plain} scope={scope} size={size} verticalAlign={verticalAlign} {...props}>
-      {children}
-    </TableCell>
-  )
-}
+const TableCell = ({ children, ...rest }) => (
+  <GrommetTableCell {...rest}>{children}</GrommetTableCell>
+)
 
 export default helpers.createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
-  component: createTableCell,
+  component: TableCell,
 })

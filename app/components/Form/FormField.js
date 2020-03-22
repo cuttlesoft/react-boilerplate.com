@@ -20,14 +20,11 @@ export const StyledFormField = styled(GrommetFormField)`
 /**
  * FormField
  */
-const FormField = props => {
-  const { children, required, label, ...rest } = props
-  return (
-    <StyledFormField required={required} label={required ? `${label}*` : label} {...rest}>
-      {children}
-    </StyledFormField>
-  )
-}
+const FormField = ({ children, required, label, ...rest }) => (
+  <StyledFormField required={required} label={required ? `${label}*` : label} {...rest}>
+    {children}
+  </StyledFormField>
+)
 
 export default helpers.createWithDoc({
   docFunction: doc,
