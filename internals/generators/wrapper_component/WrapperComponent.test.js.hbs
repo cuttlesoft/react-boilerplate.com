@@ -1,0 +1,31 @@
+import React from 'react'
+import { render } from '@testing-library/react'
+// import ''@testing-library/jest-dom/extend-expect' // add some helpful assertions
+
+// Components
+import { TestWrapper } from 'utils/TestWrapper'
+import {{ properCase name}} from './{{ properCase name }}'
+
+
+const renderComponent = (props = {}) =>
+  render(
+    <TestWrapper>
+      <{{ properCase name }} {...props} />
+    </TestWrapper>,
+  )
+
+/**
+*
+* Tests for {{ properCase name }}
+*
+*/
+describe('{{ properCase name }}', () => {
+  it('renders and matches snapshot', () => {
+    const { container } = renderComponent()
+    expect(container).toMatchSnapshot()
+  })
+
+  it('has additional unit tests specified', () => {
+    expect(true).toEqual(false)
+  })
+})

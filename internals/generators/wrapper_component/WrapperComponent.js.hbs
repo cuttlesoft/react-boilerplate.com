@@ -1,0 +1,27 @@
+/* eslint-disable react/prop-types */
+import React from 'react'
+
+// Components
+import { {{ properCase name }} as Grommet{{ properCase name }} } from 'grommet'
+
+// Helpers
+import { doc } from './{{ properCase name }}.doc'
+import helpers from '../../utils/helpers'
+
+
+/**
+ *
+ * {{ properCase name }}
+ *
+ */
+const {{ properCase name }} = ({ children, ...rest }) => (
+  <Grommet{{ properCase name }} {...rest}>
+    {children}
+  </Grommet{{ properCase name }}>
+)
+
+export default helpers.createWithDoc({
+  envName: process.env.NODE_ENV,
+  docFunction: doc,
+  component: {{ properCase name }},
+})
