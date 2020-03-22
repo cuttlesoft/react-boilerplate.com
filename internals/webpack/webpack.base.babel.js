@@ -106,6 +106,17 @@ module.exports = options => ({
           },
         },
       },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+          {
+            loader: 'markdown-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: options.plugins.concat([
