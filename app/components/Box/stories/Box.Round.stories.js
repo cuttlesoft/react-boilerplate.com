@@ -1,7 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Grid } from 'grommet' /** @todo: replace with custom wrappers */
-import { grommet } from 'grommet/themes'
 
 import { Container } from '../../Container'
 import { Box } from '..'
@@ -14,7 +13,7 @@ storiesOf('Box', module)
     },
   })
   .add('Round', () => (
-    <Container theme={grommet}>
+    <Container>
       <Box pad="small" gap="small">
         <Box pad="small" background="brand" round alignSelf="start">
           true

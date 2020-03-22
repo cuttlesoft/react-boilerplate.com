@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet/themes'
 
 import { Box } from '../../Box'
 import { Container } from '../../Container'
@@ -39,7 +38,7 @@ const MultipleCheckboxes = props => {
   ]
 
   return (
-    <Container theme={grommet}>
+    <Container>
       <Box alignContent="center" pad="large">
         {items.map(item => (
           <Checkbox

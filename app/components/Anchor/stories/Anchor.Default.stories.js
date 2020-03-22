@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet/themes'
 
 import { Container } from '../../Container'
 import { Box } from '../../Box'
@@ -14,7 +13,7 @@ storiesOf('Anchor', module)
     },
   })
   .add('Default', () => (
-    <Container theme={grommet}>
+    <Container>
       <Box align="center" pad="large">
         <Anchor href="#">Link</Anchor>
       </Box>

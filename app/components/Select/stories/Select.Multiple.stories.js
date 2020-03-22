@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { storiesOf } from '@storybook/react'
 import { FormClose } from 'grommet-icons'
 import { Text } from 'grommet'
-import { grommet } from 'grommet/themes'
 
 import { Box } from '../../Box'
 import { Button } from '../../Button'
@@ -69,7 +68,7 @@ class MultiSelect extends Component {
   render() {
     const { selected } = this.state
     return (
-      <Container full theme={grommet}>
+      <Container full>
         <Box fill align="center" justify="center">
           <Select
             closeOnChange={false}

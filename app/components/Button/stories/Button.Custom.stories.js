@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet' /** @todo: replace with custom wrappers */
 
 import { Box } from '../../Box'
 import { Container } from '../../Container'
@@ -50,7 +49,7 @@ const CustomTheme = () => (
         <Button title="custom theme" onClick={() => {}} primary />
       </Box>
     </Container>
-    <Container theme={grommet}>
+    <Container>
       <Box align="center" pad="large">
         <Button as="span" title="Custom as=span" path="/" />
       </Box>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet/themes'
 import { Add } from 'grommet-icons'
 
 import { Box } from '../../Box'
@@ -9,7 +8,7 @@ import { Button } from '..'
 import README from '../README.md'
 
 const IconLabel = () => (
-  <Container theme={grommet}>
+  <Container>
     <Box align="center" pad="large">
       <Box round="full" overflow="hidden" background="neutral-1">
         <Button icon={<Add />} hoverIndicator onClick={() => {}} />

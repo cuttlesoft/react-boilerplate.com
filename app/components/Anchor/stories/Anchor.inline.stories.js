@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet/themes'
 
 import { Box } from '../../Box'
 import { Container } from '../../Container'
@@ -14,7 +13,7 @@ storiesOf('Anchor', module)
     },
   })
   .add('Inline', () => (
-    <Container theme={grommet}>
+    <Container>
       <Box align="center" pad="large">
         <p>
           This is <Anchor label="an inline link" href="#" /> with surrounding text.

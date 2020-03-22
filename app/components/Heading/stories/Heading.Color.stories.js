@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet/themes'
 
 import { Container } from '../../Container'
 import { Heading } from '..'
@@ -13,7 +12,7 @@ storiesOf('Heading', module)
     },
   })
   .add('Color', () => (
-    <Container theme={grommet}>
+    <Container>
       <Heading level="1" size="small" color="accent-1">
         This is level 1 header
       </Heading>

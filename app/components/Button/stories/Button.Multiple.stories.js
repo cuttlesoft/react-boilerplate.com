@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet/themes'
 import { Add } from 'grommet-icons'
 
 import { Box } from '../../Box'
@@ -9,7 +8,7 @@ import { Button } from '..'
 import README from '../README.md'
 
 const MultipleButton = () => (
-  <Container theme={grommet}>
+  <Container>
     <Box align="center" pad="large">
       <Box direction="row" align="center" gap="small" pad="xsmall">
         <Button title="Cancel" onClick={() => {}} />

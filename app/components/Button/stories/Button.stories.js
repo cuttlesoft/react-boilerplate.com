@@ -1,7 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { grommet } from 'grommet' /** @todo: replace with custom wrappers */
 
 import { Box } from '../../Box'
 import { Container } from '../../Container'
@@ -9,7 +8,7 @@ import { Button } from '..'
 import README from '../README.md'
 
 const BasicButtons = props => (
-  <Container theme={grommet}>
+  <Container>
     <Box align="center" pad="medium">
       <Button title="Default" onClick={action('clicked')} {...props} />
     </Box>

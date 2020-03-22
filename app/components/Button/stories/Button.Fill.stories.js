@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet'
 
 import { Box } from '../../Box'
 import { Container } from '../../Container'
@@ -8,7 +7,7 @@ import { Button } from '..'
 import README from '../README.md'
 
 const FillButtons = props => (
-  <Container theme={grommet}>
+  <Container>
     <Box pad="medium" justify="center" direction="row">
       <Box justify="center" align="center" pad="medium" gap="medium">
         <Box border justify="center" align="center" height="100px" width="300px">

@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet/themes'
 
 import { Container } from '../../Container'
 import { Box } from '..'
@@ -13,7 +12,7 @@ storiesOf('Box', module)
     },
   })
   .add('Size', () => (
-    <Container theme={grommet}>
+    <Container>
       <Box pad="small" gap="small">
         <Box
           width="small"

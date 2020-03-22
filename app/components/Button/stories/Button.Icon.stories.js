@@ -1,7 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Text } from 'grommet' /** @todo: replace with custom wrappers */
-import { grommet } from 'grommet/themes'
 import { Close, Send, User } from 'grommet-icons'
 
 import { Box } from '../../Box'
@@ -10,7 +9,7 @@ import { Button } from '..'
 import README from '../README.md'
 
 const IconPlain = () => (
-  <Container theme={grommet}>
+  <Container>
     <Box align="center" pad="large">
       <Text margin="small"> plain=true (no padding, no border) </Text>
       <Box direction="row">

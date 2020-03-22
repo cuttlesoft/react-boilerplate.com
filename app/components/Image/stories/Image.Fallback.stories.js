@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet/themes'
 
 import sampleImg from '../../../assets/images/sample_image.jpg'
 import { Container } from '../../Container'
@@ -14,7 +13,7 @@ storiesOf('Image', module)
     },
   })
   .add('Fallback', () => (
-    <Container theme={grommet}>
+    <Container>
       <Image fallback={sampleImg} src="//v2.grommet.io/assets/IMG_4245_not_exists.jpg" />
     </Container>
   ))

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet/themes'
 
 import { Container } from '../../Container'
 import { Box } from '../../Box'
@@ -22,7 +21,7 @@ const SuggestionsInput = props => {
     .map((_, i) => `suggestion ${i + 1}`)
 
   return (
-    <Container full theme={grommet}>
+    <Container full>
       <Box fill align="center" justify="start" pad="large">
         <Box width="medium">
           <TextInput

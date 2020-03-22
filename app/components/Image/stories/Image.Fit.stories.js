@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet/themes'
 
 import sampleImg from '../../../assets/images/sample_image.jpg'
 import { Box } from '../../Box'
@@ -15,7 +14,7 @@ storiesOf('Image', module)
     },
   })
   .add('Fit', () => (
-    <Container theme={grommet}>
+    <Container>
       <Box align="start" gap="medium">
         <Box height="small" width="small" border>
           <Image src={sampleImg} fit="contain" />

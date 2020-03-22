@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet/themes'
 
 import { Box } from '../../Box'
 import { Container } from '../../Container'
@@ -18,7 +17,7 @@ storiesOf('TextInput', module)
 const SimpleTextInput = props => {
   const [inputValue, setInputValue] = useState('')
   return (
-    <Container theme={grommet}>
+    <Container>
       <Box align="center" pad="large">
         <TextInput
           placeholder={<span>Enter something...</span>}

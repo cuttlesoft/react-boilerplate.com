@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { Box, Grommet } from 'grommet'
-import { grommet } from 'grommet/themes'
 
 import { Select } from '..'
 import README from '../README.md'
@@ -15,12 +14,12 @@ storiesOf('Select', module)
   })
   .add('Simple', () => <SimpleSelect />)
 
-const SimpleSelect = ({ theme, ...rest }) => {
+const SimpleSelect = ({ ...rest }) => {
   const [value, setValue] = useState('')
 
   const options = ['one', 'two', 'three']
   return (
-    <Grommet full theme={theme || grommet}>
+    <Grommet full>
       <Box fill align="center" justify="start" pad="large">
         <Select
           id="select"

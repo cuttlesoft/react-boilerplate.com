@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet } from 'grommet/themes'
 import { Attraction, Car } from 'grommet-icons'
 
 import { Anchor } from '../../Anchor'
@@ -16,7 +15,7 @@ storiesOf('Box', module)
     },
   })
   .add('Simple', () => (
-    <Container theme={grommet}>
+    <Container>
       <Box
         direction="row-responsive"
         justify="center"
