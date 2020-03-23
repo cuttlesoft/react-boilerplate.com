@@ -1,5 +1,5 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-## createSelect
+## Select
 A control to select a value, with optional search.
 
 ## Usage

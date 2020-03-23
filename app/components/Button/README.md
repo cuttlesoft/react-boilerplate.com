@@ -1,5 +1,5 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-## createButton
+## Button
 A button.
 
 You can provide a single function child that will be called with

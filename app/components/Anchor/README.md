@@ -1,5 +1,5 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-## createAnchor
+## Anchor
 A text link.
 
 We have a separate component from the browser

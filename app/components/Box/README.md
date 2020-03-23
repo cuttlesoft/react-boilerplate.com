@@ -1,5 +1,5 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-## createBox
+## Box
 A container that lays out its contents in one direction. Box
       provides CSS flexbox capabilities for layout, as well as general
       styling of things like background color, border, and animation.

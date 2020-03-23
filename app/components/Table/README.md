@@ -1,5 +1,5 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-## createTable
+## Table
 A table of data organized in cells.
 
 ## Usage

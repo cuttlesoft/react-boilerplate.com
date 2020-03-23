@@ -1,5 +1,5 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-## createDataTable
+## DataTable
 A data driven table.
 
 ## Usage

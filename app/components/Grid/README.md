@@ -1,5 +1,5 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-## createGrid
+## Grid
 A grid system for laying out content. To use, define the
 rows and columns, create area names for adjacent cells, and then
 place Box components inside those areas using the gridArea property.
@@ -142,11 +142,8 @@ stretch
 Area names and column,row coordinates.
 
 ```
-[{
-  name: string,
-  start: [number],
-  end: [number]
-}]
+[object Object]
+[object Object]
 ```
 
 **columns**

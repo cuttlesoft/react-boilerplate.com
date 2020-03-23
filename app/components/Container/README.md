@@ -1,5 +1,5 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-## createContainer
+## Container
 The top level Container container.
 
 ## Usage
