@@ -125,6 +125,7 @@ exports[`TemplateHeader renders and matches snapshot 1`] = `
           class="c2"
         >
           <img
+            alt="react-boilerplate - Logo"
             class="c3"
             src="IMAGE_MOCK"
           />
