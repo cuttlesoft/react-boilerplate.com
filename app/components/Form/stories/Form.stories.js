@@ -18,8 +18,14 @@ const DefaultForm = props => {
       <Box fill align="center" justify="center">
         <Box width="medium">
           <Form
-            onReset={event => console.info(event)}
-            onSubmit={({ value }) => console.info('Submit', value)}
+            onReset={event => {
+              // eslint-disable-next-line no-console
+              console.info(event)
+            }}
+            onSubmit={({ value }) => {
+              // eslint-disable-next-line no-console
+              console.info('Submit', value)
+            }}
             {...props}
           >
             <FormField

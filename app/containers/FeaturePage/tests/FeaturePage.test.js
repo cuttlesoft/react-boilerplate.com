@@ -1,7 +1,8 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { IntlProvider } from 'react-intl'
 
+// Components
+import { TestWrapper } from 'utils/TestWrapper'
 import FeaturePage from '../FeaturePage'
 
 describe('FeaturePage', () => {
@@ -9,9 +10,9 @@ describe('FeaturePage', () => {
     const {
       container: { firstChild },
     } = render(
-      <IntlProvider locale="en">
+      <TestWrapper>
         <FeaturePage />
-      </IntlProvider>,
+      </TestWrapper>,
     )
 
     expect(firstChild).toMatchSnapshot()

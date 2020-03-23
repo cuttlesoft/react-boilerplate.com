@@ -13,6 +13,15 @@ import { translationMessages } from '../../../i18n'
 // Stores
 import trunk from '../../../configureStore'
 
+const renderComponent = (stores, props = {}) =>
+  render(
+    <Provider {...stores}>
+      <LanguageProvider messages={translationMessages}>
+        <LocaleToggle {...props} />
+      </LanguageProvider>
+    </Provider>,
+  )
+
 describe('LocaleToggle', () => {
   let stores
 
@@ -27,25 +36,13 @@ describe('LocaleToggle', () => {
   })
 
   it('should match the snapshot', () => {
-    const { container } = render(
-      <Provider {...stores}>
-        <LanguageProvider messages={translationMessages}>
-          <LocaleToggle />
-        </LanguageProvider>
-      </Provider>,
-    )
+    const { container } = renderComponent(stores)
 
     expect(container.firstChild).toMatchSnapshot()
   })
 
   it('should present the default `en` english language option', () => {
-    const { container } = render(
-      <Provider {...stores}>
-        <LanguageProvider messages={translationMessages}>
-          <LocaleToggle />
-        </LanguageProvider>
-      </Provider>,
-    )
+    const { container } = renderComponent(stores)
 
     expect(container.querySelector('option[value="en"]')).not.toBeNull()
   })

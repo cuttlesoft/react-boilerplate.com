@@ -202,11 +202,6 @@ exports[`Grid as renders 1`] = `
 `;
 
 exports[`Grid columns renders 1`] = `
-.c5 {
-  display: grid;
-  box-sizing: border-box;
-}
-
 .c1 {
   display: grid;
   box-sizing: border-box;
@@ -229,6 +224,11 @@ exports[`Grid columns renders 1`] = `
   display: grid;
   box-sizing: border-box;
   grid-template-columns: repeat( auto-fill,minmax(192px,1fr) );
+}
+
+.c5 {
+  display: grid;
+  box-sizing: border-box;
 }
 
 .c0 {
@@ -266,16 +266,16 @@ exports[`Grid columns renders 1`] = `
 `;
 
 exports[`Grid fill renders 1`] = `
-.c2 {
-  display: grid;
-  box-sizing: border-box;
-}
-
 .c1 {
   display: grid;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+}
+
+.c2 {
+  display: grid;
+  box-sizing: border-box;
 }
 
 .c3 {

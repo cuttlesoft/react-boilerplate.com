@@ -10,8 +10,8 @@ import helpers from '../../utils/helpers'
  * TextInput
  *
  */
-function TextInput({ name, type }) {
-  return <GrommetTextInput name={name} type={type} style={{ border: 'none' }} />
+function TextInput({ name, type, ...rest }) {
+  return <GrommetTextInput name={name} type={type} style={{ border: 'none' }} {...rest} />
 }
 
 export default helpers.createWithDoc({

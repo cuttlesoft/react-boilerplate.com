@@ -18,10 +18,4 @@ describe('Header', () => {
     const { container } = renderComponent()
     expect(container).toMatchSnapshot()
   })
-
-  it('does not log errors in console', () => {
-    const spy = jest.spyOn(global.console, 'error')
-    render(<Header />)
-    expect(spy).not.toHaveBeenCalled()
-  })
 })

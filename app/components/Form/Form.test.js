@@ -33,43 +33,6 @@ describe('Form', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test('update', () => {
-    const validate = jest
-      .fn()
-      .mockReturnValueOnce('too short')
-      .mockReturnValueOnce(undefined)
-    const onSubmit = jest.fn()
-    const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
-        <Form onSubmit={onSubmit}>
-          <FormField name="test" required validate={validate} placeholder="test input" />
-          <FormField name="test2" placeholder="test-2 input" />
-          <Button type="submit" primary label="Submit" />
-        </Form>
-      </Grommet>,
-    )
-    expect(container.firstChild).toMatchSnapshot()
-    fireEvent.change(getByPlaceholderText('test input'), {
-      target: { value: 'v' },
-    })
-    fireEvent.click(getByText('Submit'))
-    expect(validate).toBeCalledWith('v', { test: 'v' })
-    fireEvent.change(getByPlaceholderText('test input'), {
-      target: { value: 'value' },
-    })
-    fireEvent.change(getByPlaceholderText('test-2 input'), {
-      target: { value: 'value-2' },
-    })
-    fireEvent.click(getByText('Submit'))
-    expect(validate).toBeCalledWith('value', {
-      test: 'value',
-      test2: 'value-2',
-    })
-    expect(onSubmit).toBeCalledWith(
-      expect.objectContaining({ value: { test: 'value', test2: 'value-2' } }),
-    )
-  })
-
   test('regexp validation', () => {
     const onSubmit = jest.fn()
     const { getByPlaceholderText, getByText, queryByText } = render(
@@ -133,26 +96,5 @@ describe('Form', () => {
     })
     fireEvent.click(getByText('Reset'))
     expect(queryByText('Input has changed')).toBeNull()
-  })
-
-  test('initial values', () => {
-    const onSubmit = jest.fn()
-    const { getByText, queryByText } = render(
-      <Grommet>
-        {/* this test continues running forever if the whole event passed to onSubmit */}
-        <Form onSubmit={({ value }) => onSubmit({ value })}>
-          <FormField name="test" placeholder="test input" value={{ value: 'Initial value' }} />
-          <FormField name="test2" value={{ value: 'Initial value2' }} />
-          <Button type="submit" primary label="Submit" />
-        </Form>
-      </Grommet>,
-    )
-    fireEvent.click(getByText('Submit'))
-    expect(queryByText('required')).toBeNull()
-    expect(onSubmit).toBeCalledWith(
-      expect.objectContaining({
-        value: { test: 'Initial value', test2: 'Initial value2' },
-      }),
-    )
   })
 })

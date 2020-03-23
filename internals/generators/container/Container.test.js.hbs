@@ -19,24 +19,11 @@ render(
 *
 * Tests for {{ properCase name }}
 *
-* @see
-https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
-*
 */
 describe('{{ properCase name }}', () => {
   it('renders and matches snapshot', () => {
     const { container } = renderComponent()
     expect(container).toMatchSnapshot()
-  })
-
-  it('does not log errors in console', () => {
-    const spy = jest.spyOn(global.console, 'error')
-    render(
-    <IntlProvider locale={DEFAULT_LOCALE}>
-      < {{ properCase name }} />
-    </IntlProvider>,
-    )
-    expect(spy).not.toHaveBeenCalled()
   })
 
   it('has additional unit tests specified', () => {

@@ -1,77 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HomePage should render and match the snapshot 1`] = `
-<article>
-  <section
-    class="HomePagestyles__Section-okrkb4-3 HomePagestyles__CenteredSection-okrkb4-4 kWoWkk"
-  >
-    <h2
-      class="StyledHeading-sc-1rdh4aw-0 jpdBNw"
+<div
+  class="StyledGrommet-sc-19lkkz7-0 QArLx"
+>
+  <article>
+    <section
+      class="HomePagestyles__Section-okrkb4-3 HomePagestyles__CenteredSection-okrkb4-4 kWoWkk"
     >
-      <span>
-        Start your next react project in seconds
-      </span>
-    </h2>
-    <p>
-      <span>
-        A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices
-      </span>
-    </p>
-  </section>
-  <section
-    class="HomePagestyles__Section-okrkb4-3 iXduoH"
-  >
-    <h2
-      class="StyledHeading-sc-1rdh4aw-0 jMKEAN"
-    >
-      <span>
-        Try me!
-      </span>
-    </h2>
-    <form
-      class="HomePagestyles__Form-okrkb4-1 gqbTVP"
-      data-testid="search-form"
-    >
-      <label
-        for="searchTerm"
+      <h2
+        class="StyledHeading-sc-1rdh4aw-0 hoUPUX"
       >
         <span>
-          Show Github repositories by
+          Start your next react project in seconds
         </span>
-        <span
-          class="HomePagestyles__AtPrefix-okrkb4-0 krQbyt"
+      </h2>
+      <p>
+        <span>
+          A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices
+        </span>
+      </p>
+    </section>
+    <section
+      class="HomePagestyles__Section-okrkb4-3 iXduoH"
+    >
+      <h2
+        class="StyledHeading-sc-1rdh4aw-0 jMKEAN"
+      >
+        <span>
+          Try me!
+        </span>
+      </h2>
+      <form
+        class="HomePagestyles__Form-okrkb4-1 gqbTVP"
+        data-testid="search-form"
+      >
+        <label
+          for="searchTerm"
         >
           <span>
-            @
+            Show Github repositories by
           </span>
-        </span>
-        <input
-          class="HomePagestyles__Input-okrkb4-2 jjdzUj"
-          id="searchTerm"
-          placeholder="mxstbr"
-          type="text"
-          value=""
-        />
-      </label>
-    </form>
-    <div
-      class="Wrapper-sc-1umgotm-0 eAscws"
-      data-testid="repo-list-not-found"
-    >
-      <ul
-        class="Ul-mwnq6h-0 dkRQrN"
-      >
-        <li
-          class="Wrapper-euo0oy-0 bmJhkI"
-        >
-          <div
-            class="Item-sc-3y9mie-0 kSkLLA"
+          <span
+            class="HomePagestyles__AtPrefix-okrkb4-0 krQbyt"
           >
-            The user could not be found or does not have any repositories.
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-</article>
+            <span>
+              @
+            </span>
+          </span>
+          <input
+            class="HomePagestyles__Input-okrkb4-2 jjdzUj"
+            id="searchTerm"
+            placeholder="mxstbr"
+            type="text"
+            value=""
+          />
+        </label>
+      </form>
+      <div
+        class="Wrapper-sc-1umgotm-0 eAscws"
+        data-testid="repo-list-not-found"
+      >
+        <ul
+          class="Ul-mwnq6h-0 dkRQrN"
+        >
+          <li
+            class="Wrapper-euo0oy-0 bmJhkI"
+          >
+            <div
+              class="Item-sc-3y9mie-0 kSkLLA"
+            >
+              The user could not be found or does not have any repositories.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </article>
+</div>
 `;
