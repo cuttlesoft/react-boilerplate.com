@@ -6,6 +6,8 @@ import { Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
 
 // Containers
+import { Dashboard } from 'containers/Dashboard'
+import { ConfirmAccount } from 'containers/ConfirmAccount'
 import { FeaturePage } from 'containers/FeaturePage'
 import { HomePage } from 'containers/HomePage'
 import { Login } from 'containers/Login'
@@ -14,8 +16,8 @@ import { Register } from 'containers/Register'
 
 // Components
 import { Header } from 'components/Header'
-import { TemplateHeader } from 'components/TemplateHeader'
-import { Footer } from 'components/Footer'
+import { PrivateRoute } from 'components/PrivateRoute'
+import { PublicRoute } from 'components/PublicRoute'
 
 // Styles
 import GlobalStyle from '../../global-styles'
@@ -41,17 +43,18 @@ export default function Routes() {
       <Header />
 
       <Container>
-        <TemplateHeader />
-
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Route path="/features" component={FeaturePage} />
+          <Route path="/confirm-account" component={ConfirmAccount} />
+
+          <PublicRoute exact path="/login" component={Login} />
+          <PublicRoute exact path="/register" component={Register} />
+
+          <PrivateRoute exact path="/dashboard" component={Dashboard} />
+          <PrivateRoute path="/features" component={FeaturePage} />
+
           <Route path="" component={NotFoundPage} />
         </Switch>
-
-        <Footer />
       </Container>
 
       <GlobalStyle />
