@@ -6,7 +6,7 @@ import { Image as GrommetImage } from 'grommet'
 
 // Helpers
 import { doc } from './Image.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 /**
  *
@@ -15,7 +15,7 @@ import helpers from '../../utils/helpers'
  */
 const Image = ({ ...rest }) => <GrommetImage {...rest} />
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
   component: Image,

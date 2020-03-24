@@ -7,7 +7,7 @@ import { Button as GrommetButton } from 'grommet'
 
 // Helpers
 import { doc } from './Button.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 const StyledGrommetButton = styled(GrommetButton)`
   font-weight: bold;
@@ -21,7 +21,7 @@ const StyledGrommetButton = styled(GrommetButton)`
  */
 const Button = ({ ...rest }) => <StyledGrommetButton {...rest} />
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
   component: Button,

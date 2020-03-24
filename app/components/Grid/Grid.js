@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
 import React, { useContext } from 'react'
-import { Grid as GrommetGrid } from 'grommet'
-import { ResponsiveContext } from 'grommet/es6/contexts'
+import { Grid as GrommetGrid, ResponsiveContext } from 'grommet'
 import { isPlainObject } from 'lodash'
 
 import { doc } from './Grid.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 /**
  * Grid
@@ -23,7 +22,7 @@ const Grid = ({ areas, columns, rows, ...rest }) => {
   )
 }
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   docFunction: doc,
   component: Grid,
 })

@@ -4,7 +4,7 @@ import { FormField as GrommetFormField } from 'grommet'
 import styled from 'styled-components'
 
 import { doc } from './Form.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 export const StyledFormField = styled(GrommetFormField)`
   label {
@@ -26,7 +26,7 @@ const FormField = ({ children, required, label, ...rest }) => (
   </StyledFormField>
 )
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   docFunction: doc,
   component: FormField,
 })

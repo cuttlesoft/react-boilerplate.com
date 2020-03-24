@@ -6,7 +6,7 @@ import { Select as GrommetSelect } from 'grommet'
 
 // Helpers
 import { doc } from './Select.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 /**
  *
@@ -17,7 +17,7 @@ function Select({ children, ...rest }) {
   return <GrommetSelect {...rest}>{children}</GrommetSelect>
 }
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
   component: Select,

@@ -6,7 +6,7 @@ import { {{ properCase name }} as Grommet{{ properCase name }} } from 'grommet'
 
 // Helpers
 import { doc } from './{{ properCase name }}.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc save} from '../../utils/helpers'
 
 
 /**
@@ -20,7 +20,7 @@ const {{ properCase name }} = ({ children, ...rest }) => (
   </Grommet{{ properCase name }}>
 )
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
   component: {{ properCase name }},

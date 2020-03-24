@@ -5,7 +5,7 @@ import { Grommet } from 'grommet'
 // Helpers
 import { doc } from './Container.doc'
 import theme from '../../utils/theme'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 /**
  *
@@ -18,7 +18,7 @@ const Container = ({ children, ...rest }) => (
   </Grommet>
 )
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
   component: Container,

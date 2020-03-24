@@ -6,7 +6,7 @@ import { DataTable as GrommetDataTable } from 'grommet'
 
 // Helpers
 import { doc } from './DataTable.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 /**
  *
@@ -15,7 +15,7 @@ import helpers from '../../utils/helpers'
  */
 const DataTable = ({ ...rest }) => <GrommetDataTable {...rest} />
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
   component: DataTable,

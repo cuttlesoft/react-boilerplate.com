@@ -6,7 +6,7 @@ import { TableFooter as GrommetTableFooter } from 'grommet'
 
 // Helpers
 import { doc } from './TableFooter.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 /**
  *
@@ -17,7 +17,7 @@ const TableFooter = ({ children, ...props }) => (
   <GrommetTableFooter {...props}>{children}</GrommetTableFooter>
 )
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
   component: TableFooter,

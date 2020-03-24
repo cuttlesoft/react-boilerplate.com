@@ -6,7 +6,7 @@ import { Box as GrommetBox } from 'grommet'
 
 // Helpers
 import { doc } from './Box.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 /**
  *
@@ -17,7 +17,7 @@ function Box({ children, ...rest }) {
   return <GrommetBox {...rest}>{children}</GrommetBox>
 }
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
   component: Box,

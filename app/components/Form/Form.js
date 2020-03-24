@@ -6,7 +6,7 @@ import { Form as GrommetForm } from 'grommet'
 
 // Helpers
 import { doc } from './Form.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 /**
  * Form
@@ -17,7 +17,7 @@ const Form = ({ children, style, ...rest }) => (
   </GrommetForm>
 )
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   docFunction: doc,
   component: Form,
 })

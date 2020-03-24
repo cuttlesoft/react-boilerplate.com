@@ -6,7 +6,7 @@ import { TableCell as GrommetTableCell } from 'grommet'
 
 // Helpers
 import { doc } from './TableCell.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 /**
  *
@@ -17,7 +17,7 @@ const TableCell = ({ children, ...rest }) => (
   <GrommetTableCell {...rest}>{children}</GrommetTableCell>
 )
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
   component: TableCell,

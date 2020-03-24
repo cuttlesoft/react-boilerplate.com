@@ -6,7 +6,7 @@ import { TableHeader as GrommetTableHeader } from 'grommet'
 
 // Helpers
 import { doc } from './TableFooter.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 /**
  *
@@ -17,7 +17,7 @@ const TableHeader = ({ children, ...props }) => (
   <GrommetTableHeader {...props}>{children}</GrommetTableHeader>
 )
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
   component: TableHeader,

@@ -6,7 +6,7 @@ import { Heading as GrommetHeading } from 'grommet'
 
 // Helpers
 import { doc } from './Heading.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 /**
  *
@@ -15,7 +15,7 @@ import helpers from '../../utils/helpers'
  */
 const Heading = ({ children, ...rest }) => <GrommetHeading {...rest}>{children}</GrommetHeading>
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
   component: Heading,

@@ -8,7 +8,7 @@ import { Box } from '../Box'
 
 // Helpers
 import { doc } from './Header.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 /**
  *
@@ -26,7 +26,7 @@ const Header = ({ children, ...rest }) => (
   </GrommetHeader>
 )
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   envName: process.env.NODE_ENV,
   docFunction: doc,
   component: Header,

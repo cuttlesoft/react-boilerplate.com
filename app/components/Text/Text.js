@@ -7,7 +7,7 @@ import { Text as GrommetText } from 'grommet'
 
 // Helpers
 import { doc } from './Text.doc'
-import helpers from '../../utils/helpers'
+import { createWithDoc } from '../../utils/helpers'
 
 const StyledGrommetText = styled(GrommetText).attrs(props => ({ ...props }))`
   font-family: ${props => props.secondary && 'Lato'};
@@ -20,7 +20,7 @@ const StyledGrommetText = styled(GrommetText).attrs(props => ({ ...props }))`
  */
 const Text = ({ children, ...rest }) => <StyledGrommetText {...rest}>{children}</StyledGrommetText>
 
-export default helpers.createWithDoc({
+export default createWithDoc({
   docFunction: doc,
   component: Text,
 })
