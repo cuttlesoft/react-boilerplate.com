@@ -1,5 +1,5 @@
 /* @flow */
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { isEmail } from 'validator'
 
 // Components
@@ -8,62 +8,85 @@ import { Box } from 'components/Box'
 import { Button } from 'components/Button'
 import { Form, FormField } from 'components/Form'
 import { Heading } from 'components/Heading'
+import { Message } from 'components/Message'
 import { PasswordInput } from 'components/PasswordInput'
+
 import { TextInput } from 'components/TextInput'
+
+// Utils and messages
+import useFlashMessage from '../../hooks/FlashMessage'
+import { login } from '../../services/user.service'
+import { UserStoreContext } from '../../stores/UserStore'
 
 /**
  *
  * Login
  *
  */
-const Login = () => (
-  <>
-    <Box align="center" pad="large">
-      <Heading level="2">Login</Heading>
-      <Anchor href="/register" label="or Create An Account"></Anchor>
-    </Box>
+const Login = () => {
+  const { message: error, showMessage: showError } = useFlashMessage(null)
 
-    <Form
-      validate="blur"
-      onSubmit={({ value }) => {
-        // eslint-disable-next-line no-console
-        console.log('Submit', value)
-      }}
-    >
-      <FormField
-        label="Email"
-        name="email"
-        required
-        validate={[
-          email => {
-            if (email && !isEmail(email)) return 'Please enter a valid email address'
-            return undefined
-          },
-        ]}
-      >
-        <TextInput name="email" type="email" />
-      </FormField>
+  const [loading, setLoading] = useState(false)
 
-      <FormField
-        label="Password"
-        name="password"
-        required
-        validate={[
-          password => {
-            if (password && password.length <= 8) return 'Please enter more than 8 characters'
-            return undefined
-          },
-        ]}
-      >
-        <PasswordInput id="password" name="password" />
-      </FormField>
+  const { setCurrentUser } = useContext(UserStoreContext)
 
-      {/* Submit */}
-      <Box direction="row" margin={{ top: 'medium' }}>
-        <Button type="submit" label="Login" primary />
+  /**
+   * Helper to determine if the submit button is disabled
+   */
+  const _isButtonDisabled = () => loading
+
+  return (
+    <>
+      <Box align="center" pad="large" data-testid="login-header">
+        <Heading level="2">Login</Heading>
+        <Anchor href="/register" label="or Create An Account"></Anchor>
       </Box>
-    </Form>
-  </>
-)
+
+      <Form
+        id="login-form"
+        validate="blur"
+        onSubmit={({ value }) => {
+          login(value, showError, setLoading, setCurrentUser)
+        }}
+      >
+        <FormField
+          label="Email"
+          name="email"
+          required
+          validate={[
+            email => {
+              if (email && !isEmail(email)) return 'Please enter a valid email address'
+              return undefined
+            },
+          ]}
+        >
+          <TextInput name="email" type="email" />
+        </FormField>
+
+        <FormField
+          label="Password"
+          name="password"
+          required
+          validate={[
+            password => {
+              if (password && password.length <= 8) return 'Please enter more than 8 characters'
+              return undefined
+            },
+          ]}
+        >
+          <PasswordInput id="password" name="password" />
+        </FormField>
+
+        {/* Submit */}
+        <Box direction="row" margin={{ vertical: 'medium' }}>
+          <Button type="submit" label="Login" primary disabled={_isButtonDisabled()} />
+        </Box>
+
+        {/* Status Messages */}
+        {error && <Message message={error} isError />}
+      </Form>
+    </>
+  )
+}
 
 export default Login

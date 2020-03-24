@@ -1,0 +1,367 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register renders and matches snapshot 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 QArLx"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 DKkMM"
+    >
+      <h2
+        class="StyledHeading-sc-1rdh4aw-0 jMKEAN"
+      >
+        Create an account
+      </h2>
+      <a
+        class="StyledAnchor-sc-1rp7lwl-0 kZUeBZ"
+        href="/login"
+      >
+        or Sign In
+      </a>
+    </div>
+    <form
+      style="max-width: 70vw; margin: auto;"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 kEDHqi"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+          style="flex: 1;"
+        >
+          <label
+            class="StyledText-sc-1sadyjn-0 enbIRN"
+          >
+            First Name*
+          </label>
+          <div
+            class="StyledBox-sc-13pk1d4-0 GCqjV"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 jJdKAu"
+            >
+              <div
+                class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
+              >
+                <input
+                  autocomplete="off"
+                  class="StyledTextInput-sc-1x30a0s-0 iyxfWo"
+                  name="first_name"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+        />
+        <div
+          class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+          style="flex: 1;"
+        >
+          <label
+            class="StyledText-sc-1sadyjn-0 enbIRN"
+          >
+            Last Name*
+          </label>
+          <div
+            class="StyledBox-sc-13pk1d4-0 GCqjV"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 jJdKAu"
+            >
+              <div
+                class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
+              >
+                <input
+                  autocomplete="off"
+                  class="StyledTextInput-sc-1x30a0s-0 iyxfWo"
+                  name="last_name"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+      >
+        <label
+          class="StyledText-sc-1sadyjn-0 enbIRN"
+        >
+          Email*
+        </label>
+        <div
+          class="StyledBox-sc-13pk1d4-0 GCqjV"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 jJdKAu"
+          >
+            <div
+              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
+            >
+              <input
+                autocomplete="off"
+                class="StyledTextInput-sc-1x30a0s-0 bjXYsX"
+                name="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+      >
+        <label
+          class="StyledText-sc-1sadyjn-0 enbIRN"
+        >
+          Password*
+        </label>
+        <div
+          class="StyledBox-sc-13pk1d4-0 GCqjV"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 jJdKAu"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 emmXTg"
+            >
+              <div
+                class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
+              >
+                <input
+                  autocomplete="off"
+                  class="StyledTextInput-sc-1x30a0s-0 bjXYsX"
+                  id="password"
+                  name="password"
+                  type="password"
+                  value=""
+                />
+              </div>
+              <button
+                class="StyledButton-sc-323bzc-0 jvkqEN Button__StyledGrommetButton-sc-5cxguj-0 dKGxUf"
+                type="button"
+              >
+                <svg
+                  aria-label="Hide"
+                  class="StyledIcon-ofa7kd-0 gzViXn"
+                  style="width: 30px;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12,17 C9.27272727,17 6,14.2222222 6,12 C6,9.77777778 9.27272727,7 12,7 C14.7272727,7 18,9.77777778 18,12 C18,14.2222222 14.7272727,17 12,17 Z M11,12 C11,12.55225 11.44775,13 12,13 C12.55225,13 13,12.55225 13,12 C13,11.44775 12.55225,11 12,11 C11.44775,11 11,11.44775 11,12 Z M20,5 L4,19"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+      >
+        <label
+          class="StyledText-sc-1sadyjn-0 enbIRN"
+        >
+          Re-enter Password*
+        </label>
+        <div
+          class="StyledBox-sc-13pk1d4-0 GCqjV"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 jJdKAu"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 emmXTg"
+            >
+              <div
+                class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
+              >
+                <input
+                  autocomplete="off"
+                  class="StyledTextInput-sc-1x30a0s-0 bjXYsX"
+                  name="confirm_password"
+                  type="password"
+                  value=""
+                />
+              </div>
+              <button
+                class="StyledButton-sc-323bzc-0 jvkqEN Button__StyledGrommetButton-sc-5cxguj-0 dKGxUf"
+                type="button"
+              >
+                <svg
+                  aria-label="Hide"
+                  class="StyledIcon-ofa7kd-0 gzViXn"
+                  style="width: 30px;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12,17 C9.27272727,17 6,14.2222222 6,12 C6,9.77777778 9.27272727,7 12,7 C14.7272727,7 18,9.77777778 18,12 C18,14.2222222 14.7272727,17 12,17 Z M11,12 C11,12.55225 11.44775,13 12,13 C12.55225,13 13,12.55225 13,12 C13,11.44775 12.55225,11 12,11 C11.44775,11 11,11.44775 11,12 Z M20,5 L4,19"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+      >
+        <label
+          class="StyledText-sc-1sadyjn-0 enbIRN"
+        >
+          Account Type.*
+        </label>
+        <div
+          class="StyledBox-sc-13pk1d4-0 GCqjV"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 eXTSqT"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 eitMOG"
+            >
+              <label
+                class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 kKDEPl"
+                for="Artist"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 jJdKAu StyledRadioButton-g1f6ld-4 eLBYmH"
+                >
+                  <input
+                    class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                    id="Artist"
+                    name="user_type"
+                    type="radio"
+                    value="Artist"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 iOGeQY"
+                  >
+                    <span
+                      class="StyledText-sc-1sadyjn-0 gmtNWw Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+                    >
+                      Artist
+                    </span>
+                  </div>
+                </div>
+              </label>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cPZcyD"
+              />
+              <label
+                class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 kKDEPl"
+                for="Venue"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 jJdKAu StyledRadioButton-g1f6ld-4 eLBYmH"
+                >
+                  <input
+                    class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                    id="Venue"
+                    name="user_type"
+                    type="radio"
+                    value="Venue"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 iOGeQY"
+                  >
+                    <span
+                      class="StyledText-sc-1sadyjn-0 gmtNWw Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+                    >
+                      Venue
+                    </span>
+                  </div>
+                </div>
+              </label>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cPZcyD"
+              />
+              <label
+                class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 kKDEPl"
+                for="Crew"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 jJdKAu StyledRadioButton-g1f6ld-4 eLBYmH"
+                >
+                  <input
+                    class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                    id="Crew"
+                    name="user_type"
+                    type="radio"
+                    value="Crew"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 iOGeQY"
+                  >
+                    <span
+                      class="StyledText-sc-1sadyjn-0 gmtNWw Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+                    >
+                      Crew
+                    </span>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="StyledBox-sc-13pk1d4-0 kzkwBs"
+      >
+        <label
+          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 PHOTu"
+          for="check-box"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 eeTGTD StyledCheckBox-sc-1dbk5ju-6 CBoMo"
+          >
+            <input
+              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dRYNyB"
+              id="check-box"
+              type="checkbox"
+            />
+            <div
+              class="StyledBox-sc-13pk1d4-0 uqlPU StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iEciRS"
+            >
+              
+            </div>
+          </div>
+          <span
+            class="StyledText-sc-1sadyjn-0 jtSDez Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+          >
+            I agree with the
+          </span>
+        </label>
+        <span
+          class="StyledText-sc-1sadyjn-0 eYKUIT Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+        >
+           Terms of Service, Privacy Policy and Cookie Policy
+        </span>
+      </div>
+      <div
+        class="StyledBox-sc-13pk1d4-0 lozSIb"
+      >
+        <button
+          class="StyledButton-sc-323bzc-0 gQpAYz Button__StyledGrommetButton-sc-5cxguj-0 dKGxUf"
+          type="submit"
+        >
+          Register
+        </button>
+      </div>
+    </form>
+     
+  </div>
+</div>
+`;
