@@ -1,5 +1,5 @@
 /* @flow */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   CheckBox,
   Markdown,
@@ -13,12 +13,18 @@ import { Box } from 'components/Box'
 import { Button } from 'components/Button'
 import { Form, FormField } from 'components/Form'
 import { Heading } from 'components/Heading'
+import { Message } from 'components/Message'
 import { Modal } from 'components/Modal'
 import { PasswordInput } from 'components/PasswordInput'
 import { Text } from 'components/Text'
 import { TextInput } from 'components/TextInput'
 
+// Assets
 import TOS from 'assets/files/TOS.md'
+
+// Utils and messages
+import useFlashMessage from '../../hooks/FlashMessage'
+import { createAccount } from '../../services/user.service'
 
 /**
  *
@@ -28,6 +34,20 @@ import TOS from 'assets/files/TOS.md'
 const Register = () => {
   const [showModal, setShowModal] = useState(false)
 
+  const { message: error, showMessage: showError } = useFlashMessage(null)
+
+  const [loading, setLoading] = useState(false)
+
+  const [success, setSuccess] = useState(false)
+  useEffect(() => {
+    document.getElementById('register-form').reset()
+  }, [success])
+
+  /**
+   * Helper to determine if the submit button is disabled
+   */
+  const _isButtonDisabled = () => loading
+
   return (
     <>
       <Box align="center" pad="large">
@@ -36,10 +56,10 @@ const Register = () => {
       </Box>
 
       <Form
+        id="register-form"
         validate="blur"
         onSubmit={({ value }) => {
-          // eslint-disable-next-line no-console
-          console.log('Submit', value)
+          createAccount(value, showError, setLoading, setSuccess)
         }}
       >
         <Box flex="grow" gap="small" direction="row" alignItems="stretch">
@@ -184,9 +204,15 @@ const Register = () => {
         </Box>
 
         {/* Submit */}
-        <Box direction="row" justify="between" margin={{ top: 'medium' }}>
-          <Button type="submit" label="Register" primary />
+        <Box direction="row" justify="between" margin={{ vertical: 'medium' }}>
+          <Button type="submit" label="Register" primary disabled={_isButtonDisabled()} />
         </Box>
+
+        {/* Status Messages */}
+        {success && (
+          <Message message="Account created! Check your email to confirm your account." />
+        )}
+        {error && <Message message={error} isError />}
       </Form>
     </>
   )

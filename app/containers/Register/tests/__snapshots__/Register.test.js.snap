@@ -21,6 +21,7 @@ exports[`Register renders and matches snapshot 1`] = `
       </a>
     </div>
     <form
+      id="register-form"
       style="max-width: 70vw; margin: auto;"
     >
       <div
@@ -351,7 +352,7 @@ exports[`Register renders and matches snapshot 1`] = `
         </span>
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 lozSIb"
+        class="StyledBox-sc-13pk1d4-0 ejRWjs"
       >
         <button
           class="StyledButton-sc-323bzc-0 gQpAYz Button__StyledGrommetButton-sc-5cxguj-0 dKGxUf"
