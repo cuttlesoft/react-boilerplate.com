@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopoutForm renders and matches snapshot 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 blnwXx"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 hnYbnp"
+    />
+  </div>
+</div>
+`;

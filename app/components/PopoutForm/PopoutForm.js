@@ -2,9 +2,12 @@
 import React from 'react'
 import { Close } from 'grommet-icons'
 
-import { Form } from 'components/Form'
-
-import { Box, Button, Heading, Layer } from 'grommet'
+// Components
+import { Box } from '../Box'
+import { Button } from '../Button'
+import { Form } from '../Form'
+import { Heading } from '../Heading'
+import { Layer } from '../Layer'
 
 /**
  * PopoutForm

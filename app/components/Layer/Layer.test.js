@@ -4,21 +4,21 @@ import { render } from '@testing-library/react'
 
 // Components
 import { TestWrapper } from 'utils/TestWrapper'
-import PopoutForm from './PopoutForm'
+import Layer from './Layer'
 
 const renderComponent = (props = {}) =>
   render(
     <TestWrapper>
-      <PopoutForm {...props} />
+      <Layer {...props} />
     </TestWrapper>,
   )
 
 /**
  *
- * Tests for PopoutForm
+ * Tests for Layer
  *
  */
-describe('PopoutForm', () => {
+describe('Layer', () => {
   it('renders and matches snapshot', () => {
     const { container } = renderComponent()
     expect(container).toMatchSnapshot()
