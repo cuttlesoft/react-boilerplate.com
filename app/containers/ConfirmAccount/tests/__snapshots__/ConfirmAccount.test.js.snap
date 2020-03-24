@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmAccount renders and matches snapshot 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 blnwXx"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 gVSbfC"
+    >
+      <h2
+        class="StyledHeading-sc-1rdh4aw-0 hoUPUX"
+      >
+        Error confirming account
+      </h2>
+      <span
+        class="StyledText-sc-1sadyjn-0 hUokoe Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+      >
+        Invalid confirmation URL.
+      </span>
+      <div
+        class="StyledBox-sc-13pk1d4-0 hBDGhc"
+      >
+        <button
+          class="StyledButton-sc-323bzc-0 iNqTxf Button__StyledGrommetButton-sc-5cxguj-0 dKGxUf"
+          type="button"
+        >
+          Login
+        </button>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+        />
+        <button
+          class="StyledButton-sc-323bzc-0 iNqTxf Button__StyledGrommetButton-sc-5cxguj-0 dKGxUf"
+          type="button"
+        >
+          Register
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
