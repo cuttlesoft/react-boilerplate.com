@@ -83,7 +83,7 @@ const Login = () => {
         </Box>
 
         {/* Status Messages */}
-        {error && <Message message={error} isError />}
+        <Box>{error && <Message message={error} isError />}</Box>
       </Form>
     </>
   )
