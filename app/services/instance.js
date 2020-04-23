@@ -23,8 +23,8 @@ instance.interceptors.request.use(config => {
   const _config = cloneDeep(config)
 
   // If we have a user token, update the config
-  if (user.token !== '') {
-    _config.headers.Authorization = `Token ${user.token}`
+  if (user.accessToken !== '') {
+    _config.headers.Authorization = `Bearer ${user.accessToken}`
   }
 
   _config.data = convertOutgoingData(config.data)
