@@ -18,20 +18,19 @@ exports[`Routes should render and match the snapshot 1`] = `
     <TemplateHeader />
     <Switch>
       <Route
-        component={
-          Object {
-            "$$typeof": Symbol(react.memo),
-            "compare": null,
-            "type": Object {
-              "$$typeof": Symbol(react.memo),
-              "compare": null,
-              "displayName": "",
-              "type": [Function],
-            },
-          }
-        }
+        component={[Function]}
         exact={true}
         path="/"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/login"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/register"
       />
       <Route
         component={[Function]}

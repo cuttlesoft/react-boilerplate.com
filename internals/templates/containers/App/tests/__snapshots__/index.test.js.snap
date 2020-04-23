@@ -15,18 +15,7 @@ exports[`<App /> should render and match the snapshot 1`] = `
   </HelmetWrapper>
   <Switch>
     <Route
-      component={
-        Object {
-          "$$typeof": Symbol(react.memo),
-          "compare": null,
-          "type": Object {
-            "$$typeof": Symbol(react.memo),
-            "compare": null,
-            "displayName": "",
-            "type": [Function],
-          },
-        }
-      }
+      component={[Function]}
       exact={true}
       path="/"
     />

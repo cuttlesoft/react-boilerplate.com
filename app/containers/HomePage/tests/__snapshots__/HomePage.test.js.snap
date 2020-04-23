@@ -4,78 +4,42 @@ exports[`HomePage should render and match the snapshot 1`] = `
 <div
   class="StyledGrommet-sc-19lkkz7-0 QArLx"
 >
-  <article>
-    <section
-      class="HomePagestyles__Section-okrkb4-3 HomePagestyles__CenteredSection-okrkb4-4 kWoWkk"
+  <div
+    class="StyledBox-sc-13pk1d4-0 gVSbfC"
+  >
+    <h2
+      class="StyledHeading-sc-1rdh4aw-0 hoUPUX"
     >
-      <h2
-        class="StyledHeading-sc-1rdh4aw-0 hoUPUX"
-      >
-        <span>
-          Start your next react project in seconds
-        </span>
-      </h2>
-      <p>
-        <span>
-          A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices
-        </span>
-      </p>
-    </section>
-    <section
-      class="HomePagestyles__Section-okrkb4-3 iXduoH"
+      <span>
+        LiveRider
+      </span>
+    </h2>
+    <span
+      class="StyledText-sc-1sadyjn-0 hUokoe Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
     >
-      <h2
-        class="StyledHeading-sc-1rdh4aw-0 jMKEAN"
+      <span>
+        The link between music venues, touring artists, and crew.
+      </span>
+    </span>
+    <div
+      class="StyledBox-sc-13pk1d4-0 hBDGhc"
+    >
+      <button
+        class="StyledButton-sc-323bzc-0 gQpAYz Button__StyledGrommetButton-sc-5cxguj-0 dKGxUf"
+        type="button"
       >
-        <span>
-          Try me!
-        </span>
-      </h2>
-      <form
-        class="HomePagestyles__Form-okrkb4-1 gqbTVP"
-        data-testid="search-form"
-      >
-        <label
-          for="searchTerm"
-        >
-          <span>
-            Show Github repositories by
-          </span>
-          <span
-            class="HomePagestyles__AtPrefix-okrkb4-0 krQbyt"
-          >
-            <span>
-              @
-            </span>
-          </span>
-          <input
-            class="HomePagestyles__Input-okrkb4-2 jjdzUj"
-            id="searchTerm"
-            placeholder="mxstbr"
-            type="text"
-            value=""
-          />
-        </label>
-      </form>
+        Login
+      </button>
       <div
-        class="Wrapper-sc-1umgotm-0 eAscws"
-        data-testid="repo-list-not-found"
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+      />
+      <button
+        class="StyledButton-sc-323bzc-0 gQpAYz Button__StyledGrommetButton-sc-5cxguj-0 dKGxUf"
+        type="button"
       >
-        <ul
-          class="Ul-mwnq6h-0 dkRQrN"
-        >
-          <li
-            class="Wrapper-euo0oy-0 bmJhkI"
-          >
-            <div
-              class="Item-sc-3y9mie-0 kSkLLA"
-            >
-              The user could not be found or does not have any repositories.
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </article>
+        Register
+      </button>
+    </div>
+  </div>
 </div>
 `;
