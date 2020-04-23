@@ -13,6 +13,7 @@ import { HomePage } from 'containers/HomePage'
 import { Login } from 'containers/Login'
 import { NotFoundPage } from 'containers/NotFoundPage'
 import { Register } from 'containers/Register'
+import { UserProfile } from 'containers/UserProfile'
 
 // Components
 import { Header } from 'components/Header'
@@ -52,6 +53,7 @@ export default function Routes() {
 
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <PrivateRoute path="/features" component={FeaturePage} />
+          <PrivateRoute path="/profile" component={UserProfile} />
 
           <Route path="" component={NotFoundPage} />
         </Switch>
