@@ -18,7 +18,7 @@ const StyledGrommetButton = styled(GrommetButton)`
  * Button.js
  *
  */
-const Button = ({ ...rest }) => <StyledGrommetButton {...rest} />
+const Button = ({ primary = true, ...rest }) => <StyledGrommetButton primary={primary} {...rest} />
 
 export default createWithDoc({
   envName: process.env.NODE_ENV,

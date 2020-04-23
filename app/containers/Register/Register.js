@@ -205,7 +205,7 @@ const Register = () => {
 
         {/* Submit */}
         <Box direction="row" justify="between" margin={{ vertical: 'medium' }}>
-          <Button type="submit" label="Register" primary disabled={_isButtonDisabled()} />
+          <Button type="submit" label="Register" disabled={_isButtonDisabled()} />
         </Box>
 
         {/* Status Messages */}

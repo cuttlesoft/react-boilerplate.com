@@ -37,8 +37,8 @@ export const HomePage = ({ history }) => (
       </Text>
 
       <Box gap="small" direction="row" pad="large">
-        <Button primary label="Login" onClick={() => history.push('/login')} />
-        <Button primary label="Register" onClick={() => history.push('/register')} />
+        <Button label="Login" onClick={() => history.push('/login')} />
+        <Button label="Register" onClick={() => history.push('/register')} />
       </Box>
     </Box>
   </>

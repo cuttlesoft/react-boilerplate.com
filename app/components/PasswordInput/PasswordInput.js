@@ -34,6 +34,7 @@ const PasswordInput = ({ value, onChange, type, ...rest }) => {
       />
 
       <Button
+        primary={false}
         icon={
           reveal ? (
             <View size="large" style={{ width: 30 }} color="light-5" />

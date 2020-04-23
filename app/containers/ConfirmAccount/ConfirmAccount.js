@@ -81,8 +81,8 @@ const ConfirmAccount = observer(({ history, location }) => {
           )}
 
           <Box gap="small" direction="row" pad="large">
-            <Button primary label="Login" onClick={() => history.push('/login')} />
-            <Button primary label="Register" onClick={() => history.push('/register')} />
+            <Button label="Login" onClick={() => history.push('/login')} />
+            <Button label="Register" onClick={() => history.push('/register')} />
           </Box>
         </Box>
       )}
@@ -97,7 +97,7 @@ const ConfirmAccount = observer(({ history, location }) => {
           <Text>Please log out and try again.</Text>
 
           <Box gap="small" direction="row" pad="large">
-            <Button primary label="Logout" onClick={() => clearStore()} />
+            <Button label="Logout" onClick={() => clearStore()} />
           </Box>
         </Box>
       )}
