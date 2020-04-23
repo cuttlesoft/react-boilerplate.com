@@ -8,7 +8,9 @@ import styled from 'styled-components'
 // Containers
 import { FeaturePage } from 'containers/FeaturePage'
 import { HomePage } from 'containers/HomePage'
+import { Login } from 'containers/Login'
 import { NotFoundPage } from 'containers/NotFoundPage'
+import { Register } from 'containers/Register'
 
 // Components
 import { Header } from 'components/Header'
@@ -43,6 +45,8 @@ export default function Routes() {
 
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
           <Route path="/features" component={FeaturePage} />
           <Route path="" component={NotFoundPage} />
         </Switch>
