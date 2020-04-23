@@ -11,7 +11,6 @@ import { createWithDoc } from '../../utils/helpers'
 
 const StyledGrommetButton = styled(GrommetButton)`
   font-weight: bold;
-  font-family: 'Roboto Mono';
 `
 
 /**

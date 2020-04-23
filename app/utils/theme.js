@@ -3,7 +3,7 @@ import colors from './colors'
 const theme = {
   global: {
     font: {
-      family: 'MankSans',
+      family: 'Open Sans',
     },
     colors: {
       brand: colors.primary,
