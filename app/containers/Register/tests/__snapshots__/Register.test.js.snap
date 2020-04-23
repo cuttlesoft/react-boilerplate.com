@@ -235,17 +235,15 @@ exports[`Register renders and matches snapshot 1`] = `
             >
               <label
                 class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 kKDEPl"
-                for="Artist"
               >
                 <div
                   class="StyledBox-sc-13pk1d4-0 jJdKAu StyledRadioButton-g1f6ld-4 eLBYmH"
                 >
                   <input
                     class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
-                    id="Artist"
-                    name="user_type"
+                    name="role"
                     type="radio"
-                    value="Artist"
+                    value="Supplier Admin"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 iOGeQY"
@@ -253,7 +251,7 @@ exports[`Register renders and matches snapshot 1`] = `
                     <span
                       class="StyledText-sc-1sadyjn-0 gmtNWw Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
                     >
-                      Artist
+                      Supplier
                     </span>
                   </div>
                 </div>
@@ -263,17 +261,15 @@ exports[`Register renders and matches snapshot 1`] = `
               />
               <label
                 class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 kKDEPl"
-                for="Venue"
               >
                 <div
                   class="StyledBox-sc-13pk1d4-0 jJdKAu StyledRadioButton-g1f6ld-4 eLBYmH"
                 >
                   <input
                     class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
-                    id="Venue"
-                    name="user_type"
+                    name="role"
                     type="radio"
-                    value="Venue"
+                    value="Broker Admin"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 iOGeQY"
@@ -281,35 +277,7 @@ exports[`Register renders and matches snapshot 1`] = `
                     <span
                       class="StyledText-sc-1sadyjn-0 gmtNWw Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
                     >
-                      Venue
-                    </span>
-                  </div>
-                </div>
-              </label>
-              <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cPZcyD"
-              />
-              <label
-                class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 kKDEPl"
-                for="Crew"
-              >
-                <div
-                  class="StyledBox-sc-13pk1d4-0 jJdKAu StyledRadioButton-g1f6ld-4 eLBYmH"
-                >
-                  <input
-                    class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
-                    id="Crew"
-                    name="user_type"
-                    type="radio"
-                    value="Crew"
-                  />
-                  <div
-                    class="StyledBox-sc-13pk1d4-0 iOGeQY"
-                  >
-                    <span
-                      class="StyledText-sc-1sadyjn-0 gmtNWw Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
-                    >
-                      Crew
+                      Broker
                     </span>
                   </div>
                 </div>

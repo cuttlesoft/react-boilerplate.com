@@ -26,6 +26,9 @@ exports[`Login renders and matches snapshot 1`] = `
       style="max-width: 70vw; margin: auto;"
     >
       <div
+        class="StyledBox-sc-13pk1d4-0 cUMVLo"
+      />
+      <div
         class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
       >
         <label
@@ -114,6 +117,13 @@ exports[`Login renders and matches snapshot 1`] = `
           Login
         </button>
       </div>
+      <a
+        class="Link__StyledLink-sc-1vpl4pu-0 fmumj"
+        href="/password-reset-request"
+        theme="[object Object]"
+      >
+        Forgot Password?
+      </a>
       <div
         class="StyledBox-sc-13pk1d4-0 jJdKAu"
       />

@@ -1,10 +1,17 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-// import '@testing-library/jest-dom/extend-expect' // add some helpful assertions
+
+// Utils
+import { TestWrapper } from 'utils/TestWrapper'
 
 import Header from './Header'
 
-const renderComponent = (props = {}) => render(<Header {...props} />)
+const renderComponent = (props = {}) =>
+  render(
+    <TestWrapper>
+      <Header {...props} />
+    </TestWrapper>,
+  )
 
 /**
  *
