@@ -3,7 +3,7 @@
 exports[`<PublicRoute /> does not render Login if user is authenticated 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 QArLx"
+    class="StyledGrommet-sc-19lkkz7-0 fUxOqw"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`<PublicRoute /> does not render Login if user is authenticated 1`] = `
 exports[`<PublicRoute /> renders Login if user is not authenticated 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 QArLx"
+    class="StyledGrommet-sc-19lkkz7-0 fUxOqw"
   >
     <div
       class="StyledBox-sc-13pk1d4-0 DKkMM"
@@ -91,7 +91,7 @@ exports[`<PublicRoute /> renders Login if user is not authenticated 1`] = `
                 />
               </div>
               <button
-                class="StyledButton-sc-323bzc-0 jvkqEN Button__StyledGrommetButton-sc-5cxguj-0 dKGxUf"
+                class="StyledButton-sc-323bzc-0 jvkqEN Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
                 type="button"
               >
                 <svg
@@ -116,7 +116,7 @@ exports[`<PublicRoute /> renders Login if user is not authenticated 1`] = `
         class="StyledBox-sc-13pk1d4-0 gVZJeo"
       >
         <button
-          class="StyledButton-sc-323bzc-0 gQpAYz Button__StyledGrommetButton-sc-5cxguj-0 dKGxUf"
+          class="StyledButton-sc-323bzc-0 gQpAYz Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
           type="submit"
         >
           Login
