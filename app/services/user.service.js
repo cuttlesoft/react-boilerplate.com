@@ -40,8 +40,10 @@ export const login = async (
   }
 }
 
-export function getUser(user) {
-  return axios.get(`/users/${user.id}/`)
+export async function getUser(user, setCurrentUser = () => {}) {
+  const data = await axios.get(`/users/${user.id}/`)
+  setCurrentUser(data)
+  return data
 }
 
 export async function updateUser(user, setError, setLoading, setSuccess, setCurrentUser) {

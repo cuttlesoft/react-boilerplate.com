@@ -1,7 +1,6 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useReducer, useState } from 'react'
 import { isEmail } from 'validator'
 import { MaskedInput } from 'grommet'
-import { observer } from 'mobx-react'
 
 // Components
 import { Box } from 'components/Box'
@@ -16,8 +15,9 @@ import { Text } from 'components/Text'
 import { UserStoreContext } from '../../stores/UserStore'
 
 // Utils and Services
-import { updateUser } from '../../services/user.service'
 import useFlashMessage from '../../hooks/FlashMessage'
+import { getUser, updateUser } from '../../services/user.service'
+import { updateState } from '../../utils/helpers'
 import ImageEditor from './UserProfile.imageEditor'
 
 /**
@@ -25,7 +25,7 @@ import ImageEditor from './UserProfile.imageEditor'
  * UserProfile
  *
  */
-const UserProfile = observer(() => {
+const UserProfile = () => {
   const { message: error, showMessage: showError } = useFlashMessage(null)
   const { message: success, showMessage: showSuccess } = useFlashMessage(null)
 
@@ -33,9 +33,18 @@ const UserProfile = observer(() => {
   const { setCurrentUser, user } = useContext(UserStoreContext)
 
   // State
-  const [updatedUser, setUpdatedUser] = useState(user.user)
+  const [updatedUser, setUpdatedUser] = useReducer(updateState, {})
   const [editProfileImage, setEditProfileImage] = useState(false)
   const [loading, setLoading] = useState(false)
+
+  // Retrieve the most up-to-date user object and set as default form state
+  useEffect(() => {
+    async function fetchData() {
+      const currentUser = await getUser(user.user, setCurrentUser)
+      setUpdatedUser(currentUser)
+    }
+    fetchData()
+  }, [])
 
   /**
    * Handles changes to all form fields.
@@ -71,6 +80,7 @@ const UserProfile = observer(() => {
 
       {/* Basic Information */}
       <Text>Basic Information</Text>
+
       <FormField
         label="First Name"
         name="firstName"
@@ -80,6 +90,7 @@ const UserProfile = observer(() => {
       >
         <TextInput name="firstName" />
       </FormField>
+
       <FormField
         label="Last Name"
         name="lastName"
@@ -89,6 +100,7 @@ const UserProfile = observer(() => {
       >
         <TextInput name="lastName" />
       </FormField>
+
       <FormField
         disabled
         label="Email"
@@ -106,6 +118,7 @@ const UserProfile = observer(() => {
       >
         <TextInput disabled name="email" />
       </FormField>
+
       <FormField
         label="Phone"
         name="phone"
@@ -162,6 +175,6 @@ const UserProfile = observer(() => {
       )}
     </Form>
   )
-})
+}
 
 export default UserProfile
