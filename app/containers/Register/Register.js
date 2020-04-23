@@ -158,23 +158,21 @@ const Register = () => {
           <PasswordInput name="confirm_password" />
         </FormField>
 
-        <FormField
-          label="Account Type."
-          name="user_type"
-          required
-          validate={[
-            confirmPassword => {
-              if (confirmPassword && confirmPassword.length > 8)
-                return 'Please enter more than 8 characters'
-              return undefined
-            },
-          ]}
-        >
+        <FormField label="Account Type." name="role" required>
           <RadioButtonGroup
-            name="user_type"
+            name="role"
             direction="row"
             gap="xsmall"
-            options={['Artist', 'Venue', 'Crew']}
+            options={[
+              {
+                label: 'Supplier',
+                value: 'Supplier Admin',
+              },
+              {
+                label: 'Broker',
+                value: 'Broker Admin',
+              },
+            ]}
           >
             {(option, { checked, hover }) => {
               let background = 'light-2'
@@ -183,7 +181,7 @@ const Register = () => {
 
               return (
                 <Box background={background} pad="xsmall">
-                  <Text weight="bold">{option}</Text>
+                  <Text weight="bold">{option.label}</Text>
                 </Box>
               )
             }}
