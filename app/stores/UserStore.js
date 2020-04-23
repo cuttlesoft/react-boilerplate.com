@@ -38,9 +38,13 @@ export class UserStore extends BaseStore {
   }
 
   @action.bound
-  setCurrentUser({ accessToken = '', refreshToken = '', ...user } = {}) {
+  setCurrentTokens({ accessToken = '', refreshToken = '' } = {}) {
     this.accessToken = accessToken
     this.refreshToken = refreshToken
+  }
+
+  @action.bound
+  setCurrentUser({ ...user } = {}) {
     this.user = {
       ...user,
     }

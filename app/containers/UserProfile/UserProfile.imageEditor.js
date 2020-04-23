@@ -108,9 +108,7 @@ const ImageEditor = ({ showError, setEditProfileImage, setLoading }) => {
   }
 
   return (
-    <Box border align="center" pad={{ vertical: 'small' }}>
-      <Text margin={{ bottom: 'small', horizontal: 'small' }}>Drag files/images here</Text>
-
+    <Box align="center" pad={{ vertical: 'small' }}>
       <DropzoneS3Uploader
         onDrop={onDrop}
         onFinish={setUploadedImageUrl}
@@ -120,6 +118,10 @@ const ImageEditor = ({ showError, setEditProfileImage, setLoading }) => {
       >
         <Image src={currentImg.preview} fit="contain" />
       </DropzoneS3Uploader>
+
+      <Text size="small" margin={{ bottom: 'small', horizontal: 'small' }}>
+        Drag files/images here
+      </Text>
 
       {isOpen && (
         <Layer onClickOutside={() => setOpen(false)}>

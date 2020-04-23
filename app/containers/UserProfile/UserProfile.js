@@ -27,13 +27,13 @@ import ImageEditor from './UserProfile.imageEditor'
  */
 const UserProfile = observer(() => {
   const { message: error, showMessage: showError } = useFlashMessage(null)
+  const { message: success, showMessage: showSuccess } = useFlashMessage(null)
 
   // Context
-  const userStore = useContext(UserStoreContext)
-  const { updateCurrentUser, user } = userStore
+  const { setCurrentUser, user } = useContext(UserStoreContext)
 
   // State
-  const [updatedUser, setUpdatedUser] = useState(user)
+  const [updatedUser, setUpdatedUser] = useState(user.user)
   const [editProfileImage, setEditProfileImage] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -90,6 +90,7 @@ const UserProfile = observer(() => {
         <TextInput name="lastName" />
       </FormField>
       <FormField
+        disabled
         label="Email"
         name="email"
         onChange={handleChange}
@@ -103,7 +104,7 @@ const UserProfile = observer(() => {
         ]}
         required
       >
-        <TextInput name="email" />
+        <TextInput disabled name="email" />
       </FormField>
       <FormField
         label="Phone"
@@ -142,16 +143,23 @@ const UserProfile = observer(() => {
           name="phone"
         />
       </FormField>
-      {loading ? (
-        <Text>Loading</Text>
-      ) : (
-        <Button onClick={() => updateUser(updatedUser, showError, setLoading, updateCurrentUser)}>
-          Save
-        </Button>
-      )}
+
+      <Button
+        disabled={loading}
+        label={loading ? 'Loading' : 'Save'}
+        onClick={() => updateUser(updatedUser, showError, setLoading, showSuccess, setCurrentUser)}
+      />
 
       {/* Status Messages */}
-      <Box>{error && <Message message={error} isError />}</Box>
+      {(error || success) && (
+        <Box
+          background={{ color: error ? 'status-error' : 'status-ok', opacity: 'weak' }}
+          margin={{ vertical: 'small' }}
+          pad={{ horizontal: 'small' }}
+        >
+          <Message message={error || 'Profile updated!'} />
+        </Box>
+      )}
     </Form>
   )
 })

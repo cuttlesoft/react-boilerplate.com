@@ -21,12 +21,19 @@ export const createAccount = async (user, setError, setLoading, setSuccess) => {
   }
 }
 
-export const login = async (credentials, setError, setLoading, setCurrentUser) => {
+export const login = async (
+  credentials,
+  setError,
+  setLoading,
+  setCurrentUser,
+  setCurrentTokens,
+) => {
   setLoading(true)
 
   try {
     const data = await axios.post('/login/', credentials)
     setCurrentUser(data)
+    setCurrentTokens(data)
   } catch (err) {
     setError(getErrorMessage(err))
     setLoading(false)
@@ -37,8 +44,20 @@ export function getUser(user) {
   return axios.get(`/users/${user.id}/`)
 }
 
-export function updateUser(user) {
-  return axios.put(`/users/${user.id}/`, user)
+export async function updateUser(user, setError, setLoading, setSuccess, setCurrentUser) {
+  setLoading(true)
+
+  try {
+    const { user: updatedUser } = await axios.put(`/users/${user.id}/`, user)
+    setCurrentUser(updatedUser)
+    setSuccess(true)
+    setLoading(false)
+    return updatedUser
+  } catch (err) {
+    setError(getErrorMessage(err))
+    setLoading(false)
+    return null
+  }
 }
 
 export function updateUserPassword(user) {
