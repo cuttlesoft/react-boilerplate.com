@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useReducer, useState } from 'react'
-import { isEmail } from 'validator'
 import { MaskedInput } from 'grommet'
+import { isEqual } from 'lodash'
+import { isEmail } from 'validator'
 
 // Components
 import { Box } from 'components/Box'
@@ -22,7 +23,28 @@ import ImageEditor from './UserProfile.imageEditor'
 
 /**
  *
- * UserProfile
+ * User Profile
+ *
+ * Displays a summary of the user and the form used to edit profile infomration
+ *
+ * Ensures that the any updated information persists to the UserStore
+ *
+ * - When the form loads, it should display the user's current information after
+ * retrieving the most up-to-date info from the API. If live info is unavailable,
+ * falls back to the user store data.
+ * - When the form data matches the current stored information, the save button
+ * should be disabled (this includes when the form loads intially and when the
+ * user edits then resets the form data to the previous state)
+ * - When the API call for saving a user is in progress, the form fields and
+ * button should be disabled and the form fields should retain the new values
+ * - When an error occurs while saving the form (4XX or 5XX), an error message
+ * should be displayed
+ * - When the user saves the form successfully, a success message should be
+ * displayed, and the save button should disable
+ *
+ * Required fields: first name, last name
+ * Validated fields: first name, last name
+ * Disabled fields: email
  *
  */
 const UserProfile = () => {
@@ -35,13 +57,17 @@ const UserProfile = () => {
   // State
   const [updatedUser, setUpdatedUser] = useReducer(updateState, {})
   const [editProfileImage, setEditProfileImage] = useState(false)
-  const [loading, setLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   // Retrieve the most up-to-date user object and set as default form state
   useEffect(() => {
     async function fetchData() {
-      const currentUser = await getUser(user.user, setCurrentUser)
-      setUpdatedUser(currentUser)
+      try {
+        const currentUser = await getUser(user, setCurrentUser)
+        setUpdatedUser(currentUser)
+      } catch {
+        setUpdatedUser(user)
+      }
     }
     fetchData()
   }, [])
@@ -59,6 +85,8 @@ const UserProfile = () => {
     })
   }
 
+  const _isSaveDisabled = () => isEqual(user, updatedUser) || isLoading
+
   return (
     <Form>
       <Box align="center" margin={{ bottom: 'medium' }}>
@@ -72,7 +100,7 @@ const UserProfile = () => {
         ) : (
           <ImageEditor
             showError={showError}
-            setLoading={setLoading}
+            setIsLoading={setIsLoading}
             setEditProfileImage={setEditProfileImage}
           />
         )}
@@ -82,25 +110,43 @@ const UserProfile = () => {
       <Text>Basic Information</Text>
 
       <FormField
+        disabled={isLoading}
         label="First Name"
         name="firstName"
         onChange={handleChange}
         value={updatedUser.firstName}
+        validate={[
+          { regexp: /^[a-z]/i },
+          name => {
+            if (name && name.length === 1) return 'Please enter more than one character'
+            return undefined
+          },
+        ]}
         required
       >
-        <TextInput name="firstName" />
+        <TextInput disabled={isLoading} name="firstName" />
       </FormField>
 
       <FormField
+        disabled={isLoading}
         label="Last Name"
         name="lastName"
         onChange={handleChange}
         value={updatedUser.lastName}
+        validate={[
+          { regexp: /^[a-z]/i },
+          name => {
+            if (name && name.length === 1) return 'Please enter more than one character'
+            return undefined
+          },
+        ]}
         required
       >
-        <TextInput name="lastName" />
+        <TextInput disabled={isLoading} name="lastName" />
       </FormField>
 
+      {/* We don't support the user changing their email address yet, so this is
+      always disabled */}
       <FormField
         disabled
         label="Email"
@@ -120,6 +166,7 @@ const UserProfile = () => {
       </FormField>
 
       <FormField
+        disabled={isLoading}
         label="Phone"
         name="phone"
         onChange={handleChange}
@@ -132,6 +179,7 @@ const UserProfile = () => {
         value={updatedUser.phone}
       >
         <MaskedInput
+          disabled={isLoading}
           mask={[
             { fixed: '(' },
             {
@@ -158,9 +206,11 @@ const UserProfile = () => {
       </FormField>
 
       <Button
-        disabled={loading}
-        label={loading ? 'Loading' : 'Save'}
-        onClick={() => updateUser(updatedUser, showError, setLoading, showSuccess, setCurrentUser)}
+        disabled={_isSaveDisabled()}
+        label={isLoading ? 'Loading' : 'Save'}
+        onClick={() =>
+          updateUser(updatedUser, showError, setIsLoading, showSuccess, setCurrentUser)
+        }
       />
 
       {/* Status Messages */}

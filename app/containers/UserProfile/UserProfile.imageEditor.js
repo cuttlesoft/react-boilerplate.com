@@ -18,7 +18,7 @@ import { UserStoreContext } from '../../stores/UserStore'
 import { updateState } from '../../utils/helpers'
 import { updateUser } from '../../services/user.service'
 
-const ImageEditor = ({ showError, setEditProfileImage, setLoading }) => {
+const ImageEditor = ({ showError, setEditProfileImage, setIsLoading }) => {
   // Context
   const { accessToken, updateCurrentUser, user } = useContext(UserStoreContext)
 
@@ -70,7 +70,7 @@ const ImageEditor = ({ showError, setEditProfileImage, setLoading }) => {
     // Parse out AWS S3 URL and file name to form the fileUrl.
     // We have to do this because somehow the url is coming back with `/undefined/` rather than the file name.
     user.avatar = `${process.env.AWS_S3_URL}${info.fileName}`
-    updateUser(user, showError, setLoading, updateCurrentUser)
+    updateUser(user, showError, setIsLoading, updateCurrentUser)
     setEditProfileImage(false)
   }
 
@@ -160,7 +160,7 @@ const ImageEditor = ({ showError, setEditProfileImage, setLoading }) => {
 ImageEditor.propTypes = {
   showError: PropTypes.func.isRequired,
   setEditProfileImage: PropTypes.func.isRequired,
-  setLoading: PropTypes.func.isRequired,
+  setIsLoading: PropTypes.func.isRequired,
 }
 
 export default ImageEditor
