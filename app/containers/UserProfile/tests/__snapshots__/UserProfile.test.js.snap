@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserProfile renders and matches snapshot 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 blnwXx"
+  >
+    <form
+      style="max-width: 70vw; margin: auto;"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 fppapf"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 frirvn"
+        >
+          <span
+            class="StyledText-sc-1sadyjn-0 hAWAUz Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+          >
+            Drag files/images here
+          </span>
+          <div
+            aria-disabled="false"
+            class="react-dropzone-s3-uploader"
+            style="position: relative; width: 200px; height: 200px; border: 2px dashed #999; border-radius: 5px; cursor: pointer; overflow: hidden;"
+          >
+            <img
+              class="StyledImage-ey4zx9-0 cHpGKY"
+            />
+            <input
+              autocomplete="off"
+              multiple=""
+              style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;"
+              type="file"
+            />
+          </div>
+        </div>
+      </div>
+      <span
+        class="StyledText-sc-1sadyjn-0 hUokoe Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+      >
+        Basic Information
+      </span>
+      <div
+        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+      >
+        <label
+          class="StyledText-sc-1sadyjn-0 enbIRN"
+        >
+          First Name*
+        </label>
+        <div
+          class="StyledBox-sc-13pk1d4-0 GCqjV"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 jJdKAu"
+          >
+            <div
+              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
+            >
+              <input
+                autocomplete="off"
+                class="StyledTextInput-sc-1x30a0s-0 bjXYsX"
+                name="firstName"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+      >
+        <label
+          class="StyledText-sc-1sadyjn-0 enbIRN"
+        >
+          Last Name*
+        </label>
+        <div
+          class="StyledBox-sc-13pk1d4-0 GCqjV"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 jJdKAu"
+          >
+            <div
+              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
+            >
+              <input
+                autocomplete="off"
+                class="StyledTextInput-sc-1x30a0s-0 bjXYsX"
+                name="lastName"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+      >
+        <label
+          class="StyledText-sc-1sadyjn-0 enbIRN"
+        >
+          Email*
+        </label>
+        <div
+          class="StyledBox-sc-13pk1d4-0 GCqjV"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 jJdKAu"
+          >
+            <div
+              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
+            >
+              <input
+                autocomplete="off"
+                class="StyledTextInput-sc-1x30a0s-0 bjXYsX"
+                name="email"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+      >
+        <label
+          class="StyledText-sc-1sadyjn-0 enbIRN"
+        >
+          Phone
+        </label>
+        <div
+          class="StyledBox-sc-13pk1d4-0 GCqjV"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 jJdKAu"
+          >
+            <div
+              class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 eZPDpF"
+            >
+              <input
+                autocomplete="off"
+                class="StyledMaskedInput-sc-99vkfa-0 kAhxsT"
+                name="phone"
+                placeholder="(xxx) xxx-xxxx"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="StyledButton-sc-323bzc-0 dnCEuz Button__StyledGrommetButton-sc-5cxguj-0 dKGxUf"
+        type="button"
+      >
+        Save
+      </button>
+      <div
+        class="StyledBox-sc-13pk1d4-0 jJdKAu"
+      />
+    </form>
+  </div>
+</div>
+`;

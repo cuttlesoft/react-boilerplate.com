@@ -32,3 +32,47 @@ export const getErrorMessage = err => {
   // If a message has not been set, fallback to our default message
   return ERROR_DEFAULT
 }
+
+/**
+ * Updates the state object with the updated field.
+ * @param {object} state
+ * @param {object} updatedField
+ */
+export const updateState = (state, updatedField) => ({
+  ...state,
+  ...updatedField,
+})
+
+/**
+ * Updates an array stored in state.
+ * - `add`: adds value to the array
+ * - `remote`: removes the value at the index from the array
+ * - `update`: updates the value at the index in the array
+ * - `reset` and `filter`: returns the supplied value
+ * - `clear`: removes all values from the array
+ * @param {object} state
+ * @param {object} updatedState
+ */
+export const updateArrayState = (state, { type, value, index }) => {
+  switch (type) {
+    case 'add':
+      return [...state, value]
+    case 'remove': {
+      const updatedState = [...state]
+      updatedState.splice(index, 1)
+      return updatedState
+    }
+    case 'update': {
+      const updatedState = [...state]
+      updatedState[index] = value
+      return updatedState
+    }
+    case 'reset':
+    case 'filter':
+      return value
+    case 'clear':
+      return []
+    default:
+      return state
+  }
+}
