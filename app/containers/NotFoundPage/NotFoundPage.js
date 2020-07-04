@@ -1,11 +1,8 @@
 import React from 'react'
-import { FormattedMessage } from 'react-intl'
 
 // Components
+import { Box } from 'components/Box'
 import { Heading } from 'components/Heading'
-
-// Messages
-import messages from './NotFoundPage.messages'
 
 /**
  * NotFoundPage
@@ -14,10 +11,14 @@ import messages from './NotFoundPage.messages'
  */
 export default function NotFound() {
   return (
-    <>
-      <Heading level="2" textAlign="center">
-        <FormattedMessage {...messages.header} />
+    <Box height="90vh" justify="center">
+      <Heading size="medium" level="1" textAlign="center">
+        4
+        <span role="img" aria-label="Crying Face">
+          😢
+        </span>
+        4
       </Heading>
-    </>
+    </Box>
   )
 }
