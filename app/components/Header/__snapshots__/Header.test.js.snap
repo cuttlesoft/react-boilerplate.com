@@ -6,21 +6,8 @@ exports[`Header renders and matches snapshot 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 fXgXKw"
   >
     <header
-      class="StyledBox-sc-13pk1d4-0 gmyXNm"
-      style="width: 100vw;"
-    >
-      <div
-        class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-      >
-        <a
-          class="Link__StyledLink-sc-1vpl4pu-0 gEErvb"
-          href="/"
-          theme="[object Object]"
-        >
-          React Boilerplate
-        </a>
-      </div>
-    </header>
+      class="StyledBox-sc-13pk1d4-0 TLWLY"
+    />
   </div>
 </div>
 `;

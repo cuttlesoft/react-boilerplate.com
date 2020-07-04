@@ -1,23 +1,22 @@
 import React from 'react'
 import { render } from '@testing-library/react'
+import { MemoryRouter } from 'react-router-dom'
 
-// Components
-import { TestWrapper } from 'utils/TestWrapper'
-import Header from './Header'
+import NavBar from './NavBar'
 
 const renderComponent = (props = {}) =>
   render(
-    <TestWrapper>
-      <Header {...props} />
-    </TestWrapper>,
+    <MemoryRouter initialEntries={['/']}>
+      <NavBar {...props} />
+    </MemoryRouter>,
   )
 
 /**
  *
- * Tests for Header
+ * Tests for NavBar
  *
  */
-describe('Header', () => {
+describe('NavBar', () => {
   it('renders and matches snapshot', () => {
     const { container } = renderComponent()
     expect(container).toMatchSnapshot()
