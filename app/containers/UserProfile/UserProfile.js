@@ -6,12 +6,12 @@ import { isEmail } from 'validator'
 // Components
 import { Box } from 'components/Box'
 import { Button } from 'components/Button'
-import { FormContainer } from 'components/FormContainer'
 import { Form, FormField } from 'components/Form'
+import { FormContainer } from 'components/FormContainer'
+import { Heading } from 'components/Heading'
 import { Image } from 'components/Image'
 import { Message } from 'components/Message'
 import { TextInput } from 'components/TextInput'
-import { Text } from 'components/Text'
 
 // Stores
 import { UserStoreContext } from '../../stores/UserStore'
@@ -109,7 +109,7 @@ const UserProfile = () => {
         </Box>
 
         {/* Basic Information */}
-        <Text>Basic Information</Text>
+        <Heading level="4">Basic Information</Heading>
 
         <FormField
           disabled={isLoading}
