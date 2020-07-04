@@ -13,8 +13,9 @@ exports[`Header renders and matches snapshot 1`] = `
         class="StyledBox-sc-13pk1d4-0 jJdKAu"
       >
         <a
-          class="StyledAnchor-sc-1rp7lwl-0 SWNCL"
+          class="Link__StyledLink-sc-1vpl4pu-0 gEErvb"
           href="/"
+          theme="[object Object]"
         >
           React Boilerplate
         </a>

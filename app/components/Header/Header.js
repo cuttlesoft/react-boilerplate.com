@@ -6,8 +6,8 @@ import { withRouter } from 'react-router-dom'
 
 // Components
 import { Header as GrommetHeader } from 'grommet'
-import { Anchor } from '../Anchor'
 import { Box } from '../Box'
+import { Link } from '../Link'
 import { Menu } from '../Menu'
 
 // Helpers
@@ -29,9 +29,9 @@ const Header = observer(
     return (
       <GrommetHeader background="light-2" pad="small" {...rest} style={{ width: '100vw' }}>
         <Box>
-          <Anchor href={user.isAuthenticated ? '/dashboard' : '/'} size="large">
+          <Link to={user.isAuthenticated ? '/dashboard' : '/'} size="large">
             React Boilerplate
-          </Anchor>
+          </Link>
         </Box>
 
         {user.isAuthenticated && (
