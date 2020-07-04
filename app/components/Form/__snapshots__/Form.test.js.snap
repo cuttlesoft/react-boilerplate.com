@@ -98,7 +98,7 @@ exports[`Form with field 1`] = `
   flex-direction: column;
 }
 
-.c3 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,7 +114,7 @@ exports[`Form with field 1`] = `
   flex-direction: column;
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -129,7 +129,22 @@ exports[`Form with field 1`] = `
   flex-direction: column;
 }
 
-.c6 {
+.c3 {
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.c4 {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.c8 {
   box-sizing: border-box;
   font-size: inherit;
   font-family: inherit;
@@ -147,28 +162,28 @@ exports[`Form with field 1`] = `
   border: none;
 }
 
-.c6::-webkit-search-decoration {
+.c8::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-.c6::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: #AAAAAA;
 }
 
-.c6::-moz-placeholder {
+.c8::-moz-placeholder {
   color: #AAAAAA;
 }
 
-.c6:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: #AAAAAA;
 }
 
-.c6::-moz-focus-inner {
+.c8::-moz-focus-inner {
   border: none;
   outline: none;
 }
 
-.c5 {
+.c7 {
   position: relative;
   width: 100%;
 }
@@ -195,7 +210,7 @@ exports[`Form with field 1`] = `
 }
 
 @media only screen and (max-width:768px) {
-  .c3 {
+  .c5 {
     border-bottom: solid 1px rgba(0,0,0,0.33);
   }
 }
@@ -212,18 +227,26 @@ exports[`Form with field 1`] = `
       onBlur={[Function]}
       onFocus={[Function]}
     >
-      <div
+      <label
         className="c3"
       >
+        <span
+          className="c4 "
+          size="xsmall"
+        />
+      </label>
+      <div
+        className="c5"
+      >
         <div
-          className="c4"
+          className="c6"
         >
           <div
-            className="c5"
+            className="c7"
           >
             <input
               autoComplete="off"
-              className="c6"
+              className="c8"
               name="test"
               onBlur={[Function]}
               onChange={[Function]}
