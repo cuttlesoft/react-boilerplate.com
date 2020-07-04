@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Hide } from 'grommet-icons'
+import { FormView, Hide } from 'grommet-icons'
 
 // Components
 import { Box } from '../Box'
@@ -12,7 +12,7 @@ import { TextInput } from '../TextInput'
  *
  * Displays a textinput with masked value for password
  *
- * - When View Icon is clicked, it reveals the password
+ * - When FormView Icon is clicked, it reveals the password
  * - When HIde Icon is clicked, it masks the password
  *
  */
@@ -37,9 +37,9 @@ const PasswordInput = ({ value, onChange, type, ...rest }) => {
         primary={false}
         icon={
           reveal ? (
-            <View size="large" style={{ width: 30 }} color="light-5" />
+            <FormView size="medium" style={{ width: 30 }} color="light-5" />
           ) : (
-            <Hide size="xlarge" style={{ width: 30 }} color="light-5" />
+            <Hide size="medium" style={{ width: 30 }} color="light-5" />
           )
         }
         onClick={() => setReveal(!reveal)}
