@@ -8,11 +8,13 @@ import {
 import { isEmail } from 'validator'
 
 // Components
-import { Anchor } from 'components/Anchor'
 import { Box } from 'components/Box'
 import { Button } from 'components/Button'
 import { Form, FormField } from 'components/Form'
+import { FormContainer } from 'components/FormContainer'
 import { Heading } from 'components/Heading'
+import { Link } from 'components/Link'
+import { LogoHeader } from 'components/LogoHeader'
 import { Message } from 'components/Message'
 import { Modal } from 'components/Modal'
 import { PasswordInput } from 'components/PasswordInput'
@@ -43,175 +45,186 @@ const Register = () => {
     document.getElementById('register-form').reset()
   }, [success])
 
-  /**
-   * Helper to determine if the submit button is disabled
-   */
-  const _isButtonDisabled = () => loading
-
   return (
     <>
-      <Box align="center" pad="large">
-        <Heading level="2">Create an account</Heading>
-        <Anchor href="/login" label="or Sign In"></Anchor>
-      </Box>
+      <LogoHeader />
 
-      <Form
-        id="register-form"
-        validate="blur"
-        onSubmit={({ value }) => {
-          createAccount(value, showError, setLoading, setSuccess)
-        }}
-      >
-        <Box flex="grow" gap="small" direction="row" alignItems="stretch">
-          <FormField
-            label="First Name"
-            name="first_name"
-            required
-            style={{ flex: 1 }}
-            validate={[
-              { regexp: /^[a-z]/i },
-              name => {
-                if (name && name.length === 1) return 'Please enter more than one character'
-                return undefined
-              },
-            ]}
-          />
-
-          <FormField
-            label="Last Name"
-            name="last_name"
-            required
-            style={{ flex: 1 }}
-            validate={[
-              { regexp: /^[a-z]/i },
-              name => {
-                if (name && name.length === 1) return 'Please enter more than one character'
-                return undefined
-              },
-            ]}
-          />
+      <FormContainer>
+        <Box align="center">
+          <Heading level="2">Create an account</Heading>
+          <Link to="/login">or Sign In</Link>
         </Box>
 
-        <FormField
-          label="Email"
-          name="email"
-          required
-          validate={[
-            email => {
-              if (email && !isEmail(email)) return 'Please enter a valid email address'
-              return undefined
-            },
-          ]}
+        <Form
+          id="register-form"
+          validate="blur"
+          onSubmit={({ value }) => {
+            createAccount(value, showError, setLoading, setSuccess)
+          }}
         >
-          <TextInput name="email" type="email" />
-        </FormField>
+          <Box flex="grow" gap="small" direction="row" alignItems="stretch">
+            <FormField
+              label="First Name"
+              name="first_name"
+              required
+              style={{ flex: 1 }}
+              validate={[
+                { regexp: /^[a-z]/i },
+                name => {
+                  if (name && name.length === 1) return 'Please enter more than one character'
+                  return undefined
+                },
+              ]}
+            />
 
-        <FormField
-          label="Password"
-          name="password"
-          required
-          validate={[
-            password => {
-              if (password && password.length <= 8) return 'Please enter more than 8 characters'
-              return undefined
-            },
-            password => {
-              const confirmPasswordInput = document.getElementsByName('confirm_password')[0]
-              if (
-                password &&
-                confirmPasswordInput instanceof HTMLInputElement &&
-                confirmPasswordInput.value !== password
-              ) {
-                return 'Passwords must match'
-              }
-              return undefined
-            },
-          ]}
-        >
-          <PasswordInput id="password" name="password" />
-        </FormField>
+            <FormField
+              label="Last Name"
+              name="last_name"
+              required
+              style={{ flex: 1 }}
+              validate={[
+                { regexp: /^[a-z]/i },
+                name => {
+                  if (name && name.length === 1) return 'Please enter more than one character'
+                  return undefined
+                },
+              ]}
+            />
+          </Box>
 
-        <FormField
-          label="Re-enter Password"
-          name="confirm_password"
-          required
-          validate={[
-            confirmPassword => {
-              if (confirmPassword && confirmPassword.length <= 8)
-                return 'Please enter more than 8 characters'
-              return undefined
-            },
-            confirmPassword => {
-              const passwordInput = document.getElementsByName('password')[0]
-
-              if (
-                confirmPassword &&
-                passwordInput instanceof HTMLInputElement &&
-                passwordInput.value !== confirmPassword
-              ) {
-                return 'Passwords must match'
-              }
-              return undefined
-            },
-          ]}
-        >
-          <PasswordInput name="confirm_password" />
-        </FormField>
-
-        <FormField label="Account Type." name="role" required>
-          <RadioButtonGroup
-            name="role"
-            direction="row"
-            gap="xsmall"
-            options={[
-              {
-                label: 'Supplier',
-                value: 'Supplier Admin',
-              },
-              {
-                label: 'Broker',
-                value: 'Broker Admin',
+          <FormField
+            label="Email"
+            name="email"
+            required
+            validate={[
+              email => {
+                if (email && !isEmail(email)) return 'Please enter a valid email address'
+                return undefined
               },
             ]}
           >
-            {(option, { checked, hover }) => {
-              let background = 'light-2'
-              if (checked) background = 'brand'
-              else if (hover) background = 'light-4'
+            <TextInput name="email" type="email" />
+          </FormField>
 
-              return (
-                <Box background={background} pad="xsmall">
-                  <Text weight="bold">{option.label}</Text>
-                </Box>
-              )
-            }}
-          </RadioButtonGroup>
-        </FormField>
+          <FormField
+            label="Password"
+            name="password"
+            required
+            validate={[
+              password => {
+                if (password && password.length <= 8) return 'Please enter more than 8 characters'
+                return undefined
+              },
+              password => {
+                const confirmPasswordInput = document.getElementsByName('confirm_password')[0]
+                if (
+                  password &&
+                  confirmPasswordInput instanceof HTMLInputElement &&
+                  confirmPasswordInput.value !== password
+                ) {
+                  return 'Passwords must match'
+                }
+                return undefined
+              },
+            ]}
+          >
+            <PasswordInput id="password" name="password" />
+          </FormField>
 
-        {/* TOS */}
-        <Box direction="row" margin={{ top: 'large' }}>
-          <CheckBox id="check-box" label={<Text size="xsmall">I agree with the</Text>} />
+          <FormField
+            label="Re-enter Password"
+            name="confirm_password"
+            required
+            validate={[
+              confirmPassword => {
+                if (confirmPassword && confirmPassword.length <= 8)
+                  return 'Please enter more than 8 characters'
+                return undefined
+              },
+              confirmPassword => {
+                const passwordInput = document.getElementsByName('password')[0]
 
-          <Text size="xsmall" color="brand" weight="bold" onClick={() => setShowModal(true)}>
-            &nbsp;Terms of Service, Privacy Policy and Cookie Policy
-          </Text>
+                if (
+                  confirmPassword &&
+                  passwordInput instanceof HTMLInputElement &&
+                  passwordInput.value !== confirmPassword
+                ) {
+                  return 'Passwords must match'
+                }
+                return undefined
+              },
+            ]}
+          >
+            <PasswordInput name="confirm_password" />
+          </FormField>
 
-          <Modal showModal={showModal} setShowModal={setShowModal} title="Terms of Service">
-            <Markdown>{TOS}</Markdown>
-          </Modal>
-        </Box>
+          <FormField label="Account Type." name="role" required>
+            <RadioButtonGroup
+              name="role"
+              direction="row"
+              gap="xsmall"
+              options={[
+                {
+                  label: 'Supplier',
+                  value: 'Supplier Admin',
+                },
+                {
+                  label: 'Broker',
+                  value: 'Broker Admin',
+                },
+              ]}
+            >
+              {(option, { checked, hover }) => {
+                let background = 'light-2'
+                if (checked) background = 'brand'
+                else if (hover) background = 'light-4'
 
-        {/* Submit */}
-        <Box direction="row" justify="between" margin={{ vertical: 'medium' }}>
-          <Button type="submit" label="Register" disabled={_isButtonDisabled()} />
-        </Box>
+                return (
+                  <Box background={background} pad="xsmall">
+                    <Text size="xsmall" weight="bold">
+                      {option.label}
+                    </Text>
+                  </Box>
+                )
+              }}
+            </RadioButtonGroup>
+          </FormField>
 
-        {/* Status Messages */}
-        {success && (
-          <Message message="Account created! Check your email to confirm your account." />
-        )}
-        {error && <Message message={error} isError />}
-      </Form>
+          {/* TOS */}
+          <Box align="center" direction="row" margin={{ top: 'large' }}>
+            <CheckBox id="check-box" />
+
+            <Text size="xsmall" margin={{ left: '10px' }}>
+              I agree to the{' '}
+              <Text size="xsmall" color="brand" weight="bold" onClick={() => setShowModal(true)}>
+                &nbsp;Terms of Service, Privacy Policy and Cookie Policy
+              </Text>
+            </Text>
+
+            <Modal showModal={showModal} setShowModal={setShowModal} title="Terms of Service">
+              <Markdown>{TOS}</Markdown>
+            </Modal>
+          </Box>
+
+          {/* Submit */}
+          <Box direction="row" fill="horizontal" margin={{ vertical: 'medium' }}>
+            <Button
+              data-testid="submit-button"
+              disabled={loading}
+              fill="horizontal"
+              label="Register"
+              primary
+              type="submit"
+            />
+          </Box>
+
+          {/* Status Messages */}
+          {success && (
+            <Message message="Account created! Check your email to confirm your account." />
+          )}
+          {error && <Message message={error} isError />}
+        </Form>
+      </FormContainer>
     </>
   )
 }
