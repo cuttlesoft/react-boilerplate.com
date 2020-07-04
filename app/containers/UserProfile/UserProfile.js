@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useReducer, useState } from 'react'
+import React, { useContext, useEffect, useReducer, useRef, useState } from 'react'
 import { MaskedInput } from 'grommet'
-import { isEqual } from 'lodash'
+import { debounce } from 'lodash'
 import { isEmail } from 'validator'
 
 // Components
@@ -58,13 +58,14 @@ const UserProfile = () => {
   // State
   const [updatedUser, setUpdatedUser] = useReducer(updateState, {})
   const [editProfileImage, setEditProfileImage] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const isLoaded = useRef(false)
 
   // Retrieve the most up-to-date user object and set as default form state
   useEffect(() => {
     async function fetchData() {
       try {
-        const currentUser = await getUser(user, setCurrentUser)
+        const currentUser = await getUser(user, showError, setIsLoading)
         setUpdatedUser(currentUser)
       } catch {
         setUpdatedUser(user)
@@ -72,6 +73,23 @@ const UserProfile = () => {
     }
     fetchData()
   }, [])
+
+  const updateUserWrapper = payload => {
+    updateUser(payload, showError, setIsLoading, showSuccess, setCurrentUser)
+  }
+  const handleautoSave = useRef(debounce(updateUserWrapper, 500))
+
+  // Update the data in the API when the data changes
+  useEffect(() => {
+    // Ensure that our initial data is loaded before we push changes
+    if (isLoaded.current === false) {
+      // If we haven't marked data as loaded and data has arrived (we have keys),
+      // set isLoaded to true
+      if (Object.keys(updatedUser).length > 0) isLoaded.current = true
+    } else {
+      handleautoSave.current(updatedUser)
+    }
+  }, [updatedUser])
 
   /**
    * Handles changes to all form fields.
@@ -86,17 +104,16 @@ const UserProfile = () => {
     })
   }
 
-  const _isSaveDisabled = () => isEqual(user, updatedUser) || isLoading
-
   return (
     <FormContainer>
-      <Form>
+      <Form validate="blur">
         <Box align="center" margin={{ bottom: 'medium' }}>
           {user.avatar && !editProfileImage ? (
             <>
               <Box height="small" width="small" round="xlarge" overflow="hidden">
                 <Image fit="contain" src={updatedUser.avatar} />
               </Box>
+
               <Button onClick={() => setEditProfileImage(true)}>Edit Profile Image</Button>
             </>
           ) : (
@@ -111,38 +128,12 @@ const UserProfile = () => {
         {/* Basic Information */}
         <Heading level="4">Basic Information</Heading>
 
-        <FormField
-          disabled={isLoading}
-          label="First Name"
-          name="firstName"
-          onChange={handleChange}
-          value={updatedUser.firstName}
-          validate={[
-            name => {
-              if (name && name.length === 1) return 'Please enter more than one character'
-              return undefined
-            },
-          ]}
-          required
-        >
-          <TextInput disabled={isLoading} name="firstName" />
+        <FormField label="First Name" onChange={handleChange} required>
+          <TextInput disabled={isLoading} name="firstName" value={updatedUser.firstName} />
         </FormField>
 
-        <FormField
-          disabled={isLoading}
-          label="Last Name"
-          name="lastName"
-          onChange={handleChange}
-          value={updatedUser.lastName}
-          validate={[
-            name => {
-              if (name && name.length === 1) return 'Please enter more than one character'
-              return undefined
-            },
-          ]}
-          required
-        >
-          <TextInput disabled={isLoading} name="lastName" />
+        <FormField label="Last Name" onChange={handleChange} required>
+          <TextInput disabled={isLoading} name="lastName" value={updatedUser.lastName} />
         </FormField>
 
         {/* We don't support the user changing their email address yet, so this is
@@ -150,9 +141,8 @@ const UserProfile = () => {
         <FormField
           disabled
           label="Email"
-          name="email"
           onChange={handleChange}
-          value={updatedUser.email}
+          required
           validate={[
             () => {
               if (updatedUser.email && !isEmail(updatedUser.email))
@@ -160,15 +150,12 @@ const UserProfile = () => {
               return undefined
             },
           ]}
-          required
         >
-          <TextInput disabled name="email" />
+          <TextInput name="email" value={updatedUser.email} />
         </FormField>
 
         <FormField
-          disabled={isLoading}
           label="Phone"
-          name="phone"
           onChange={handleChange}
           validate={[
             phone => {
@@ -176,7 +163,6 @@ const UserProfile = () => {
               return undefined
             },
           ]}
-          value={updatedUser.phone}
         >
           <MaskedInput
             disabled={isLoading}
@@ -202,25 +188,19 @@ const UserProfile = () => {
               },
             ]}
             name="phone"
+            value={updatedUser.phone || ''}
           />
         </FormField>
 
-        <Button
-          disabled={_isSaveDisabled()}
-          label={isLoading ? 'Loading' : 'Save'}
-          onClick={() =>
-            updateUser(updatedUser, showError, setIsLoading, showSuccess, setCurrentUser)
-          }
-        />
-
         {/* Status Messages */}
-        {(error || success) && (
+        {/** @fixme messages don't display properly with auto-saving yet */}
+        {(isLoading || error || success) && (
           <Box
             background={{ color: error ? 'status-error' : 'status-ok', opacity: 'weak' }}
             margin={{ vertical: 'small' }}
             pad={{ horizontal: 'small' }}
           >
-            <Message message={error || 'Profile updated!'} />
+            <Message message={error || isLoading ? 'Loading...' : 'Profile updated!'} />
           </Box>
         )}
       </Form>
