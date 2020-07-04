@@ -3,17 +3,23 @@ import { render } from '@testing-library/react'
 
 // Components
 import { TestWrapper } from 'utils/TestWrapper'
-import NotFound from '../NotFoundPage'
-import messages from '../NotFoundPage.messages'
+import NotFoundPage from '../NotFoundPage'
 
-describe('NotFound', () => {
-  it('should render the Page Not Found text', () => {
-    const { queryByText } = render(
-      <TestWrapper>
-        <NotFound />
-      </TestWrapper>,
-    )
+const renderComponent = (props = {}) =>
+  render(
+    <TestWrapper>
+      <NotFoundPage {...props} />
+    </TestWrapper>,
+  )
 
-    expect(queryByText(messages.header.defaultMessage)).not.toBeNull()
+/**
+ *
+ * Tests for NotFoundPage
+ *
+ */
+describe('NotFoundPage', () => {
+  it('renders and matches snapshot', () => {
+    const { container } = renderComponent()
+    expect(container).toMatchSnapshot()
   })
 })

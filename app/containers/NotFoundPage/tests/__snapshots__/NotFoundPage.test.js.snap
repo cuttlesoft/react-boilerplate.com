@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPage renders and matches snapshot 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 fXgXKw"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 kibWqE"
+    >
+      <h1
+        class="StyledHeading-sc-1rdh4aw-0 dpKawW"
+        style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
+      >
+        4
+        <span
+          aria-label="Crying Face"
+          role="img"
+        >
+          😢
+        </span>
+        4
+      </h1>
+    </div>
+  </div>
+</div>
+`;
