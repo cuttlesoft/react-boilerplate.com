@@ -5,17 +5,17 @@ exports[`HomePage should render and match the snapshot 1`] = `
   class="StyledGrommet-sc-19lkkz7-0 eTWpSM"
 >
   <div
-    class="StyledBox-sc-13pk1d4-0 gVSbfC"
+    class="StyledBox-sc-13pk1d4-0 QJUym"
   >
-    <div
-      class="StyledBox-sc-13pk1d4-0 QJUym"
-    >
-      <img
-        class="StyledImage-ey4zx9-0 cHpGKY"
-        src="IMAGE_MOCK"
-        style="width: 300px;"
-      />
-    </div>
+    <img
+      class="StyledImage-ey4zx9-0 cHpGKY"
+      src="IMAGE_MOCK"
+      style="width: 300px;"
+    />
+  </div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 fBJwqA"
+  >
     <h2
       class="StyledHeading-sc-1rdh4aw-0 jNKvMz"
       style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
