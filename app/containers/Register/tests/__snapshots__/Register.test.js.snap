@@ -195,7 +195,7 @@ exports[`Register renders and matches snapshot 1`] = `
                   />
                 </div>
                 <button
-                  class="StyledButton-sc-323bzc-0 jvkqEN Button__StyledGrommetButton-sc-5cxguj-0 jYsjN"
+                  class="StyledButton-sc-323bzc-0 jvkqEN Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
                   type="button"
                 >
                   <svg
@@ -254,7 +254,7 @@ exports[`Register renders and matches snapshot 1`] = `
                   />
                 </div>
                 <button
-                  class="StyledButton-sc-323bzc-0 jvkqEN Button__StyledGrommetButton-sc-5cxguj-0 jYsjN"
+                  class="StyledButton-sc-323bzc-0 jvkqEN Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
                   type="button"
                 >
                   <svg
@@ -392,7 +392,7 @@ exports[`Register renders and matches snapshot 1`] = `
           class="StyledBox-sc-13pk1d4-0 hzTjkL"
         >
           <button
-            class="StyledButton-sc-323bzc-0 cGKVeS Button__StyledGrommetButton-sc-5cxguj-0 jYsjN"
+            class="StyledButton-sc-323bzc-0 cGKVeS Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
             data-testid="submit-button"
             type="submit"
           >

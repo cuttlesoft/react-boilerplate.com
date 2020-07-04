@@ -5,9 +5,7 @@ exports[`UserProfile renders and matches snapshot 1`] = `
   <div
     class="StyledGrommet-sc-19lkkz7-0 eTWpSM"
   >
-    <form
-      style="max-width: 70vw; margin: auto;"
-    >
+    <form>
       <div
         class="StyledBox-sc-13pk1d4-0 fppapf"
       >
@@ -42,12 +40,21 @@ exports[`UserProfile renders and matches snapshot 1`] = `
         Basic Information
       </span>
       <div
-        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 feezXd"
       >
         <label
           class="StyledText-sc-1sadyjn-0 enbIRN"
         >
-          First Name*
+          <span
+            class="StyledText-sc-1sadyjn-0 lmFPCJ Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+          >
+            First Name
+            <span
+              class="StyledText-sc-1sadyjn-0 hnHDhw Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+            >
+              *
+            </span>
+          </span>
         </label>
         <div
           class="StyledBox-sc-13pk1d4-0 GCqjV"
@@ -69,12 +76,21 @@ exports[`UserProfile renders and matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 feezXd"
       >
         <label
           class="StyledText-sc-1sadyjn-0 enbIRN"
         >
-          Last Name*
+          <span
+            class="StyledText-sc-1sadyjn-0 lmFPCJ Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+          >
+            Last Name
+            <span
+              class="StyledText-sc-1sadyjn-0 hnHDhw Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+            >
+              *
+            </span>
+          </span>
         </label>
         <div
           class="StyledBox-sc-13pk1d4-0 GCqjV"
@@ -96,12 +112,21 @@ exports[`UserProfile renders and matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 feezXd"
       >
         <label
           class="StyledText-sc-1sadyjn-0 enbIRN"
         >
-          Email*
+          <span
+            class="StyledText-sc-1sadyjn-0 lmFPCJ Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+          >
+            Email
+            <span
+              class="StyledText-sc-1sadyjn-0 hnHDhw Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+            >
+              *
+            </span>
+          </span>
         </label>
         <div
           class="StyledBox-sc-13pk1d4-0 GCqjV"
@@ -124,7 +149,7 @@ exports[`UserProfile renders and matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
+        class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 feezXd"
       >
         <label
           class="StyledText-sc-1sadyjn-0 enbIRN"
