@@ -69,7 +69,6 @@ const Register = () => {
               required
               style={{ flex: 1 }}
               validate={[
-                { regexp: /^[a-z]/i },
                 name => {
                   if (name && name.length === 1) return 'Please enter more than one character'
                   return undefined
@@ -83,7 +82,6 @@ const Register = () => {
               required
               style={{ flex: 1 }}
               validate={[
-                { regexp: /^[a-z]/i },
                 name => {
                   if (name && name.length === 1) return 'Please enter more than one character'
                   return undefined

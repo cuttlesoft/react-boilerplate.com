@@ -118,7 +118,6 @@ const UserProfile = () => {
           onChange={handleChange}
           value={updatedUser.firstName}
           validate={[
-            { regexp: /^[a-z]/i },
             name => {
               if (name && name.length === 1) return 'Please enter more than one character'
               return undefined
@@ -136,7 +135,6 @@ const UserProfile = () => {
           onChange={handleChange}
           value={updatedUser.lastName}
           validate={[
-            { regexp: /^[a-z]/i },
             name => {
               if (name && name.length === 1) return 'Please enter more than one character'
               return undefined
