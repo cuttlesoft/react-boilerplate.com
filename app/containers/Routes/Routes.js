@@ -12,6 +12,8 @@ import { FeaturePage } from 'containers/FeaturePage'
 import { HomePage } from 'containers/HomePage'
 import { Login } from 'containers/Login'
 import { NotFoundPage } from 'containers/NotFoundPage'
+import { PasswordReset } from 'containers/PasswordReset'
+import { PasswordResetRequest } from 'containers/PasswordResetRequest'
 import { Register } from 'containers/Register'
 import { UserProfile } from 'containers/UserProfile'
 
@@ -50,6 +52,8 @@ export default function Routes() {
 
           <PublicRoute exact path="/login" component={Login} />
           <PublicRoute exact path="/register" component={Register} />
+          <PublicRoute exact path="/password-reset-request" component={PasswordResetRequest} />
+          <PublicRoute exact path="/password-reset" component={PasswordReset} />
 
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <PrivateRoute path="/features" component={FeaturePage} />
