@@ -21,7 +21,7 @@ export const baseColors = {
   pink: 'rgb(221,17,117)',
   orange: 'rgb(245,186,23)',
   yellow: 'rgb(242,233,0)',
-  green: '#6eff20',
+  green: 'rgb(112, 189, 70)',
   blue: 'rgb(24,192,221)',
   purple: 'rgb(65,86,166)',
   darkGrey: 'rgb(68,68,68)',
