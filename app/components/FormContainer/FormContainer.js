@@ -7,8 +7,8 @@ import { Box } from '../Box'
 /**
  * FormContainer
  */
-const FormContainer = ({ children }) => (
-  <Box margin="auto" pad="large" style={{ width: '90vw', maxWidth: 600 }}>
+const FormContainer = ({ children, ...rest }) => (
+  <Box margin="auto" pad="large" style={{ width: '90vw', maxWidth: 600 }} {...rest}>
     {children}
   </Box>
 )

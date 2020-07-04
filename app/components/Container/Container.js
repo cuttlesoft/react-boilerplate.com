@@ -7,8 +7,8 @@ import { Box } from '../Box'
 /**
  * Container
  */
-const Container = ({ children }) => (
-  <Box margin="auto" pad="large">
+const Container = ({ children, ...rest }) => (
+  <Box margin="auto" pad="large" {...rest}>
     {children}
   </Box>
 )
