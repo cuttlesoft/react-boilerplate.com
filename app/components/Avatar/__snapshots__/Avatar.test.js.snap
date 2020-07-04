@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar renders and matches snapshot 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 fXgXKw"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 eREzgX StyledAvatar-sc-1suyamb-1 juEsgd"
+    />
+  </div>
+</div>
+`;
