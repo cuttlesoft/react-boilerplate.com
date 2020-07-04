@@ -3,18 +3,18 @@
 exports[`UserProfile renders and matches snapshot 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 eTWpSM"
+    class="StyledGrommet-sc-19lkkz7-0 fXgXKw"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 ewTzDI"
+      class="StyledBox-sc-13pk1d4-0 bKktlX"
       style="width: 90vw; max-width: 600px;"
     >
       <form>
         <div
-          class="StyledBox-sc-13pk1d4-0 fppapf"
+          class="StyledBox-sc-13pk1d4-0 iteVJU"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 fZvOFY"
+            class="StyledBox-sc-13pk1d4-0 eEzmQn"
           >
             <div
               aria-disabled="false"
@@ -45,7 +45,7 @@ exports[`UserProfile renders and matches snapshot 1`] = `
           Basic Information
         </h4>
         <div
-          class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 feezXd"
+          class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp FormField__StyledFormField-g4wt0p-0 feezXd"
         >
           <label
             class="StyledText-sc-1sadyjn-0 enbIRN"
@@ -62,17 +62,17 @@ exports[`UserProfile renders and matches snapshot 1`] = `
             </span>
           </label>
           <div
-            class="StyledBox-sc-13pk1d4-0 GCqjV"
+            class="StyledBox-sc-13pk1d4-0 kGPDbB FormField__FormFieldContentBox-m9hood-1 ckZStK"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 jJdKAu"
+              class="StyledBox-sc-13pk1d4-0 bFwQzJ"
             >
               <div
                 class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
               >
                 <input
                   autocomplete="off"
-                  class="StyledTextInput-sc-1x30a0s-0 FRVtH"
+                  class="StyledTextInput-sc-1x30a0s-0 daoHZW"
                   disabled=""
                   name="firstName"
                   value=""
@@ -82,7 +82,7 @@ exports[`UserProfile renders and matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 feezXd"
+          class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp FormField__StyledFormField-g4wt0p-0 feezXd"
         >
           <label
             class="StyledText-sc-1sadyjn-0 enbIRN"
@@ -99,17 +99,17 @@ exports[`UserProfile renders and matches snapshot 1`] = `
             </span>
           </label>
           <div
-            class="StyledBox-sc-13pk1d4-0 GCqjV"
+            class="StyledBox-sc-13pk1d4-0 kGPDbB FormField__FormFieldContentBox-m9hood-1 ckZStK"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 jJdKAu"
+              class="StyledBox-sc-13pk1d4-0 bFwQzJ"
             >
               <div
                 class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
               >
                 <input
                   autocomplete="off"
-                  class="StyledTextInput-sc-1x30a0s-0 FRVtH"
+                  class="StyledTextInput-sc-1x30a0s-0 daoHZW"
                   disabled=""
                   name="lastName"
                   value=""
@@ -119,7 +119,7 @@ exports[`UserProfile renders and matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 feezXd"
+          class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp FormField__StyledFormField-g4wt0p-0 feezXd"
         >
           <label
             class="StyledText-sc-1sadyjn-0 enbIRN"
@@ -136,17 +136,17 @@ exports[`UserProfile renders and matches snapshot 1`] = `
             </span>
           </label>
           <div
-            class="StyledBox-sc-13pk1d4-0 GCqjV"
+            class="StyledBox-sc-13pk1d4-0 kGPDbB FormField__FormFieldContentBox-m9hood-1 ckZStK"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 erwKMJ"
+              class="StyledBox-sc-13pk1d4-0 jsxKAO"
             >
               <div
                 class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
               >
                 <input
                   autocomplete="off"
-                  class="StyledTextInput-sc-1x30a0s-0 gknGre"
+                  class="StyledTextInput-sc-1x30a0s-0 cOdHuP"
                   name="email"
                   value=""
                 />
@@ -155,7 +155,7 @@ exports[`UserProfile renders and matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 feezXd"
+          class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp FormField__StyledFormField-g4wt0p-0 feezXd"
         >
           <label
             class="StyledText-sc-1sadyjn-0 enbIRN"
@@ -167,17 +167,17 @@ exports[`UserProfile renders and matches snapshot 1`] = `
             </span>
           </label>
           <div
-            class="StyledBox-sc-13pk1d4-0 GCqjV"
+            class="StyledBox-sc-13pk1d4-0 kGPDbB FormField__FormFieldContentBox-m9hood-1 ckZStK"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 jJdKAu"
+              class="StyledBox-sc-13pk1d4-0 bFwQzJ"
             >
               <div
                 class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 eZPDpF"
               >
                 <input
                   autocomplete="off"
-                  class="StyledMaskedInput-sc-99vkfa-0 hrdBpO"
+                  class="StyledMaskedInput-sc-99vkfa-0 dFGRFU"
                   disabled=""
                   name="phone"
                   placeholder="(xxx) xxx-xxxx"
@@ -188,7 +188,7 @@ exports[`UserProfile renders and matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 gFBNDa"
+          class="StyledBox-sc-13pk1d4-0 ddqsFt"
         >
           <span
             class="StyledText-sc-1sadyjn-0 ejlBdv Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"

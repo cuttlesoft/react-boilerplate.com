@@ -41,7 +41,6 @@ exports[`Anchor renders and matches snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -73,7 +72,6 @@ exports[`Anchor renders and matches snapshot 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  outline: none;
 }
 
 .c0:hover {

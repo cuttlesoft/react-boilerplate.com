@@ -3,10 +3,10 @@
 exports[`Dashboard renders and matches snapshot 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 eTWpSM"
+    class="StyledGrommet-sc-19lkkz7-0 fXgXKw"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 ewTzDI"
+      class="StyledBox-sc-13pk1d4-0 bKktlX"
     >
       <h2
         class="StyledHeading-sc-1rdh4aw-0 fjsCgo"

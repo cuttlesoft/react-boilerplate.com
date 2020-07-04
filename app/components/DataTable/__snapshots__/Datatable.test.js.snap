@@ -13,7 +13,7 @@ exports[`DataTable renders and matches snapshot 1`] = `
       />
     </thead>
     <tbody
-      class="StyledTable__StyledTableBody-sc-1m3u5g-3 bMdIOJ StyledDataTable__StyledDataTableBody-xrlyjm-2 bkHhvy"
+      class="StyledTable__StyledTableBody-sc-1m3u5g-3 bMdIOJ StyledDataTable__StyledDataTableBody-xrlyjm-2 kERYjL"
     />
   </table>
 </div>

@@ -7,7 +7,6 @@ exports[`renders 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   margin-bottom: 12px;
   min-width: 0;
@@ -23,7 +22,6 @@ exports[`renders 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   border-bottom: solid 1px rgba(0,0,0,0.33);
   min-width: 0;
@@ -31,6 +29,7 @@ exports[`renders 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .c6 {
@@ -39,7 +38,6 @@ exports[`renders 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -69,15 +67,15 @@ exports[`renders 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
-  outline: none;
   background: transparent;
   color: inherit;
+  padding: 11px;
   font-weight: 600;
   margin: 0;
   border: 1px solid rgba(0,0,0,0.33);
   border-radius: 4px;
   width: 100%;
+  outline: none;
   border: none;
 }
 
@@ -151,7 +149,7 @@ exports[`renders 1`] = `
       />
     </label>
     <div
-      className="c5"
+      className="c5 "
     >
       <div
         className="c6"
@@ -172,7 +170,7 @@ exports[`renders 1`] = `
       />
     </label>
     <div
-      className="c5"
+      className="c5 "
     >
       <div
         className="c6"
@@ -187,7 +185,6 @@ exports[`renders 1`] = `
             onChange={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
-            value=""
           />
         </div>
       </div>
@@ -203,7 +200,6 @@ exports[`renders custom formfield 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   margin-bottom: 12px;
   min-width: 0;
@@ -219,7 +215,6 @@ exports[`renders custom formfield 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   border-bottom: solid 1px rgba(0,0,0,0.33);
   min-width: 0;
@@ -227,6 +222,7 @@ exports[`renders custom formfield 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .c7 {
@@ -235,7 +231,6 @@ exports[`renders custom formfield 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -308,7 +303,7 @@ exports[`renders custom formfield 1`] = `
       />
     </label>
     <div
-      className="c6"
+      className="c6 "
     >
       <div
         className="c7"
@@ -325,7 +320,6 @@ exports[`renders error 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   margin-bottom: 12px;
   min-width: 0;
@@ -341,7 +335,6 @@ exports[`renders error 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   border-bottom: solid 1px #FF4040;
   min-width: 0;
@@ -349,6 +342,7 @@ exports[`renders error 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .c6 {
@@ -357,7 +351,6 @@ exports[`renders error 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -435,7 +428,7 @@ exports[`renders error 1`] = `
       />
     </label>
     <div
-      className="c5"
+      className="c5 "
     >
       <div
         className="c6"
@@ -457,7 +450,6 @@ exports[`renders help 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   margin-bottom: 12px;
   min-width: 0;
@@ -473,7 +465,6 @@ exports[`renders help 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   border-bottom: solid 1px rgba(0,0,0,0.33);
   min-width: 0;
@@ -481,6 +472,7 @@ exports[`renders help 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .c7 {
@@ -489,7 +481,6 @@ exports[`renders help 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -569,7 +560,7 @@ exports[`renders help 1`] = `
       test help
     </span>
     <div
-      className="c6"
+      className="c6 "
     >
       <div
         className="c7"
@@ -586,7 +577,6 @@ exports[`renders htmlFor 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   margin-bottom: 12px;
   min-width: 0;
@@ -602,7 +592,6 @@ exports[`renders htmlFor 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   border-bottom: solid 1px rgba(0,0,0,0.33);
   min-width: 0;
@@ -610,6 +599,7 @@ exports[`renders htmlFor 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .c6 {
@@ -618,7 +608,6 @@ exports[`renders htmlFor 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -687,7 +676,7 @@ exports[`renders htmlFor 1`] = `
       />
     </label>
     <div
-      className="c5"
+      className="c5 "
     >
       <div
         className="c6"
@@ -704,7 +693,6 @@ exports[`renders label 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   margin-bottom: 12px;
   min-width: 0;
@@ -720,7 +708,6 @@ exports[`renders label 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   border-bottom: solid 1px rgba(0,0,0,0.33);
   min-width: 0;
@@ -728,6 +715,7 @@ exports[`renders label 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .c6 {
@@ -736,7 +724,6 @@ exports[`renders label 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -806,7 +793,7 @@ exports[`renders label 1`] = `
       </span>
     </label>
     <div
-      className="c5"
+      className="c5 "
     >
       <div
         className="c6"
