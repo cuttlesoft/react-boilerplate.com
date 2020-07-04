@@ -3,15 +3,15 @@
 exports[`Menu renders and matches snapshot 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 eTWpSM"
+    class="StyledGrommet-sc-19lkkz7-0 fXgXKw"
   >
     <button
       aria-label="Open Menu"
-      class="StyledButton-sc-323bzc-0 dnCEuz"
+      class="StyledButton-sc-323bzc-0 bwJeiP"
       type="button"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 hYQclW"
+        class="StyledBox-sc-13pk1d4-0 hkbjbd"
       >
         <span
           class="StyledText-sc-1sadyjn-0 hUokoe"
