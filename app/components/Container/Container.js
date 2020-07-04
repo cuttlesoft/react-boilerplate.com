@@ -1,25 +1,20 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
-import { Grommet } from 'grommet'
+import PropTypes from 'prop-types'
 
-// Helpers
-import { doc } from './Container.doc'
-import theme from '../../utils/theme'
-import { createWithDoc } from '../../utils/helpers'
+// Components
+import { Box } from '../Box'
 
 /**
- *
  * Container
- *
  */
-const Container = ({ children, ...rest }) => (
-  <Grommet theme={theme} {...rest}>
+const Container = ({ children }) => (
+  <Box margin="auto" pad="large">
     {children}
-  </Grommet>
+  </Box>
 )
 
-export default createWithDoc({
-  envName: process.env.NODE_ENV,
-  docFunction: doc,
-  component: Container,
-})
+Container.propTypes = {
+  children: PropTypes.any,
+}
+
+export default Container
