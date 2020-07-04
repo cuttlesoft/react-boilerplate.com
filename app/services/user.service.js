@@ -32,7 +32,7 @@ export const login = async (
 
   try {
     const data = await axios.post('/login/', credentials)
-    setCurrentUser(data)
+    setCurrentUser(data.user)
     setCurrentTokens(data)
   } catch (err) {
     setError(getErrorMessage(err))
@@ -40,30 +40,25 @@ export const login = async (
   }
 }
 
-export async function getUser(user, setCurrentUser = () => {}) {
-  const data = await axios.get(`/users/${user.id}/`)
-  setCurrentUser(data)
-  return data
+export function getUser(user) {
+  return axios.get(`/users/${user.id}/`)
 }
 
-export async function updateUser(user, setError, setLoading, setSuccess, setCurrentUser) {
+export function updateUser(user) {
+  return axios.put(`/users/${user.id}/`, user)
+}
+
+export const updateUserPassword = async (data, setError, setLoading, setSuccess) => {
   setLoading(true)
 
   try {
-    const { user: updatedUser } = await axios.put(`/users/${user.id}/`, user)
-    setCurrentUser(updatedUser)
-    setSuccess(true)
+    await axios.put('/update-password/', data)
     setLoading(false)
-    return updatedUser
+    setSuccess(true)
   } catch (err) {
     setError(getErrorMessage(err))
     setLoading(false)
-    return null
   }
-}
-
-export function updateUserPassword(user) {
-  return axios.put(`/set_password/`, user)
 }
 
 export function confirmAccountOrEmail(token, uid) {
@@ -74,7 +69,7 @@ export async function forgotPassword({ email }, setError, setLoading, setSuccess
   setLoading(true)
 
   try {
-    const { data } = await axios.post('/password_reset/', { email })
+    const { data } = await axios.post('/reset-password/', { email })
     setSuccess(true)
     setLoading(false)
     return data
@@ -82,37 +77,35 @@ export async function forgotPassword({ email }, setError, setLoading, setSuccess
     setError(getErrorMessage(err))
     setLoading(false)
     return null
+  }
+}
+
+export async function resetPassword({ token, password }, setError, setLoading) {
+  setLoading(true)
+
+  try {
+    await axios.post('/reset-password/confirm/', { token, password })
+    setLoading(false)
+    return true
+  } catch (err) {
+    setError(getErrorMessage(err))
+    setLoading(false)
+    return false
   }
 }
 
 export async function validateResetToken(token) {
   try {
-    const { data } = await axios.post('/password_reset/validate_token/', { token })
-    return data
+    await axios.post('/reset-password/validate_token/', { token })
+    return true
   } catch (err) {
     return getErrorMessage(err)
   }
 }
 
-export async function resetPassword({ token, password }, setError, setLoading, setSuccess) {
-  setLoading(true)
-
-  try {
-    const { data } = await axios.post('/password_reset/confirm/', { token, password })
-    setSuccess(true)
-    setLoading(false)
-    return data
-  } catch (err) {
-    setError(getErrorMessage(err))
-    setLoading(false)
-    return null
-  }
-}
-
 export async function refreshAccessToken(refresh) {
   try {
-    const { data } = await axios.post('/token/refresh/', { refresh })
-    return data
+    return axios.post('/token/refresh/', { refresh })
   } catch (err) {
     throw {
       error: true,
@@ -120,4 +113,24 @@ export async function refreshAccessToken(refresh) {
       details: typeof details === 'object' ? err.response.data : { error: err.response.data },
     }
   }
+}
+
+/**
+ *
+ * If possible, revoke the user's session.
+ * In all cases, remove the user's data, including auth tokens, by clearing the store. This triggers
+ * a change in PrivateRoute and redirects the user.
+ *
+ * @param {string} refresh - The user's refresh token
+ * @param {function} clearStore - Function from RootStore to clear out all store data
+ */
+export async function logout(refresh, clearStore = () => {}) {
+  try {
+    await axios.post('/logout/', { refresh })
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.warn('User session could not be revoked.')
+  }
+
+  clearStore()
 }
