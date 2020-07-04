@@ -3,28 +3,50 @@ import React from 'react'
 import { FormField as GrommetFormField } from 'grommet'
 import styled from 'styled-components'
 
+// Components
+import { Text } from '../Text'
+
+// Helpers
 import { doc } from './Form.doc'
 import { createWithDoc } from '../../utils/helpers'
 
 export const StyledFormField = styled(GrommetFormField)`
-  label {
-    margin: 15px 0 0 12px;
-    font-size: 14px;
-  }
-
+  /* Error message */
   span {
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 12px;
   }
 `
 
 /**
  * FormField
+ *
+ * - If the field is marked as `required`, add an asterisk (*) to its label
  */
-const FormField = ({ children, required, label, ...rest }) => (
-  <StyledFormField required={required} label={required ? `${label}*` : label} {...rest}>
-    {children}
-  </StyledFormField>
-)
+const FormField = props => {
+  const { label, required, value, children, ...rest } = props
+  return (
+    <StyledFormField
+      label={
+        required ? (
+          <Text size="xsmall" weight="bold">
+            {label}
+            <Text color="brand" margin={{ left: 'xsmall' }} size="xsmall">
+              *
+            </Text>
+          </Text>
+        ) : (
+          label
+        )
+      }
+      required={required}
+      {...value}
+      {...rest}
+    >
+      {children}
+    </StyledFormField>
+  )
+}
 
 export default createWithDoc({
   docFunction: doc,
