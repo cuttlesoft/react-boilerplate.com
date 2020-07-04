@@ -15,6 +15,7 @@ const Message = ({ isError = false, message, ...rest }) => (
     color={isError ? 'status-critical' : 'primary'}
     margin={{ vertical: 'small' }}
     size="small"
+    weight="bold"
     {...rest}
   >
     {message}
