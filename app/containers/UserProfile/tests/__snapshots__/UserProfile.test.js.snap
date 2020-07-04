@@ -38,11 +38,12 @@ exports[`UserProfile renders and matches snapshot 1`] = `
             </span>
           </div>
         </div>
-        <span
-          class="StyledText-sc-1sadyjn-0 hUokoe Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+        <h4
+          class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
+          style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
         >
           Basic Information
-        </span>
+        </h4>
         <div
           class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 feezXd"
         >

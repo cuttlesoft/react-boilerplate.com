@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 // Components
 import { Box } from 'components/Box'
 import { Button } from 'components/Button'
+import { Container } from 'components/Container'
 import { Heading } from 'components/Heading'
 import { LogoHeader } from 'components/LogoHeader'
 import { Text } from 'components/Text'
@@ -28,9 +29,9 @@ export const HomePage = ({ history }) => (
       <meta name="description" content="A React.js Boilerplate application homepage" />
     </Helmet>
 
-    <Box align="center">
-      <LogoHeader />
+    <LogoHeader />
 
+    <Container align="center">
       <Heading level="2" color="brand">
         <FormattedMessage {...messages.startProjectHeader} />
       </Heading>
@@ -43,7 +44,7 @@ export const HomePage = ({ history }) => (
         <Button label="Login" onClick={() => history.push('/login')} />
         <Button label="Register" onClick={() => history.push('/register')} />
       </Box>
-    </Box>
+    </Container>
   </>
 )
 
