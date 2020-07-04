@@ -25,10 +25,9 @@ import { PublicRoute } from 'components/PublicRoute'
 // Styles
 import GlobalStyle from '../../global-styles'
 
-const Container = styled.div`
+const AppContainer = styled.div`
   margin: 0 auto 30px auto;
-  min-height: 100%;
-  padding: 0 16px;
+  min-height: 100vh;
 `
 /**
  *
@@ -43,9 +42,10 @@ export default function Routes() {
       <Helmet titleTemplate="%s - React.js Boilerplate" defaultTitle="React.js Boilerplate">
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
+
       <Header />
 
-      <Container>
+      <AppContainer>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/confirm-account" component={ConfirmAccount} />
@@ -61,7 +61,7 @@ export default function Routes() {
 
           <Route path="" component={NotFoundPage} />
         </Switch>
-      </Container>
+      </AppContainer>
 
       <GlobalStyle />
     </>

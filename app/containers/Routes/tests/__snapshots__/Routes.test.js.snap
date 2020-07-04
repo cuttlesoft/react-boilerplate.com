@@ -14,7 +14,7 @@ exports[`Routes should render and match the snapshot 1`] = `
     />
   </HelmetWrapper>
   <Memo(withRouter()) />
-  <Routes__Container>
+  <Routes__AppContainer>
     <Switch>
       <Route
         component={[Function]}
@@ -47,6 +47,26 @@ exports[`Routes should render and match the snapshot 1`] = `
         path="/register"
       />
       <Memo(wrappedComponent)
+        component={[Function]}
+        exact={true}
+        path="/password-reset-request"
+      />
+      <Memo(wrappedComponent)
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "displayName": "",
+            "propTypes": Object {
+              "location": [Function],
+            },
+            "type": [Function],
+          }
+        }
+        exact={true}
+        path="/password-reset"
+      />
+      <Memo(wrappedComponent)
         component={
           Object {
             "$$typeof": Symbol(react.memo),
@@ -71,7 +91,7 @@ exports[`Routes should render and match the snapshot 1`] = `
         path=""
       />
     </Switch>
-  </Routes__Container>
+  </Routes__AppContainer>
   <Memo(GlobalStyleComponent) />
 </React.Fragment>
 `;
