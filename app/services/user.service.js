@@ -34,18 +34,58 @@ export const login = async (
     const data = await axios.post('/login/', credentials)
     setCurrentUser(data.user)
     setCurrentTokens(data)
+    setLoading(false)
   } catch (err) {
     setError(getErrorMessage(err))
     setLoading(false)
   }
 }
 
-export function getUser(user) {
-  return axios.get(`/users/${user.id}/`)
+export const getUser = async (
+  user,
+  setError = () => {},
+  setLoading = () => {},
+  setSuccess = () => {},
+  setCurrentUser = () => {},
+) => {
+  setLoading(true)
+
+  try {
+    const data = await axios.get(`/users/${user.id}/`)
+
+    setCurrentUser(data.user)
+    setLoading(false)
+    setSuccess(true)
+    return data
+  } catch (err) {
+    setError(getErrorMessage(err))
+    setLoading(false)
+    return null
+  }
 }
 
-export function updateUser(user) {
-  return axios.put(`/users/${user.id}/`, user)
+export const updateUser = async (
+  user,
+  setError = () => {},
+  setLoading = () => {},
+  setSuccess = () => {},
+  setCurrentUser = () => {},
+) => {
+  setLoading(true)
+  setSuccess(false)
+
+  try {
+    const data = await axios.put(`/users/${user.id}/`, user)
+
+    setCurrentUser(data.user)
+    setLoading(false)
+    setSuccess(true)
+    return data
+  } catch (err) {
+    setError(getErrorMessage(err))
+    setLoading(false)
+    return null
+  }
 }
 
 export const updateUserPassword = async (data, setError, setLoading, setSuccess) => {
