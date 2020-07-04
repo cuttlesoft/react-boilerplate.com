@@ -24,7 +24,7 @@ export class RootStore {
   @action.bound
   async triggerRefreshToken(failedRequest) {
     try {
-      const { access } = await refreshAccessTokenService(this.refreshToken)
+      const { access } = await refreshAccessTokenService(this.user.refreshToken)
       this.user.accessToken = access
 
       // Reassign to `failedRequest` as this object is used by the token
