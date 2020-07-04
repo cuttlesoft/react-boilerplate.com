@@ -17,12 +17,6 @@ exports[`Form empty 1`] = `
   <form
     onReset={[Function]}
     onSubmit={[Function]}
-    style={
-      Object {
-        "margin": "auto",
-        "maxWidth": "70vw",
-      }
-    }
   />
 </div>
 `;
@@ -57,35 +51,7 @@ exports[`Form regexp validation 1`] = `
 </span>
 `;
 
-exports[`Form required validation 1`] = `
-.c0 {
-  margin-left: 12px;
-  margin-right: 12px;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  font-size: 18px;
-  line-height: 24px;
-  color: #FF4040;
-}
-
-@media only screen and (max-width:768px) {
-
-}
-
-@media only screen and (max-width:768px) {
-
-}
-
-@media only screen and (max-width:768px) {
-
-}
-
-<span
-  class="c0"
->
-  required
-</span>
-`;
+exports[`Form required validation 1`] = `null`;
 
 exports[`Form with field 1`] = `
 .c1 {
@@ -189,13 +155,9 @@ exports[`Form with field 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c2 label {
-  margin: 15px 0 0 12px;
-  font-size: 14px;
-}
-
 .c2 span {
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 12px;
 }
 
 @media only screen and (max-width:768px) {
@@ -216,12 +178,6 @@ exports[`Form with field 1`] = `
   <form
     onReset={[Function]}
     onSubmit={[Function]}
-    style={
-      Object {
-        "margin": "auto",
-        "maxWidth": "70vw",
-      }
-    }
   >
     <div
       className="c1 c2"

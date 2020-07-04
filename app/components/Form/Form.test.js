@@ -53,13 +53,13 @@ describe('Form', () => {
       target: { value: '1' },
     })
     fireEvent.click(getByText('Submit'))
-    expect(getByText('invalid')).toMatchSnapshot()
+    expect(getByText('Invalid')).toMatchSnapshot()
 
     fireEvent.change(getByPlaceholderText('test input'), {
       target: { value: 'a' },
     })
     fireEvent.click(getByText('Submit'))
-    expect(queryByText('invalid')).toBeNull()
+    expect(queryByText('Invalid')).toBeNull()
   })
 
   test('required validation', () => {
@@ -74,11 +74,11 @@ describe('Form', () => {
     )
 
     fireEvent.click(getByText('Submit'))
-    expect(queryByText('required')).toMatchSnapshot()
+    expect(queryByText('Required')).toMatchSnapshot()
     fireEvent.change(getByPlaceholderText('test input'), {
       target: { value: '1' },
     })
-    expect(queryByText('required')).toBeNull()
+    expect(queryByText('Required')).toBeNull()
   })
 
   test('reset clears form', () => {
