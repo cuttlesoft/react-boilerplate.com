@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoHeader renders and matches snapshot 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 eTWpSM"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 QJUym"
+    >
+      <img
+        class="StyledImage-ey4zx9-0 cHpGKY"
+        src="IMAGE_MOCK"
+        style="width: 300px;"
+      />
+    </div>
+  </div>
+</div>
+`;
