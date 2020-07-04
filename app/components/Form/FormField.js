@@ -36,7 +36,9 @@ const FormField = props => {
             </Text>
           </Text>
         ) : (
-          label
+          <Text size="xsmall" weight="bold">
+            {label}
+          </Text>
         )
       }
       required={required}

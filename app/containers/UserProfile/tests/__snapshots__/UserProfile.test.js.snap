@@ -159,7 +159,11 @@ exports[`UserProfile renders and matches snapshot 1`] = `
           <label
             class="StyledText-sc-1sadyjn-0 enbIRN"
           >
-            Phone
+            <span
+              class="StyledText-sc-1sadyjn-0 lmFPCJ Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+            >
+              Phone
+            </span>
           </label>
           <div
             class="StyledBox-sc-13pk1d4-0 GCqjV"
