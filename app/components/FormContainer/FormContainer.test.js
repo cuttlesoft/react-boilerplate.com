@@ -16,8 +16,4 @@ describe('FormContainer', () => {
     const { container } = renderComponent()
     expect(container).toMatchSnapshot()
   })
-
-  it('has additional unit tests specified', () => {
-    expect(true).toEqual(false)
-  })
 })

@@ -6,7 +6,8 @@ exports[`FeaturePage should render its heading 1`] = `
 >
   <div>
     <h1
-      class="StyledHeading-sc-1rdh4aw-0 kZPGVt"
+      class="StyledHeading-sc-1rdh4aw-0 jMKEAN"
+      style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
     >
       <span>
         Features

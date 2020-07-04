@@ -691,9 +691,9 @@ exports[`Grommet dark theme 1`] = `
 }
 
 .c2 {
-  font-size: 50px;
-  line-height: 56px;
-  max-width: 1200px;
+  font-size: 34px;
+  line-height: 40px;
+  max-width: 816px;
   font-weight: 600;
 }
 
@@ -712,9 +712,9 @@ exports[`Grommet dark theme 1`] = `
 
 @media only screen and (max-width:768px) {
   .c2 {
-    font-size: 34px;
-    line-height: 40px;
-    max-width: 816px;
+    font-size: 26px;
+    line-height: 32px;
+    max-width: 624px;
   }
 }
 
@@ -726,6 +726,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       accent-1
     </h1>
@@ -735,6 +743,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       accent-2
     </h1>
@@ -744,6 +760,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       accent-3
     </h1>
@@ -753,6 +777,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       brand
     </h1>
@@ -762,6 +794,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       dark-1
     </h1>
@@ -771,6 +811,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       dark-2
     </h1>
@@ -780,6 +828,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       dark-3
     </h1>
@@ -789,6 +845,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       dark-4
     </h1>
@@ -798,6 +862,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       dark-5
     </h1>
@@ -807,6 +879,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       dark-6
     </h1>
@@ -816,6 +896,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       focus
     </h1>
@@ -825,6 +913,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       light-1
     </h1>
@@ -834,6 +930,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       light-2
     </h1>
@@ -843,6 +947,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       light-3
     </h1>
@@ -852,6 +964,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       light-4
     </h1>
@@ -861,6 +981,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       light-5
     </h1>
@@ -870,6 +998,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       light-6
     </h1>
@@ -879,6 +1015,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       neutral-1
     </h1>
@@ -888,6 +1032,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       neutral-2
     </h1>
@@ -897,6 +1049,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       neutral-3
     </h1>
@@ -906,6 +1066,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       status-critical
     </h1>
@@ -915,6 +1083,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       status-disabled
     </h1>
@@ -924,6 +1100,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       status-ok
     </h1>
@@ -933,6 +1117,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       status-unknown
     </h1>
@@ -942,6 +1134,14 @@ exports[`Grommet dark theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       status-warning
     </h1>
@@ -1274,9 +1474,9 @@ exports[`Grommet default theme 1`] = `
 }
 
 .c2 {
-  font-size: 50px;
-  line-height: 56px;
-  max-width: 1200px;
+  font-size: 34px;
+  line-height: 40px;
+  max-width: 816px;
   font-weight: 600;
 }
 
@@ -1292,9 +1492,9 @@ exports[`Grommet default theme 1`] = `
 
 @media only screen and (max-width:768px) {
   .c2 {
-    font-size: 34px;
-    line-height: 40px;
-    max-width: 816px;
+    font-size: 26px;
+    line-height: 32px;
+    max-width: 624px;
   }
 }
 
@@ -1306,6 +1506,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       accent-1
     </h1>
@@ -1315,6 +1523,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       accent-2
     </h1>
@@ -1324,6 +1540,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       accent-3
     </h1>
@@ -1333,6 +1557,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       brand
     </h1>
@@ -1342,6 +1574,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       dark-1
     </h1>
@@ -1351,6 +1591,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       dark-2
     </h1>
@@ -1360,6 +1608,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       dark-3
     </h1>
@@ -1369,6 +1625,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       dark-4
     </h1>
@@ -1378,6 +1642,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       dark-5
     </h1>
@@ -1387,6 +1659,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       dark-6
     </h1>
@@ -1396,6 +1676,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       focus
     </h1>
@@ -1405,6 +1693,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       light-1
     </h1>
@@ -1414,6 +1710,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       light-2
     </h1>
@@ -1423,6 +1727,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       light-3
     </h1>
@@ -1432,6 +1744,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       light-4
     </h1>
@@ -1441,6 +1761,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       light-5
     </h1>
@@ -1450,6 +1778,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       light-6
     </h1>
@@ -1459,6 +1795,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       neutral-1
     </h1>
@@ -1468,6 +1812,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       neutral-2
     </h1>
@@ -1477,6 +1829,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       neutral-3
     </h1>
@@ -1486,6 +1846,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       status-critical
     </h1>
@@ -1495,6 +1863,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       status-disabled
     </h1>
@@ -1504,6 +1880,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       status-ok
     </h1>
@@ -1513,6 +1897,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       status-unknown
     </h1>
@@ -1522,6 +1914,14 @@ exports[`Grommet default theme 1`] = `
   >
     <h1
       className="c2"
+      size="small"
+      style={
+        Object {
+          "fontFamily": "soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "maxWidth": "100vw",
+          "textTransform": "false",
+        }
+      }
     >
       status-warning
     </h1>

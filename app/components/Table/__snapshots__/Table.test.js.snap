@@ -17,6 +17,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h4
             class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           >
             Name
           </h4>
@@ -27,6 +28,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h4
             class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           >
             Email
           </h4>
@@ -37,6 +39,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h4
             class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           >
             Amount
           </h4>
@@ -55,6 +58,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h5
             class="StyledHeading-sc-1rdh4aw-0 hetXvW"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           >
             Eric
           </h5>
@@ -65,6 +69,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h5
             class="StyledHeading-sc-1rdh4aw-0 hetXvW"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           >
             eric@gmail.com
           </h5>
@@ -75,6 +80,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h5
             class="StyledHeading-sc-1rdh4aw-0 hetXvW"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           >
             $45
           </h5>
@@ -89,6 +95,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h5
             class="StyledHeading-sc-1rdh4aw-0 hetXvW"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           >
             Chris
           </h5>
@@ -99,6 +106,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h5
             class="StyledHeading-sc-1rdh4aw-0 hetXvW"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           >
             chris@gmail.com
           </h5>
@@ -109,6 +117,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h5
             class="StyledHeading-sc-1rdh4aw-0 hetXvW"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           >
             $45
           </h5>
@@ -123,6 +132,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h5
             class="StyledHeading-sc-1rdh4aw-0 hetXvW"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           >
             Shanna
           </h5>
@@ -133,6 +143,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h5
             class="StyledHeading-sc-1rdh4aw-0 hetXvW"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           >
             shanna@gmail.com
           </h5>
@@ -143,6 +154,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h5
             class="StyledHeading-sc-1rdh4aw-0 hetXvW"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           >
             $45
           </h5>
@@ -160,6 +172,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h4
             class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           />
         </td>
         <td
@@ -167,6 +180,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h4
             class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           />
         </td>
         <td
@@ -174,6 +188,7 @@ exports[`Table renders and matches snapshot 1`] = `
         >
           <h4
             class="StyledHeading-sc-1rdh4aw-0 cJdkwo"
+            style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
           />
         </td>
       </tr>

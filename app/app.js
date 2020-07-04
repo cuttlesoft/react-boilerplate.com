@@ -29,8 +29,7 @@ import { translationMessages } from './i18n'
 import '!file-loader?name=[name].[ext]!./assets/images/favicon.ico'
 import 'file-loader?name=.htaccess!./.htaccess' // eslint-disable-line import/extensions
 
-// Observe loading of Open Sans (to remove open sans, remove the <link> tag in
-// the index.html file and this observer)
+// Observe loading of fonts
 const openSansObserver = new FontFaceObserver('Open Sans', {})
 
 // When Open Sans is loaded, add a font-family using Open Sans to the body

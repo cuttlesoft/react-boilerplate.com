@@ -9,7 +9,8 @@ exports[`ConfirmAccount renders and matches snapshot 1`] = `
       class="StyledBox-sc-13pk1d4-0 gVSbfC"
     >
       <h2
-        class="StyledHeading-sc-1rdh4aw-0 eWKAGi"
+        class="StyledHeading-sc-1rdh4aw-0 jNKvMz"
+        style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
       >
         Error confirming account
       </h2>
