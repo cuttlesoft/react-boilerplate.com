@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { Add } from 'grommet-icons'
 
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Anchor } from '..'
 import README from '../README.md'
 
@@ -14,7 +14,7 @@ storiesOf('Anchor', module)
     },
   })
   .add('Colors', () => (
-    <Container>
+    <StoryContainer>
       <Box pad="medium" gap="medium">
         <Anchor icon={<Add />} href="#" />
         <Anchor icon={<Add />} label="Add" href="#" />
@@ -26,5 +26,5 @@ storiesOf('Anchor', module)
         <Anchor icon={<Add />} label="Add" href="#" />
         <Anchor label="Add" href="#" />
       </Box>
-    </Container>
+    </StoryContainer>
   ))

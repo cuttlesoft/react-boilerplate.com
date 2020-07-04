@@ -2,11 +2,11 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 // Components
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import Layer from '../Layer'
 
 storiesOf('Layer', module).add('Default', () => (
-  <Container>
+  <StoryContainer>
     <Layer />
-  </Container>
+  </StoryContainer>
 ))

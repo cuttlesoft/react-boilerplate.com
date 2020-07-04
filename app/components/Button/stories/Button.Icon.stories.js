@@ -4,12 +4,12 @@ import { Text } from 'grommet' /** @todo: replace with custom wrappers */
 import { Close, Send, User } from 'grommet-icons'
 
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Button } from '..'
 import README from '../README.md'
 
 const IconPlain = () => (
-  <Container>
+  <StoryContainer>
     <Box align="center" pad="large">
       <Text margin="small"> plain=true (no padding, no border) </Text>
       <Box direction="row">
@@ -34,7 +34,7 @@ const IconPlain = () => (
         <Button icon={<User />} onClick={() => {}} />
       </Box>
     </Box>
-  </Container>
+  </StoryContainer>
 )
 
 storiesOf('Button', module)

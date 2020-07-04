@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { Text } from 'grommet'
 
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Table, TableBody, TableCell, TableFooter, TableHeader, TableRow } from '..'
 import README from '../README.md'
 
@@ -57,7 +57,7 @@ storiesOf('Table', module)
   })
   .add('Simple', () => <DefaultTable />)
 const DefaultTable = () => (
-  <Container>
+  <StoryContainer>
     <Box align="center" pad="large">
       <Table caption="Default Table">
         <TableHeader>
@@ -93,5 +93,5 @@ const DefaultTable = () => (
         </TableFooter>
       </Table>
     </Box>
-  </Container>
+  </StoryContainer>
 )

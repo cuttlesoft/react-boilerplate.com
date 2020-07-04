@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import sampleImg from '../../../assets/images/sample_image.jpg'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Image } from '..'
 import README from '../README.md'
 
@@ -13,7 +13,7 @@ storiesOf('Image', module)
     },
   })
   .add('Simple', () => (
-    <Container>
+    <StoryContainer>
       <Image src={sampleImg} />
-    </Container>
+    </StoryContainer>
   ))

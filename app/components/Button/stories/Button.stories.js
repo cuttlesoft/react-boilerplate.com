@@ -3,12 +3,12 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Button } from '..'
 import README from '../README.md'
 
 const BasicButtons = props => (
-  <Container>
+  <StoryContainer>
     <Box align="center" pad="medium">
       <Button title="Default" onClick={action('clicked')} {...props} />
     </Box>
@@ -21,7 +21,7 @@ const BasicButtons = props => (
     <Box align="center" pad="medium">
       <Button primary title="Primary" onClick={action('clicked')} {...props} />
     </Box>
-  </Container>
+  </StoryContainer>
 )
 
 storiesOf('Button', module)

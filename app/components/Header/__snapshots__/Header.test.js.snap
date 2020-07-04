@@ -3,10 +3,10 @@
 exports[`Header renders and matches snapshot 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 fUxOqw"
+    class="StyledGrommet-sc-19lkkz7-0 eTWpSM"
   >
     <header
-      class="StyledBox-sc-13pk1d4-0 dfQQGl"
+      class="StyledBox-sc-13pk1d4-0 hHnPGd"
       style="width: 100vw;"
     >
       <div

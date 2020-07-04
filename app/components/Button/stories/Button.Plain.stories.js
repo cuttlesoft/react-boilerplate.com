@@ -4,12 +4,12 @@ import { Text } from 'grommet' /** @todo: replace with custom wrappers */
 import { Add } from 'grommet-icons'
 
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Button } from '..'
 import README from '../README.md'
 
 const PlainButton = props => (
-  <Container>
+  <StoryContainer>
     <Box align="center" pad="large">
       <Button hoverIndicator="light-1" onClick={() => {}} {...props}>
         <Box pad="small" direction="row" align="center" gap="small">
@@ -18,7 +18,7 @@ const PlainButton = props => (
         </Box>
       </Button>
     </Box>
-  </Container>
+  </StoryContainer>
 )
 
 storiesOf('Button', module)

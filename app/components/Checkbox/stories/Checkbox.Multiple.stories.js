@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Checkbox } from '..'
 import README from '../README.md'
 
@@ -38,7 +38,7 @@ const MultipleCheckboxes = props => {
   ]
 
   return (
-    <Container>
+    <StoryContainer>
       <Box alignContent="center" pad="large">
         {items.map(item => (
           <Checkbox
@@ -50,6 +50,6 @@ const MultipleCheckboxes = props => {
           />
         ))}
       </Box>
-    </Container>
+    </StoryContainer>
   )
 }

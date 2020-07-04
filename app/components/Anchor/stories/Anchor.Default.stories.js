@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Box } from '../../Box'
 import { Anchor } from '..'
 import README from '../README.md'
@@ -13,9 +13,9 @@ storiesOf('Anchor', module)
     },
   })
   .add('Default', () => (
-    <Container>
+    <StoryContainer>
       <Box align="center" pad="large">
         <Anchor href="#">Link</Anchor>
       </Box>
-    </Container>
+    </StoryContainer>
   ))

@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Button } from '..'
 import README from '../README.md'
 
@@ -44,16 +44,16 @@ const customTheme = {
 
 const CustomTheme = () => (
   <React.Fragment>
-    <Container theme={customTheme}>
+    <StoryContainer theme={customTheme}>
       <Box align="center" pad="large">
         <Button title="custom theme" onClick={() => {}} primary />
       </Box>
-    </Container>
-    <Container>
+    </StoryContainer>
+    <StoryContainer>
       <Box align="center" pad="large">
         <Button as="span" title="Custom as=span" path="/" />
       </Box>
-    </Container>
+    </StoryContainer>
   </React.Fragment>
 )
 

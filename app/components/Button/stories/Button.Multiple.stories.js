@@ -3,12 +3,12 @@ import { storiesOf } from '@storybook/react'
 import { Add } from 'grommet-icons'
 
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Button } from '..'
 import README from '../README.md'
 
 const MultipleButton = () => (
-  <Container>
+  <StoryContainer>
     <Box align="center" pad="large">
       <Box direction="row" align="center" gap="small" pad="xsmall">
         <Button title="Cancel" onClick={() => {}} />
@@ -33,7 +33,7 @@ const MultipleButton = () => (
         <Button color="light-2" primary icon={<Add />} title="Add" onClick={() => {}} />
       </Box>
     </Box>
-  </Container>
+  </StoryContainer>
 )
 
 storiesOf('Button', module)

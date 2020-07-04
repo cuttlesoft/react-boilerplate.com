@@ -76,8 +76,8 @@ exports[`Grommet custom theme 1`] = `
   flex: 0 0 auto;
   width: 24px;
   height: 24px;
-  fill: #6FFFB0;
-  stroke: #6FFFB0;
+  fill: rgb(24,192,221);
+  stroke: rgb(24,192,221);
 }
 
 .c10 g {
@@ -145,8 +145,8 @@ exports[`Grommet custom theme 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  background: #333333;
-  color: #f8f8f8;
+  background: #323232;
+  color: #eeeeee;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -202,7 +202,7 @@ exports[`Grommet custom theme 1`] = `
   box-sizing: border-box;
   font-size: inherit;
   line-height: inherit;
-  color: #6FFFB0;
+  color: rgb(24,192,221);
   font-weight: 600;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -217,8 +217,10 @@ exports[`Grommet custom theme 1`] = `
 
 .c0 {
   font-family: Open Sans;
-  font-size: 18px;
+  font-size: 14;
   line-height: 24px;
+  background: rgb(255,255,255);
+  color: #444444;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;

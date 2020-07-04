@@ -4,7 +4,7 @@ import { Attraction, Car } from 'grommet-icons'
 
 import { Anchor } from '../../Anchor'
 import { Button } from '../../Button'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Box } from '..'
 import README from '../README.md'
 
@@ -15,7 +15,7 @@ storiesOf('Box', module)
     },
   })
   .add('Simple', () => (
-    <Container>
+    <StoryContainer>
       <Box
         direction="row-responsive"
         justify="center"
@@ -43,5 +43,5 @@ storiesOf('Box', module)
           <Button label="Button" onClick={() => {}} />
         </Box>
       </Box>
-    </Container>
+    </StoryContainer>
   ))

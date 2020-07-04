@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Box } from '..'
 import README from '../README.md'
 
@@ -12,7 +12,7 @@ storiesOf('Box', module)
     },
   })
   .add('Border', () => (
-    <Container>
+    <StoryContainer>
       <Box pad="small" gap="small" align="start">
         <Box pad="small" border>
           true
@@ -44,5 +44,5 @@ storiesOf('Box', module)
           )}
         </Box>
       </Box>
-    </Container>
+    </StoryContainer>
   ))
