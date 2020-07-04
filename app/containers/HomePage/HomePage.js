@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 import { Box } from 'components/Box'
 import { Button } from 'components/Button'
 import { Heading } from 'components/Heading'
+import { LogoHeader } from 'components/LogoHeader'
 import { Text } from 'components/Text'
 
 // Messages
@@ -28,6 +29,8 @@ export const HomePage = ({ history }) => (
     </Helmet>
 
     <Box align="center">
+      <LogoHeader />
+
       <Heading level="2" color="brand">
         <FormattedMessage {...messages.startProjectHeader} />
       </Heading>
