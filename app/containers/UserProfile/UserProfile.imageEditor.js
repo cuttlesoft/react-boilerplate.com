@@ -117,11 +117,13 @@ const ImageEditor = ({ showError, setEditProfileImage, setIsLoading }) => {
         upload={UPLOAD_OPTIONS}
       >
         <Image src={currentImg.preview} fit="contain" />
-      </DropzoneS3Uploader>
 
-      <Text size="small" margin={{ bottom: 'small', horizontal: 'small' }}>
-        Drag files/images here
-      </Text>
+        <Box align="center" pad="small" style={{ textAlign: 'center' }}>
+          <Text size="xsmall" weight="bold">
+            Drag files/images here, or click to browse
+          </Text>
+        </Box>
+      </DropzoneS3Uploader>
 
       {isOpen && (
         <Layer onClickOutside={() => setOpen(false)}>
@@ -148,7 +150,7 @@ const ImageEditor = ({ showError, setEditProfileImage, setIsLoading }) => {
             />
 
             <Box direction="row" pad={{ vertical: '20px' }}>
-              <Button onClick={saveCroppedImage}>Save</Button>
+              <Button onClick={saveCroppedImage} label="Save" />
             </Box>
           </Box>
         </Layer>
