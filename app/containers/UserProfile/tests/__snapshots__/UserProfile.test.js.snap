@@ -72,7 +72,8 @@ exports[`UserProfile renders and matches snapshot 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="StyledTextInput-sc-1x30a0s-0 gknGre"
+                  class="StyledTextInput-sc-1x30a0s-0 FRVtH"
+                  disabled=""
                   name="firstName"
                   value=""
                 />
@@ -108,7 +109,8 @@ exports[`UserProfile renders and matches snapshot 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="StyledTextInput-sc-1x30a0s-0 gknGre"
+                  class="StyledTextInput-sc-1x30a0s-0 FRVtH"
+                  disabled=""
                   name="lastName"
                   value=""
                 />
@@ -144,8 +146,7 @@ exports[`UserProfile renders and matches snapshot 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="StyledTextInput-sc-1x30a0s-0 FRVtH"
-                  disabled=""
+                  class="StyledTextInput-sc-1x30a0s-0 gknGre"
                   name="email"
                   value=""
                 />
@@ -177,6 +178,7 @@ exports[`UserProfile renders and matches snapshot 1`] = `
                 <input
                   autocomplete="off"
                   class="StyledMaskedInput-sc-99vkfa-0 hrdBpO"
+                  disabled=""
                   name="phone"
                   placeholder="(xxx) xxx-xxxx"
                   value=""
@@ -185,13 +187,15 @@ exports[`UserProfile renders and matches snapshot 1`] = `
             </div>
           </div>
         </div>
-        <button
-          class="StyledButton-sc-323bzc-0 fjPIgc Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
-          disabled=""
-          type="button"
+        <div
+          class="StyledBox-sc-13pk1d4-0 gFBNDa"
         >
-          Save
-        </button>
+          <span
+            class="StyledText-sc-1sadyjn-0 ejlBdv Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+          >
+            Loading...
+          </span>
+        </div>
       </form>
     </div>
   </div>
