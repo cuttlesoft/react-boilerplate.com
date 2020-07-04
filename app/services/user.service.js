@@ -75,14 +75,14 @@ export const updateUser = async (
   setSuccess(false)
 
   try {
-    const data = await axios.put(`/users/${user.id}/`, user)
+    const data = await axios.patch(`/users/${user.id}/`, user)
 
     setCurrentUser(data.user)
     setLoading(false)
     setSuccess(true)
     return data
   } catch (err) {
-    setError(getErrorMessage(err))
+    setError({ message: getErrorMessage(err), details: err.response ? err.response.data : null })
     setLoading(false)
     return null
   }

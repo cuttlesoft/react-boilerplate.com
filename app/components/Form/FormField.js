@@ -24,11 +24,11 @@ export const StyledFormField = styled(GrommetFormField)`
  * - If the field is marked as `required`, add an asterisk (*) to its label
  */
 const FormField = props => {
-  const { label, required, value, children, ...rest } = props
+  const { label, required, serverSideRequired, value, children, ...rest } = props
   return (
     <StyledFormField
       label={
-        required ? (
+        required || serverSideRequired ? (
           <Text size="xsmall" weight="bold">
             {label}
             <Text color="brand" margin={{ left: 'xsmall' }} size="xsmall">
