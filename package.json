@@ -91,7 +91,7 @@
     "lodash": "4.17.15",
     "markdown-loader": "^5.1.0",
     "minimist": "1.2.4",
-    "mobx": "^5.15.4",
+    "mobx": "^4.15.4",
     "mobx-react": "^6.1.8",
     "mobx-react-router": "^4.1.0",
     "mobx-sync": "^2.1.3",
