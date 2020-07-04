@@ -1,12 +1,15 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-## Container
-The top level Container container.
+
+## StoryContainer
+
+The top level StoryContainer container.
 
 ## Usage
 
 ```javascript
-import { Container } from 'component/Container';
-<Container>...</Container>
+import { StoryContainer } from 'component/Container'
+
+<StoryContainer>...</StoryContainer>
 ```
 
 ## Properties
@@ -21,7 +24,7 @@ boolean
 
 **plain**
 
-Whether or not Container should apply a global font-family, font-size, and line-height.
+Whether or not StoryContainer should apply a global font-family, font-size, and line-height.
 
 ```
 boolean
@@ -37,7 +40,7 @@ boolean
 
 **theme**
 
-Custom styles for Container app component.
+Custom styles for StoryContainer app component.
 
 ```
 object
@@ -50,17 +53,18 @@ User agent used to detect the device width for setting the initial breakpoint.
 ```
 string
 ```
-  
+
 ## Intrinsic element
 
 ```
 div
 ```
+
 ## Theme
-  
+
 **container.extend**
 
-Any additional style for Container. Expects `string | (props) => {}`.
+Any additional style for StoryContainer. Expects `string | (props) => {}`.
 
 Defaults to
 

@@ -2,10 +2,10 @@ import React, { Fragment } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { Box } from '../../Box'
-import { Container } from '..'
+import { StoryContainer } from '..'
 import README from '../README.md'
 
-storiesOf('Container', module)
+storiesOf('StoryContainer', module)
   .addParameters({
     readme: {
       sidebar: README,
@@ -13,15 +13,16 @@ storiesOf('Container', module)
   })
   .add('Simple', () => (
     <Fragment>
-      <Container plain>
+      <StoryContainer plain>
         <Box pad="medium">
-          <p>Plain Container</p>
+          <p>Plain StoryContainer</p>
         </Box>
-      </Container>
-      <Container>
+      </StoryContainer>
+
+      <StoryContainer>
         <Box pad="medium">
-          <p>Not plain Container</p>
+          <p>Not plain StoryContainer</p>
         </Box>
-      </Container>
+      </StoryContainer>
     </Fragment>
   ))

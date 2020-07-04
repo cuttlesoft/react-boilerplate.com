@@ -4,7 +4,7 @@ import { Add } from 'grommet-icons'
 
 import { Anchor } from '../../Anchor'
 import { Box } from '../../Box'
-import { Container } from '..'
+import { StoryContainer } from '..'
 import README from '../README.md'
 
 const customTheme = {
@@ -15,16 +15,16 @@ const customTheme = {
   },
 }
 
-storiesOf('Container', module)
+storiesOf('StoryContainer', module)
   .addParameters({
     readme: {
       sidebar: README,
     },
   })
   .add('Custom', () => (
-    <Container theme={customTheme}>
+    <StoryContainer theme={customTheme}>
       <Box pad="medium">
         <Anchor icon={<Add />} label="Add" color="custom" />
       </Box>
-    </Container>
+    </StoryContainer>
   ))
