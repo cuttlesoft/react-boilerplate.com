@@ -1,11 +1,13 @@
 import _ from 'lodash'
+import { formatPhoneNumber } from '../../utils/formatters'
 
 /**
  * Convert keys from lower_snake_case to camelCase
  *
  * @param {*} data Data to be transformed
+ * @param {bool} formatData Whether to apply additional data formatting or not
  */
-const convertIncomingData = data => {
+const convertIncomingData = (data, formatData = false) => {
   const formattedData = _.isArray(data) ? [] : {}
 
   _.forEach(data, (value, key) => {
@@ -16,7 +18,11 @@ const convertIncomingData = data => {
       formattedValue = convertIncomingData(formattedValue)
     }
 
-    formattedData[_.camelCase(key)] = formattedValue
+    if (formatData && key === 'phone') {
+      formattedData[_.camelCase(key)] = formatPhoneNumber(formattedValue)
+    } else {
+      formattedData[_.camelCase(key)] = formattedValue
+    }
   })
   return formattedData
 }
