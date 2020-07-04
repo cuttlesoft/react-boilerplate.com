@@ -1,12 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Grommet } from 'grommet'
 
-import theme from '../../../utils/theme'
+// Components
+import { StoryContainer } from '../../StoryContainer'
 import Header from '../Header'
 
 storiesOf('Header', module).add('Default', () => (
-  <Grommet theme={theme}>
+  <StoryContainer>
     <Header />
-  </Grommet>
+  </StoryContainer>
 ))

@@ -1,65 +1,19 @@
 /* eslint-disable react/prop-types */
-import React, { useContext } from 'react'
-import { observer } from 'mobx-react'
-import { User } from 'grommet-icons'
-import { withRouter } from 'react-router-dom'
+import React from 'react'
 
 // Components
 import { Header as GrommetHeader } from 'grommet'
-import { Box } from '../Box'
-import { Link } from '../Link'
-import { Menu } from '../Menu'
 
 // Helpers
 import { doc } from './Header.doc'
 import { createWithDoc } from '../../utils/helpers'
-
-// Stores
-import { RootStoreContext } from '../../stores/RootStore'
 
 /**
  *
  * Header
  *
  */
-const Header = observer(
-  withRouter(({ history, ...rest }) => {
-    const { clearStore, user } = useContext(RootStoreContext)
-
-    return (
-      <GrommetHeader background="light-2" pad="small" {...rest} style={{ width: '100vw' }}>
-        <Box>
-          <Link to={user.isAuthenticated ? '/dashboard' : '/'} size="large">
-            React Boilerplate
-          </Link>
-        </Box>
-
-        {user.isAuthenticated && (
-          <Menu
-            dropProps={{ align: { top: 'bottom', left: 'left' } }}
-            label={
-              <Box pad="8px" background="brand" round>
-                <User size="16px" />
-              </Box>
-            }
-            items={[
-              {
-                label: 'Settings',
-                onClick: () => history.push('/profile'),
-              },
-              {
-                label: 'Logout',
-                onClick: () => {
-                  clearStore()
-                },
-              },
-            ]}
-          />
-        )}
-      </GrommetHeader>
-    )
-  }),
-)
+const Header = ({ children, ...rest }) => <GrommetHeader {...rest}>{children}</GrommetHeader>
 
 export default createWithDoc({
   envName: process.env.NODE_ENV,

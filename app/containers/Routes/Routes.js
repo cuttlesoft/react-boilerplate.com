@@ -18,7 +18,7 @@ import { Register } from 'containers/Register'
 import { UserProfile } from 'containers/UserProfile'
 
 // Components
-import { Header } from 'components/Header'
+import { NavBar } from 'components/NavBar'
 import { PrivateRoute } from 'components/PrivateRoute'
 import { PublicRoute } from 'components/PublicRoute'
 
@@ -43,7 +43,7 @@ export default function Routes() {
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
 
-      <Header />
+      <NavBar />
 
       <AppContainer>
         <Switch>
