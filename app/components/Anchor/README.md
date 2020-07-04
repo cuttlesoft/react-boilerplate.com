@@ -10,7 +10,7 @@ or just use children.
 
 ```javascript
 import { Anchor } from 'components/Anchor';
-<Anchor href={location} label='Label' />
+<Anchor href={location} label="Label" />
 ```
 
 ## Properties

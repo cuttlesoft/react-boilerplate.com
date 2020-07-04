@@ -1,14 +1,11 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-
 ## StoryContainer
-
 The top level StoryContainer container.
 
 ## Usage
 
 ```javascript
-import { StoryContainer } from 'component/Container'
-
+import { StoryContainer } from 'component/StoryContainer'
 <StoryContainer>...</StoryContainer>
 ```
 
@@ -53,15 +50,14 @@ User agent used to detect the device width for setting the initial breakpoint.
 ```
 string
 ```
-
+  
 ## Intrinsic element
 
 ```
 div
 ```
-
 ## Theme
-
+  
 **container.extend**
 
 Any additional style for StoryContainer. Expects `string | (props) => {}`.
