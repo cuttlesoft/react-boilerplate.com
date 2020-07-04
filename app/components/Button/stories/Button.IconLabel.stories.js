@@ -3,12 +3,12 @@ import { storiesOf } from '@storybook/react'
 import { Add } from 'grommet-icons'
 
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Button } from '..'
 import README from '../README.md'
 
 const IconLabel = () => (
-  <Container>
+  <StoryContainer>
     <Box align="center" pad="large">
       <Box round="full" overflow="hidden" background="neutral-1">
         <Button icon={<Add />} hoverIndicator onClick={() => {}} />
@@ -20,7 +20,7 @@ const IconLabel = () => (
         <Button icon={<Add />} title="500px gap" gap="500px" onClick={() => {}} />
       </Box>
     </Box>
-  </Container>
+  </StoryContainer>
 )
 
 storiesOf('Button', module)

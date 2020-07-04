@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Box } from '../../Box'
 import { TextInput } from '..'
 import README from '../README.md'
@@ -21,7 +21,7 @@ const SuggestionsInput = props => {
     .map((_, i) => `suggestion ${i + 1}`)
 
   return (
-    <Container full>
+    <StoryContainer full>
       <Box fill align="center" justify="start" pad="large">
         <Box width="medium">
           <TextInput
@@ -34,6 +34,6 @@ const SuggestionsInput = props => {
           />
         </Box>
       </Box>
-    </Container>
+    </StoryContainer>
   )
 }

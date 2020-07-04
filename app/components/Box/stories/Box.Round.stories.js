@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Grid } from 'grommet' /** @todo: replace with custom wrappers */
 
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Box } from '..'
 import README from '../README.md'
 
@@ -13,7 +13,7 @@ storiesOf('Box', module)
     },
   })
   .add('Round', () => (
-    <Container>
+    <StoryContainer>
       <Box pad="small" gap="small">
         <Box pad="small" background="brand" round alignSelf="start">
           true
@@ -45,5 +45,5 @@ storiesOf('Box', module)
           </Box>
         </Grid>
       </Box>
-    </Container>
+    </StoryContainer>
   ))

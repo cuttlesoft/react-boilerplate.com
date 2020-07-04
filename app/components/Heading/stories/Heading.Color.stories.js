@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Heading } from '..'
 import README from '../README.md'
 
@@ -12,7 +12,7 @@ storiesOf('Heading', module)
     },
   })
   .add('Color', () => (
-    <Container>
+    <StoryContainer>
       <Heading level="1" size="small" color="accent-1">
         This is level 1 header
       </Heading>
@@ -25,5 +25,5 @@ storiesOf('Heading', module)
       <Heading size="xlarge" color="neutral-2">
         This is level 1 header
       </Heading>
-    </Container>
+    </StoryContainer>
   ))

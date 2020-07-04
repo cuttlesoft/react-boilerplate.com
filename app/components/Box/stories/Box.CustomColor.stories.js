@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Box } from '..'
 import README from '../README.md'
 
@@ -12,7 +12,7 @@ storiesOf('Box', module)
     },
   })
   .add('Custom', () => (
-    <Container>
+    <StoryContainer>
       <Box
         justify="center"
         align="center"
@@ -22,5 +22,5 @@ storiesOf('Box', module)
       >
         <p color="white">I have a linear gradient background</p>
       </Box>
-    </Container>
+    </StoryContainer>
   ))

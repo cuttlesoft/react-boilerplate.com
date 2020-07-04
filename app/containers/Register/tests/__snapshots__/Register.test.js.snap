@@ -3,7 +3,7 @@
 exports[`Register renders and matches snapshot 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 fUxOqw"
+    class="StyledGrommet-sc-19lkkz7-0 eTWpSM"
   >
     <div
       class="StyledBox-sc-13pk1d4-0 DKkMM"
@@ -47,7 +47,7 @@ exports[`Register renders and matches snapshot 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="StyledTextInput-sc-1x30a0s-0 iyxfWo"
+                  class="StyledTextInput-sc-1x30a0s-0 ickzDR"
                   name="first_name"
                   value=""
                 />
@@ -78,7 +78,7 @@ exports[`Register renders and matches snapshot 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="StyledTextInput-sc-1x30a0s-0 iyxfWo"
+                  class="StyledTextInput-sc-1x30a0s-0 ickzDR"
                   name="last_name"
                   value=""
                 />
@@ -106,7 +106,7 @@ exports[`Register renders and matches snapshot 1`] = `
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 bjXYsX"
+                class="StyledTextInput-sc-1x30a0s-0 gknGre"
                 name="email"
                 type="email"
                 value=""
@@ -137,7 +137,7 @@ exports[`Register renders and matches snapshot 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="StyledTextInput-sc-1x30a0s-0 bjXYsX"
+                  class="StyledTextInput-sc-1x30a0s-0 gknGre"
                   id="password"
                   name="password"
                   type="password"
@@ -150,7 +150,7 @@ exports[`Register renders and matches snapshot 1`] = `
               >
                 <svg
                   aria-label="Hide"
-                  class="StyledIcon-ofa7kd-0 gzViXn"
+                  class="StyledIcon-ofa7kd-0 fHwKIz"
                   style="width: 30px;"
                   viewBox="0 0 24 24"
                 >
@@ -188,7 +188,7 @@ exports[`Register renders and matches snapshot 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="StyledTextInput-sc-1x30a0s-0 bjXYsX"
+                  class="StyledTextInput-sc-1x30a0s-0 gknGre"
                   name="confirm_password"
                   type="password"
                   value=""
@@ -200,7 +200,7 @@ exports[`Register renders and matches snapshot 1`] = `
               >
                 <svg
                   aria-label="Hide"
-                  class="StyledIcon-ofa7kd-0 gzViXn"
+                  class="StyledIcon-ofa7kd-0 fHwKIz"
                   style="width: 30px;"
                   viewBox="0 0 24 24"
                 >
@@ -246,7 +246,7 @@ exports[`Register renders and matches snapshot 1`] = `
                     value="Supplier Admin"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 iOGeQY"
+                    class="StyledBox-sc-13pk1d4-0 fmmWcA"
                   >
                     <span
                       class="StyledText-sc-1sadyjn-0 gmtNWw Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
@@ -272,7 +272,7 @@ exports[`Register renders and matches snapshot 1`] = `
                     value="Broker Admin"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 iOGeQY"
+                    class="StyledBox-sc-13pk1d4-0 fmmWcA"
                   >
                     <span
                       class="StyledText-sc-1sadyjn-0 gmtNWw Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
@@ -314,7 +314,7 @@ exports[`Register renders and matches snapshot 1`] = `
           </span>
         </label>
         <span
-          class="StyledText-sc-1sadyjn-0 eYKUIT Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+          class="StyledText-sc-1sadyjn-0 gEmiHW Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
         >
            Terms of Service, Privacy Policy and Cookie Policy
         </span>
@@ -323,7 +323,7 @@ exports[`Register renders and matches snapshot 1`] = `
         class="StyledBox-sc-13pk1d4-0 ejRWjs"
       >
         <button
-          class="StyledButton-sc-323bzc-0 gQpAYz Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+          class="StyledButton-sc-323bzc-0 dzMTYh Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
           type="submit"
         >
           Register

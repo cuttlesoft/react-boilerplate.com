@@ -3,7 +3,7 @@
 exports[`Login renders and matches snapshot 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 fUxOqw"
+    class="StyledGrommet-sc-19lkkz7-0 eTWpSM"
   >
     <div
       class="StyledBox-sc-13pk1d4-0 DKkMM"
@@ -26,7 +26,7 @@ exports[`Login renders and matches snapshot 1`] = `
       style="max-width: 70vw; margin: auto;"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 cUMVLo"
+        class="StyledBox-sc-13pk1d4-0 jVIYNo"
       />
       <div
         class="StyledBox-sc-13pk1d4-0 bIVpEL FormField__FormFieldBox-m9hood-0 ddgSii FormField__StyledFormField-g4wt0p-0 euhBMS"
@@ -47,7 +47,7 @@ exports[`Login renders and matches snapshot 1`] = `
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 bjXYsX"
+                class="StyledTextInput-sc-1x30a0s-0 gknGre"
                 name="email"
                 type="email"
                 value=""
@@ -78,7 +78,7 @@ exports[`Login renders and matches snapshot 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="StyledTextInput-sc-1x30a0s-0 bjXYsX"
+                  class="StyledTextInput-sc-1x30a0s-0 gknGre"
                   id="password"
                   name="password"
                   type="password"
@@ -91,7 +91,7 @@ exports[`Login renders and matches snapshot 1`] = `
               >
                 <svg
                   aria-label="Hide"
-                  class="StyledIcon-ofa7kd-0 gzViXn"
+                  class="StyledIcon-ofa7kd-0 fHwKIz"
                   style="width: 30px;"
                   viewBox="0 0 24 24"
                 >
@@ -111,14 +111,14 @@ exports[`Login renders and matches snapshot 1`] = `
         class="StyledBox-sc-13pk1d4-0 gVZJeo"
       >
         <button
-          class="StyledButton-sc-323bzc-0 gQpAYz Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+          class="StyledButton-sc-323bzc-0 dzMTYh Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
           type="submit"
         >
           Login
         </button>
       </div>
       <a
-        class="Link__StyledLink-sc-1vpl4pu-0 fmumj"
+        class="Link__StyledLink-sc-1vpl4pu-0 gYVXeE"
         href="/password-reset-request"
         theme="[object Object]"
       >

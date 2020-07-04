@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import Form from '../Form'
 import FormField from '../FormField'
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Button } from '../../Button'
 
 storiesOf('Form', module).add('Default', () => <DefaultForm />)
@@ -14,7 +14,7 @@ const DefaultForm = props => {
   const [password, onPasswordChange] = useState('tacocat')
 
   return (
-    <Container full>
+    <StoryContainer full>
       <Box fill align="center" justify="center">
         <Box width="medium">
           <Form
@@ -50,6 +50,6 @@ const DefaultForm = props => {
           </Form>
         </Box>
       </Box>
-    </Container>
+    </StoryContainer>
   )
 }

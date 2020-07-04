@@ -4,7 +4,7 @@ import { grommet, Text } from 'grommet' /** @todo: replace with custom wrappers 
 
 import { genericProps } from '../../../utils/propTypes'
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Button } from '..'
 import README from '../README.md'
 
@@ -28,7 +28,7 @@ SidebarButton.propTypes = {
 const SidebarButtons = () => {
   const [active, setActive] = useState()
   return (
-    <Container full theme={grommet}>
+    <StoryContainer full theme={grommet}>
       <Box fill direction="row">
         <Box background="neutral-1">
           {['Dashboard', 'Devices', 'Settings'].map(label => (
@@ -41,7 +41,7 @@ const SidebarButtons = () => {
           ))}
         </Box>
       </Box>
-    </Container>
+    </StoryContainer>
   )
 }
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { TextInput } from '..'
 import README from '../README.md'
 
@@ -17,7 +17,7 @@ storiesOf('TextInput', module)
 const SimpleTextInput = props => {
   const [inputValue, setInputValue] = useState('')
   return (
-    <Container>
+    <StoryContainer>
       <Box align="center" pad="large">
         <TextInput
           placeholder={<span>Enter something...</span>}
@@ -26,6 +26,6 @@ const SimpleTextInput = props => {
           {...props}
         />
       </Box>
-    </Container>
+    </StoryContainer>
   )
 }

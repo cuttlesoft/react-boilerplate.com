@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Anchor } from '..'
 import README from '../README.md'
 
@@ -13,7 +13,7 @@ storiesOf('Anchor', module)
     },
   })
   .add('Size', () => (
-    <Container>
+    <StoryContainer>
       <Box align="center" pad="large">
         {['xxlarge', 'xlarge', 'large', 'medium', 'small', 'xsmall'].map(size => (
           <Box key={size} margin="small">
@@ -21,5 +21,5 @@ storiesOf('Anchor', module)
           </Box>
         ))}
       </Box>
-    </Container>
+    </StoryContainer>
   ))

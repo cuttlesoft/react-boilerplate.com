@@ -2,11 +2,11 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 // Components
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import RangeInput from '../RangeInput'
 
 storiesOf('RangeInput', module).add('Default', () => (
-  <Container>
+  <StoryContainer>
     <RangeInput />
-  </Container>
+  </StoryContainer>
 ))

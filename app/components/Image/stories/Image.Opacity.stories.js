@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import sampleImg from '../../../assets/images/sample_image.jpg'
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Image } from '..'
 import README from '../README.md'
 
@@ -14,7 +14,7 @@ storiesOf('Image', module)
     },
   })
   .add('Opacity', () => (
-    <Container>
+    <StoryContainer>
       <Box gap="small" direction="row">
         <Image src={sampleImg} />
         <Image opacity="strong" src={sampleImg} />
@@ -30,5 +30,5 @@ storiesOf('Image', module)
       <Box gap="small" direction="row">
         <Image opacity="0.6" src={sampleImg} />
       </Box>
-    </Container>
+    </StoryContainer>
   ))

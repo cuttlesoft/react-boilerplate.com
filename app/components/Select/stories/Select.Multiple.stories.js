@@ -5,7 +5,7 @@ import { Text } from 'grommet'
 
 import { Box } from '../../Box'
 import { Button } from '../../Button'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Select } from '..'
 import README from '../README.md'
 
@@ -68,7 +68,7 @@ class MultiSelect extends Component {
   render() {
     const { selected } = this.state
     return (
-      <Container full>
+      <StoryContainer full>
         <Box fill align="center" justify="center">
           <Select
             closeOnChange={false}
@@ -94,7 +94,7 @@ class MultiSelect extends Component {
             {this.renderOption}
           </Select>
         </Box>
-      </Container>
+      </StoryContainer>
     )
   }
 }

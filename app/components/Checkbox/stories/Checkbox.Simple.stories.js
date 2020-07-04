@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { Box } from '../../Box'
-import { Container } from '../../Container'
+import { StoryContainer } from '../../StoryContainer'
 import { Checkbox } from '..'
 import README from '../README.md'
 
@@ -17,7 +17,7 @@ storiesOf('Checkbox', module)
 const SimpleCheckbox = props => {
   const [checked, toggleChecked] = useState(false)
   return (
-    <Container>
+    <StoryContainer>
       <Box align="center" pad="large">
         <Checkbox
           {...props}
@@ -26,6 +26,6 @@ const SimpleCheckbox = props => {
           onChange={e => toggleChecked(e.target.checked)}
         />
       </Box>
-    </Container>
+    </StoryContainer>
   )
 }
