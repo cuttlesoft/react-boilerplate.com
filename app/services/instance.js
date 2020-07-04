@@ -51,26 +51,31 @@ instance.interceptors.request.use(config => {
 /**
  * - If a response is successful, only return the data portion of the response
  */
-instance.interceptors.response.use(response => {
-  if (response.status === 204 || response.status === 205) {
-    return null
-  }
+instance.interceptors.response.use(
+  response => {
+    if (response.status === 204 || response.status === 205) {
+      return null
+    }
 
-  /**
-   * Somewhere along the lines, there's a bug in either our code, axios, or axios-auth-refresh
-   * that causes this interceptor to get called twice only after re-calling a failed request that
-   * has been given a fresh access token via the authRefreshInterceptor
-   *
-   * If you print out the response here, you'll see that this interceptor hits twice after the auth
-   * refresh - once with the expected shape, e.g. { data: { new_key: 'info' } }, and a second time
-   * with the object that has already been transformed, e.g. { newKey: 'info' }
-   *
-   * In order to avoid assumptions about the existance of the `data` key, the simple workaround
-   * here is to first attempt to use `response.data` and fallback to `response` if needed. This
-   * ensures that all data is transformed even if a `data` key does not exist, though it does
-   * attempt to transform the data twice in the case described above.
-   */
-  return convertIncomingData(response.data || response)
-})
+    /**
+     * Somewhere along the lines, there's a bug in either our code, axios, or axios-auth-refresh
+     * that causes this interceptor to get called twice only after re-calling a failed request that
+     * has been given a fresh access token via the authRefreshInterceptor
+     *
+     * If you print out the response here, you'll see that this interceptor hits twice after the auth
+     * refresh - once with the expected shape, e.g. { data: { new_key: 'info' } }, and a second time
+     * with the object that has already been transformed, e.g. { newKey: 'info' }
+     *
+     * In order to avoid assumptions about the existance of the `data` key, the simple workaround
+     * here is to first attempt to use `response.data` and fallback to `response` if needed. This
+     * ensures that all data is transformed even if a `data` key does not exist, though it does
+     * attempt to transform the data twice in the case described above.
+     */
+    return convertIncomingData(response.data || response, true)
+  },
+  error => {
+    throw convertIncomingData(error)
+  },
+)
 
 export default instance
