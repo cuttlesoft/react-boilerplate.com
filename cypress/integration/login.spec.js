@@ -95,7 +95,7 @@ describe('Log In', () => {
       // Mock the `login` API endpoint with an usuccessful response
       cy.route({
         method: 'POST',
-        url: 'http://0.0.0.0:8000/api/v1/login/',
+        url: `${Cypress.env('API_BASE_URL')}/api/v1/login/`,
         status: 400,
         response: 'fixture:login-invalid-credentials.json',
       })
@@ -115,7 +115,7 @@ describe('Log In', () => {
       // Mock the `login` API endpoint with a successful response
       cy.route({
         method: 'POST',
-        url: 'http://0.0.0.0:8000/api/v1/login/',
+        url: `${Cypress.env('API_BASE_URL')}/api/v1/login/`,
         status: 200,
         response: 'fixture:login-valid-credentials.json',
       })

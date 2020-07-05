@@ -114,6 +114,7 @@
     "cross-env": "7.0.2",
     "cypress-plugin-snapshots": "^1.4.3",
     "express": "4.17.1",
+    "firebase-tools": "^8.4.3",
     "fontfaceobserver": "2.1.0",
     "grommet": "^2.14.0",
     "history": "4.10.1",

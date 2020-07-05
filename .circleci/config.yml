@@ -1,17 +1,42 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
+--- ### ------------------------------------------------------------------------------------------------
 
-defaults: &defaults
-  working_directory: ~/repo
-  docker:
-    - image: cypress/browsers:node12.18.0-chrome83-ff77
+### ------------------------------------------------------------------------------------------------
+### To use this configuration, ensure that the following environment variables are configured in
+### the CircleCI project settings:
+###
+### For all projects, set:
+### - $DEV_API_BASE_URL (becomes $API_BASE_URL  based on env)
+### - $STAGING_API_BASE_URL (becomes $API_BASE_URL  based on env)
+### - $PROD_API_BASE_URL (becomes $API_BASE_URL  based on env)
+### - $SENTRY_AUTH_TOKEN
+### - $SENTRY_DSN
+### - $SENTRY_ENABLED
+### - $SENTRY_ORG
+### - $SENTRY_PROJECT
+### - $CYPRESS_RECORD_KEY
+###
+### If deploying to Google Cloud Platform (GCP), create a token via `firebase login:ci` and set:
+### - $FIREBASE_TOKEN
+###
+### If deploying to AWS, you must configure the built-in settings (only available on the old UI,
+### this is being deprecated), set:
+### - $DEV_S3_BUCKET_NAME (becomes $S3_BUCKET_NAME  based on env)
+### - $DEV_DISTRIBUTION_ID (becomes $DISTRIBUTION_ID based on env)
+### - $STAGING_S3_BUCKET_NAME (becomes $S3_BUCKET_NAME  based on env)
+### - $STAGING_DISTRIBUTION_ID (becomes $DISTRIBUTION_ID based on env)
+### - $PROD_S3_BUCKET_NAME (becomes $S3_BUCKET_NAME  based on env)
+### - $PROD_DISTRIBUTION_ID (becomes $DISTRIBUTION_ID based on env)
+version: 2.1
 
-version: 2
+executors:
+  docker-executor:
+    working_directory: ~/repo
+    docker:
+      - image: cypress/browsers:node12.18.0-chrome83-ff77
+
 jobs:
-  build:
-    <<: *defaults
+  setup-lint:
+    executor: docker-executor
     steps:
       - checkout
 
@@ -19,14 +44,14 @@ jobs:
       # it should have same dependencies installed from package.json checksum
       - restore_cache:
           keys:
-            - cache-{{ .Branch }}-{{ checksum "package.json" }}
+            - cache-{{ checksum "package.json" }}
 
       - run:
           name: Install Dependencies
           command: npm install
 
       - save_cache:
-          key: cache-{{ .Branch }}-{{ checksum "package.json" }}
+          key: cache-{{ checksum "package.json" }}
           paths:
             - ~/.npm
             - ~/.cache
@@ -40,7 +65,7 @@ jobs:
           command: npm run format:test
 
       # all other test jobs will run AFTER this build job finishes
-      # to avoid reinstalling dependencies, we persist the source folder "app"
+      # to avoid reinstalling dependencies, we persist the source folder "repo"
       # and the Cypress binary to workspace, which is the fastest way
       # for Circle jobs to pass files
       - persist_to_workspace:
@@ -50,14 +75,14 @@ jobs:
             - .cache/Cypress
 
   unittests:
-    <<: *defaults
+    executor: docker-executor
     steps:
       - attach_workspace:
           at: ~/
       - run: npm test -- --maxWorkers=4
 
   integration-chrome:
-    <<: *defaults
+    executor: docker-executor
     steps:
       - attach_workspace:
           at: ~/
@@ -67,7 +92,7 @@ jobs:
       - run: npm run e2e:record -- --group $CIRCLE_JOB --browser chrome
 
   integration-firefox:
-    <<: *defaults
+    executor: docker-executor
     steps:
       - attach_workspace:
           at: ~/
@@ -76,19 +101,127 @@ jobs:
           background: true
       - run: npm run e2e:record -- --group $CIRCLE_JOB --browser firefox
 
+  build:
+    executor: docker-executor
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Configure build variables
+          command: ./.circleci/configure-build-vars.sh
+      # Ensure that the build completes before considering the build as 'Passed'
+      - run:
+          name: Run build
+          command: npm run build
+      - persist_to_workspace:
+          root: ~/build
+          paths:
+            - repo
+            - .cache/Cypress
+            - build
+
+  # Enable this and configure as needed if deploying to AWS S3
+  # deploy-s3:
+  #   executor: docker-executor
+  #   steps:
+  #     - checkout
+  #     - attach_workspace:
+  #         at: ~/build
+  #     - run:
+  #         name: Configure deploy variables
+  #         command: ./.circleci/configure-deploy-vars.sh
+  #     - run:
+  #         name: Install AWS CLI
+  #         command: sudo apt-get -y -qq install awscli
+  #     - run:
+  #         name: Enable CloudFront
+  #         command: aws configure set preview.cloudfront true
+  #     - run:
+  #         name: Upload to S3
+  #         command: aws s3 sync ./build s3://${S3_BUCKET_NAME} --delete --cache-control max-age=31536000,public
+
+  #     - run:
+  #         name: Update file cache headers
+  #         command: aws s3 cp s3://${S3_BUCKET_NAME}/index.html s3://${S3_BUCKET_NAME}/index.html --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html --acl public-read
+  #     - run:
+  #         name: Invalidate CloudFront distribution
+  #         command: aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/index.html"
+
+  deploy-gcp:
+    executor: docker-executor
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/build
+      - run:
+          name: Configure deploy variables
+          command: ./.circleci/configure-deploy-vars.sh
+      - run:
+          name: Firebase Deploy
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
+
+  notify-sentry-deploy:
+    executor: docker-executor
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/build
+      - run:
+          name: Create release and notify Sentry of deploy
+          command: |
+            curl -sL https://sentry.io/get-cli/ | bash
+            export SENTRY_RELEASE=$(sentry-cli releases propose-version)
+            sentry-cli releases new -p $SENTRY_PROJECT $SENTRY_RELEASE
+            sentry-cli releases files $SENTRY_RELEASE upload-sourcemaps ./build
+            sentry-cli releases finalize $SENTRY_RELEASE
+            sentry-cli releases deploys $SENTRY_RELEASE new -e $CIRCLE_BRANCH
+
 workflows:
   version: 2
   build_and_test:
     jobs:
-      - build
-      # after installing dependencies in the "build" job
+      - setup-lint
+      # after installing dependencies in the "setup-lint" job
       # run all tests in several groups
       - unittests:
           requires:
-            - build
+            - setup-lint
       - integration-chrome:
           requires:
-            - build
+            - setup-lint
       - integration-firefox:
           requires:
+            - setup-lint
+      - build:
+          requires:
+            - unittests
+            - integration-chrome
+            - integration-firefox
+      # Enable this and configure branches as needed if deploying to AWS S3
+      # - deploy-s3:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only:
+      #           - master
+      #           - staging
+      - deploy-gcp:
+          requires:
             - build
+          # Disabled only for testing! Put back before merging to master
+          # filters:
+          #   branches:
+          #     only:
+          #       - master
+          #       - staging
+          #       - prod
+      - notify-sentry-deploy:
+          requires:
+            - deploy-gcp
+          filters:
+            branches:
+              only:
+                - master
+                - staging
+                - prod

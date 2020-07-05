@@ -32,7 +32,7 @@ Cypress.Commands.add('login', (email = 'engineering@cuttlesoft.com', password = 
   cy.server()
   cy.route({
     method: 'POST',
-    url: 'http://0.0.0.0:8000/api/v1/login/',
+    url: `${Cypress.env('API_BASE_URL')}/api/v1/login/`,
     status: 200,
     response: 'fixture:login-valid-credentials.json',
   })
