@@ -1,16 +1,27 @@
 /// <reference types="cypress" />
 
-// Be sure to run `npm start` to start the server
-// before running the tests below.
+describe('Log In', () => {
+  const EMAIL = 'engineering@cuttlesoft.com'
+  const PASSWORD = 'password123'
 
-describe('Logging In', () => {
-  const username = 'engineering@cuttlesoft.com'
-  const password = 'password123'
+  context('Page renders', () => {
+    beforeEach(() => {
+      cy.visit('/login')
+    })
+
+    it('displays the login page', () => {
+      cy.url()
+        .should('include', '/login')
+        .then(() => {
+          cy.document().toMatchImageSnapshot()
+        })
+      cy.get('h2').should('contain', 'Login')
+    })
+  })
 
   context('Unauthorized', () => {
     it('redirects from /dashboard when not logged in', () => {
-      // we must have a valid session cookie to be logged
-      // in else we are redirected to /unauthorized
+      // We must have a valid token to be logged in, else we are redirected to /dashboard
       cy.visit('/dashboard')
       cy.get('h2').should('contain', 'Login')
 
@@ -29,7 +40,7 @@ describe('Logging In', () => {
         .should('exist')
         .click()
 
-      // Ensure that two errors are shown
+      // Ensure that two errors are shown, one for email and one for password
       cy.findAllByText('Required').then(requiredText => {
         expect(requiredText.length).to.equal(2)
       })
@@ -81,6 +92,7 @@ describe('Logging In', () => {
     })
 
     it('displays errors on login', () => {
+      // Mock the `login` API endpoint with an usuccessful response
       cy.route({
         method: 'POST',
         url: 'http://0.0.0.0:8000/api/v1/login/',
@@ -88,18 +100,19 @@ describe('Logging In', () => {
         response: 'fixture:login-invalid-credentials.json',
       })
 
-      // incorrect username on purpose
-      cy.get('input[name=email]').type(username)
+      // Attempt to login with invalid credentials, via enter-key submit
+      cy.get('input[name=email]').type(EMAIL)
       cy.get('input[name=password]').type('password123{enter}')
 
       // Ensure that the error is shown
       cy.findByText('Unable to log in with provided credentials.').should('be.visible')
 
-      // and still be on the same URL
+      // Ensure that the URL has not changed
       cy.url().should('include', '/login')
     })
 
     it('logs in and redirects to dashboard with valid credentials', () => {
+      // Mock the `login` API endpoint with a successful response
       cy.route({
         method: 'POST',
         url: 'http://0.0.0.0:8000/api/v1/login/',
@@ -107,11 +120,12 @@ describe('Logging In', () => {
         response: 'fixture:login-valid-credentials.json',
       })
 
-      cy.get('input[name=email]').type(username)
-      cy.get('input[name=password]').type(password)
+      // Input credentials and submit the form, via form submit
+      cy.get('input[name=email]').type(EMAIL)
+      cy.get('input[name=password]').type(PASSWORD)
       cy.get('form').submit()
 
-      // we should be redirected to /dashboard
+      // After logging in, we're automatically redirected to the dashboard
       cy.url().should('include', '/dashboard')
       cy.get('h2').should('contain', 'Dashboard')
     })
@@ -146,6 +160,7 @@ describe('Logging In', () => {
     beforeEach(() => {
       cy.visit('/login')
     })
+
     it('links to the register page', () => {
       cy.findByText('or Create An Account').click()
 

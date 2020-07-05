@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe('Dashboard', () => {
-  context('Displays the dashboard', () => {
+  context('Page renders', () => {
     beforeEach(() => {
       cy.login()
       cy.visit('/dashboard')
