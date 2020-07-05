@@ -131,32 +131,31 @@ jobs:
             - .cache/Cypress
             - build
 
-  # Enable this and configure as needed if deploying to AWS S3
-  # deploy-s3:
-  #   executor: docker-executor
-  #   steps:
-  #     - checkout
-  #     - attach_workspace:
-  #         at: ~/
-  #     - run:
-  #         name: Configure deploy variables
-  #         command: ./.circleci/configure-deploy-vars.sh
-  #     - run:
-  #         name: Install AWS CLI
-  #         command: sudo apt-get -y -qq install awscli
-  #     - run:
-  #         name: Enable CloudFront
-  #         command: aws configure set preview.cloudfront true
-  #     - run:
-  #         name: Upload to S3
-  #         command: aws s3 sync ./build s3://${S3_BUCKET_NAME} --delete --cache-control max-age=31536000,public
+  deploy-s3:
+    executor: docker-executor
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Configure deploy variables
+          command: ./.circleci/configure-deploy-vars.sh
+      - run:
+          name: Install AWS CLI
+          command: sudo apt-get -y -qq install awscli
+      - run:
+          name: Enable CloudFront
+          command: aws configure set preview.cloudfront true
+      - run:
+          name: Upload to S3
+          command: aws s3 sync ./build s3://${S3_BUCKET_NAME} --delete --cache-control max-age=31536000,public
 
-  #     - run:
-  #         name: Update file cache headers
-  #         command: aws s3 cp s3://${S3_BUCKET_NAME}/index.html s3://${S3_BUCKET_NAME}/index.html --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html --acl public-read
-  #     - run:
-  #         name: Invalidate CloudFront distribution
-  #         command: aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/index.html"
+      - run:
+          name: Update file cache headers
+          command: aws s3 cp s3://${S3_BUCKET_NAME}/index.html s3://${S3_BUCKET_NAME}/index.html --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html --acl public-read
+      - run:
+          name: Invalidate CloudFront distribution
+          command: aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/index.html"
 
   deploy-gcp:
     executor: docker-executor
@@ -193,14 +192,16 @@ jobs:
             sentry-cli releases files $SENTRY_RELEASE upload-sourcemaps ./build
             sentry-cli releases finalize $SENTRY_RELEASE
             sentry-cli releases deploys $SENTRY_RELEASE new -e $CIRCLE_BRANCH
+      - run:
+          name: Notify via Slack
+          command: curl -X POST -H 'Content-type:\ application/json' --data "{'text':'🦾 Sentry Release successful.'}" $SLACK_HOOK
+
 
 workflows:
   version: 2
   build_and_test:
     jobs:
       - setup-lint
-      # after installing dependencies in the "setup-lint" job
-      # run all tests in several groups
       - unittests:
           requires:
             - setup-lint
@@ -227,13 +228,12 @@ workflows:
       - deploy-gcp:
           requires:
             - build
-          # Disabled only for testing! Put back before merging to master
-          # filters:
-          #   branches:
-          #     only:
-          #       - master
-          #       - staging
-          #       - prod
+          filters:
+            branches:
+              only:
+                - master
+                - staging
+                - prod
       - notify-sentry-deploy:
           requires:
             - deploy-gcp
