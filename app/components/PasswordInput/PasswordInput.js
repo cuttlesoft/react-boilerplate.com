@@ -17,7 +17,7 @@ import { TextInput } from '../TextInput'
  *
  */
 // eslint-disable-next-line react/prop-types
-const PasswordInput = ({ value, onChange, type, ...rest }) => {
+const PasswordInput = ({ value, onChange = () => {}, type, ...rest }) => {
   if (type) {
     // eslint-disable-next-line no-console
     console.warn('type prop does not have an effect on PasswordInput!')
