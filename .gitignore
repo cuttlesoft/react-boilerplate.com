@@ -13,3 +13,4 @@ npm-debug.log
 
 cypress/videos
 cypress/screenshots
+cypress.env.json

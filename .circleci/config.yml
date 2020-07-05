@@ -87,6 +87,12 @@ jobs:
       - attach_workspace:
           at: ~/
       - run:
+          name: Configure cypress variables
+          command: ./.circleci/configure-cypress-vars.sh
+      - run:
+          name: Configure build variables
+          command: ./.circleci/configure-build-vars.sh
+      - run:
           command: npm start
           background: true
       - run: npm run e2e:record -- --group $CIRCLE_JOB --browser chrome
@@ -96,6 +102,12 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
+      - run:
+          name: Configure cypress variables
+          command: ./.circleci/configure-cypress-vars.sh
+      - run:
+          name: Configure build variables
+          command: ./.circleci/configure-build-vars.sh
       - run:
           command: npm start
           background: true
