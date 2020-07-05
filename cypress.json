@@ -10,5 +10,9 @@
       }
     }
   },
+  "firefoxGcInterval": {
+    "runMode": null,
+    "openMode": null
+  },
   "ignoreTestFiles": ["**/__snapshots__/*", "**/__image_snapshots__/*"]
 }
