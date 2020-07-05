@@ -1,16 +1,22 @@
-# Don't check auto-generated stuff into git
+# Dependencies
+node_modules
+
+# One-Offs / Generated
 coverage
 build
-node_modules
 stats.json
-
-# Cruft
-.DS_Store
 npm-debug.log
-.idea
 
+# Mac meta file
+.DS_Store
+
+# Configuration
 .env
+cypress.env.json
 
+# Cypress intermediate assets
 cypress/videos
 cypress/screenshots
-cypress.env.json
+
+# Firebase hosting cache files
+.firebase/
