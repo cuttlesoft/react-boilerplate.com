@@ -1,0 +1,14 @@
+{
+  "projectId": "ac3ase",
+  "baseUrl": "http://localhost:3000",
+  "env": {
+    "cypress-plugin-snapshots": {
+      "imageConfig": {
+        "createDiffImage": true,
+        "threshold": 0.005,
+        "thresholdType": "percent"
+      }
+    }
+  },
+  "ignoreTestFiles": ["**/__snapshots__/*", "**/__image_snapshots__/*"]
+}
