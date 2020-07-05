@@ -2,7 +2,6 @@
 
 // Be sure to run `npm start` to start the server
 // before running the tests below.
-const BASE_URL = 'http://localhost:3000'
 
 describe('Logging In', () => {
   const username = 'engineering@cuttlesoft.com'
@@ -12,7 +11,7 @@ describe('Logging In', () => {
     it('redirects from /dashboard when not logged in', () => {
       // we must have a valid session cookie to be logged
       // in else we are redirected to /unauthorized
-      cy.visit(`${BASE_URL}/dashboard`)
+      cy.visit('/dashboard')
       cy.get('h2').should('contain', 'Login')
 
       cy.url().should('include', 'login')
@@ -21,7 +20,19 @@ describe('Logging In', () => {
 
   context('Form validation', () => {
     beforeEach(() => {
-      cy.visit(`${BASE_URL}/login`)
+      cy.visit('/login')
+    })
+
+    it('requires all fields', () => {
+      cy.findByRole('button', { name: /Login/i }).click()
+      cy.findByRole('button', { name: /Login/i })
+        .should('exist')
+        .click()
+
+      // Ensure that two errors are shown
+      cy.findAllByText('Required').then(requiredText => {
+        expect(requiredText.length).to.equal(2)
+      })
     })
 
     it('validates the email field', () => {
@@ -65,7 +76,7 @@ describe('Logging In', () => {
 
   context('Form submission', () => {
     beforeEach(() => {
-      cy.visit(`${BASE_URL}/login`)
+      cy.visit('/login')
       cy.server()
     })
 
@@ -101,14 +112,14 @@ describe('Logging In', () => {
       cy.get('form').submit()
 
       // we should be redirected to /dashboard
-      cy.url().should('include', `${BASE_URL}/dashboard`)
+      cy.url().should('include', '/dashboard')
       cy.get('h2').should('contain', 'Dashboard')
     })
   })
 
   context('Redirect messages when navigating from an email link', () => {
     it('displays the confirmed message', () => {
-      cy.visit(`${BASE_URL}/login?confirmed=true`)
+      cy.visit('/login?confirmed=true')
 
       // Ensure that the error is shown
       cy.findByText('Your email address has been confirmed. You may now log in.').should(
@@ -117,14 +128,14 @@ describe('Logging In', () => {
     })
 
     it('displays the password changed message', () => {
-      cy.visit(`${BASE_URL}/login?reset=true`)
+      cy.visit('/login?reset=true')
 
       // Ensure that the error is shown
       cy.findByText('Your password has been changed. You may now log in.').should('be.visible')
     })
 
     it('displays the account created message', () => {
-      cy.visit(`${BASE_URL}/login?created=true`)
+      cy.visit('/login?created=true')
 
       // Ensure that the error is shown
       cy.findByText('Your account has been created. You may now log in.').should('be.visible')
@@ -133,26 +144,26 @@ describe('Logging In', () => {
 
   context('Links to other pages', () => {
     beforeEach(() => {
-      cy.visit(`${BASE_URL}/login`)
+      cy.visit('/login')
     })
     it('links to the register page', () => {
       cy.findByText('or Create An Account').click()
 
-      cy.url().should('include', `${BASE_URL}/register`)
+      cy.url().should('include', '/register')
       cy.get('h2').should('contain', 'Create an account')
     })
 
     it('links to the forgot password page', () => {
       cy.findByText('Forgot Password?').click()
 
-      cy.url().should('include', `${BASE_URL}/password-reset-request`)
+      cy.url().should('include', '/password-reset-request')
       cy.get('h2').should('contain', 'Forgot your password?')
     })
 
     it('links to the index page', () => {
       cy.findByText('React Boilerplate').click()
 
-      cy.url().should('be', `${BASE_URL}`)
+      cy.url().should('be', '')
       cy.get('h2').should('contain', 'Start your next react project in seconds')
     })
   })
