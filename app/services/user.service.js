@@ -1,6 +1,8 @@
 /* eslint-disable camelcase */
 /* eslint-disable no-throw-literal */
 
+import * as Sentry from '@sentry/browser'
+
 /** @todo Fix import cycle */
 // eslint-disable-next-line import/no-cycle
 import axios from './instance'
@@ -34,6 +36,11 @@ export const login = async (
     const data = await axios.post('/login/', credentials)
     setCurrentUser(data.user)
     setCurrentTokens(data)
+    Sentry.configureScope(scope => {
+      scope.setUser({
+        ...data.user,
+      })
+    })
     setLoading(false)
   } catch (err) {
     setError(getErrorMessage(err))

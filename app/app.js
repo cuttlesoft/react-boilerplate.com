@@ -16,6 +16,7 @@ import { Provider } from 'mobx-react'
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router'
 import { Router } from 'react-router'
 import FontFaceObserver from 'fontfaceobserver'
+import * as Sentry from '@sentry/browser'
 import 'sanitize.css/sanitize.css'
 
 import { Routes } from 'containers/Routes'
@@ -28,6 +29,14 @@ import { translationMessages } from './i18n'
 // Load the favicon and the .htaccess file
 import '!file-loader?name=[name].[ext]!./assets/images/favicon.ico'
 import 'file-loader?name=.htaccess!./.htaccess' // eslint-disable-line import/extensions
+
+// The env variable is not converted to a bool - must check for the explicit string
+if (process.env.SENTRY_ENABLED === 'true')
+  Sentry.init({
+    release: process.env.SENTRY_RELEASE_GIT_HASH,
+    dsn: process.env.SENTRY_DSN,
+    environment: process.env.SENTRY_ENVIRONMENT,
+  })
 
 // Observe loading of fonts
 const openSansObserver = new FontFaceObserver('Open Sans', {})

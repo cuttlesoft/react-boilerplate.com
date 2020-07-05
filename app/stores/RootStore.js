@@ -4,6 +4,7 @@
 import { ignore } from 'mobx-sync'
 import { action } from 'mobx'
 import { createContext } from 'react'
+import * as Sentry from '@sentry/browser'
 
 import { locale } from './LocaleStore'
 import { user } from './UserStore'
@@ -19,6 +20,8 @@ export class RootStore {
   @action.bound
   clearStore() {
     this.user.reset()
+
+    Sentry.configureScope(scope => scope.setUser(null))
   }
 
   @action.bound
