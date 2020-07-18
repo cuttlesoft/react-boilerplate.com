@@ -29,14 +29,19 @@ const NavBar = observer(
     const { clearStore, user } = useContext(RootStoreContext)
 
     return (
-      <Header background="light-2" pad="small" {...rest} style={{ width: '100vw' }}>
-        <Box>
+      <Header
+        background="light-2"
+        pad="small"
+        style={{ width: '100vw', transition: 'none' }}
+        {...rest}
+      >
+        <Box style={{ transition: 'all .3s ease-in-out' }}>
           <Link to={user.isAuthenticated ? '/dashboard' : '/'}>
             <Heading level="2">React Boilerplate</Heading>
           </Link>
         </Box>
 
-        {user.isAuthenticated && (
+        {user?.isAuthenticated && (
           <Menu
             dropProps={{ align: { top: 'bottom', left: 'left' } }}
             label={

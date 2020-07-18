@@ -4,10 +4,11 @@ exports[`NavBar renders and matches snapshot 1`] = `
 <div>
   <header
     class="StyledBox-sc-13pk1d4-0 ixgMvS"
-    style="width: 100vw;"
+    style="width: 100vw; transition: none;"
   >
     <div
       class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+      style="transition: all .3s ease-in-out;"
     >
       <a
         class="Link__StyledLink-sc-1vpl4pu-0 gEErvb"
