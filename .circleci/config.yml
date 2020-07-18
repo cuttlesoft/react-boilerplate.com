@@ -147,12 +147,17 @@ jobs:
           name: Enable CloudFront
           command: aws configure set preview.cloudfront true
       - run:
-          name: Upload to S3
+          name: Upload to S3 with all cached
           command: aws s3 sync ./build s3://${S3_BUCKET_NAME} --delete --cache-control max-age=31536000,public
-
       - run:
-          name: Update file cache headers
+          name: Update file cache headers to remove caching - index.html
           command: aws s3 cp s3://${S3_BUCKET_NAME}/index.html s3://${S3_BUCKET_NAME}/index.html --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html --acl public-read
+      - run:
+          name: Update file cache headers to remove caching - sw.js
+          command: aws s3 cp s3://${S3_BUCKET_NAME}/sw.js s3://${S3_BUCKET_NAME}/sw.js --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html --acl public-read
+      - run:
+          name: Update file cache headers to remove caching - sw.js.gz
+          command: aws s3 cp s3://${S3_BUCKET_NAME}/sw.js.gz s3://${S3_BUCKET_NAME}/sw.js.gz --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html --acl public-read
       - run:
           name: Invalidate CloudFront distribution
           command: aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/index.html"
@@ -176,7 +181,6 @@ jobs:
           name: Notify via Slack
           command: curl -X POST -H 'Content-type:\ application/json' --data "{'text':'🍰 Deploy successful.'}" $SLACK_HOOK
 
-
   notify-sentry-deploy:
     executor: docker-executor
     steps:
@@ -195,7 +199,6 @@ jobs:
       - run:
           name: Notify via Slack
           command: curl -X POST -H 'Content-type:\ application/json' --data "{'text':'🦾 Sentry Release successful.'}" $SLACK_HOOK
-
 
 workflows:
   version: 2
