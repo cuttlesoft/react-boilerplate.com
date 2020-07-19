@@ -1,5 +1,5 @@
 <!-- ! This is a generated file. To make changes, edit <Component>.doc.js ! -->
-## Form
+## createForm
 A form that manages state for its fields.
 
 ## Usage
