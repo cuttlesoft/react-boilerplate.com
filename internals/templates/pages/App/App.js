@@ -4,8 +4,8 @@ import { Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
 
 // Components
-import { HomePage } from 'containers/HomePage'
-import { NotFoundPage } from 'containers/NotFoundPage'
+import { HomePage } from 'pages/HomePage'
+import { NotFoundPage } from 'pages/NotFoundPage'
 import { Footer } from 'components/Footer'
 
 // Styles

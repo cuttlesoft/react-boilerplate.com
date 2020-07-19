@@ -5,7 +5,7 @@ import { act, render, waitFor } from '@testing-library/react'
 import { Grommet, grommet } from 'grommet'
 import '@testing-library/jest-dom/extend-expect'
 
-import { Dashboard } from 'containers/Dashboard'
+import { Dashboard } from 'pages/Dashboard'
 import trunk from '../../configureStore'
 import { DEFAULT_LOCALE } from '../../i18n'
 import { UserStore, UserStoreContext } from '../../stores/UserStore'

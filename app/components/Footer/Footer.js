@@ -1,7 +1,7 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import { LocaleToggle } from 'containers/LocaleToggle'
+import { LocaleToggle } from 'pages/LocaleToggle'
 import { Anchor } from '../Anchor'
 import Wrapper from './Wrapper'
 import messages from './Footer.messages'

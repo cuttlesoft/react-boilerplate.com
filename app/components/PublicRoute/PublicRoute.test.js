@@ -6,7 +6,7 @@ import { Grommet } from 'grommet'
 import '@testing-library/jest-dom/extend-expect'
 
 // Components
-import { Login } from '../../containers/Login'
+import { Login } from '../../pages/Login'
 import PublicRoute from './PublicRoute'
 
 // Helpers

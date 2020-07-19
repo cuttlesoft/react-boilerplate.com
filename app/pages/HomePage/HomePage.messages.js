@@ -1,6 +1,6 @@
 import { defineMessages } from 'react-intl'
 
-export const scope = 'boilerplate.containers.HomePage'
+export const scope = 'boilerplate.pages.HomePage'
 
 /*
  * HomePage Messages

@@ -13,13 +13,15 @@
 // the project's config changing)
 
 const { initPlugin } = require('cypress-plugin-snapshots/plugin')
+const coveragePlugin = require('@cypress/code-coverage/task')
 
 /**
  * @type {Cypress.PluginConfig}
  */
 module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
   initPlugin(on, config)
+
+  coveragePlugin(on, config)
+
   return config
 }

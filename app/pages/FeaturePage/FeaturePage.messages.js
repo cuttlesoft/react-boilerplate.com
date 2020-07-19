@@ -1,6 +1,6 @@
 import { defineMessages } from 'react-intl'
 
-export const scope = 'boilerplate.containers.FeaturePage'
+export const scope = 'boilerplate.pages.FeaturePage'
 
 /*
  * FeaturePage Messages
@@ -18,7 +18,7 @@ export default defineMessages({
   },
   scaffoldingMessage: {
     id: `${scope}.scaffolding.message`,
-    defaultMessage: `Automate the creation of components, containers, routes, selectors
+    defaultMessage: `Automate the creation of components, pages, routes, selectors
   and sagas - and their tests - right from the CLI!`,
   },
   feedbackHeader: {

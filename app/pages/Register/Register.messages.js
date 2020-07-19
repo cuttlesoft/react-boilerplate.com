@@ -1,6 +1,6 @@
 import { defineMessages } from 'react-intl'
 
-export const scope = 'app.containers.Register'
+export const scope = 'app.pages.Register'
 
 /*
  * Register Messages
