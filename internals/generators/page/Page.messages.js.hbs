@@ -1,0 +1,19 @@
+import { defineMessages } from 'react-intl'
+
+export const scope = 'app.pages.{{ properCase name }}'
+
+/**
+ * {{ properCase name }} Messages
+ *
+ * This contains all the text for the {{ properCase name }} page.
+ */
+export default defineMessages({
+  header: {
+    id: `${scope}.header`,
+    defaultMessage: 'This is the {{ properCase name }} page!',
+  },
+    loading: {
+    id: `${scope}.header`,
+    defaultMessage: 'Loading {{ properCase name }} page!',
+  },
+})

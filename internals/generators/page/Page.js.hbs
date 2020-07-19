@@ -9,7 +9,7 @@ import React, {useContext} from 'react'
 {{else}}
 import React from 'react'
 {{/if}}
-{{#if wantHeaders}}
+{{#if wantHelmet}}
 import { Helmet } from 'react-helmet'
 {{/if}}
 {{#if wantMessages}}
@@ -54,7 +54,7 @@ const {{ properCase name}} = () =>
 {{/if}}
 (
 <article>
-  {{#if wantHeaders}}
+  {{#if wantHelmet}}
   <Helmet>
     <title>{{properCase name}}</title>
     <meta name="description"
