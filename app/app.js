@@ -20,9 +20,9 @@ import * as Sentry from '@sentry/browser'
 import 'mobx-react/batchingForReactDom'
 import 'sanitize.css/sanitize.css'
 
-import { Routes } from 'containers/Routes'
+import { Routes } from 'pages/Routes'
 
-import { LanguageProvider } from 'containers/LanguageProvider'
+import { LanguageProvider } from 'pages/LanguageProvider'
 import trunk from './configureStore'
 import theme from './utils/theme'
 import { translationMessages } from './i18n'
@@ -81,7 +81,7 @@ if (module.hot) {
    * modules.hot.accept does not accept dynamic dependencies,
    * have to be constants at compile-time
    */
-  module.hot.accept(['./i18n', 'containers/Routes'], () => {
+  module.hot.accept(['./i18n', 'pages/Routes'], () => {
     ReactDOM.unmountComponentAtNode(MOUNT_NODE)
     render(translationMessages)
   })

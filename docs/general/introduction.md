@@ -86,13 +86,13 @@ In any case, here's the TL;DR:
 
 We use the [container/component
 architecture](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.4rmjqneiw).
-`containers/` contains React components which are connected to the redux store.
-`components/` contains dumb React components which depend on containers for
+`pages/` contains React components which are connected to the redux store.
+`components/` contains dumb React components which depend on pages for
 data. **Container components care about how things work, while components care
 about how things look.**
 
 We've found that for many applications treating single pages (e.g. the
-LoginPage, the HomePage, etc.) as containers and their small parts (e.g. the
+LoginPage, the HomePage, etc.) as pages and their small parts (e.g. the
 Login form, the Navigation bar) as components works well, but there are no
 rigid rules. **Bend the architecture to the needs of your app, nothing is set
 in stone!**
@@ -119,7 +119,7 @@ you won't have to mess around with this folder much.
 > Take a tea-break and then read on.)
 
 - `internals/generators`: This folder has the code to scaffold out new
-  components, containers and routes. Read [more about
+  components, pages and routes. Read [more about
   scaffolding](https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/general#quick-scaffolding)
   in the docs.
 
@@ -192,12 +192,12 @@ down:
   visit. (Very useful for analytics, by the way.)
 - A redux `store` is instantiated.
 - `ReactDOM.render()` not only renders the [root react
-  component](https://github.com/react-boilerplate/react-boilerplate/blob/master/app/containers/App/index.js)
+  component](https://github.com/react-boilerplate/react-boilerplate/blob/master/app/pages/App/index.js)
   called `<App />`, of your application, but it renders it with `<Provider />`,
   `<LanguageProvider />` and `<ConnectedRouter />`.
 - Hot module replacement is set up via vanilla [Webpack
   HMR](https://webpack.js.org/guides/hot-module-replacement/) that makes all
-  the reducers, injected sagas, components, containers, and i18n messages hot
+  the reducers, injected sagas, components, pages, and i18n messages hot
   reloadable.
 - i18n internationalization support setup.
 - Offline plugin support to make your app
@@ -291,7 +291,7 @@ And this is only for **_one_** API call. In a real-world scenario, one page of
 your application could be making tens of API calls. How do we manage all of
 them effectively? This essentially boils down to controlling the flow of your
 application. What if there was a background process that handles multiple
-actions simultaneously, communicates with the Redux store and react containers
+actions simultaneously, communicates with the Redux store and react pages
 at the same time? This is where redux-saga comes into the picture.
 
 The mental model is that a saga is like a separate thread in your application
@@ -335,7 +335,7 @@ English and German by selecting the desired option from the menu in the footer.
 Run `npm start` to launch the application. If you start browsing at
 [https://localhost:3000](https://localhost:3000), by default you will be
 navigated to the home page. Here, notice that route is `"/"`, so the
-[`<HomePage />`](https://github.com/react-boilerplate/react-boilerplate/blob/master/app/containers/HomePage/index.js)
+[`<HomePage />`](https://github.com/react-boilerplate/react-boilerplate/blob/master/app/pages/HomePage/index.js)
 container will be mounted. It is responsible for rendering a form with a
 textbox and a list of repositories.
 
@@ -386,7 +386,7 @@ be "paused" and "resumed" at any point in time. `redux-saga` provides an
 intuitive, declarative API for managing asynchronous operations.
 
 Check out
-[`HomePage/saga.js`](https://github.com/react-boilerplate/react-boilerplate/blob/master/app/containers/HomePage/saga.js).
+[`HomePage/saga.js`](https://github.com/react-boilerplate/react-boilerplate/blob/master/app/pages/HomePage/saga.js).
 It can be confusing for untrained eyes. The API of `redux-saga` is
 self-descriptive once you've seen it, so let's go over what happens in there:
 
@@ -399,7 +399,7 @@ self-descriptive once you've seen it, so let's go over what happens in there:
 - If the API successfully returns some data, a `reposLoaded()` action will be
   dispatched which carries the data. When the Redux store receives this action,
   [a
-  reducer](https://github.com/react-boilerplate/react-boilerplate/blob/master/app/containers/App/reducer.js)
+  reducer](https://github.com/react-boilerplate/react-boilerplate/blob/master/app/pages/App/reducer.js)
   will set incoming data in the new state tree.
 
 _An update has occurred!_ `mapStateToProps()` will be triggered. `<HomePage />`

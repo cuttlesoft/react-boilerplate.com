@@ -1,6 +1,6 @@
 import { defineMessages } from 'react-intl'
 
-export const scope = 'app.containers.UserProfile'
+export const scope = 'app.pages.UserProfile'
 
 /*
  * UserProfile Messages

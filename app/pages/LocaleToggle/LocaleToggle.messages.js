@@ -1,6 +1,6 @@
 import { defineMessages } from 'react-intl'
 
-export const scope = 'boilerplate.containers.LocaleToggle'
+export const scope = 'boilerplate.pages.LocaleToggle'
 
 /*
  * LocaleToggle Messages

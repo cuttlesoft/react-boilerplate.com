@@ -13,7 +13,7 @@
   - [Full in-depth explanation](#full-in-depth-explanation)
 - [Local webfonts not working for
   development](#local-webfonts-not-working-for-development)
-- [Non-route containers](#non-route-containers)
+- [Non-route pages](#non-route-pages)
   - [Where do I put the reducer?](#where-do-i-put-the-reducer)
 - [Use CI with bitbucket pipelines](#use-ci-with-bitbucket-pipelines)
 - [How to keep my project up-to-date with
@@ -124,7 +124,7 @@ output: {
 },
 ```
 
-## Non-route containers
+## Non-route pages
 
 > Note: Container will always be nested somewhere below a route. Even if
 > there's dozens of components in between, somewhere up the tree will be route.
@@ -276,7 +276,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 **3) Change the position of `<GlobalStyle>` in the rendering of `<App>`**
 
-You can do that inside `containers/App/index.js`.
+You can do that inside `pages/App/index.js`.
 
 More information is available in the [official
 documentation](https://github.com/styled-components/styled-components/blob/master/docs/existing-css.md).

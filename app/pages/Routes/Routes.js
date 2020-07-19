@@ -5,17 +5,17 @@ import { Helmet } from 'react-helmet'
 import { Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
 
-// Containers
-import { Dashboard } from 'containers/Dashboard'
-import { ConfirmAccount } from 'containers/ConfirmAccount'
-import { FeaturePage } from 'containers/FeaturePage'
-import { HomePage } from 'containers/HomePage'
-import { Login } from 'containers/Login'
-import { NotFoundPage } from 'containers/NotFoundPage'
-import { PasswordReset } from 'containers/PasswordReset'
-import { PasswordResetRequest } from 'containers/PasswordResetRequest'
-import { Register } from 'containers/Register'
-import { UserProfile } from 'containers/UserProfile'
+// pages
+import { Dashboard } from 'pages/Dashboard'
+import { ConfirmAccount } from 'pages/ConfirmAccount'
+import { FeaturePage } from 'pages/FeaturePage'
+import { HomePage } from 'pages/HomePage'
+import { Login } from 'pages/Login'
+import { NotFoundPage } from 'pages/NotFoundPage'
+import { PasswordReset } from 'pages/PasswordReset'
+import { PasswordResetRequest } from 'pages/PasswordResetRequest'
+import { Register } from 'pages/Register'
+import { UserProfile } from 'pages/UserProfile'
 
 // Components
 import { NavBar } from 'components/NavBar'
