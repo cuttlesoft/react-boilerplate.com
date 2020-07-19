@@ -2,11 +2,20 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 // Components
-import { StoryContainer } from '../../StoryContainer'
 import {{ properCase name }} from '../{{ properCase name }}'
+import { StoryContainer } from '../../StoryContainer'
 
-storiesOf("{{ properCase name }}", module).add("Default", () => (
+// Misc
+import README from '../README.md'
+
+storiesOf("{{ properCase name }}", module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add("Default", () => (
     <StoryContainer>
-        <{{ properCase name }} />
+      <{{ properCase name }} />
     </StoryContainer>
-))
+  ))
