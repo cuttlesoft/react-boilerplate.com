@@ -1,8 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+// Components
 import { StoryContainer } from '../../StoryContainer'
 import { Heading } from '..'
+
+// Misc
 import README from '../README.md'
 
 storiesOf('Heading', module)
@@ -14,13 +17,13 @@ storiesOf('Heading', module)
   .add('Size', () => (
     <StoryContainer>
       <Heading level="1" size="small">
-        This is level 1 header
+        This is a level 1 header
       </Heading>
 
-      <Heading size="medium">This is level 1 header</Heading>
+      <Heading size="medium">This is a level 1 header</Heading>
 
-      <Heading size="large">This is level 1 header</Heading>
+      <Heading size="large">This is a level 1 header</Heading>
 
-      <Heading size="xlarge">This is level 1 header</Heading>
+      <Heading size="xlarge">This is a level 1 header</Heading>
     </StoryContainer>
   ))

@@ -1,12 +1,21 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Grommet } from 'grommet'
 
-import theme from '../../../utils/theme'
+// Components
 import AutoSaveFormField from '../AutoSaveFormField'
+import { StoryContainer } from '../../StoryContainer'
 
-storiesOf('AutoSaveFormField', module).add('Default', () => (
-  <Grommet theme={theme}>
-    <AutoSaveFormField />
-  </Grommet>
-))
+// Misc
+import README from '../README.md'
+
+storiesOf('AutoSaveFormField', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Default', () => (
+    <StoryContainer>
+      <AutoSaveFormField />
+    </StoryContainer>
+  ))

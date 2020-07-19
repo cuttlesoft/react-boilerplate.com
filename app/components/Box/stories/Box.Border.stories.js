@@ -1,8 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { StoryContainer } from '../../StoryContainer'
+// Components
 import { Box } from '..'
+import { StoryContainer } from '../../StoryContainer'
+
+// Misc
 import README from '../README.md'
 
 storiesOf('Box', module)
@@ -17,6 +20,7 @@ storiesOf('Box', module)
         <Box pad="small" border>
           true
         </Box>
+
         <Box direction="row-responsive" gap="small">
           {['horizontal', 'vertical', 'left', 'top', 'right', 'bottom'].map(border => (
             <Box key={border} pad="small" border={border}>
@@ -24,9 +28,11 @@ storiesOf('Box', module)
             </Box>
           ))}
         </Box>
+
         <Box pad="small" border={{ color: 'brand' }}>
           color
         </Box>
+
         <Box direction="row-responsive" gap="small" align="start">
           {['small', 'medium', 'large'].map(size => (
             <Box key={size} pad="small" border={{ size }}>
@@ -34,6 +40,7 @@ storiesOf('Box', module)
             </Box>
           ))}
         </Box>
+
         <Box direction="row-responsive" gap="small" align="start">
           {['solid', 'dashed', 'dotted', 'double', 'groove', 'ridge', 'inset', 'outset'].map(
             type => (

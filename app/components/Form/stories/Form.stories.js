@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
+// Components
+import { Box } from '../../Box'
+import { Button } from '../../Button'
 import Form from '../Form'
 import FormField from '../FormField'
-import { Box } from '../../Box'
 import { StoryContainer } from '../../StoryContainer'
-import { Button } from '../../Button'
 
-storiesOf('Form', module).add('Default', () => <DefaultForm />)
+// Misc
+import README from '../README.md'
 
 const DefaultForm = props => {
   const [email, onEmailChange] = useState('banana@banana.com')
@@ -36,6 +38,7 @@ const DefaultForm = props => {
               value={email}
               onChange={e => onEmailChange(e.target.value)}
             />
+
             <FormField
               label="Password"
               name="password"
@@ -44,8 +47,11 @@ const DefaultForm = props => {
               value={password}
               onChange={e => onPasswordChange(e.target.value)}
             />
+
             <Button label="Cancel" />
+
             <Button type="reset" label="Reset" />
+
             <Button type="submit" label="Submit" primary />
           </Form>
         </Box>
@@ -53,3 +59,11 @@ const DefaultForm = props => {
     </StoryContainer>
   )
 }
+
+storiesOf('Form', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Default', () => <DefaultForm />)

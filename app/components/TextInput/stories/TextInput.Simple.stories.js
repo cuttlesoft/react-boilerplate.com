@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
+// Components
 import { Box } from '../../Box'
-import { StoryContainer } from '../../StoryContainer'
 import { TextInput } from '..'
+import { StoryContainer } from '../../StoryContainer'
+
+// Misc
 import README from '../README.md'
 
 storiesOf('TextInput', module)
@@ -16,13 +19,14 @@ storiesOf('TextInput', module)
 
 const SimpleTextInput = props => {
   const [inputValue, setInputValue] = useState('')
+
   return (
     <StoryContainer>
       <Box align="center" pad="large">
         <TextInput
+          onChange={e => setInputValue(e.target.value)}
           placeholder={<span>Enter something...</span>}
           value={inputValue}
-          onChange={e => setInputValue(e.target.value)}
           {...props}
         />
       </Box>

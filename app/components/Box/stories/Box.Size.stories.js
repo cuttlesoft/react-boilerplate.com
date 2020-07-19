@@ -1,8 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { StoryContainer } from '../../StoryContainer'
+// Components
 import { Box } from '..'
+import { StoryContainer } from '../../StoryContainer'
+
+// Misc
 import README from '../README.md'
 
 storiesOf('Box', module)
@@ -30,6 +33,7 @@ storiesOf('Box', module)
               <p key={i}>{`Small (${i})`}</p>
             ))}
         </Box>
+
         <Box
           width="medium"
           height="medium"
@@ -40,6 +44,7 @@ storiesOf('Box', module)
         >
           Medium
         </Box>
+
         <Box
           width="large"
           height="large"

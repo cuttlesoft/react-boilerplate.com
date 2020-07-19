@@ -1,9 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+// Components
 import { Box } from '../../Box'
-import { StoryContainer } from '../../StoryContainer'
 import { Button } from '..'
+import { StoryContainer } from '../../StoryContainer'
+
+// Misc
 import README from '../README.md'
 
 const customTheme = {
@@ -49,6 +52,7 @@ const CustomTheme = () => (
         <Button title="custom theme" onClick={() => {}} primary />
       </Box>
     </StoryContainer>
+
     <StoryContainer>
       <Box align="center" pad="large">
         <Button as="span" title="Custom as=span" path="/" />

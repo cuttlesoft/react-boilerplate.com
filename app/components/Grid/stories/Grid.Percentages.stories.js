@@ -1,14 +1,24 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Grommet, grommet } from 'grommet'
+
+// Components
 import { Box } from '../../Box'
-
 import Grid from '../Grid'
+import { StoryContainer } from '../../StoryContainer'
 
-storiesOf('Grid', module).add('Percentages', () => <Percentages />)
+// Misc
+import README from '../README.md'
+
+storiesOf('Grid', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Percentages', () => <Percentages />)
 
 const Percentages = () => (
-  <Grommet theme={grommet} full>
+  <StoryContainer>
     <Grid
       fill
       areas={[
@@ -22,5 +32,5 @@ const Percentages = () => (
       <Box gridArea="nav" background="brand" />
       <Box gridArea="main" background="brand" />
     </Grid>
-  </Grommet>
+  </StoryContainer>
 )

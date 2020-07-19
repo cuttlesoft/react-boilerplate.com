@@ -2,10 +2,13 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Attraction, Car } from 'grommet-icons'
 
+// Components
 import { Anchor } from '../../Anchor'
 import { Button } from '../../Button'
-import { StoryContainer } from '../../StoryContainer'
 import { Box } from '..'
+import { StoryContainer } from '../../StoryContainer'
+
+// Misc
 import README from '../README.md'
 
 storiesOf('Box', module)
@@ -36,6 +39,7 @@ storiesOf('Box', module)
           <Anchor href="" label="Link" />
           <Button label="Button" onClick={() => {}} />
         </Box>
+
         <Box pad="large" align="center" background="dark-3" round gap="small">
           <Car size="large" color="light-2" />
           <p>Travel</p>

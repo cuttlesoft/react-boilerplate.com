@@ -1,11 +1,16 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+// Components
 import { Box } from '../../Box'
-import { StoryContainer } from '../../StoryContainer'
 import { DataTable } from '..'
-import README from '../README.md'
+import { StoryContainer } from '../../StoryContainer'
+
+// Utils
 import { columns, DATA } from './data'
+
+// Misc
+import README from '../README.md'
 
 storiesOf('DataTable', module)
   .addParameters({

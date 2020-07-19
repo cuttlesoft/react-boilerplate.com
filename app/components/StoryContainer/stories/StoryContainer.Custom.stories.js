@@ -2,9 +2,12 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Add } from 'grommet-icons'
 
+// Components
 import { Anchor } from '../../Anchor'
 import { Box } from '../../Box'
 import { StoryContainer } from '..'
+
+// Misc
 import README from '../README.md'
 
 const customTheme = {

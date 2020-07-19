@@ -2,11 +2,20 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 // Components
-import { StoryContainer } from '../../StoryContainer'
 import Menu from '../Menu'
+import { StoryContainer } from '../../StoryContainer'
 
-storiesOf('Menu', module).add('Default', () => (
-  <StoryContainer>
-    <Menu />
-  </StoryContainer>
-))
+// Misc
+import README from '../README.md'
+
+storiesOf('Menu', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Default', () => (
+    <StoryContainer>
+      <Menu />
+    </StoryContainer>
+  ))

@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import { storiesOf } from '@storybook/react'
 import { FormClose } from 'grommet-icons'
-import { Text } from 'grommet'
 
+// Components
 import { Box } from '../../Box'
 import { Button } from '../../Button'
-import { StoryContainer } from '../../StoryContainer'
 import { Select } from '..'
+import { StoryContainer } from '../../StoryContainer'
+import { Text } from '../../Text'
+
+// Misc
 import README from '../README.md'
 
 const ALL_OPTIONS = ['S01', 'S02', 'S03', 'S04', 'S05', 'S06', 'S07', 'S08', 'S09', 'S10']
@@ -52,6 +55,7 @@ class MultiSelect extends Component {
         <Text size="small" color="white">
           {option}
         </Text>
+
         <Box background="white" round="full" margin={{ left: 'xsmall' }}>
           <FormClose color="accent-1" size="small" style={{ width: '12px', height: '12px' }} />
         </Box>
@@ -67,6 +71,7 @@ class MultiSelect extends Component {
 
   render() {
     const { selected } = this.state
+
     return (
       <StoryContainer full>
         <Box fill align="center" justify="center">

@@ -1,12 +1,21 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Grommet } from 'grommet'
 
-import theme from '../../../utils/theme'
+// Components
 import GenericError from '../GenericError'
+import { StoryContainer } from '../../StoryContainer'
 
-storiesOf('GenericError', module).add('Default', () => (
-  <Grommet theme={theme}>
-    <GenericError />
-  </Grommet>
-))
+// Misc
+import README from '../README.md'
+
+storiesOf('GenericError', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Default', () => (
+    <StoryContainer>
+      <GenericError />
+    </StoryContainer>
+  ))

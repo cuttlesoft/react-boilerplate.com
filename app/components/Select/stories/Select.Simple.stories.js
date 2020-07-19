@@ -1,9 +1,13 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
-import { Box, Grommet } from 'grommet'
 
+// Components
+import { Box } from '../../Box'
 import { Select } from '..'
+import { StoryContainer } from '../../StoryContainer'
+
+// Misc
 import README from '../README.md'
 
 storiesOf('Select', module)
@@ -19,7 +23,7 @@ const SimpleSelect = ({ ...rest }) => {
 
   const options = ['one', 'two', 'three']
   return (
-    <Grommet full>
+    <StoryContainer>
       <Box fill align="center" justify="start" pad="large">
         <Select
           id="select"
@@ -31,6 +35,6 @@ const SimpleSelect = ({ ...rest }) => {
           {...rest}
         />
       </Box>
-    </Grommet>
+    </StoryContainer>
   )
 }

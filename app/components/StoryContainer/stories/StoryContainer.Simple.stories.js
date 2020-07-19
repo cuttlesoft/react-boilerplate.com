@@ -1,8 +1,11 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+// Components
 import { Box } from '../../Box'
 import { StoryContainer } from '..'
+
+// Misc
 import README from '../README.md'
 
 storiesOf('StoryContainer', module)
@@ -12,7 +15,7 @@ storiesOf('StoryContainer', module)
     },
   })
   .add('Simple', () => (
-    <Fragment>
+    <>
       <StoryContainer plain>
         <Box pad="medium">
           <p>Plain StoryContainer</p>
@@ -24,5 +27,5 @@ storiesOf('StoryContainer', module)
           <p>Not plain StoryContainer</p>
         </Box>
       </StoryContainer>
-    </Fragment>
+    </>
   ))
