@@ -63,7 +63,6 @@ const UserProfile = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        console.log('get getting')
         const currentUser = await getUser(user, showError, setIsLoading)
         setUpdatedUser(currentUser)
       } catch {

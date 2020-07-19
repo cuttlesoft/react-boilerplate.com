@@ -9,7 +9,7 @@ import Message from './Message'
 const renderComponent = (props = {}) =>
   render(
     <TestWrapper>
-      <Message {...props} />
+      <Message message="Cuttlefish are colorblind" {...props} />
     </TestWrapper>,
   )
 

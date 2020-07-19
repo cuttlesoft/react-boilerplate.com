@@ -14,10 +14,10 @@ module.exports = {
   coverageThreshold: {
     // Test coverage should be adjusted on a project-by-project basis
     global: {
-      statements: 0,
-      branches: 0,
-      functions: 0,
-      lines: 0,
+      statements: 35,
+      branches: 35,
+      functions: 35,
+      lines: 35,
     },
   },
   moduleDirectories: ['node_modules', 'app'],

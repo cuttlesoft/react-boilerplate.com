@@ -1,7 +1,7 @@
 import React from 'react'
 import { IntlProvider } from 'react-intl'
 import { MemoryRouter } from 'react-router-dom'
-import { act, render, waitForElement } from '@testing-library/react'
+import { act, render, waitFor } from '@testing-library/react'
 import { Grommet, grommet } from 'grommet'
 import '@testing-library/jest-dom/extend-expect'
 
@@ -45,9 +45,9 @@ describe('<PrivateRoute />', () => {
     userStore.accessToken = 'faketoken'
     userStore.email = TEST_USER
 
-    act(async () => {
+    await act(async () => {
       const { container, getByTestId } = renderComponent(userStore)
-      const dashboardPage = await waitForElement(() => getByTestId('dashboard-page'))
+      const dashboardPage = await waitFor(() => getByTestId('dashboard-page'))
 
       expect(container).toMatchSnapshot()
       expect(dashboardPage).toHaveTextContent('Dashboard')

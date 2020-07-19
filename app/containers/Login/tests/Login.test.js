@@ -8,21 +8,18 @@ import { Login } from '../index'
 const renderComponent = (props = {}) =>
   render(
     <TestWrapper>
-      <Login {...props} />
+      <Login location={{}} {...props} />
     </TestWrapper>,
   )
 
 /**
-*
-* Tests for Login
-*
-* @see
-https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
-*
-*/
+ *
+ * Tests for Login
+ */
 describe('Login', () => {
   it('renders and matches snapshot', () => {
     const { container } = renderComponent()
+
     expect(container).toMatchSnapshot()
   })
 })

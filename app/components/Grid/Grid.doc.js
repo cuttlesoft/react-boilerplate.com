@@ -1,6 +1,6 @@
 import { describe, PropTypes } from 'react-desc'
 
-import { genericProps } from '../../utils/propTypes'
+import { genericProps, padPropType } from '../../utils/propTypes'
 import { themeDocUtils } from '../../utils/themeDocUtils'
 
 const fixedSizes = ['xsmall', 'small', 'medium', 'large', 'xlarge']
@@ -54,7 +54,7 @@ space in the column axis.`,
       'around',
       'stretch',
     ]).description('How to align the contents along the column axis.'),
-    areas: PropTypes.oneOf([
+    areas: PropTypes.oneOfType([
       PropTypes.arrayOf(
         PropTypes.shape({
           name: PropTypes.string,
@@ -62,37 +62,12 @@ space in the column axis.`,
           end: PropTypes.arrayOf(PropTypes.number),
         }),
       ),
-      PropTypes.shape({
-        xsmall: PropTypes.arrayOf(
-          PropTypes.shape({
-            name: PropTypes.string,
-            start: PropTypes.arrayOf(PropTypes.number),
-            end: PropTypes.arrayOf(PropTypes.number),
-          }),
-        ),
-        small: PropTypes.arrayOf(
-          PropTypes.shape({
-            name: PropTypes.string,
-            start: PropTypes.arrayOf(PropTypes.number),
-            end: PropTypes.arrayOf(PropTypes.number),
-          }),
-        ),
-        medium: PropTypes.arrayOf(
-          PropTypes.shape({
-            name: PropTypes.string,
-            start: PropTypes.arrayOf(PropTypes.number),
-            end: PropTypes.arrayOf(PropTypes.number),
-          }),
-        ),
-        large: PropTypes.arrayOf(
-          PropTypes.shape({
-            name: PropTypes.string,
-            start: PropTypes.arrayOf(PropTypes.number),
-            end: PropTypes.arrayOf(PropTypes.number),
-          }),
-        ),
-      }),
-    ]).description('Area names and column,row coordinates.'),
+      PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)),
+    ]).description(
+      `Grid areas.
+      Either area names and column,row coordinates.
+      Or, an array of string arrays that specify named grid areas.`,
+    ),
     columns: PropTypes.oneOfType([
       PropTypes.arrayOf(
         PropTypes.oneOfType([
@@ -146,6 +121,13 @@ space in the row axis.`,
       'around',
       'stretch',
     ]).description('How to align the contents along the row axis.'),
+    pad: padPropType,
+    responsive: PropTypes.bool
+      .description(
+        `Whether margin and pad sizes should be scaled for mobile
+        environments.`,
+      )
+      .defaultValue(true),
     rows: PropTypes.oneOfType([
       PropTypes.arrayOf(
         PropTypes.oneOfType([

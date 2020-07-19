@@ -10,8 +10,6 @@ const renderComponent = (props = {}) =>
  *
  * Tests for Select
  *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
  */
 describe('Select', () => {
   it('renders and matches snapshot', () => {

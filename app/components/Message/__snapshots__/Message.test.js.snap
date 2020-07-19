@@ -7,7 +7,9 @@ exports[`Message it renders and matches snapshot 1`] = `
   >
     <span
       class="StyledText-sc-1sadyjn-0 ejlBdv Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
-    />
+    >
+      Cuttlefish are colorblind
+    </span>
   </div>
 </div>
 `;

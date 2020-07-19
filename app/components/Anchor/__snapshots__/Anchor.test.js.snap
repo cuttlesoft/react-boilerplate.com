@@ -8,8 +8,8 @@ exports[`Anchor renders and matches snapshot 1`] = `
   flex: 0 0 auto;
   width: 24px;
   height: 24px;
-  fill: blue;
-  stroke: blue;
+  fill: #7D4CDB;
+  stroke: #7D4CDB;
 }
 
 .c2 g {
@@ -67,7 +67,7 @@ exports[`Anchor renders and matches snapshot 1`] = `
   box-sizing: border-box;
   font-size: 14px;
   line-height: 20px;
-  color: blue;
+  color: #7D4CDB;
   font-weight: 600;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -81,7 +81,7 @@ exports[`Anchor renders and matches snapshot 1`] = `
 
 <div>
   <a
-    aria-label="string"
+    aria-label="Link to Cuttlesoft Website"
     class="c0"
     href="https://cuttlesoft.com"
   >
@@ -104,7 +104,7 @@ exports[`Anchor renders and matches snapshot 1`] = `
       <div
         class="c3"
       />
-      Clickme
+      Click Me
     </span>
   </a>
 </div>

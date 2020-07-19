@@ -10,8 +10,6 @@ import TemplateHeader from './TemplateHeader'
  *
  * Tests for TemplateHeader
  *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
  */
 const renderComponent = (props = {}) =>
   render(

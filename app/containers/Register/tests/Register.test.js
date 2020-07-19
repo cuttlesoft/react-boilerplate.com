@@ -13,16 +13,14 @@ const renderComponent = (props = {}) =>
   )
 
 /**
-*
-* Tests for Register
-*
-* @see
-https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
-*
-*/
+ *
+ * Tests for Register
+ *
+ */
 describe('Register', () => {
   it('renders and matches snapshot', () => {
     const { container } = renderComponent()
+
     expect(container).toMatchSnapshot()
   })
 })

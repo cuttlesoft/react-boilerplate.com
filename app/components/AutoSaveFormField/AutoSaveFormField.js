@@ -61,7 +61,7 @@ const AutoSaveFormField = ({ onSave, name, value, ...rest }) => {
 
   return (
     <Box direction="row" align="end">
-      <FormField error={getError()} fill="horizontal" name={name} value={value} {...rest} />
+      <FormField error={getError()} fill="horizontal" name={name} value={{ value }} {...rest} />
       <Status />
     </Box>
   )
