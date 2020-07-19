@@ -26,7 +26,10 @@ module.exports = {
     '.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|md)$':
       '<rootDir>/internals/mocks/image.js',
   },
-  setupFilesAfterEnv: ['<rootDir>/internals/testing/test-bundler.js'],
+  setupFilesAfterEnv: [
+    '<rootDir>/internals/testing/configure-mobx-batching.js',
+    '<rootDir>/internals/testing/test-bundler.js',
+  ],
   setupFiles: ['raf/polyfill'],
   testRegex: '.*\\.test\\.js$',
   snapshotSerializers: [],
