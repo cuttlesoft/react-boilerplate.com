@@ -17,6 +17,7 @@ import { RouterStore, syncHistoryWithStore } from 'mobx-react-router'
 import { Router } from 'react-router'
 import FontFaceObserver from 'fontfaceobserver'
 import * as Sentry from '@sentry/browser'
+import 'mobx-react/batchingForReactDom'
 import 'sanitize.css/sanitize.css'
 
 import { Routes } from 'containers/Routes'
