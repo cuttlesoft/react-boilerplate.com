@@ -9,8 +9,6 @@ const renderComponent = (props = {}) => render(<DataTable {...props} />)
  *
  * Tests for DataTable
  *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
  */
 describe('DataTable', () => {
   it('renders and matches snapshot', () => {

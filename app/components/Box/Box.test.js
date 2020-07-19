@@ -12,8 +12,6 @@ const renderComponent = (props = {}) => render(<Box {...props}>{CHILDREN}</Box>)
  *
  * Tests for Box
  *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
  */
 describe('Box', () => {
   it('renders and matches snapshot', () => {

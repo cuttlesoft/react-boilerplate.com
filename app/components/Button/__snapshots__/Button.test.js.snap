@@ -1,14 +1,807 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button renders and matches snapshot 1`] = `
-<div>
-  <a
-    class="StyledButton-sc-323bzc-0 fvdBZJ Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
-    href="https://cuttlesoft.com"
+exports[`Button active + primary 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 eeKyGX Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
   >
-    <h1>
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button active 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 eeKyGX Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button as 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <span
+    className="Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+  />
+</div>
+`;
+
+exports[`Button basic 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button children function 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <span
+      className="StyledText-sc-1sadyjn-0 hUokoe Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+    >
       Test
-    </h1>
-  </a>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button color 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 dAroZZ Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Test
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 dAroZZ Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Test
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 iVJRqJ Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Test
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 laCGrp Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button disabled 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 bBycNt Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    disabled={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  />
+  <button
+    className="StyledButton-sc-323bzc-0 bBycNt Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    disabled={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Button
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 bBycNt Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    disabled={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Button
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 hYxWyD Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    disabled={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Button
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 bBycNt Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    disabled={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Button
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 bKAvkZ Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    disabled={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <svg
+      color="#f8f8f8"
+    />
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 bPAEbC Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    disabled={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <svg
+      color="#f8f8f8"
+    />
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 eIeHFn Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    disabled={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <svg
+      color="#f8f8f8"
+    />
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 bBycNt Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    disabled={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <div
+      className="StyledBox-sc-13pk1d4-0 gPerFl"
+    >
+      <svg
+        color="#f8f8f8"
+      />
+      <div
+        className="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+      />
+      Button
+    </div>
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 hYxWyD Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    disabled={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <div
+      className="StyledBox-sc-13pk1d4-0 gPerFl"
+    >
+      <svg
+        color="#f8f8f8"
+      />
+      <div
+        className="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+      />
+      Button
+    </div>
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 bBycNt Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    disabled={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <div
+      className="StyledBox-sc-13pk1d4-0 gPerFl"
+    >
+      <svg
+        color="#f8f8f8"
+      />
+      <div
+        className="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+      />
+      Button
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Button fill 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 fvdBZJ Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <button
+      className="StyledButton-sc-323bzc-0 UCvKU Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="button"
+    />
+    <button
+      className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="button"
+    />
+    <button
+      className="StyledButton-sc-323bzc-0 bRuVGs Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="button"
+    />
+    <button
+      className="StyledButton-sc-323bzc-0 lajgpV Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="button"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button focus 1`] = `
+<div
+  class="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    class="StyledButton-sc-323bzc-0 leqwOx Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button hoverIndicator as object with color 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 hBRxXK Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    hoverIndicator
+  </button>
+</div>
+`;
+
+exports[`Button hoverIndicator as object with invalid color 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 cwUbqo Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    hoverIndicator
+  </button>
+</div>
+`;
+
+exports[`Button hoverIndicator background 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 fTevtd Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    hoverIndicator
+  </button>
+</div>
+`;
+
+exports[`Button hoverIndicator color 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 foODku Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    hoverIndicator
+  </button>
+</div>
+`;
+
+exports[`Button href 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <a
+    className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    href="test"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Button icon label 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <div
+      className="StyledBox-sc-13pk1d4-0 gPerFl"
+    >
+      <svg
+        color="#f8f8f8"
+      />
+      <div
+        className="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+      />
+      Test
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Button primary 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`Button reverse icon label 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <div
+      className="StyledBox-sc-13pk1d4-0 gPerFl"
+    >
+      Test
+      <div
+        className="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+      />
+      <svg
+        color="#f8f8f8"
+      />
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Button size 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 kphDHx Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Small
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Medium
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Default
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 dQyzWj Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Large
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 kphDHx Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Small
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Medium
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Default
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 dQyzWj Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Large
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 ewKsZD Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <svg
+      aria-label="Add"
+      className="StyledIcon-ofa7kd-0 kPmYvD"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12,22 L12,2 M2,12 L22,12"
+        fill="none"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 ewKsZD Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <svg
+      aria-label="Add"
+      className="StyledIcon-ofa7kd-0 kPmYvD"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12,22 L12,2 M2,12 L22,12"
+        fill="none"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 ewKsZD Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <svg
+      aria-label="Add"
+      className="StyledIcon-ofa7kd-0 kPmYvD"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12,22 L12,2 M2,12 L22,12"
+        fill="none"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 ewKsZD Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <svg
+      aria-label="Add"
+      className="StyledIcon-ofa7kd-0 kPmYvD"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12,22 L12,2 M2,12 L22,12"
+        fill="none"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 kphDHx Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <div
+      className="StyledBox-sc-13pk1d4-0 gPerFl"
+    >
+      Small
+      <div
+        className="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+      />
+      <svg
+        aria-label="Next"
+        className="StyledIcon-ofa7kd-0 kPmYvD"
+        viewBox="0 0 24 24"
+      >
+        <polyline
+          fill="none"
+          points="7 2 17 12 7 22"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </div>
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <div
+      className="StyledBox-sc-13pk1d4-0 gPerFl"
+    >
+      Medium
+      <div
+        className="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+      />
+      <svg
+        aria-label="Next"
+        className="StyledIcon-ofa7kd-0 kPmYvD"
+        viewBox="0 0 24 24"
+      >
+        <polyline
+          fill="none"
+          points="7 2 17 12 7 22"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </div>
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 kIXxtf Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <div
+      className="StyledBox-sc-13pk1d4-0 gPerFl"
+    >
+      Default
+      <div
+        className="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+      />
+      <svg
+        aria-label="Next"
+        className="StyledIcon-ofa7kd-0 kPmYvD"
+        viewBox="0 0 24 24"
+      >
+        <polyline
+          fill="none"
+          points="7 2 17 12 7 22"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </div>
+  </button>
+  <button
+    className="StyledButton-sc-323bzc-0 dQyzWj Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <div
+      className="StyledBox-sc-13pk1d4-0 gPerFl"
+    >
+      Large
+      <div
+        className="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+      />
+      <svg
+        aria-label="Next"
+        className="StyledIcon-ofa7kd-0 kPmYvD"
+        viewBox="0 0 24 24"
+      >
+        <polyline
+          fill="none"
+          points="7 2 17 12 7 22"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </div>
+  </button>
 </div>
 `;

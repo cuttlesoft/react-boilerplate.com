@@ -18,8 +18,6 @@ const setup = () => {
  *
  * Tests for Chexbox
  *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
  */
 describe('TextInput', () => {
   it('renders and matches snapshot', () => {

@@ -10,8 +10,6 @@ const renderComponent = (props = {}) => render(<Image {...props} />)
  *
  * Tests for Image
  *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
  */
 describe('Image', () => {
   it('renders and matches snapshot', () => {

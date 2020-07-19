@@ -7,3 +7,23 @@ exports[`<PrivateRoute /> does not render if user is not authenticated 1`] = `
   />
 </div>
 `;
+
+exports[`<PrivateRoute /> renders dashboard if user is authenticated 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 dlDmwu"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 bKktlX"
+      data-testid="dashboard-page"
+    >
+      <h2
+        class="StyledHeading-sc-1rdh4aw-0 fjsCgo"
+        style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
+      >
+        Dashboard
+      </h2>
+    </div>
+  </div>
+</div>
+`;

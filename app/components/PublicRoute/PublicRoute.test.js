@@ -1,7 +1,7 @@
 import React from 'react'
 import { IntlProvider } from 'react-intl'
 import { MemoryRouter } from 'react-router-dom'
-import { render, waitForElement } from '@testing-library/react'
+import { render, waitFor } from '@testing-library/react'
 import { Grommet } from 'grommet'
 import '@testing-library/jest-dom/extend-expect'
 
@@ -41,7 +41,7 @@ describe('<PublicRoute />', () => {
   it('renders Login if user is not authenticated', async () => {
     const { container, getByTestId } = renderComponent(userStore)
     expect(container).toMatchSnapshot()
-    const LoginPage = await waitForElement(() => getByTestId('login-header'))
+    const LoginPage = await waitFor(() => getByTestId('login-header'))
     expect(LoginPage).toBeVisible()
   })
 

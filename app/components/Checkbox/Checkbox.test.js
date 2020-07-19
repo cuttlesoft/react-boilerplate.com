@@ -9,8 +9,6 @@ const renderComponent = props => render(<Checkbox label="Choice" {...props} />)
  *
  * Tests for Chexbox
  *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
  */
 describe('Checkbox', () => {
   it('renders and matches snapshot', () => {

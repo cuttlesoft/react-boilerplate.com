@@ -1,63 +1,250 @@
 import React from 'react'
 import { fireEvent, render, cleanup } from '@testing-library/react'
+import { Add, Next } from 'grommet-icons'
+import { Grommet } from 'grommet'
+import renderer from 'react-test-renderer'
 
 import Button from './Button'
-
-const handleRoute = () => {}
-const href = 'https://cuttlesoft.com'
-const children = <h1>Test</h1>
-const renderComponent = (props = {}) =>
-  render(
-    <Button href={href} {...props}>
-      {children}
-    </Button>,
-  )
-
-afterEach(cleanup)
+import { Text } from '../Text'
 
 describe('Button', () => {
-  it('renders a <a> tag if no route is provided', () => {
-    const { container } = renderComponent({ href })
+  afterEach(cleanup)
 
-    expect(container.querySelector('a')).not.toBeNull()
+  test('basic', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button label="Test" onClick={() => {}} />
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
   })
 
-  it('renders a <button> tag to change route if the handleRoute prop is specified', () => {
-    const { container } = renderComponent({ handleRoute })
-
-    expect(container.querySelector('button')).toBeDefined()
+  test('children function', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button onClick={() => {}}>{() => <Text>Test</Text>}</Button>
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
   })
 
-  it('fires of a click event', () => {
-    const onClickSpy = jest.fn()
-    const { container } = renderComponent({ onClick: onClickSpy })
-    fireEvent.click(container.querySelector('a'))
-
-    expect(onClickSpy).toHaveBeenCalled()
+  test('primary', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button primary label="Test" onClick={() => {}} />
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
   })
 
-  it('has children', () => {
-    const { container } = renderComponent()
-
-    expect(container.querySelector('a').children).toHaveLength(1)
+  test('color', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button color="accent-1" label="Test" onClick={() => {}} />
+        <Button color="accent-1" primary label="Test" onClick={() => {}} />
+        <Button color="#111111" primary label="Test" onClick={() => {}} />
+        <Button color="#123" primary label="Test" onClick={() => {}} />
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
   })
 
-  it('should have a class attribute', () => {
-    const { container } = renderComponent()
-
-    expect(container.querySelector('a').hasAttribute('class')).toBe(true)
+  test('fill', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button>
+          <Button fill />
+          <Button fill={false} />
+          <Button fill="horizontal" />
+          <Button fill="vertical" />
+        </Button>
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
   })
 
-  it('should not adopt a type attribute when rendering a button', () => {
-    const type = 'submit'
-    const { container } = renderComponent({ handleRoute, type })
+  test('focus', () => {
+    const { container, getByText } = render(
+      <Grommet>
+        <Button label="Test" onClick={() => {}} />
+      </Grommet>,
+    )
 
-    expect(container.querySelector(`button[type="${type}"]`)).toBeNull()
+    fireEvent.focus(getByText('Test'))
+    expect(container.firstChild).toMatchSnapshot()
   })
 
-  it('renders and matches snapshot', () => {
-    const { container } = renderComponent()
+  test('disabled', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button disabled />
+        <Button disabled primary label="Button" />
+        <Button disabled label="Button" />
+        <Button disabled plain label="Button" />
+        <Button disabled plain={false} label="Button" />
+        <Button disabled icon={<svg />} />
+        <Button disabled icon={<svg />} plain />
+        <Button disabled icon={<svg />} plain={false} />
+        <Button disabled icon={<svg />} label="Button" />
+        <Button disabled icon={<svg />} label="Button" plain />
+        <Button disabled icon={<svg />} label="Button" primary />
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 
-    expect(container).toMatchSnapshot()
+  test('active', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button active label="Button" />
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('active + primary', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button active primary label="Button" />
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('icon label', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button icon={<svg />} label="Test" onClick={() => {}} />
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('reverse icon label', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button reverse icon={<svg />} label="Test" onClick={() => {}} />
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('href', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button href="test" />
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('hoverIndicator background', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button onClick={() => {}} hoverIndicator="background">
+          hoverIndicator
+        </Button>
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('hoverIndicator as object with color', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button onClick={() => {}} hoverIndicator={{ color: 'brand' }}>
+          hoverIndicator
+        </Button>
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('hoverIndicator as object with invalid color', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button onClick={() => {}} hoverIndicator={{ color: 'invalid' }}>
+          hoverIndicator
+        </Button>
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('hoverIndicator color', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button onClick={() => {}} hoverIndicator="dark-3">
+          hoverIndicator
+        </Button>
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('size', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button size="small" label="Small" />
+        <Button size="medium" label="Medium" />
+        <Button label="Default" />
+        <Button size="large" label="Large" />
+        <Button primary size="small" label="Small" />
+        <Button primary size="medium" label="Medium" />
+        <Button primary label="Default" />
+        <Button primary size="large" label="Large" />
+        <Button size="small" icon={<Add />} primary />
+        <Button size="medium" icon={<Add />} primary />
+        <Button icon={<Add />} primary />
+        <Button size="large" icon={<Add />} primary />
+        <Button size="small" label="Small" icon={<Next />} reverse />
+        <Button size="medium" label="Medium" icon={<Next />} reverse />
+        <Button label="Default" icon={<Next />} reverse />
+        <Button size="large" label="Large" icon={<Next />} reverse />
+      </Grommet>,
+    )
+
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('as', () => {
+    const component = renderer.create(
+      <Grommet>
+        <Button as="span" />
+      </Grommet>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test(`disabled state cursor should indicate the button cannot be
+  clicked`, () => {
+    const { getByText } = render(
+      <Grommet>
+        <Button disabled label="Button" />
+      </Grommet>,
+    )
+
+    const button = getByText('Button')
+    // eslint-disable-next-line no-underscore-dangle
+    const cursorStyle = window.getComputedStyle(button)._values.cursor
+    expect(cursorStyle).not.toBe('pointer')
+    expect(cursorStyle).toBe('default')
   })
 })

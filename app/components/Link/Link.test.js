@@ -6,7 +6,7 @@ import { render } from '@testing-library/react'
 import { TestWrapper } from 'utils/TestWrapper'
 import Link from './Link'
 
-const renderComponent = (props = {}) =>
+const renderComponent = (props = { to: '/login' }) =>
   render(
     <TestWrapper>
       <Link {...props} />

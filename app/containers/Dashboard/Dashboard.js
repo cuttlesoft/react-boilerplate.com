@@ -11,7 +11,7 @@ import { Heading } from 'components/Heading'
  *
  */
 const Dashboard = observer(() => (
-  <Container>
+  <Container data-testid="dashboard-page">
     <Heading level="2" pad="small">
       Dashboard
     </Heading>

@@ -7,7 +7,7 @@ exports[`Link renders and matches snapshot 1`] = `
   >
     <a
       class="Link__StyledLink-sc-1vpl4pu-0 gEErvb"
-      href=""
+      href="/login"
       theme="[object Object]"
     />
   </div>

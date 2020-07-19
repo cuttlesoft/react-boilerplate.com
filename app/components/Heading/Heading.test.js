@@ -10,8 +10,6 @@ const renderComponent = (props = {}) => render(<Heading {...props}>TESTING</Head
  *
  * Tests for Heading
  *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
  */
 describe('Heading', () => {
   it('renders and matches snapshot', () => {

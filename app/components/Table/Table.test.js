@@ -91,8 +91,6 @@ const renderComponent = (props = {}) =>
  *
  * Tests for Table
  *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
  */
 describe('Table', () => {
   it('renders and matches snapshot', () => {

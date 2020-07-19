@@ -7,7 +7,7 @@ import AutoSaveFormField from './AutoSaveFormField'
 const renderComponent = (props = {}) =>
   render(
     <TestWrapper>
-      <AutoSaveFormField {...props} />
+      <AutoSaveFormField name="Test Name" onSave={() => {}} value="Test Value" {...props} />
     </TestWrapper>,
   )
 

@@ -9,8 +9,6 @@ const renderComponent = (props = {}) => render(<Modal {...props} />)
  *
  * Tests for Modal
  *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
  */
 describe('Modal', () => {
   it('renders and matches snapshot', () => {
