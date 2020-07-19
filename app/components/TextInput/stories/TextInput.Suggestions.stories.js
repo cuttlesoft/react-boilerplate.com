@@ -1,10 +1,17 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { StoryContainer } from '../../StoryContainer'
+// Components
 import { Box } from '../../Box'
 import { TextInput } from '..'
+import { StoryContainer } from '../../StoryContainer'
+
+// Misc
 import README from '../README.md'
+
+const SUGGESTIONS = Array(100)
+  .fill()
+  .map((_, i) => `suggestion ${i + 1}`)
 
 storiesOf('TextInput', module)
   .addParameters({
@@ -16,9 +23,6 @@ storiesOf('TextInput', module)
 
 const SuggestionsInput = props => {
   const [inputValue, setInputValue] = useState('')
-  const suggestions = Array(100)
-    .fill()
-    .map((_, i) => `suggestion ${i + 1}`)
 
   return (
     <StoryContainer full>
@@ -29,7 +33,7 @@ const SuggestionsInput = props => {
             dropProps={{ height: 'small' }}
             onChange={e => setInputValue(e.target.value)}
             onSelect={e => setInputValue(e.suggestion)}
-            suggestions={suggestions}
+            suggestions={SUGGESTIONS}
             {...props}
           />
         </Box>

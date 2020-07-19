@@ -2,8 +2,11 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Grid } from 'grommet' /** @todo: replace with custom wrappers */
 
-import { StoryContainer } from '../../StoryContainer'
+// Components
 import { Box } from '..'
+import { StoryContainer } from '../../StoryContainer'
+
+// Misc
 import README from '../README.md'
 
 storiesOf('Box', module)
@@ -18,6 +21,7 @@ storiesOf('Box', module)
         <Box pad="small" background="brand" round alignSelf="start">
           true
         </Box>
+
         <Grid columns="small" gap="small">
           {['xsmall', 'small', 'medium', 'large', 'xlarge', 'full'].map(size => (
             <Box key={size} pad="large" background="brand" round={{ size }}>
@@ -25,6 +29,7 @@ storiesOf('Box', module)
             </Box>
           ))}
         </Grid>
+
         <Grid columns="small" gap="small">
           {[
             'left',
@@ -40,6 +45,7 @@ storiesOf('Box', module)
               {corner}
             </Box>
           ))}
+
           <Box background="brand" pad="small" round={{ corner: 'left', size: '15px' }}>
             left rounded corner px value
           </Box>

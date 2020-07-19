@@ -1,12 +1,21 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Grommet } from 'grommet'
 
-import theme from '../../../utils/theme'
+// Components
 import PopoutForm from '../PopoutForm'
+import { StoryContainer } from '../../StoryContainer'
 
-storiesOf('PopoutForm', module).add('Default', () => (
-  <Grommet theme={theme}>
-    <PopoutForm />
-  </Grommet>
-))
+// Misc
+import README from '../README.md'
+
+storiesOf('PopoutForm', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Default', () => (
+    <StoryContainer>
+      <PopoutForm />
+    </StoryContainer>
+  ))

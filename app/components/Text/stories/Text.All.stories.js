@@ -1,19 +1,28 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Grommet } from 'grommet'
 
-import Text from '../Text'
+// Components
 import { Box } from '../../Box'
+import { StoryContainer } from '../../StoryContainer'
+import Text from '../Text'
 
-storiesOf('Text', module).add('All', () => <All />)
+// Misc
+import README from '../README.md'
 
-const sizes = ['xxlarge', 'xlarge', 'large', 'medium', 'small', 'xsmall', '77px']
-const All = () => (
-  <Grommet>
-    {sizes.map(size => (
-      <Box key={size} margin="small">
-        <Text size={size}>{`Text ${size}`}</Text>
-      </Box>
-    ))}
-  </Grommet>
-)
+const SIZES = ['xxlarge', 'xlarge', 'large', 'medium', 'small', 'xsmall', '77px']
+
+storiesOf('Text', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('All', () => (
+    <StoryContainer>
+      {SIZES.map(size => (
+        <Box key={size} margin="small">
+          <Text size={size}>{`Text ${size}`}</Text>
+        </Box>
+      ))}
+    </StoryContainer>
+  ))

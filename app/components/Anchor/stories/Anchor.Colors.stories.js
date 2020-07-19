@@ -2,9 +2,12 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Add } from 'grommet-icons'
 
+// Components
+import { Anchor } from '..'
 import { Box } from '../../Box'
 import { StoryContainer } from '../../StoryContainer'
-import { Anchor } from '..'
+
+// Misc
 import README from '../README.md'
 
 storiesOf('Anchor', module)
@@ -20,6 +23,7 @@ storiesOf('Anchor', module)
         <Anchor icon={<Add />} label="Add" href="#" />
         <Anchor label="Add" href="#" />
       </Box>
+
       <Box background="dark-1" pad="medium" gap="medium">
         <Anchor icon={<Add />} href="#" />
         <Anchor icon={<Add />} label="Add" href="#" />

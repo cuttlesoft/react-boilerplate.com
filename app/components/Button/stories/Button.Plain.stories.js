@@ -3,9 +3,12 @@ import { storiesOf } from '@storybook/react'
 import { Text } from 'grommet' /** @todo: replace with custom wrappers */
 import { Add } from 'grommet-icons'
 
+// Components
 import { Box } from '../../Box'
-import { StoryContainer } from '../../StoryContainer'
 import { Button } from '..'
+import { StoryContainer } from '../../StoryContainer'
+
+// Misc
 import README from '../README.md'
 
 const PlainButton = props => (
@@ -14,6 +17,7 @@ const PlainButton = props => (
       <Button hoverIndicator="light-1" onClick={() => {}} {...props}>
         <Box pad="small" direction="row" align="center" gap="small">
           <Add />
+
           <Text>Add</Text>
         </Box>
       </Button>

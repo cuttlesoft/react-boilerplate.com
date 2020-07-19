@@ -1,28 +1,14 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { storiesOf } from '@storybook/react'
 
+// Components
 import { Box } from '../../Box'
-import { StoryContainer } from '../../StoryContainer'
 import { Button } from '..'
-import README from '../README.md'
+import { StoryContainer } from '../../StoryContainer'
 
-const BasicButtons = props => (
-  <StoryContainer>
-    <Box align="center" pad="medium">
-      <Button title="Default" onClick={action('clicked')} {...props} />
-    </Box>
-    <Box align="center" pad="medium">
-      <Button title="Anchor" href="#" />
-    </Box>
-    <Box align="center" pad="medium">
-      <Button disabled title="Disabled" onClick={action('clicked')} {...props} />
-    </Box>
-    <Box align="center" pad="medium">
-      <Button primary title="Primary" onClick={action('clicked')} {...props} />
-    </Box>
-  </StoryContainer>
-)
+// Misc
+import README from '../README.md'
 
 storiesOf('Button', module)
   .addParameters({
@@ -30,4 +16,22 @@ storiesOf('Button', module)
       sidebar: README,
     },
   })
-  .add('Basic', () => <BasicButtons />)
+  .add('Basic', () => (
+    <StoryContainer>
+      <Box align="center" pad="medium">
+        <Button title="Default" onClick={action('clicked')} />
+      </Box>
+
+      <Box align="center" pad="medium">
+        <Button title="Anchor" href="#" />
+      </Box>
+
+      <Box align="center" pad="medium">
+        <Button disabled title="Disabled" onClick={action('clicked')} />
+      </Box>
+
+      <Box align="center" pad="medium">
+        <Button primary title="Primary" onClick={action('clicked')} />
+      </Box>
+    </StoryContainer>
+  ))

@@ -2,10 +2,15 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { grommet, Text } from 'grommet' /** @todo: replace with custom wrappers */
 
-import { genericProps } from '../../../utils/propTypes'
+// Components
 import { Box } from '../../Box'
-import { StoryContainer } from '../../StoryContainer'
 import { Button } from '..'
+import { StoryContainer } from '../../StoryContainer'
+
+// Utils
+import { genericProps } from '../../../utils/propTypes'
+
+// Misc
 import README from '../README.md'
 
 const SidebarButton = ({ title, ...rest }) => (

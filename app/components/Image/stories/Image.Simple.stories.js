@@ -1,9 +1,14 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import sampleImg from '../../../assets/images/sample_image.jpg'
-import { StoryContainer } from '../../StoryContainer'
+// Components
 import { Image } from '..'
+import { StoryContainer } from '../../StoryContainer'
+
+// Assets
+import sampleImg from '../../../assets/images/sample_image.jpg'
+
+// Misc
 import README from '../README.md'
 
 storiesOf('Image', module)

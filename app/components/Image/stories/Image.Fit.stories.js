@@ -1,10 +1,15 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import sampleImg from '../../../assets/images/sample_image.jpg'
+// Components
 import { Box } from '../../Box'
-import { StoryContainer } from '../../StoryContainer'
 import { Image } from '..'
+import { StoryContainer } from '../../StoryContainer'
+
+// Assets
+import sampleImg from '../../../assets/images/sample_image.jpg'
+
+// Misc
 import README from '../README.md'
 
 storiesOf('Image', module)
@@ -19,6 +24,7 @@ storiesOf('Image', module)
         <Box height="small" width="small" border>
           <Image src={sampleImg} fit="contain" />
         </Box>
+
         <Box height="small" width="small" border>
           <Image src={sampleImg} fit="cover" />
         </Box>

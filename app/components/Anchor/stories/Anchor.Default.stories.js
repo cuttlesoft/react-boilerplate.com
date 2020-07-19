@@ -1,9 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { StoryContainer } from '../../StoryContainer'
-import { Box } from '../../Box'
+// Components
 import { Anchor } from '..'
+import { Box } from '../../Box'
+import { StoryContainer } from '../../StoryContainer'
+
+// Misc
 import README from '../README.md'
 
 storiesOf('Anchor', module)

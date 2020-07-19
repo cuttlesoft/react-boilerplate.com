@@ -1,12 +1,21 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Grommet } from 'grommet'
 
-import theme from '../../../utils/theme'
+// Components
 import Modal from '../Modal'
+import { StoryContainer } from '../../StoryContainer'
 
-storiesOf('Modal', module).add('Default', () => (
-  <Grommet theme={theme}>
-    <Modal />
-  </Grommet>
-))
+// Misc
+import README from '../README.md'
+
+storiesOf('Modal', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Default', () => (
+    <StoryContainer>
+      <Modal />
+    </StoryContainer>
+  ))

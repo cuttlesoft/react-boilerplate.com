@@ -2,11 +2,20 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 // Components
-import { StoryContainer } from '../../StoryContainer'
 import RangeInput from '../RangeInput'
+import { StoryContainer } from '../../StoryContainer'
 
-storiesOf('RangeInput', module).add('Default', () => (
-  <StoryContainer>
-    <RangeInput />
-  </StoryContainer>
-))
+// Misc
+import README from '../README.md'
+
+storiesOf('RangeInput', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Default', () => (
+    <StoryContainer>
+      <RangeInput />
+    </StoryContainer>
+  ))

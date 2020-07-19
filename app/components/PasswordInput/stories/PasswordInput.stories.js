@@ -1,8 +1,13 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import README from '../README.md'
+import { MemoryRouter } from 'react-router-dom'
 
+// Components
 import PasswordInput from '../PasswordInput'
+import { StoryContainer } from '../../StoryContainer'
+
+// Misc
+import README from '../README.md'
 
 storiesOf('PasswordInput', module)
   .addParameters({
@@ -10,4 +15,10 @@ storiesOf('PasswordInput', module)
       sidebar: README,
     },
   })
-  .add('Default', () => <PasswordInput />)
+  .add('Default', () => (
+    <StoryContainer>
+      <MemoryRouter initialEntries={['/']}>
+        <PasswordInput />
+      </MemoryRouter>
+    </StoryContainer>
+  ))

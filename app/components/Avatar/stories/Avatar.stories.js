@@ -2,11 +2,20 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 // Components
-import { StoryContainer } from '../../StoryContainer'
 import Avatar from '../Avatar'
+import { StoryContainer } from '../../StoryContainer'
 
-storiesOf('Avatar', module).add('Default', () => (
-  <StoryContainer>
-    <Avatar />
-  </StoryContainer>
-))
+// Misc
+import README from '../README.md'
+
+storiesOf('Avatar', module)
+  .addParameters({
+    readme: {
+      sidebar: README,
+    },
+  })
+  .add('Default', () => (
+    <StoryContainer>
+      <Avatar />
+    </StoryContainer>
+  ))
