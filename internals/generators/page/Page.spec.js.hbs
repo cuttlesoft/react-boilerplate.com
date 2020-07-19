@@ -1,0 +1,23 @@
+/// <reference types="cypress" />
+
+describe('{{ properCase name }}', () => {
+  context('Page renders', () => {
+    beforeEach(() => {
+      cy.login()
+      cy.visit('/{{ lowerCase name }}')
+    })
+
+    it('displays the {{ properCase name }}', () => {
+      cy.url()
+        .should('include', '/{{ lowerCase name }}')
+        .then(() => {
+          cy.document().toMatchImageSnapshot()
+        })
+      cy.get('h2').should('contain', '{{ properCase name }}')
+    })
+
+    it('has additional tests specified', () => {
+      expect(true).toEqual(false)
+    })
+  })
+})
