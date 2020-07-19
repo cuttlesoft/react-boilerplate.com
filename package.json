@@ -96,7 +96,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:staged && npm run flow",
+      "pre-commit": "npm run lint:staged && npm run flow && npm run generate-readme",
       "commit-msg": "python3 validate_commit_message.py"
     }
   },
