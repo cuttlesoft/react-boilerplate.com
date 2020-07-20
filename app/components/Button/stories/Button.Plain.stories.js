@@ -1,12 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Text } from 'grommet' /** @todo: replace with custom wrappers */
 import { Add } from 'grommet-icons'
 
 // Components
 import { Box } from '../../Box'
 import { Button } from '..'
 import { StoryContainer } from '../../StoryContainer'
+import { Text } from '../../Text'
 
 // Misc
 import README from '../README.md'

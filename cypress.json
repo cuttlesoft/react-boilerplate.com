@@ -5,7 +5,7 @@
     "cypress-plugin-snapshots": {
       "imageConfig": {
         "createDiffImage": true,
-        "threshold": 0.005,
+        "threshold": 0.8,
         "thresholdType": "percent"
       }
     }

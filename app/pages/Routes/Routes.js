@@ -29,6 +29,7 @@ const AppContainer = styled.div`
   margin: 0 auto 30px auto;
   min-height: 100vh;
 `
+
 /**
  *
  * Routes

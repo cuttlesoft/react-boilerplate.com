@@ -1,0 +1,29 @@
+{
+  "message": "User updated.",
+  "user": {
+    "uid": "73414fee-f05e-4711-8458-64478f168f1c",
+    "email": "suki@cuttlesoft.com",
+    "updated_email": null,
+    "first_name": "Emily",
+    "last_name": "Morehouse",
+    "title": "Miss",
+    "avatar": "https://google.com",
+    "city": "Denver",
+    "state": "Colorado",
+    "country": "United States of America",
+    "organization": {
+      "uid": "d15406b2-d9bb-42f1-9c07-3780375ef4d9",
+      "name": "Cuttlesoft",
+      "county": "Denver",
+      "city": "Denver",
+      "state": "Colorado",
+      "country": "United States of America",
+      "org_type": null,
+      "has_parent_organization": true,
+      "min_preparedness": null,
+      "tax_status": null,
+      "discipline": null,
+      "dba": null
+    }
+  }
+}

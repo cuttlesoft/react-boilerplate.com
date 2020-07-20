@@ -127,11 +127,13 @@ exports[`<PublicRoute /> renders Login if user is not authenticated 1`] = `
                 </div>
                 <button
                   class="StyledButton-sc-323bzc-0 tdSht Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+                  data-testid="show-password-toggle"
                   type="button"
                 >
                   <svg
                     aria-label="Hide"
                     class="StyledIcon-ofa7kd-0 dWXdkj"
+                    data-testid="hidden-icon"
                     style="width: 30px;"
                     viewBox="0 0 24 24"
                   >

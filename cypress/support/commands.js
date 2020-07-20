@@ -47,5 +47,5 @@ Cypress.Commands.add('login', (email = 'engineering@cuttlesoft.com', password = 
 
   // After logging in, we're automatically redirected to the dashboard
   cy.url().should('include', '/dashboard')
-  cy.get('h2').should('contain', 'Dashboard')
+  cy.findByText('Dashboard')
 })

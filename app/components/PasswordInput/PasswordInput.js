@@ -10,7 +10,7 @@ import { TextInput } from '../TextInput'
  *
  * PasswordInput
  *
- * Displays a textinput with masked value for password
+ * Displays a text input with masked value for password
  *
  * - When FormView Icon is clicked, it reveals the password
  * - When HIde Icon is clicked, it masks the password
@@ -34,12 +34,18 @@ const PasswordInput = ({ value, onChange = () => {}, type, ...rest }) => {
       />
 
       <Button
+        data-testid="show-password-toggle"
         primary={false}
         icon={
           reveal ? (
-            <FormView size="medium" style={{ width: 30 }} color="light-5" />
+            <FormView
+              data-testid="shown-icon"
+              size="medium"
+              style={{ width: 30 }}
+              color="light-5"
+            />
           ) : (
-            <Hide size="medium" style={{ width: 30 }} color="light-5" />
+            <Hide data-testid="hidden-icon" size="medium" style={{ width: 30 }} color="light-5" />
           )
         }
         onClick={() => setReveal(!reveal)}

@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet'
 import { FormattedMessage } from 'react-intl'
 
 // Components
+import { Box } from 'components/Box'
+import { Container } from 'components/Container'
 import { Heading } from 'components/Heading'
+import { Text } from 'components/Text'
 
 // Messages
 import messages from './FeaturePage.messages'
-
-// Styles
-import { List, ListItem, ListItemTitle } from './FeaturePage.styles'
 
 /*
  * FeaturePage
@@ -17,68 +17,40 @@ import { List, ListItem, ListItemTitle } from './FeaturePage.styles'
  * List all the features
  */
 export default function FeaturePage() {
+  const items = [
+    { title: messages.scaffoldingHeader, body: messages.scaffoldingMessage },
+    { title: messages.feedbackHeader, body: messages.feedbackMessage },
+    { title: messages.routingHeader, body: messages.routingMessage },
+    { title: messages.networkHeader, body: messages.networkMessage },
+    { title: messages.intlHeader, body: messages.intlMessage },
+  ]
+
   return (
-    <div>
+    <>
       <Helmet>
         <title>Feature Page</title>
         <meta name="description" content="Feature page of React.js Boilerplate application" />
       </Helmet>
 
-      <Heading>
-        <FormattedMessage {...messages.header} />
-      </Heading>
+      <Container>
+        <Heading>
+          <FormattedMessage {...messages.header} />
+        </Heading>
 
-      <List>
-        <ListItem>
-          <ListItemTitle>
-            <FormattedMessage {...messages.scaffoldingHeader} />
-          </ListItemTitle>
+        <Box padding={{ top: 'small' }}>
+          {items.map(item => (
+            <Box margin="small">
+              <Text weight="bold">
+                <FormattedMessage {...item.title} />
+              </Text>
 
-          <p>
-            <FormattedMessage {...messages.scaffoldingMessage} />
-          </p>
-        </ListItem>
-
-        <ListItem>
-          <ListItemTitle>
-            <FormattedMessage {...messages.feedbackHeader} />
-          </ListItemTitle>
-
-          <p>
-            <FormattedMessage {...messages.feedbackMessage} />
-          </p>
-        </ListItem>
-
-        <ListItem>
-          <ListItemTitle>
-            <FormattedMessage {...messages.routingHeader} />
-          </ListItemTitle>
-
-          <p>
-            <FormattedMessage {...messages.routingMessage} />
-          </p>
-        </ListItem>
-
-        <ListItem>
-          <ListItemTitle>
-            <FormattedMessage {...messages.networkHeader} />
-          </ListItemTitle>
-
-          <p>
-            <FormattedMessage {...messages.networkMessage} />
-          </p>
-        </ListItem>
-
-        <ListItem>
-          <ListItemTitle>
-            <FormattedMessage {...messages.intlHeader} />
-          </ListItemTitle>
-
-          <p>
-            <FormattedMessage {...messages.intlMessage} />
-          </p>
-        </ListItem>
-      </List>
-    </div>
+              <Text>
+                <FormattedMessage {...item.body} />
+              </Text>
+            </Box>
+          ))}
+        </Box>
+      </Container>
+    </>
   )
 }

@@ -10,7 +10,7 @@ export const scope = 'boilerplate.pages.HomePage'
 export default defineMessages({
   startProjectHeader: {
     id: `${scope}.start_project.header`,
-    defaultMessage: 'LiveRider',
+    defaultMessage: 'React Boilerplate',
   },
   startProjectMessage: {
     id: `${scope}.start_project.message`,

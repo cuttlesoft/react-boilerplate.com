@@ -11,7 +11,7 @@ module.exports = {
       type: 'input',
       name: 'name',
       message: 'What should it be called?',
-      default: 'EmptyPage',
+      default: 'UserProfile',
       validate: value => {
         if (/.+/.test(value)) {
           return componentExists(value)

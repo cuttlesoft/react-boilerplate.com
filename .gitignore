@@ -6,6 +6,7 @@ coverage
 build
 stats.json
 npm-debug.log
+.nyc_output/*
 
 # Mac meta file
 .DS_Store
