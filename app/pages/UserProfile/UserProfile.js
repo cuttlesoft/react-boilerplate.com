@@ -73,7 +73,7 @@ const UserProfile = () => {
   }, [])
 
   const onSave = (payload, setError, setLoading, setSuccess) => {
-    updateUser({ id: user.id, ...payload }, setError, setLoading, setSuccess)
+    updateUser({ uid: user.uid, ...payload }, setError, setLoading, setSuccess)
   }
 
   /**

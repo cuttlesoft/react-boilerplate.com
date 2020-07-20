@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
-import { grommet, Text } from 'grommet' /** @todo: replace with custom wrappers */
 
 // Components
 import { Box } from '../../Box'
 import { Button } from '..'
 import { StoryContainer } from '../../StoryContainer'
+import { Text } from '../../Text'
 
 // Utils
 import { genericProps } from '../../../utils/propTypes'
@@ -33,7 +33,7 @@ SidebarButton.propTypes = {
 const SidebarButtons = () => {
   const [active, setActive] = useState()
   return (
-    <StoryContainer full theme={grommet}>
+    <StoryContainer full>
       <Box fill direction="row">
         <Box background="neutral-1">
           {['Dashboard', 'Devices', 'Settings'].map(label => (

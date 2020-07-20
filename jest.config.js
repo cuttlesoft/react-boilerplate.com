@@ -10,14 +10,17 @@ module.exports = {
     '!app/app.js',
     '!app/global-styles.js',
     '!app/*/*/index.{js,jsx}',
+    // Pages are tested with Cypress - disable coverage until we have a coverage report combined
+    // from Jest + Cypress. See https://github.com/bahmutov/cypress-and-jest
+    '!app/pages/**/*',
   ],
   coverageThreshold: {
     // Test coverage should be adjusted on a project-by-project basis
     global: {
-      statements: 35,
-      branches: 35,
-      functions: 35,
-      lines: 35,
+      statements: 50,
+      branches: 50,
+      functions: 50,
+      lines: 50,
     },
   },
   moduleDirectories: ['node_modules', 'app'],

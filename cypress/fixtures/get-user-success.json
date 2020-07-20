@@ -1,0 +1,13 @@
+{
+  "user": {
+    "uid": "fb6c5bfe-e39f-4b67-954d-3a8aeb9689dd",
+    "email": "engineering@cuttlesoft.com",
+    "phone": null,
+    "title": null,
+    "first_name": "Engineering",
+    "last_name": "Cuttlesoft",
+    "is_staff": false,
+    "is_active": true,
+    "is_superuser": false
+  }
+}

@@ -58,7 +58,7 @@ export const getUser = async (
   setLoading(true)
 
   try {
-    const data = await axios.get(`/users/${user.id}/`)
+    const data = await axios.get(`/users/${user.uid}/`)
 
     setCurrentUser(data.user)
     setLoading(false)
@@ -82,7 +82,7 @@ export const updateUser = async (
   setSuccess(false)
 
   try {
-    const data = await axios.patch(`/users/${user.id}/`, user)
+    const data = await axios.patch(`/users/${user.uid}/`, user)
 
     setCurrentUser(data.user)
     setLoading(false)

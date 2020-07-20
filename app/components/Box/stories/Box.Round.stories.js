@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Grid } from 'grommet' /** @todo: replace with custom wrappers */
 
 // Components
 import { Box } from '..'
+import { Grid } from '../../Grid'
 import { StoryContainer } from '../../StoryContainer'
 
 // Misc
