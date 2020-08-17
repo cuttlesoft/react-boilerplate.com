@@ -25,7 +25,13 @@ module.exports = options => ({
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: options.babelQuery,
+          options: {
+            ...options.babelQuery,
+            // DO NOT apply the Babel plugin in production mode!
+            plugins: [
+              options.mode === 'development' && require.resolve('react-refresh/babel'),
+            ].filter(Boolean),
+          },
         },
       },
       {
