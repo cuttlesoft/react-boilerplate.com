@@ -17,7 +17,7 @@ require('@formatjs/intl-relativetimeformat/locale-data/de')
 const enTranslationMessages = require('./translations/en.json')
 const deTranslationMessages = require('./translations/de.json')
 
-const DEFAULT_LOCALE = 'de'
+const DEFAULT_LOCALE = 'en'
 
 // prettier-ignore
 const appLocales = [
