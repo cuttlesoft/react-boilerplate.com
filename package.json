@@ -123,7 +123,7 @@
     "cross-env": "7.0.2",
     "cypress-plugin-snapshots": "^1.4.4",
     "express": "4.17.1",
-    "firebase-tools": "^8.15.0",
+    "firebase-tools": "^8.15.1",
     "fontfaceobserver": "2.1.0",
     "grommet": "^2.15.2",
     "history": "5.0.0",
@@ -232,7 +232,7 @@
     "webpack-dev-middleware": "3.7.2",
     "webpack-hot-middleware": "2.25.0",
     "webpack-pwa-manifest": "4.2.0",
-    "whatwg-fetch": "3.4.1"
+    "whatwg-fetch": "3.5.0"
   },
   "comments": {
     "dependencies": {
