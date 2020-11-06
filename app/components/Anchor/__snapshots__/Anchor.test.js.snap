@@ -101,7 +101,7 @@ exports[`Anchor renders and matches snapshot 1`] = `
           stroke-width="2"
         />
       </svg>
-      <div
+      <span
         class="c3"
       />
       Click Me

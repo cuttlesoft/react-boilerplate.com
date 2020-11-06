@@ -3,20 +3,20 @@
 exports[`NavBar renders and matches snapshot 1`] = `
 <div>
   <header
-    class="StyledBox-sc-13pk1d4-0 ixgMvS"
+    class="StyledBox-sc-13pk1d4-0 fgzesE"
     style="width: 100vw; transition: none;"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+      class="StyledBox-sc-13pk1d4-0 dYebPD"
       style="transition: all .3s ease-in-out;"
     >
       <a
-        class="Link__StyledLink-sc-1vpl4pu-0 gEErvb"
+        class="Link__StyledLink-sc-1vpl4pu-0 gBiCSt"
         href="/"
         theme="[object Object]"
       >
         <h2
-          class="StyledHeading-sc-1rdh4aw-0 fjsCgo"
+          class="StyledHeading-sc-1rdh4aw-0 kjJkGW"
           style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
         >
           React Boilerplate
