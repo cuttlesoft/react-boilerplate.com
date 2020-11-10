@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react'
 import { FormField as GrommetFormField } from 'grommet'
 import styled from 'styled-components'
+import _ from 'lodash'
 
 // Components
 import { Text } from '../Text'
@@ -23,8 +25,20 @@ export const StyledFormField = styled(GrommetFormField)`
  *
  * - If the field is marked as `required`, add an asterisk (*) to its label
  */
-const FormField = props => {
-  const { label, required, serverSideRequired, value, children, ...rest } = props
+const FormField = (props) => {
+  const { children, label, name, required, serverSideRequired, value, ...rest } = props
+
+  /**
+   * Configure the children to pass down in the `FormField`.
+   * - If there is a `name`, and the `children` are not an array, clone them and pass down the `name` prop.
+   */
+  const configureChildren = () => {
+    if (name && _.isObject(children) && !_.isArray(children))
+      return React.cloneElement(children, { name })
+
+    return children
+  }
+
   return (
     <StyledFormField
       label={
@@ -41,11 +55,12 @@ const FormField = props => {
           </Text>
         )
       }
+      name={name}
       required={required}
       {...value}
       {...rest}
     >
-      {children}
+      {configureChildren()}
     </StyledFormField>
   )
 }
