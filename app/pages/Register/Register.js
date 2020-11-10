@@ -69,7 +69,7 @@ const Register = () => {
               required
               style={{ flex: 1 }}
               validate={[
-                name => {
+                (name) => {
                   if (name && name.length === 1) return 'Please enter more than one character'
                   return undefined
                 },
@@ -82,7 +82,7 @@ const Register = () => {
               required
               style={{ flex: 1 }}
               validate={[
-                name => {
+                (name) => {
                   if (name && name.length === 1) return 'Please enter more than one character'
                   return undefined
                 },
@@ -95,13 +95,13 @@ const Register = () => {
             name="email"
             required
             validate={[
-              email => {
+              (email) => {
                 if (email && !isEmail(email)) return 'Please enter a valid email address'
                 return undefined
               },
             ]}
           >
-            <TextInput name="email" type="email" />
+            <TextInput type="email" />
           </FormField>
 
           <FormField
@@ -109,11 +109,11 @@ const Register = () => {
             name="password"
             required
             validate={[
-              password => {
+              (password) => {
                 if (password && password.length <= 8) return 'Please enter more than 8 characters'
                 return undefined
               },
-              password => {
+              (password) => {
                 const confirmPasswordInput = document.getElementsByName('confirm_password')[0]
                 if (
                   password &&
@@ -126,7 +126,7 @@ const Register = () => {
               },
             ]}
           >
-            <PasswordInput id="password" name="password" />
+            <PasswordInput id="password" />
           </FormField>
 
           <FormField
@@ -134,12 +134,12 @@ const Register = () => {
             name="confirm_password"
             required
             validate={[
-              confirmPassword => {
+              (confirmPassword) => {
                 if (confirmPassword && confirmPassword.length <= 8)
                   return 'Please enter more than 8 characters'
                 return undefined
               },
-              confirmPassword => {
+              (confirmPassword) => {
                 const passwordInput = document.getElementsByName('password')[0]
 
                 if (
@@ -153,12 +153,11 @@ const Register = () => {
               },
             ]}
           >
-            <PasswordInput name="confirm_password" />
+            <PasswordInput />
           </FormField>
 
           <FormField label="Account Type." name="role" required>
             <RadioButtonGroup
-              name="role"
               direction="row"
               gap="xsmall"
               options={[

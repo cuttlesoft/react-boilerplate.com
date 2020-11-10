@@ -80,13 +80,13 @@ const Login = ({ location }) => {
             name="email"
             required
             validate={[
-              email => {
+              (email) => {
                 if (email && !isEmail(email)) return 'Please enter a valid email address'
                 return undefined
               },
             ]}
           >
-            <TextInput name="email" type="email" />
+            <TextInput type="email" />
           </FormField>
 
           <FormField
@@ -94,13 +94,13 @@ const Login = ({ location }) => {
             name="password"
             required
             validate={[
-              password => {
+              (password) => {
                 if (password && password.length <= 8) return 'Please enter more than 8 characters'
                 return undefined
               },
             ]}
           >
-            <PasswordInput id="password" name="password" />
+            <PasswordInput id="password" />
           </FormField>
 
           {/* Submit */}
