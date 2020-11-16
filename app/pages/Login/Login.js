@@ -29,8 +29,11 @@ const Login = ({ location }) => {
   const { message: error, showMessage: showError } = useFlashMessage(null)
   const { message: redirectedMessage, showMessage: showRedirectedMessage } = useFlashMessage(null)
 
+  // State
   const [loading, setLoading] = useState(false)
+  const [email, setEmail] = useState('')
 
+  // Context
   const { setCurrentUser, setCurrentTokens } = useContext(UserStoreContext)
 
   /**
@@ -78,10 +81,11 @@ const Login = ({ location }) => {
           <FormField
             label="Email"
             name="email"
+            onChange={e => setEmail(e.target.value)}
             required
             validate={[
-              email => {
-                if (email && !isEmail(email)) return 'Please enter a valid email address'
+              e => {
+                if (e && !isEmail(e)) return 'Please enter a valid email address'
                 return undefined
               },
             ]}
@@ -115,7 +119,9 @@ const Login = ({ location }) => {
             />
           </Box>
 
-          <Link to="/password-reset-request">Forgot Password?</Link>
+          <Link to={{ pathname: '/password-reset-request', state: { email } }}>
+            Forgot Password?
+          </Link>
 
           {/* Status Messages */}
           <Box>{error && <Message message={error} isError />}</Box>

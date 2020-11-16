@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useEffect, useState } from 'react'
 import { isEmail } from 'validator'
+import PropTypes from 'prop-types'
 
 // Components
 import { Box } from 'components/Box'
@@ -23,12 +24,21 @@ import { forgotPassword } from '../../services/user.service'
  * PasswordResetRequest
  *
  */
-const PasswordResetRequest = () => {
+const PasswordResetRequest = ({ location }) => {
+  // Mesage
   const { message: error, showMessage: showError } = useFlashMessage(null)
 
+  // State
   const [loading, setLoading] = useState(false)
-
   const [success, setSuccess] = useState(false)
+  const [email, setEmail] = useState('')
+
+  useEffect(() => {
+    if (location && location.state && location.state.email) {
+      setEmail(location.state.email)
+    }
+  }, [])
+
   useEffect(() => {
     document.getElementById('reset-password-request-form').reset()
   }, [success])
@@ -55,13 +65,14 @@ const PasswordResetRequest = () => {
             name="email"
             required
             validate={[
-              email => {
-                if (email && !isEmail(email)) return 'Please enter a valid email address'
+              e => {
+                if (e && !isEmail(e)) return 'Please enter a valid email address'
                 return undefined
               },
             ]}
+            value={email}
           >
-            <TextInput type="email" />
+            <TextInput type="email" value={email} />
           </FormField>
 
           {/* Submit */}
@@ -76,6 +87,10 @@ const PasswordResetRequest = () => {
       </FormContainer>
     </Box>
   )
+}
+
+PasswordResetRequest.propTypes = {
+  location: PropTypes.object.isRequired,
 }
 
 export default PasswordResetRequest
