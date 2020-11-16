@@ -43,9 +43,7 @@ describe('Login', () => {
     })
 
     it('requires all fields', () => {
-      cy.findByRole('button', { name: /Login/i })
-        .should('exist')
-        .click()
+      cy.findByRole('button', { name: /Login/i }).should('exist').click()
 
       // Ensure that two errors are shown, one for email and one for password
       cy.findAllByText('Required').then(requiredText => {
@@ -55,9 +53,7 @@ describe('Login', () => {
 
     it('validates the email field', () => {
       // Enter an invalid email
-      cy.get('input[name=email]')
-        .type('engineering')
-        .blur()
+      cy.get('input[name=email]').type('engineering').blur()
 
       // Ensure that the error is shown
       cy.findByText('Please enter a valid email address').should('be.visible')
@@ -65,9 +61,7 @@ describe('Login', () => {
 
     it('validates the password field', () => {
       // Enter an invalid password
-      cy.get('input[name=password]')
-        .type('a')
-        .blur()
+      cy.get('input[name=password]').type('a').blur()
 
       // Ensure that the error is shown
       cy.findByText('Please enter more than 8 characters').should('be.visible')
@@ -75,14 +69,10 @@ describe('Login', () => {
 
     it('validates the email field and password field at the same time', () => {
       // Enter an invalid email
-      cy.get('input[name=email]')
-        .type('engineering')
-        .blur()
+      cy.get('input[name=email]').type('engineering').blur()
 
       // Enter an invalid password
-      cy.get('input[name=password]')
-        .type('a')
-        .blur()
+      cy.get('input[name=password]').type('a').blur()
 
       // Ensure that the error is shown
       cy.findByText('Please enter a valid email address').should('be.visible')

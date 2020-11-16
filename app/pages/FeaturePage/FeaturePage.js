@@ -18,11 +18,26 @@ import messages from './FeaturePage.messages'
  */
 export default function FeaturePage() {
   const items = [
-    { title: messages.scaffoldingHeader, body: messages.scaffoldingMessage },
-    { title: messages.feedbackHeader, body: messages.feedbackMessage },
-    { title: messages.routingHeader, body: messages.routingMessage },
-    { title: messages.networkHeader, body: messages.networkMessage },
-    { title: messages.intlHeader, body: messages.intlMessage },
+    {
+      title: messages.scaffoldingHeader,
+      body: messages.scaffoldingMessage,
+    },
+    {
+      title: messages.feedbackHeader,
+      body: messages.feedbackMessage,
+    },
+    {
+      title: messages.routingHeader,
+      body: messages.routingMessage,
+    },
+    {
+      title: messages.networkHeader,
+      body: messages.networkMessage,
+    },
+    {
+      title: messages.intlHeader,
+      body: messages.intlMessage,
+    },
   ]
 
   return (

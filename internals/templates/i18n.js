@@ -31,7 +31,9 @@ const formatTranslationMessages = (locale, messages) => {
   const flattenFormattedMessages = (formattedMessages, key) => {
     const formattedMessage =
       !messages[key] && locale !== DEFAULT_LOCALE ? defaultFormattedMessages[key] : messages[key]
-    return Object.assign(formattedMessages, { [key]: formattedMessage })
+    return Object.assign(formattedMessages, {
+      [key]: formattedMessage,
+    })
   }
   return Object.keys(messages).reduce(flattenFormattedMessages, {})
 }

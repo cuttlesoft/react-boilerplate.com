@@ -68,7 +68,10 @@ const Login = ({ location }) => {
         >
           {/* Redirected Message */}
           <Box
-            background={{ color: 'accent-1', opacity: 'weak' }}
+            background={{
+              color: 'accent-1',
+              opacity: 'weak',
+            }}
             margin={{ vertical: 'small' }}
             pad={{ horizontal: 'small' }}
           >

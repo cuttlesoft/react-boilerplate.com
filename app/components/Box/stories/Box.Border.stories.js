@@ -44,7 +44,14 @@ storiesOf('Box', module)
         <Box direction="row-responsive" gap="small" align="start">
           {['solid', 'dashed', 'dotted', 'double', 'groove', 'ridge', 'inset', 'outset'].map(
             type => (
-              <Box key={type} pad="small" border={{ size: 'medium', style: type }}>
+              <Box
+                key={type}
+                pad="small"
+                border={{
+                  size: 'medium',
+                  style: type,
+                }}
+              >
                 {type}
               </Box>
             ),

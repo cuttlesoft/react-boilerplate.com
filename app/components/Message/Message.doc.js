@@ -1,12 +1,10 @@
 import { describe, PropTypes } from 'react-desc'
 
 export const doc = Message => {
-  const DocumentedMessage = describe(Message)
-    .description('A Message')
-    .usage(
-      `import { Message } from 'components/Message';
+  const DocumentedMessage = describe(Message).description('A Message').usage(
+    `import { Message } from 'components/Message';
 <Message />`,
-    )
+  )
 
   DocumentedMessage.propTypes = {
     id: PropTypes.string

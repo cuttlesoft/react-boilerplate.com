@@ -46,7 +46,7 @@ const customTheme = {
 }
 
 const CustomTheme = () => (
-  <React.Fragment>
+  <>
     <StoryContainer theme={customTheme}>
       <Box align="center" pad="large">
         <Button title="custom theme" onClick={() => {}} primary />
@@ -58,7 +58,7 @@ const CustomTheme = () => (
         <Button as="span" title="Custom as=span" path="/" />
       </Box>
     </StoryContainer>
-  </React.Fragment>
+  </>
 )
 
 storiesOf('Button', module)

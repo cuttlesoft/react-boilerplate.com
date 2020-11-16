@@ -22,7 +22,9 @@ describe('Register', () => {
     })
 
     it('requires all fields', () => {
-      cy.findByRole('button', { name: /Register/i })
+      cy.findByRole('button', {
+        name: /Register/i,
+      })
         .should('exist')
         .click()
 
@@ -34,9 +36,7 @@ describe('Register', () => {
 
     it('validates the email field', () => {
       // Enter an invalid email
-      cy.get('input[name=email]')
-        .type('engineering')
-        .blur()
+      cy.get('input[name=email]').type('engineering').blur()
 
       // Ensure that the error is shown
       cy.findByText('Please enter a valid email address')
@@ -44,9 +44,7 @@ describe('Register', () => {
 
     it('validates the password field', () => {
       // Enter an invalid password
-      cy.get('input[name=password]')
-        .type('a')
-        .blur()
+      cy.get('input[name=password]').type('a').blur()
 
       // Ensure that the error is shown
       cy.findByText('Please enter more than 8 characters')
@@ -54,14 +52,10 @@ describe('Register', () => {
 
     it('validates the email field and password field at the same time', () => {
       // Enter an invalid email
-      cy.get('input[name=email]')
-        .type('engineering')
-        .blur()
+      cy.get('input[name=email]').type('engineering').blur()
 
       // Enter an invalid password
-      cy.get('input[name=password]')
-        .type('a')
-        .blur()
+      cy.get('input[name=password]').type('a').blur()
 
       // Ensure that the error is shown
       cy.findByText('Please enter a valid email address')
@@ -72,14 +66,10 @@ describe('Register', () => {
 
     it('validates requires that the password and password confirmation match', () => {
       // Enter a valid password
-      cy.get('input[name=password]')
-        .type('cuttleEngineering2020!')
-        .blur()
+      cy.get('input[name=password]').type('cuttleEngineering2020!').blur()
 
       // Enter a valid password confirmation
-      cy.get('input[name=confirm_password]')
-        .type('cuttleEngineering2020')
-        .blur()
+      cy.get('input[name=confirm_password]').type('cuttleEngineering2020').blur()
 
       // Ensure that two errors are shown, one for password and one for password confirmation
       cy.findAllByText('Passwords must match').then(lengthErrors => {

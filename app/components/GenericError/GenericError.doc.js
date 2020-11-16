@@ -1,12 +1,10 @@
 import { describe, PropTypes } from 'react-desc'
 
 export const doc = GenericError => {
-  const DocumentedGenericError = describe(GenericError)
-    .description('A GenericError')
-    .usage(
-      `import { GenericError } from 'components/GenericError';
+  const DocumentedGenericError = describe(GenericError).description('A GenericError').usage(
+    `import { GenericError } from 'components/GenericError';
 <GenericError />`,
-    )
+  )
 
   DocumentedGenericError.propTypes = {
     id: PropTypes.string

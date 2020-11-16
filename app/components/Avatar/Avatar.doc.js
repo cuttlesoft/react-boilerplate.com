@@ -1,12 +1,10 @@
 import { describe, PropTypes } from 'react-desc'
 
 export const doc = Avatar => {
-  const DocumentedAvatar = describe(Avatar)
-    .description('A Avatar')
-    .usage(
-      `import { Avatar } from 'components/Avatar';
+  const DocumentedAvatar = describe(Avatar).description('A Avatar').usage(
+    `import { Avatar } from 'components/Avatar';
 <Avatar />`,
-    )
+  )
 
   DocumentedAvatar.propTypes = {
     id: PropTypes.string

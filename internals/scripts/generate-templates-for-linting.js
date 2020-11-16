@@ -359,12 +359,28 @@ async function generateLanguage(language) {
 /**
  * Run
  */
-;(async function() {
+;(async function () {
   await generateComponents([
-    { kind: 'component', name: 'Component', memo: false },
-    { kind: 'component', name: 'MemoizedComponent', memo: true },
-    { kind: 'container', name: 'Container', memo: false },
-    { kind: 'container', name: 'MemoizedContainer', memo: true },
+    {
+      kind: 'component',
+      name: 'Component',
+      memo: false,
+    },
+    {
+      kind: 'component',
+      name: 'MemoizedComponent',
+      memo: true,
+    },
+    {
+      kind: 'container',
+      name: 'Container',
+      memo: false,
+    },
+    {
+      kind: 'container',
+      name: 'MemoizedContainer',
+      memo: true,
+    },
   ]).catch(reason => reportErrors(reason))
 
   await generateLanguage('fr').catch(reason => reportErrors(reason))

@@ -6,7 +6,7 @@ const path = require('path')
 const webpack = require('webpack')
 const envKeys = require('./envKeys')()
 
-module.exports = (options) => ({
+module.exports = options => ({
   devtool: options.devtool,
   entry: options.entry,
   infrastructureLogging: {

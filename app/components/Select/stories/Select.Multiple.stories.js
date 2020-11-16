@@ -47,7 +47,10 @@ class MultiSelect extends Component {
         align="center"
         direction="row"
         gap="xsmall"
-        pad={{ vertical: 'xsmall', horizontal: 'small' }}
+        pad={{
+          vertical: 'xsmall',
+          horizontal: 'small',
+        }}
         margin="xsmall"
         background="accent-1"
         round="large"
@@ -57,7 +60,14 @@ class MultiSelect extends Component {
         </Text>
 
         <Box background="white" round="full" margin={{ left: 'xsmall' }}>
-          <FormClose color="accent-1" size="small" style={{ width: '12px', height: '12px' }} />
+          <FormClose
+            color="accent-1"
+            size="small"
+            style={{
+              width: '12px',
+              height: '12px',
+            }}
+          />
         </Box>
       </Box>
     </Button>
@@ -83,7 +93,13 @@ class MultiSelect extends Component {
                 {selected && selected.length ? (
                   selected.map(index => this.renderOptions(ALL_OPTIONS[index]))
                 ) : (
-                  <Box pad={{ vertical: 'xsmall', horizontal: 'small' }} margin="xsmall">
+                  <Box
+                    pad={{
+                      vertical: 'xsmall',
+                      horizontal: 'small',
+                    }}
+                    margin="xsmall"
+                  >
                     Select Option
                   </Box>
                 )}
@@ -93,7 +109,9 @@ class MultiSelect extends Component {
             selected={selected}
             disabled={[2, 6]}
             onChange={({ selected: nextSelected }) => {
-              this.setState({ selected: nextSelected.sort() })
+              this.setState({
+                selected: nextSelected.sort(),
+              })
             }}
           >
             {this.renderOption}

@@ -1,12 +1,10 @@
 import { describe, PropTypes } from 'react-desc'
 
 export const doc = Menu => {
-  const DocumentedMenu = describe(Menu)
-    .description('A Menu')
-    .usage(
-      `import { Menu } from 'components/Menu';
+  const DocumentedMenu = describe(Menu).description('A Menu').usage(
+    `import { Menu } from 'components/Menu';
 <Menu />`,
-    )
+  )
 
   DocumentedMenu.propTypes = {
     id: PropTypes.string

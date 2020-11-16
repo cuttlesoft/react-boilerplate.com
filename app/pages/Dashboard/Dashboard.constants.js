@@ -23,22 +23,38 @@ export const GRID_AREAS = {
   small: [
     { name: 'shows', start: [0, 0], end: [1, 0] },
     { name: 'todos', start: [0, 1], end: [1, 1] },
-    { name: 'artist-venues', start: [0, 2], end: [1, 2] },
+    {
+      name: 'artist-venues',
+      start: [0, 2],
+      end: [1, 2],
+    },
   ],
   // Shows pops to the top with todos and artist-venues split below
   medium: [
     { name: 'shows', start: [0, 0], end: [1, 0] },
     { name: 'todos', start: [0, 1], end: [0, 1] },
-    { name: 'artist-venues', start: [1, 1], end: [1, 1] },
+    {
+      name: 'artist-venues',
+      start: [1, 1],
+      end: [1, 1],
+    },
   ],
   large: [
     { name: 'todos', start: [0, 0], end: [0, 0] },
     { name: 'shows', start: [1, 0], end: [1, 0] },
-    { name: 'artist-venues', start: [2, 0], end: [2, 0] },
+    {
+      name: 'artist-venues',
+      start: [2, 0],
+      end: [2, 0],
+    },
   ],
   xlarge: [
     { name: 'todos', start: [0, 0], end: [0, 0] },
     { name: 'shows', start: [1, 0], end: [1, 0] },
-    { name: 'artist-venues', start: [2, 0], end: [2, 0] },
+    {
+      name: 'artist-venues',
+      start: [2, 0],
+      end: [2, 0],
+    },
   ],
 }
