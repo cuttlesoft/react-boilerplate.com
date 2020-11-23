@@ -104,6 +104,6 @@ process.env.API_BASE_URL // 'https://myapi.com'
 process.env.GOOGLE_MAPS_API_KEY // 'abcdefgh'
 ```
 
-## A new section
+## A New Section
 
 This is a demo section for the sake of demoing things.
