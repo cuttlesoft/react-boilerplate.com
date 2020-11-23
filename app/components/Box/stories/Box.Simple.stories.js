@@ -30,7 +30,10 @@ storiesOf('Box', module)
         <Box
           pad="large"
           align="center"
-          background={{ color: 'light-2', opacity: 'strong' }}
+          background={{
+            color: 'light-2',
+            opacity: 'strong',
+          }}
           round
           gap="small"
         >

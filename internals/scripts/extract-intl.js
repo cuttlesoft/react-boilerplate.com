@@ -87,7 +87,11 @@ const extractFromFile = async filename => {
   try {
     const code = await readFile(filename)
 
-    const output = await transform(code, { filename, presets, plugins })
+    const output = await transform(code, {
+      filename,
+      presets,
+      plugins,
+    })
     const messages = get(output, 'metadata.react-intl.messages', [])
 
     for (const message of messages) {

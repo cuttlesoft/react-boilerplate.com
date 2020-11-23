@@ -31,11 +31,15 @@ import { RootStoreContext } from '../../stores/RootStore'
  *
  */
 const PasswordReset = observer(({ location }) => {
+  // Message
+  const { message: error, showMessage: showError } = useFlashMessage(null)
+
+  // State
   const [loading, setLoading] = useState(false)
   const [redirect, setRedirect] = useState(false)
   const [tokenError, setTokenError] = useState(false)
-  const { message: error, showMessage: showError } = useFlashMessage(null)
 
+  // Context
   const {
     clearStore,
     user: { isAuthenticated },
@@ -53,7 +57,9 @@ const PasswordReset = observer(({ location }) => {
    *   have been added by an organization admin
    */
   if (location && location.search) {
-    const params = qs.parse(location.search, { ignoreQueryPrefix: true })
+    const params = qs.parse(location.search, {
+      ignoreQueryPrefix: true,
+    })
     ;({ token } = params)
 
     isNewUser = location.search.includes('&new_user=true')
@@ -118,7 +124,14 @@ const PasswordReset = observer(({ location }) => {
 
   return (
     <Box>
-      {redirect && <Redirect to={{ pathname: '/login', search: _getRedirectParams() }} />}
+      {redirect && (
+        <Redirect
+          to={{
+            pathname: '/login',
+            search: _getRedirectParams(),
+          }}
+        />
+      )}
 
       <LogoHeader />
 

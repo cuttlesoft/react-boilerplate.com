@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-const Wrapper = styled.div.attrs(props => ({ ...props }))`
+const Wrapper = styled.div.attrs(props => ({
+  ...props,
+}))`
   padding: 0;
   margin: 0;
   width: 100%;

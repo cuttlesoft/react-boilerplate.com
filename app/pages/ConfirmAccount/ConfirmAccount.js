@@ -66,7 +66,14 @@ const ConfirmAccount = observer(({ history, location }) => {
 
   return (
     <>
-      {redirect && <Redirect to={{ pathname: '/login', search: '?confirmed=true' }} />}
+      {redirect && (
+        <Redirect
+          to={{
+            pathname: '/login',
+            search: '?confirmed=true',
+          }}
+        />
+      )}
 
       {errorMessage && (
         <Box align="center">

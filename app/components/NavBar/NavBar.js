@@ -32,10 +32,17 @@ const NavBar = observer(
       <Header
         background="light-2"
         pad="small"
-        style={{ width: '100vw', transition: 'none' }}
+        style={{
+          width: '100vw',
+          transition: 'none',
+        }}
         {...rest}
       >
-        <Box style={{ transition: 'all .3s ease-in-out' }}>
+        <Box
+          style={{
+            transition: 'all .3s ease-in-out',
+          }}
+        >
           <Link to={user.isAuthenticated ? '/dashboard' : '/'}>
             <Heading level="2">React Boilerplate</Heading>
           </Link>
@@ -43,7 +50,12 @@ const NavBar = observer(
 
         {user?.isAuthenticated && (
           <Menu
-            dropProps={{ align: { top: 'bottom', left: 'left' } }}
+            dropProps={{
+              align: {
+                top: 'bottom',
+                left: 'left',
+              },
+            }}
             label={
               <Avatar background="brand">
                 <User color="white" />
