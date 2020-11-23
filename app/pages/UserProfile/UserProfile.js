@@ -80,7 +80,7 @@ const UserProfile = () => {
    * Handles changes to all form fields.
    * @param {object} e
    */
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { target, option } = e
 
     setUpdatedUser({
@@ -124,7 +124,7 @@ const UserProfile = () => {
           serverSideRequired
           value={updatedUser.firstName}
         >
-          <TextInput name="firstName" value={updatedUser.firstName} />
+          <TextInput value={updatedUser.firstName} />
         </AutoSaveFormField>
 
         <AutoSaveFormField
@@ -135,7 +135,7 @@ const UserProfile = () => {
           serverSideRequired
           value={updatedUser.lastName}
         >
-          <TextInput name="lastName" value={updatedUser.lastName} />
+          <TextInput value={updatedUser.lastName} />
         </AutoSaveFormField>
 
         {/* We don't support the user changing their email address yet, so this is
@@ -156,7 +156,7 @@ const UserProfile = () => {
           ]}
           value={updatedUser.email}
         >
-          <TextInput disabled name="email" value={updatedUser.email} />
+          <TextInput disabled value={updatedUser.email} />
         </AutoSaveFormField>
 
         <AutoSaveFormField
@@ -166,7 +166,7 @@ const UserProfile = () => {
           name="phone"
           value={updatedUser.phone || ''}
           validate={[
-            phone => {
+            (phone) => {
               if (phone && phone.length < 14) return 'Number must be 10 digits'
               return undefined
             },
@@ -195,10 +195,9 @@ const UserProfile = () => {
                 placeholder: 'xxxx',
               },
             ]}
-            name="phone"
             value={updatedUser.phone || ''}
             validate={[
-              phone => {
+              (phone) => {
                 if (phone && phone.length < 14) return 'Number must be 10 digits'
                 return undefined
               },

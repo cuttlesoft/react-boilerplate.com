@@ -158,11 +158,11 @@ const PasswordReset = observer(({ location }) => {
             name="password"
             required
             validate={[
-              password => {
+              (password) => {
                 if (password && password.length <= 8) return 'Please enter more than 8 characters'
                 return undefined
               },
-              password => {
+              (password) => {
                 const confirmPasswordInput = document.getElementsByName('confirm_password')[0]
                 if (
                   password &&
@@ -175,7 +175,7 @@ const PasswordReset = observer(({ location }) => {
               },
             ]}
           >
-            <PasswordInput id="password" name="password" />
+            <PasswordInput id="password" />
           </FormField>
 
           <FormField
@@ -183,12 +183,12 @@ const PasswordReset = observer(({ location }) => {
             name="confirm_password"
             required
             validate={[
-              confirmPassword => {
+              (confirmPassword) => {
                 if (confirmPassword && confirmPassword.length <= 8)
                   return 'Please enter more than 8 characters'
                 return undefined
               },
-              confirmPassword => {
+              (confirmPassword) => {
                 const passwordInput = document.getElementsByName('password')[0]
 
                 if (
@@ -202,7 +202,7 @@ const PasswordReset = observer(({ location }) => {
               },
             ]}
           >
-            <PasswordInput name="confirm_password" />
+            <PasswordInput />
           </FormField>
 
           {/* TOS */}

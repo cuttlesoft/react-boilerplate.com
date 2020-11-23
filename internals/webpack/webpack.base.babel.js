@@ -6,18 +6,13 @@ const path = require('path')
 const webpack = require('webpack')
 const envKeys = require('./envKeys')()
 
-module.exports = options => ({
-  mode: options.mode,
+module.exports = (options) => ({
+  devtool: options.devtool,
   entry: options.entry,
-  output: Object.assign(
-    {
-      // Compile into js/build.js
-      path: path.resolve(process.cwd(), 'build'),
-      publicPath: '/',
-    },
-    options.output,
-  ), // Merge with env dependent settings
-  optimization: options.optimization,
+  infrastructureLogging: {
+    level: 'warn',
+  },
+  mode: options.mode,
   module: {
     rules: [
       {
@@ -125,6 +120,14 @@ module.exports = options => ({
       },
     ],
   },
+  output: {
+    // Compile into js/build.js
+    path: path.resolve(process.cwd(), 'build'),
+    publicPath: '/',
+    ...options.output,
+  }, // Merge with env dependent settings
+  optimization: options.optimization,
+  performance: options.performance || {},
   plugins: options.plugins.concat([
     // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
     // inside your code for any environment checks; Terser will automatically
@@ -136,7 +139,6 @@ module.exports = options => ({
     extensions: ['.js', '.jsx', '.react.js'],
     mainFields: ['browser', 'jsnext:main', 'main'],
   },
-  devtool: options.devtool,
+  stats: 'errors-only',
   target: 'web', // Make web variables accessible to webpack, e.g. window
-  performance: options.performance || {},
 })

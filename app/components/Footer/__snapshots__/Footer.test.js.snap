@@ -2,21 +2,19 @@
 
 exports[`Footer should render and match the snapshot 1`] = `
 <footer
-  className="Wrapper-wcfdfo-0 ktQLLy"
+  className="Wrapper-wcfdfo-0 gKUkCQ"
 >
   <section>
-    <span>
-      This project is licensed under the MIT license.
-    </span>
+    This project is licensed under the MIT license.
   </section>
   <section>
     <div
-      className="LocaleTogglestyles__Wrapper-sc-1df0f0w-0 djZlcf"
+      className="LocaleTogglestyles__Wrapper-sc-1df0f0w-0 eDbmIJ"
     >
       <select
-        className="Select-sc-1sm01tk-0 fSKxbD"
+        className="Select-sc-1sm01tk-0 igKyVl"
         onChange={[Function]}
-        value="en"
+        value="de"
       >
         <option
           value="en"
@@ -32,20 +30,18 @@ exports[`Footer should render and match the snapshot 1`] = `
     </div>
   </section>
   <section>
-    <span>
-      
-      Made with love by 
-      <a
-        className="StyledAnchor-sc-1rp7lwl-0 cfNrRd"
-        href="https://twitter.com/mxstbr"
-        onBlur={[Function]}
-        onFocus={[Function]}
-      >
-        Max Stoiber
-      </a>
-      .
     
-    </span>
+      Made with love by 
+    <a
+      className="StyledAnchor-sc-1rp7lwl-0 eCyBYb"
+      href="https://twitter.com/mxstbr"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      Max Stoiber
+    </a>
+    .
+    
   </section>
 </footer>
 `;

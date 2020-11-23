@@ -55,13 +55,13 @@ const PasswordResetRequest = () => {
             name="email"
             required
             validate={[
-              email => {
+              (email) => {
                 if (email && !isEmail(email)) return 'Please enter a valid email address'
                 return undefined
               },
             ]}
           >
-            <TextInput name="email" type="email" />
+            <TextInput type="email" />
           </FormField>
 
           {/* Submit */}
