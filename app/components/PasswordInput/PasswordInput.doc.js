@@ -1,12 +1,10 @@
 import { describe, PropTypes } from 'react-desc'
 
 export const doc = PasswordInput => {
-  const DocumentedPasswordInput = describe(PasswordInput)
-    .description('A PasswordInput')
-    .usage(
-      `import { PasswordInput } from 'components/PasswordInput';
+  const DocumentedPasswordInput = describe(PasswordInput).description('A PasswordInput').usage(
+    `import { PasswordInput } from 'components/PasswordInput';
 <PasswordInput />`,
-    )
+  )
 
   DocumentedPasswordInput.propTypes = {
     value: PropTypes.string.description('Value of the input').defaultValue(''),

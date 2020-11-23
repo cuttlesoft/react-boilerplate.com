@@ -7,12 +7,14 @@
  *   script `extract-intl`, and must use CommonJS module syntax
  *   You CANNOT use import/export in this file.
  */
-const addLocaleData = require('react-intl').addLocaleData //eslint-disable-line
-const enLocaleData = require('react-intl/locale-data/en')
+require('@formatjs/intl-pluralrules/polyfill')
+require('@formatjs/intl-pluralrules/locale-data/en')
+require('@formatjs/intl-pluralrules/locale-data/de')
+require('@formatjs/intl-relativetimeformat/polyfill')
+require('@formatjs/intl-relativetimeformat/locale-data/en')
+require('@formatjs/intl-relativetimeformat/locale-data/de')
 
 const enTranslationMessages = require('./translations/en.json')
-
-addLocaleData(enLocaleData)
 
 const DEFAULT_LOCALE = 'en'
 
@@ -29,7 +31,9 @@ const formatTranslationMessages = (locale, messages) => {
   const flattenFormattedMessages = (formattedMessages, key) => {
     const formattedMessage =
       !messages[key] && locale !== DEFAULT_LOCALE ? defaultFormattedMessages[key] : messages[key]
-    return Object.assign(formattedMessages, { [key]: formattedMessage })
+    return Object.assign(formattedMessages, {
+      [key]: formattedMessage,
+    })
   }
   return Object.keys(messages).reduce(flattenFormattedMessages, {})
 }
