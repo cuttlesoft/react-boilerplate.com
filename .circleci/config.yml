@@ -133,6 +133,8 @@ jobs:
           command: npm start
           background: true
       - run: npm run e2e:record -- --group $CIRCLE_JOB --browser chrome
+      - run: 
+          command: "find cypress/cucumber-json/**.cucumber.json -exec curl -X POST https://c4j.cucumber.io/ci/rest/api/results -H 'authorization: Bearer $CUCUMBER_ACCESS_TOKEN' -H 'content-type: multipart/form-data' -F results_file=@\"{}\" -F language=js  \\; && rm cypress/cucumber-json/**.cucumber.json"
       - slack/notify: *notify_slack_of_failures
 
   integration-firefox:
