@@ -27,6 +27,15 @@
 ### - $PROD_DISTRIBUTION_ID (becomes $DISTRIBUTION_ID based on env)
 version: 2.1
 
+orbs:
+  slack: circleci/slack@4.3.0
+
+notify_slack_of_failures: &notify_slack_of_failures
+  channel: C02Q03FL726 # Channel ID, found by copying a link to a message, e.g. https://cuttlesoft.slack.com/archives/C01ML8VTLHJ/p1613692609008000
+  event: fail
+  template: basic_fail_1
+  branch_pattern: main,spike/cucumber-for-jira
+
 executors:
   docker-executor:
     working_directory: ~/repo
@@ -37,6 +46,28 @@ jobs:
   setup-lint:
     executor: docker-executor
     steps:
+      - run:
+          name: Update dependencies
+          command: apt-get update --allow-releaseinfo-change
+
+      - slack/notify:
+          channel: C02Q03FL726 # Channel ID, found by copying a link to a message, e.g. https://cuttlesoft.slack.com/archives/C01ML8VTLHJ/p1613692609008000
+          template: ''
+          event: pass
+          branch_pattern: main,spike/cucumber-for-jira
+          custom: >
+            {
+              "text": "🏷 Deploy pipeline started.",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "🏷 Deploy pipeline started."
+                  }
+                }
+              ]
+            }
       - checkout
 
       # find compatible cache from previous build,
@@ -78,13 +109,20 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
+      - run:
+          name: Update dependencies
+          command: apt-get update --allow-releaseinfo-change
       - run: npm test -- --maxWorkers=4
+      - slack/notify: *notify_slack_of_failures
 
   integration-chrome:
     executor: docker-executor
     steps:
       - attach_workspace:
           at: ~/
+      - run:
+          name: Update dependencies
+          command: apt-get update --allow-releaseinfo-change
       - run:
           name: Configure cypress variables
           command: ./.circleci/configure-cypress-vars.sh
@@ -95,12 +133,16 @@ jobs:
           command: npm start
           background: true
       - run: npm run e2e:record -- --group $CIRCLE_JOB --browser chrome
+      - slack/notify: *notify_slack_of_failures
 
   integration-firefox:
     executor: docker-executor
     steps:
       - attach_workspace:
           at: ~/
+      - run:
+          name: Update dependencies
+          command: apt-get update --allow-releaseinfo-change
       - run:
           name: Configure cypress variables
           command: ./.circleci/configure-cypress-vars.sh
@@ -111,12 +153,16 @@ jobs:
           command: npm start
           background: true
       - run: npm run e2e:record -- --group $CIRCLE_JOB --browser firefox
+      - slack/notify: *notify_slack_of_failures
 
   build:
     executor: docker-executor
     steps:
       - attach_workspace:
           at: ~/
+      - run:
+          name: Update dependencies
+          command: apt-get update --allow-releaseinfo-change
       - run:
           name: Configure build variables
           command: ./.circleci/configure-build-vars.sh
@@ -130,6 +176,7 @@ jobs:
             - repo
             - .cache/Cypress
             - build
+      - slack/notify: *notify_slack_of_failures
 
   deploy-s3:
     executor: docker-executor
@@ -138,11 +185,31 @@ jobs:
       - attach_workspace:
           at: ~/
       - run:
+          name: Update dependencies
+          command: apt-get update --allow-releaseinfo-change
+      - slack/notify:
+          channel: C02Q03FL726 # Channel ID, found by copying a link to a message, e.g. https://cuttlesoft.slack.com/archives/C01ML8VTLHJ/p1613692609008000
+          template: ''
+          event: pass
+          custom: >
+            {
+              "text": "📦 Build successful. Deploying!",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "📦 Build successful. Deploying!"
+                  }
+                }
+              ]
+            }
+      - run:
           name: Configure deploy variables
           command: ./.circleci/configure-deploy-vars.sh
       - run:
           name: Install AWS CLI
-          command: sudo apt-get -y -qq install awscli
+          command: apt-get -y -qq install awscli
       - run:
           name: Enable CloudFront
           command: aws configure set preview.cloudfront true
@@ -161,6 +228,24 @@ jobs:
       - run:
           name: Invalidate CloudFront distribution
           command: aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/index.html"
+      - slack/notify:
+          channel: C02Q03FL726 # Channel ID, found by copying a link to a message, e.g. https://cuttlesoft.slack.com/archives/C01ML8VTLHJ/p1613692609008000
+          template: ''
+          event: pass
+          custom: >
+            {
+              "text": "🍰 Deploy successful.",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "🍰 Deploy successful."
+                  }
+                }
+              ]
+            }
+      - slack/notify: *notify_slack_of_failures
 
   deploy-gcp:
     executor: docker-executor
@@ -168,6 +253,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/
+      - run:
+          name: Update dependencies
+          command: apt-get update --allow-releaseinfo-change
       - run:
           name: Notify via Slack
           command: curl -X POST -H 'Content-type:\ application/json' --data "{'text':'📦 Build successful. Deploying!'}" $SLACK_HOOK
@@ -177,9 +265,24 @@ jobs:
       - run:
           name: Firebase Deploy
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
-      - run:
-          name: Notify via Slack
-          command: curl -X POST -H 'Content-type:\ application/json' --data "{'text':'🍰 Deploy successful.'}" $SLACK_HOOK
+      - slack/notify:
+          channel: C02Q03FL726 # Channel ID, found by copying a link to a message, e.g. https://cuttlesoft.slack.com/archives/C01ML8VTLHJ/p1613692609008000
+          template: ''
+          event: pass
+          custom: >
+            {
+              "text": "🍰 Deploy successful.",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "🍰 Deploy successful."
+                  }
+                }
+              ]
+            }
+      - slack/notify: *notify_slack_of_failures
 
   notify-sentry-deploy:
     executor: docker-executor
@@ -187,6 +290,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/
+      - run:
+          name: Update dependencies
+          command: apt-get update --allow-releaseinfo-change
       - run:
           name: Create release and notify Sentry of deploy
           command: |
@@ -196,25 +302,45 @@ jobs:
             sentry-cli releases files $SENTRY_RELEASE upload-sourcemaps ./build
             sentry-cli releases finalize $SENTRY_RELEASE
             sentry-cli releases deploys $SENTRY_RELEASE new -e $CIRCLE_BRANCH
-      - run:
-          name: Notify via Slack
-          command: curl -X POST -H 'Content-type:\ application/json' --data "{'text':'🦾 Sentry Release successful.'}" $SLACK_HOOK
+      - slack/notify:
+          channel: C02Q03FL726 # Channel ID, found by copying a link to a message, e.g. https://cuttlesoft.slack.com/archives/C01ML8VTLHJ/p1613692609008000
+          template: ''
+          event: pass
+          custom: >
+            {
+              "text": "🦾 Sentry Release successful.",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "🦾 Sentry Release successful."
+                  }
+                }
+              ]
+            }
+      - slack/notify: *notify_slack_of_failures
 
 workflows:
   version: 2
   build_and_test:
     jobs:
       - setup-lint
+          context: slack-notifications
       - unittests:
+          context: slack-notifications
           requires:
             - setup-lint
       - integration-chrome:
+          context: slack-notifications
           requires:
             - setup-lint
       - integration-firefox:
+          context: slack-notifications
           requires:
             - setup-lint
       - build:
+          context: slack-notifications
           requires:
             - unittests
             - integration-chrome
@@ -228,21 +354,22 @@ workflows:
       #         only:
       #           - main
       #           - staging
-      - deploy-gcp:
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - main
-                - staging
-                - prod
-      - notify-sentry-deploy:
-          requires:
-            - deploy-gcp
-          filters:
-            branches:
-              only:
-                - main
-                - staging
-                - prod
+      # - deploy-gcp:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only:
+      #           - main
+      #           - staging
+      #           - prod
+      # - notify-sentry-deploy:
+      #     context: slack-notifications
+      #     requires:
+      #       - deploy-gcp
+      #     filters:
+      #       branches:
+      #         only:
+      #           - main
+      #           - staging
+      #           - prod
