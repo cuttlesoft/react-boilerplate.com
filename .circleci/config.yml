@@ -325,7 +325,7 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - setup-lint
+      - setup-lint:
           context: slack-notifications
       - unittests:
           context: slack-notifications
