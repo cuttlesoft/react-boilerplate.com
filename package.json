@@ -75,9 +75,9 @@
     "cy:info": "cypress info",
     "cy:version": "cypress version",
     "cy:cache:list": "cypress cache list",
-    "cy:run": "cypress run",
-    "cy:run:record": "cypress run --record",
-    "cy:open": "cypress open"
+    "cy:run": "cypress run  --spec 'cypress/integration/**/*.feature'",
+    "cy:run:record": "cypress run --record  --spec 'cypress/integration/**/*.feature'",
+    "cy:open": "cypress open TAGS='@e2e-test'"
   },
   "browserslist": [
     "last 2 versions",
@@ -118,6 +118,7 @@
     "chalk": "3.0.0",
     "compression": "1.7.4",
     "cross-env": "7.0.2",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-plugin-snapshots": "^1.4.3",
     "express": "4.17.1",
     "firebase-tools": "^8.4.3",
@@ -237,6 +238,15 @@
     },
     "devDependencies": {
       "js-base64": "This should be installed by cypress-plugin-snapshots and can be removed once this issue is resolved: https://github.com/meinaart/cypress-plugin-snapshots/issues/126"
+    }
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
     }
   }
 }

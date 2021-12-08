@@ -14,6 +14,7 @@
 
 const { initPlugin } = require('cypress-plugin-snapshots/plugin')
 const coveragePlugin = require('@cypress/code-coverage/task')
+const cucumber = require('cypress-cucumber-preprocessor').default
 
 /**
  * @type {Cypress.PluginConfig}
@@ -22,6 +23,8 @@ module.exports = (on, config) => {
   initPlugin(on, config)
 
   coveragePlugin(on, config)
+
+  on('file:preprocessor', cucumber())
 
   return config
 }

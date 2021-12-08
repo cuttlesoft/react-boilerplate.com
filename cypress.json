@@ -14,5 +14,6 @@
     "runMode": null,
     "openMode": null
   },
-  "ignoreTestFiles": ["**/__snapshots__/*", "**/__image_snapshots__/*"]
+  "ignoreTestFiles": ["**/__snapshots__/*", "**/__image_snapshots__/*", "*.js", "*.md"],
+  "testFiles": "**/*.feature"
 }

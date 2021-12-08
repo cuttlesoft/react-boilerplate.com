@@ -226,7 +226,7 @@ workflows:
       #     filters:
       #       branches:
       #         only:
-      #           - master
+      #           - main
       #           - staging
       - deploy-gcp:
           requires:
@@ -234,7 +234,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
                 - staging
                 - prod
       - notify-sentry-deploy:
@@ -243,6 +243,6 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
                 - staging
                 - prod
