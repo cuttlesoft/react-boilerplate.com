@@ -15,5 +15,6 @@
     "openMode": null
   },
   "ignoreTestFiles": ["**/__snapshots__/*", "**/__image_snapshots__/*", "*.js", "*.md"],
-  "testFiles": "**/*.feature"
+  "testFiles": "**/*.feature",
+  "reporter": "cypress-mochawesome-reporter"
 }

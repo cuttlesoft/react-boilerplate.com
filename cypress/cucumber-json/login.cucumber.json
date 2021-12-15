@@ -27,7 +27,7 @@
             "name": "I visit Login Page",
             "result": {
               "status": "passed",
-              "duration": 2015000000
+              "duration": 5891000000
             }
           },
           {
@@ -37,7 +37,7 @@
             "name": "The login page renders",
             "result": {
               "status": "passed",
-              "duration": 3035000000
+              "duration": 4443000000
             }
           }
         ]

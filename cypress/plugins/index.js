@@ -15,6 +15,7 @@
 const { initPlugin } = require('cypress-plugin-snapshots/plugin')
 const coveragePlugin = require('@cypress/code-coverage/task')
 const cucumber = require('cypress-cucumber-preprocessor').default
+const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/lib')
 
 /**
  * @type {Cypress.PluginConfig}
@@ -24,6 +25,12 @@ module.exports = (on, config) => {
 
   coveragePlugin(on, config)
 
+  on('before:run', async details => {
+    await beforeRunHook(details)
+  })
+  on('after:run', async () => {
+    await afterRunHook()
+  })
   on('file:preprocessor', cucumber())
 
   return config
