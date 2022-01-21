@@ -29,6 +29,7 @@ version: 2.1
 
 orbs:
   slack: circleci/slack@4.3.0
+  ruby: circleci/ruby@1.4.0
 
 notify_slack_of_failures: &notify_slack_of_failures
   channel: C02Q03FL726 # Channel ID, found by copying a link to a message, e.g. https://cuttlesoft.slack.com/archives/C01ML8VTLHJ/p1613692609008000
@@ -120,6 +121,8 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
+      - ruby/install:
+          version: '2.7'
       - run:
           name: Update dependencies
           command: apt-get update --allow-releaseinfo-change
