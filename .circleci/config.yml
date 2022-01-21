@@ -118,14 +118,16 @@ jobs:
 
   integration-chrome:
     executor: docker-executor
+    docker:
+      - image: circleci/ruby:2.6.6-node-browsers
     steps:
       - attach_workspace:
           at: ~/
-      - ruby/install:
-          version: '2.7'
       - run:
           name: Update dependencies
-          command: apt-get update --allow-releaseinfo-change
+          command: sudo apt-get update --allow-releaseinfo-change
+      - ruby/install:
+          version: '2.7'
       - run:
           name: Install Homebrew and jq
           command: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"  </dev/null && PATH="$HOME/.linuxbrew/bin:$PATH" && brew install jq
