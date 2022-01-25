@@ -153,7 +153,7 @@ jobs:
       - run: npm run e2e:record --tag $CIRCLE_BUILD_NUM --group $CIRCLE_JOB --browser chrome
       - run:
           command: |
-            jq -s 'flatten' $target/*/*.json > $merged_json
+            jq -s 'flatten' cypress/cucumber-json/*.cucumber.json > results.json
             curl -X POST https://c4j.cucumber.io/ci/rest/api/results \
             -H 'authorization: Bearer $CUCUMBER_ACCESS_TOKEN' \
             -H 'content-type: multipart/form-data' \
