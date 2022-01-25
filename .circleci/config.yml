@@ -150,7 +150,7 @@ jobs:
       - run:
           command: npm start
           background: true
-      - run: npm run e2e:record -- --group $CIRCLE_JOB --browser chrome
+      - run: npm run e2e:record --tag $CIRCLE_BUILD_NUM --group $CIRCLE_JOB --browser chrome
       - run:
           command: |
             jq -s 'flatten' $target/*/*.json > $merged_json
