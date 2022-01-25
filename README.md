@@ -99,7 +99,7 @@ GOOGLE_MAPS_API_KEY=abcdefgh
 
 dotenv will make them globally available through webpack.definePlugin
 
-```javascript
+```js
 process.env.API_BASE_URL // 'https://myapi.com'
 process.env.GOOGLE_MAPS_API_KEY // 'abcdefgh'
 ```
