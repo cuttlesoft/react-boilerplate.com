@@ -154,13 +154,11 @@ jobs:
       - run:
           command: |
             jq -s 'flatten' cypress/cucumber-json/*.cucumber.json > results.json
-            echo $CUCUMBER_TOKEN
-            echo ${CUCUMBER_TOKEN}
             curl -X POST https://c4j.cucumber.io/ci/rest/api/results \
-            -H 'authorization: Bearer ${CUCUMBER_TOKEN}' \
-            -H 'content-type: multipart/form-data' \
-            -F 'results_files[]'=@results.json \
-            -F language=js
+              -H "authorization: Bearer ${CUCUMBER_ACCESS_TOKEN}" \
+              -H "content-type: multipart/form-data" \
+              -F "results_files[]"=@results.json \
+              -F language=js
             rm results.json
       - slack/notify: *notify_slack_of_failures
 
