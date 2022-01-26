@@ -10,3 +10,5 @@ else
     echo "Setting dev URLS..."
     echo "export CYPRESS_API_BASE_URL=$DEV_API_BASE_URL" >> $BASH_ENV
 fi
+
+echo "export CUCUMBER_TOKEN=$CUCUMBER_TOKEN" >> $BASH_ENV

@@ -154,6 +154,8 @@ jobs:
       - run:
           command: |
             jq -s 'flatten' cypress/cucumber-json/*.cucumber.json > results.json
+            echo $CUCUMBER_TOKEN
+            echo ${CUCUMBER_TOKEN}
             curl -X POST https://c4j.cucumber.io/ci/rest/api/results \
             -H 'authorization: Bearer ${CUCUMBER_TOKEN}' \
             -H 'content-type: multipart/form-data' \
