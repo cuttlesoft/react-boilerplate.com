@@ -152,6 +152,8 @@ jobs:
           background: true
       - run: npm run e2e:record --tag $CIRCLE_BUILD_NUM --group $CIRCLE_JOB --browser chrome
       - run:
+          name: Push up results report to Cucumber for Jira
+          when: always
           command: |
             jq -s 'flatten' cypress/cucumber-json/*.cucumber.json > results.json
             curl -X POST https://c4j.cucumber.io/ci/rest/api/results \
