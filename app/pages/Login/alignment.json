@@ -1,0 +1,1282 @@
+[
+ {
+   "contig": "Homo_sapiens.1",
+   "readsAligned": 576357,
+   "readsUnaligned": 3173
+ },
+ {
+   "contig": "Homo_sapiens.10",
+   "readsAligned": 162167,
+   "readsUnaligned": 926
+ },
+ {
+   "contig": "Homo_sapiens.11",
+   "readsAligned": 228804,
+   "readsUnaligned": 1305
+ },
+ {
+   "contig": "Homo_sapiens.12",
+   "readsAligned": 177039,
+   "readsUnaligned": 1030
+ },
+ {
+   "contig": "Homo_sapiens.13",
+   "readsAligned": 63093,
+   "readsUnaligned": 334
+ },
+ {
+   "contig": "Homo_sapiens.14",
+   "readsAligned": 90533,
+   "readsUnaligned": 608
+ },
+ {
+   "contig": "Homo_sapiens.15",
+   "readsAligned": 125469,
+   "readsUnaligned": 736
+ },
+ {
+   "contig": "Homo_sapiens.16",
+   "readsAligned": 176700,
+   "readsUnaligned": 1010
+ },
+ {
+   "contig": "Homo_sapiens.17",
+   "readsAligned": 197569,
+   "readsUnaligned": 1224
+ },
+ {
+   "contig": "Homo_sapiens.18",
+   "readsAligned": 59825,
+   "readsUnaligned": 333
+ },
+ {
+   "contig": "Homo_sapiens.19",
+   "readsAligned": 234071,
+   "readsUnaligned": 1484
+ },
+ {
+   "contig": "Homo_sapiens.2\t",
+   "readsAligned": 278044,
+   "readsUnaligned": 1571
+ },
+ {
+   "contig": "Homo_sapiens.20\t",
+   "readsAligned": 100138,
+   "readsUnaligned": 579
+ },
+ {
+   "contig": "Homo_sapiens.21\t",
+   "readsAligned": 109874,
+   "readsUnaligned": 1041
+ },
+ {
+   "contig": "Homo_sapiens.22\t",
+   "readsAligned": 126796,
+   "readsUnaligned": 765
+ },
+ {
+   "contig": "Homo_sapiens.3\t",
+   "readsAligned": 224127,
+   "readsUnaligned": 1212
+ },
+ {
+   "contig": "Homo_sapiens.4\t",
+   "readsAligned": 150633,
+   "readsUnaligned": 927
+ },
+ {
+   "contig": "Homo_sapiens.5\t",
+   "readsAligned": 211003,
+   "readsUnaligned": 1217
+ },
+ {
+   "contig": "Homo_sapiens.6\t",
+   "readsAligned": 245067,
+   "readsUnaligned": 1353
+ },
+ {
+   "contig": "Homo_sapiens.7\t",
+   "readsAligned": 268192,
+   "readsUnaligned": 1613
+ },
+ {
+   "contig": "Homo_sapiens.8\t",
+   "readsAligned": 152989,
+   "readsUnaligned": 918
+ },
+ {
+   "contig": "Homo_sapiens.9\t",
+   "readsAligned": 163712,
+   "readsUnaligned": 1019
+ },
+ {
+   "contig": "Homo_sapiens.MT\t",
+   "readsAligned": 1279672,
+   "readsUnaligned": 4741
+ },
+ {
+   "contig": "Homo_sapiens.X\t",
+   "readsAligned": 102069,
+   "readsUnaligned": 623
+ },
+ {
+   "contig": "Homo_sapiens.Y\t",
+   "readsAligned": 2126,
+   "readsUnaligned": 84
+ },
+ {
+   "contig": "Homo_sapiens.KI270728.1",
+   "readsAligned": 1155,
+   "readsUnaligned": 9
+ },
+ {
+   "contig": "Homo_sapiens.KI270727.1",
+   "readsAligned": 243,
+   "readsUnaligned": 2
+ },
+ {
+   "contig": "Homo_sapiens.KI270442.1",
+   "readsAligned": 371,
+   "readsUnaligned": 10
+ },
+ {
+   "contig": "Homo_sapiens.KI270729.1",
+   "readsAligned": 186,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.GL000225.1",
+   "readsAligned": 2231,
+   "readsUnaligned": 70
+ },
+ {
+   "contig": "Homo_sapiens.KI270743.1",
+   "readsAligned": 394,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.GL000008.2",
+   "readsAligned": 277,
+   "readsUnaligned": 3
+ },
+ {
+   "contig": "Homo_sapiens.GL000009.2",
+   "readsAligned": 349,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.KI270747.1",
+   "readsAligned": 37,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.KI270722.1",
+   "readsAligned": 80,
+   "readsUnaligned": 2
+ },
+ {
+   "contig": "Homo_sapiens.GL000194.1",
+   "readsAligned": 594,
+   "readsUnaligned": 2
+ },
+ {
+   "contig": "Homo_sapiens.KI270742.1",
+   "readsAligned": 956,
+   "readsUnaligned": 3
+ },
+ {
+   "contig": "Homo_sapiens.GL000205.2",
+   "readsAligned": 2540,
+   "readsUnaligned": 13
+ },
+ {
+   "contig": "Homo_sapiens.GL000195.1",
+   "readsAligned": 1259,
+   "readsUnaligned": 9
+ },
+ {
+   "contig": "Homo_sapiens.KI270736.1",
+   "readsAligned": 230,
+   "readsUnaligned": 8
+ },
+ {
+   "contig": "Homo_sapiens.KI270733.1",
+   "readsAligned": 23961,
+   "readsUnaligned": 322
+ },
+ {
+   "contig": "Homo_sapiens.GL000224.1",
+   "readsAligned": 1234,
+   "readsUnaligned": 9
+ },
+ {
+   "contig": "Homo_sapiens.GL000219.1",
+   "readsAligned": 1134,
+   "readsUnaligned": 3
+ },
+ {
+   "contig": "Homo_sapiens.KI270719.1",
+   "readsAligned": 164,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.GL000216.2",
+   "readsAligned": 827,
+   "readsUnaligned": 24
+ },
+ {
+   "contig": "Homo_sapiens.KI270712.1",
+   "readsAligned": 197,
+   "readsUnaligned": 2
+ },
+ {
+   "contig": "Homo_sapiens.KI270706.1",
+   "readsAligned": 449,
+   "readsUnaligned": 3
+ },
+ {
+   "contig": "Homo_sapiens.KI270725.1",
+   "readsAligned": 54,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270744.1",
+   "readsAligned": 1144,
+   "readsUnaligned": 3
+ },
+ {
+   "contig": "Homo_sapiens.KI270734.1",
+   "readsAligned": 487,
+   "readsUnaligned": 3
+ },
+ {
+   "contig": "Homo_sapiens.GL000213.1",
+   "readsAligned": 72,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.GL000220.1",
+   "readsAligned": 23221,
+   "readsUnaligned": 327
+ },
+ {
+   "contig": "Homo_sapiens.KI270715.1",
+   "readsAligned": 44,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.GL000218.1",
+   "readsAligned": 422,
+   "readsUnaligned": 2
+ },
+ {
+   "contig": "Homo_sapiens.KI270749.1",
+   "readsAligned": 33,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270741.1",
+   "readsAligned": 325,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.GL000221.1",
+   "readsAligned": 482,
+   "readsUnaligned": 3
+ },
+ {
+   "contig": "Homo_sapiens.KI270716.1",
+   "readsAligned": 44,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270731.1",
+   "readsAligned": 500,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.KI270751.1",
+   "readsAligned": 245,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.KI270750.1",
+   "readsAligned": 97,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270519.1",
+   "readsAligned": 46,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.GL000214.1",
+   "readsAligned": 875,
+   "readsUnaligned": 8
+ },
+ {
+   "contig": "Homo_sapiens.KI270708.1",
+   "readsAligned": 46,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270730.1",
+   "readsAligned": 72,
+   "readsUnaligned": 2
+ },
+ {
+   "contig": "Homo_sapiens.KI270438.1",
+   "readsAligned": 516,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.KI270737.1",
+   "readsAligned": 67,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270721.1",
+   "readsAligned": 320,
+   "readsUnaligned": 2
+ },
+ {
+   "contig": "Homo_sapiens.KI270738.1",
+   "readsAligned": 41,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270748.1",
+   "readsAligned": 81,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270435.1",
+   "readsAligned": 17,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.GL000208.1",
+   "readsAligned": 22,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270538.1",
+   "readsAligned": 40,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270756.1",
+   "readsAligned": 21,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270739.1",
+   "readsAligned": 4,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270757.1",
+   "readsAligned": 31,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.KI270709.1",
+   "readsAligned": 113,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.KI270746.1",
+   "readsAligned": 14,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270753.1",
+   "readsAligned": 19,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270589.1",
+   "readsAligned": 13,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.KI270726.1",
+   "readsAligned": 56,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270735.1",
+   "readsAligned": 28,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270711.1",
+   "readsAligned": 101,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.KI270745.1",
+   "readsAligned": 220,
+   "readsUnaligned": 2
+ },
+ {
+   "contig": "Homo_sapiens.KI270714.1",
+   "readsAligned": 423,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.KI270732.1",
+   "readsAligned": 20,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270713.1",
+   "readsAligned": 1095,
+   "readsUnaligned": 2
+ },
+ {
+   "contig": "Homo_sapiens.KI270754.1",
+   "readsAligned": 896,
+   "readsUnaligned": 11
+ },
+ {
+   "contig": "Homo_sapiens.KI270710.1",
+   "readsAligned": 14,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270717.1",
+   "readsAligned": 22,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270724.1",
+   "readsAligned": 94,
+   "readsUnaligned": 4
+ },
+ {
+   "contig": "Homo_sapiens.KI270720.1",
+   "readsAligned": 26,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270723.1",
+   "readsAligned": 49,
+   "readsUnaligned": 3
+ },
+ {
+   "contig": "Homo_sapiens.KI270718.1",
+   "readsAligned": 154,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270317.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270740.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270755.1",
+   "readsAligned": 8,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270707.1",
+   "readsAligned": 54,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270579.1",
+   "readsAligned": 3,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.KI270752.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270512.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270322.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.GL000226.1",
+   "readsAligned": 3,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Homo_sapiens.KI270311.1",
+   "readsAligned": 6,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270366.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270511.1",
+   "readsAligned": 3,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270448.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270521.1",
+   "readsAligned": 4,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270581.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270582.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270515.1",
+   "readsAligned": 6,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270588.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270591.1",
+   "readsAligned": 1,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270522.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270507.1",
+   "readsAligned": 4,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270590.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270584.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270320.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270382.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270468.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270467.1",
+   "readsAligned": 5,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270362.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270517.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270593.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270528.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270587.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270364.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270371.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270333.1",
+   "readsAligned": 3,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270374.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270411.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270414.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270510.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270390.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270375.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270420.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270509.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270315.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270302.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270518.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270530.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270304.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270418.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270424.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270417.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270508.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270303.1",
+   "readsAligned": 4,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270381.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270529.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270425.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270396.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270363.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270386.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270465.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270383.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270384.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270330.1",
+   "readsAligned": 20,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270372.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270548.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270580.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270387.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270391.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270305.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270373.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270422.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270316.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270340.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270338.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270583.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270334.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270429.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270393.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270516.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270389.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270466.1",
+   "readsAligned": 3,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270388.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270544.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270310.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270412.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270395.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270376.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270337.1",
+   "readsAligned": 2,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270335.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270378.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270379.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270329.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270419.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270336.1",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270312.1",
+   "readsAligned": null,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270539.1",
+   "readsAligned": null,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270385.1",
+   "readsAligned": null,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270423.1",
+   "readsAligned": null,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270392.1",
+   "readsAligned": null,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Homo_sapiens.KI270394.1",
+   "readsAligned": null,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.1\t",
+   "readsAligned": 332399,
+   "readsUnaligned": 1874
+ },
+ {
+   "contig": "Mus_musculus.10\t",
+   "readsAligned": 291489,
+   "readsUnaligned": 1686
+ },
+ {
+   "contig": "Mus_musculus.11\t",
+   "readsAligned": 432248,
+   "readsUnaligned": 2586
+ },
+ {
+   "contig": "Mus_musculus.12\t",
+   "readsAligned": 227851,
+   "readsUnaligned": 1442
+ },
+ {
+   "contig": "Mus_musculus.13\t",
+   "readsAligned": 162566,
+   "readsUnaligned": 959
+ },
+ {
+   "contig": "Mus_musculus.14\t",
+   "readsAligned": 154606,
+   "readsUnaligned": 951
+ },
+ {
+   "contig": "Mus_musculus.15\t",
+   "readsAligned": 282073,
+   "readsUnaligned": 1516
+ },
+ {
+   "contig": "Mus_musculus.16\t",
+   "readsAligned": 156928,
+   "readsUnaligned": 880
+ },
+ {
+   "contig": "Mus_musculus.17\t",
+   "readsAligned": 317736,
+   "readsUnaligned": 2357
+ },
+ {
+   "contig": "Mus_musculus.18\t",
+   "readsAligned": 135551,
+   "readsUnaligned": 734
+ },
+ {
+   "contig": "Mus_musculus.19\t",
+   "readsAligned": 216443,
+   "readsUnaligned": 1247
+ },
+ {
+   "contig": "Mus_musculus.2\t",
+   "readsAligned": 426153,
+   "readsUnaligned": 2446
+ },
+ {
+   "contig": "Mus_musculus.3\t",
+   "readsAligned": 260179,
+   "readsUnaligned": 1482
+ },
+ {
+   "contig": "Mus_musculus.4\t",
+   "readsAligned": 353290,
+   "readsUnaligned": 2163
+ },
+ {
+   "contig": "Mus_musculus.5\t",
+   "readsAligned": 338443,
+   "readsUnaligned": 1997
+ },
+ {
+   "contig": "Mus_musculus.6\t",
+   "readsAligned": 324456,
+   "readsUnaligned": 1972
+ },
+ {
+   "contig": "Mus_musculus.7\t",
+   "readsAligned": 349474,
+   "readsUnaligned": 2067
+ },
+ {
+   "contig": "Mus_musculus.8\t",
+   "readsAligned": 313075,
+   "readsUnaligned": 1869
+ },
+ {
+   "contig": "Mus_musculus.9\t",
+   "readsAligned": 239409,
+   "readsUnaligned": 1465
+ },
+ {
+   "contig": "Mus_musculus.MT\t",
+   "readsAligned": 20663,
+   "readsUnaligned": 57
+ },
+ {
+   "contig": "Mus_musculus.X\t",
+   "readsAligned": 84878,
+   "readsUnaligned": 599
+ },
+ {
+   "contig": "Mus_musculus.Y\t",
+   "readsAligned": 5330,
+   "readsUnaligned": 97
+ },
+ {
+   "contig": "Mus_musculus.JH584299.1\t",
+   "readsAligned": 107,
+   "readsUnaligned": 2
+ },
+ {
+   "contig": "Mus_musculus.GL456233.2\t",
+   "readsAligned": 208,
+   "readsUnaligned": 2
+ },
+ {
+   "contig": "Mus_musculus.JH584301.1\t",
+   "readsAligned": 6,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456211.1\t",
+   "readsAligned": 161,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456221.1\t",
+   "readsAligned": 165,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Mus_musculus.JH584297.1\t",
+   "readsAligned": 40,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.JH584296.1\t",
+   "readsAligned": 36,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456354.1\t",
+   "readsAligned": 20,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.JH584298.1\t",
+   "readsAligned": 15,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Mus_musculus.JH584300.1\t",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456219.1\t",
+   "readsAligned": 13,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Mus_musculus.GL456210.1\t",
+   "readsAligned": 111,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Mus_musculus.JH584303.1\t",
+   "readsAligned": 4,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.JH584302.1\t",
+   "readsAligned": 0,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456212.1\t",
+   "readsAligned": 112,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Mus_musculus.JH584304.1\t",
+   "readsAligned": 15055,
+   "readsUnaligned": 92
+ },
+ {
+   "contig": "Mus_musculus.GL456379.1\t",
+   "readsAligned": 4,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456366.1\t",
+   "readsAligned": 10,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456367.1\t",
+   "readsAligned": 23,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Mus_musculus.GL456239.1\t",
+   "readsAligned": 35,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Mus_musculus.GL456383.1\t",
+   "readsAligned": 56,
+   "readsUnaligned": 6
+ },
+ {
+   "contig": "Mus_musculus.GL456385.1\t",
+   "readsAligned": 6,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456360.1\t",
+   "readsAligned": 6,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456378.1\t",
+   "readsAligned": 8,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.MU069435.1\t",
+   "readsAligned": 8973,
+   "readsUnaligned": 249
+ },
+ {
+   "contig": "Mus_musculus.GL456389.1\t",
+   "readsAligned": 97,
+   "readsUnaligned": 7
+ },
+ {
+   "contig": "Mus_musculus.GL456372.1\t",
+   "readsAligned": 16,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456370.1\t",
+   "readsAligned": 34,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456381.1\t",
+   "readsAligned": 45,
+   "readsUnaligned": 4
+ },
+ {
+   "contig": "Mus_musculus.GL456387.1\t",
+   "readsAligned": 57,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Mus_musculus.GL456390.1\t",
+   "readsAligned": 38,
+   "readsUnaligned": 2
+ },
+ {
+   "contig": "Mus_musculus.GL456394.1\t",
+   "readsAligned": 21,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Mus_musculus.GL456392.1\t",
+   "readsAligned": 111,
+   "readsUnaligned": 6
+ },
+ {
+   "contig": "Mus_musculus.GL456382.1\t",
+   "readsAligned": 8,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456359.1\t",
+   "readsAligned": 162,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.GL456396.1\t",
+   "readsAligned": 33,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "Mus_musculus.GL456368.1\t",
+   "readsAligned": 14,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.MU069434.1\t",
+   "readsAligned": 256,
+   "readsUnaligned": 0
+ },
+ {
+   "contig": "Mus_musculus.JH584295.1\t",
+   "readsAligned": 23,
+   "readsUnaligned": 1
+ },
+ {
+   "contig": "*",
+   "readsAligned": 0,
+   "readsUnaligned": 316102
+ }
+]
