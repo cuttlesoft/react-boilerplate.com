@@ -19,5 +19,8 @@ cypress.env.json
 cypress/videos
 cypress/screenshots
 
+# Cypress generated reports
+cypress/cucumber-json
+
 # Firebase hosting cache files
 .firebase/

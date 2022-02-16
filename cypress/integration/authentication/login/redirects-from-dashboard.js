@@ -8,7 +8,7 @@ When(/^I visit the dashboard \(unauthenticated\)$/, () => {
 
 Then(/^I get redirected to the login page$/, () => {
   // Ensure that two Login items are shown, one for the header and one for the button
-  cy.findAllByText('Login').then(requiredText => {
+  cy.findAllByText('Test').then(requiredText => {
     expect(requiredText.length).to.equal(2)
   })
 
