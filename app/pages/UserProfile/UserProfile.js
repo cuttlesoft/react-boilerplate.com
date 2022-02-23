@@ -80,7 +80,7 @@ const UserProfile = () => {
    * Handles changes to all form fields.
    * @param {object} e
    */
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { target, option } = e
 
     setUpdatedUser({
@@ -166,7 +166,7 @@ const UserProfile = () => {
           name="phone"
           value={updatedUser.phone || ''}
           validate={[
-            (phone) => {
+            phone => {
               if (phone && phone.length < 14) return 'Number must be 10 digits'
               return undefined
             },
@@ -197,7 +197,7 @@ const UserProfile = () => {
             ]}
             value={updatedUser.phone || ''}
             validate={[
-              (phone) => {
+              phone => {
                 if (phone && phone.length < 14) return 'Number must be 10 digits'
                 return undefined
               },

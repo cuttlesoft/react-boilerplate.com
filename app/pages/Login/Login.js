@@ -80,7 +80,7 @@ const Login = ({ location }) => {
             name="email"
             required
             validate={[
-              (email) => {
+              email => {
                 if (email && !isEmail(email)) return 'Please enter a valid email address'
                 return undefined
               },
@@ -94,7 +94,7 @@ const Login = ({ location }) => {
             name="password"
             required
             validate={[
-              (password) => {
+              password => {
                 if (password && password.length <= 8) return 'Please enter more than 8 characters'
                 return undefined
               },

@@ -25,9 +25,7 @@ export const StyledFormField = styled(GrommetFormField)`
  *
  * - If the field is marked as `required`, add an asterisk (*) to its label
  */
-const FormField = (props) => {
-  const { children, label, name, required, serverSideRequired, value, ...rest } = props
-
+const FormField = ({ children, label, name, required, serverSideRequired, value, ...rest }) => {
   /**
    * Configure the children to pass down in the `FormField`.
    * - If there is a `name`, and the `children` are not an array, clone them and pass down the `name` prop.
