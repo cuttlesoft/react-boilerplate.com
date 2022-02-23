@@ -1,7 +1,8 @@
 /* @flow */
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { isEmail } from 'validator'
 import PropTypes from 'prop-types'
+import { useHistory } from 'react-router-dom'
 
 // Components
 import { Box } from 'components/Box'
@@ -10,15 +11,22 @@ import { Form, FormField } from 'components/Form'
 import { FormContainer } from 'components/FormContainer'
 import { Heading } from 'components/Heading'
 import { Message } from 'components/Message'
-import { Link } from 'components/Link'
 import { LogoHeader } from 'components/LogoHeader'
 import { PasswordInput } from 'components/PasswordInput'
+import { Text } from 'components/Text'
 import { TextInput } from 'components/TextInput'
 
-// Utils and messages
-import useFlashMessage from '../../hooks/FlashMessage'
+// Service
 import { login } from '../../services/user.service'
+
+// Store
 import { UserStoreContext } from '../../stores/UserStore'
+
+// Style
+import { baseColors } from '../../utils/colors'
+
+// Utils
+import useFlashMessage from '../../hooks/FlashMessage'
 
 /**
  *
@@ -26,15 +34,19 @@ import { UserStoreContext } from '../../stores/UserStore'
  *
  */
 const Login = ({ location }) => {
+  // Messages
   const { message: error, showMessage: showError } = useFlashMessage(null)
   const { message: redirectedMessage, showMessage: showRedirectedMessage } = useFlashMessage(null)
 
+  // Context
+  const history = useHistory()
+  const { setCurrentUser, setCurrentTokens } = useContext(UserStoreContext)
+
   // State
   const [loading, setLoading] = useState(false)
-  const [email, setEmail] = useState('')
 
-  // Context
-  const { setCurrentUser, setCurrentTokens } = useContext(UserStoreContext)
+  // Ref
+  const emailRef = useRef()
 
   /**
    * Check if the user has been redirected to this page with a URL parameter
@@ -59,7 +71,16 @@ const Login = ({ location }) => {
       <FormContainer>
         <Box align="center" data-testid="login-header">
           <Heading level="2">Login</Heading>
-          <Link to="/register">or Create An Account</Link>
+          <Button
+            label={
+              <Text color={baseColors.blue} size="15px">
+                or Create An Account
+              </Text>
+            }
+            onClick={() => history.push('/register', { email: emailRef.current?.value })}
+            plain
+            style={{ background: 'transparent' }}
+          />
         </Box>
 
         <Form
@@ -81,7 +102,6 @@ const Login = ({ location }) => {
           <FormField
             label="Email"
             name="email"
-            onChange={e => setEmail(e.target.value)}
             required
             validate={[
               e => {
@@ -90,7 +110,7 @@ const Login = ({ location }) => {
               },
             ]}
           >
-            <TextInput type="email" />
+            <TextInput ref={emailRef} type="email" />
           </FormField>
 
           <FormField
@@ -119,9 +139,18 @@ const Login = ({ location }) => {
             />
           </Box>
 
-          <Link to={{ pathname: '/password-reset-request', state: { email } }}>
-            Forgot Password?
-          </Link>
+          <Button
+            label={
+              <Text color={baseColors.blue} size="15px">
+                Forgot Password?
+              </Text>
+            }
+            onClick={() =>
+              history.push('/password-reset-request', { email: emailRef.current?.value })
+            }
+            plain
+            style={{ background: 'transparent' }}
+          />
 
           {/* Status Messages */}
           <Box>{error && <Message message={error} isError />}</Box>

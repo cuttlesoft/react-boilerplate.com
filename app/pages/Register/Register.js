@@ -1,11 +1,12 @@
 /* @flow */
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   CheckBox,
   Markdown,
   RadioButtonGroup,
 } from 'grommet' /** @todo replace with wrapper component */
 import { isEmail } from 'validator'
+import { useLocation } from 'react-router-dom'
 
 // Components
 import { Box } from 'components/Box'
@@ -34,13 +35,34 @@ import { createAccount } from '../../services/user.service'
  *
  */
 const Register = () => {
-  const [showModal, setShowModal] = useState(false)
-
+  // Message
   const { message: error, showMessage: showError } = useFlashMessage(null)
 
-  const [loading, setLoading] = useState(false)
+  // Context
+  const location = useLocation()
 
+  // State
+  const [showModal, setShowModal] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [registration, setRegistration] = useState({
+    confirmPassword: null,
+    email: null,
+    firstName: null,
+    lastName: null,
+    password: null,
+    role: null,
+  })
+
+  /**
+   * If there is an email provided through the route, use that as the default value
+   */
+  useEffect(() => {
+    if (location.state && location.state.email) {
+      setRegistration({ ...registration, email: location.state.email })
+    }
+  }, [])
+
   useEffect(() => {
     document.getElementById('register-form').reset()
   }, [success])
@@ -58,14 +80,16 @@ const Register = () => {
         <Form
           id="register-form"
           validate="blur"
+          onChange={e => setRegistration(e.value)}
           onSubmit={({ value }) => {
             createAccount(value, showError, setLoading, setSuccess)
           }}
+          value={registration}
         >
           <Box flex="grow" gap="small" direction="row" alignItems="stretch">
             <FormField
               label="First Name"
-              name="first_name"
+              name="firstName"
               required
               style={{ flex: 1 }}
               validate={[
@@ -78,7 +102,7 @@ const Register = () => {
 
             <FormField
               label="Last Name"
-              name="last_name"
+              name="lastName"
               required
               style={{ flex: 1 }}
               validate={[
@@ -95,8 +119,8 @@ const Register = () => {
             name="email"
             required
             validate={[
-              email => {
-                if (email && !isEmail(email)) return 'Please enter a valid email address'
+              e => {
+                if (e && !isEmail(e)) return 'Please enter a valid email address'
                 return undefined
               },
             ]}
@@ -114,7 +138,7 @@ const Register = () => {
                 return undefined
               },
               password => {
-                const confirmPasswordInput = document.getElementsByName('confirm_password')[0]
+                const confirmPasswordInput = document.getElementsByName('confirmPassword')[0]
                 if (
                   password &&
                   confirmPasswordInput instanceof HTMLInputElement &&
@@ -131,7 +155,7 @@ const Register = () => {
 
           <FormField
             label="Re-enter Password"
-            name="confirm_password"
+            name="confirmPassword"
             required
             validate={[
               confirmPassword => {
@@ -156,7 +180,7 @@ const Register = () => {
             <PasswordInput />
           </FormField>
 
-          <FormField label="Account Type." name="role" required>
+          <FormField label="Account Type" name="role" required>
             <RadioButtonGroup
               direction="row"
               gap="xsmall"

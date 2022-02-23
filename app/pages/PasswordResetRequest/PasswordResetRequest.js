@@ -1,7 +1,7 @@
 /* @flow */
 import React, { useEffect, useState } from 'react'
 import { isEmail } from 'validator'
-import PropTypes from 'prop-types'
+import { useLocation } from 'react-router-dom'
 
 // Components
 import { Box } from 'components/Box'
@@ -13,28 +13,37 @@ import { Link } from 'components/Link'
 import { LogoHeader } from 'components/LogoHeader'
 import { Message } from 'components/Message'
 
+// Component
 import { TextInput } from 'components/TextInput'
 
-// Utils and messages
-import useFlashMessage from '../../hooks/FlashMessage'
+// Service
 import { forgotPassword } from '../../services/user.service'
+
+// Utils
+import useFlashMessage from '../../hooks/FlashMessage'
 
 /**
  *
  * PasswordResetRequest
  *
  */
-const PasswordResetRequest = ({ location }) => {
-  // Mesage
+const PasswordResetRequest = () => {
+  // Message
   const { message: error, showMessage: showError } = useFlashMessage(null)
+
+  // Context
+  const location = useLocation()
 
   // State
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState(null)
 
+  /**
+   * If there is an email provided through the route, use that as the default value
+   */
   useEffect(() => {
-    if (location && location.state && location.state.email) {
+    if (location.state && location.state.email) {
       setEmail(location.state.email)
     }
   }, [])
@@ -59,10 +68,12 @@ const PasswordResetRequest = ({ location }) => {
           onSubmit={({ value }) => {
             forgotPassword(value, showError, setLoading, setSuccess)
           }}
+          value={{ email }}
         >
           <FormField
             label="Email"
             name="email"
+            onChange={e => setEmail(e.target.value)}
             required
             validate={[
               e => {
@@ -70,9 +81,8 @@ const PasswordResetRequest = ({ location }) => {
                 return undefined
               },
             ]}
-            value={email}
           >
-            <TextInput type="email" value={email} />
+            <TextInput type="email" />
           </FormField>
 
           {/* Submit */}
@@ -87,10 +97,6 @@ const PasswordResetRequest = ({ location }) => {
       </FormContainer>
     </Box>
   )
-}
-
-PasswordResetRequest.propTypes = {
-  location: PropTypes.object.isRequired,
 }
 
 export default PasswordResetRequest
