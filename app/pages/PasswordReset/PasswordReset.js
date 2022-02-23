@@ -175,7 +175,7 @@ const PasswordReset = observer(({ location }) => {
               },
             ]}
           >
-            <PasswordInput id="password" name="password" />
+            <PasswordInput id="password" />
           </FormField>
 
           <FormField
@@ -202,7 +202,7 @@ const PasswordReset = observer(({ location }) => {
               },
             ]}
           >
-            <PasswordInput name="confirm_password" />
+            <PasswordInput />
           </FormField>
 
           {/* TOS */}

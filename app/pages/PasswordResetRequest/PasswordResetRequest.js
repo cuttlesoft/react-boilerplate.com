@@ -61,7 +61,7 @@ const PasswordResetRequest = () => {
               },
             ]}
           >
-            <TextInput name="email" type="email" />
+            <TextInput type="email" />
           </FormField>
 
           {/* Submit */}

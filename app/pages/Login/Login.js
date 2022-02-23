@@ -86,7 +86,7 @@ const Login = ({ location }) => {
               },
             ]}
           >
-            <TextInput name="email" type="email" />
+            <TextInput type="email" />
           </FormField>
 
           <FormField
@@ -100,7 +100,7 @@ const Login = ({ location }) => {
               },
             ]}
           >
-            <PasswordInput id="password" name="password" />
+            <PasswordInput id="password" />
           </FormField>
 
           {/* Submit */}

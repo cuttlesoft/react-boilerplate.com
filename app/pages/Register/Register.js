@@ -101,7 +101,7 @@ const Register = () => {
               },
             ]}
           >
-            <TextInput name="email" type="email" />
+            <TextInput type="email" />
           </FormField>
 
           <FormField
@@ -126,7 +126,7 @@ const Register = () => {
               },
             ]}
           >
-            <PasswordInput id="password" name="password" />
+            <PasswordInput id="password" />
           </FormField>
 
           <FormField
@@ -153,12 +153,11 @@ const Register = () => {
               },
             ]}
           >
-            <PasswordInput name="confirm_password" />
+            <PasswordInput />
           </FormField>
 
           <FormField label="Account Type." name="role" required>
             <RadioButtonGroup
-              name="role"
               direction="row"
               gap="xsmall"
               options={[

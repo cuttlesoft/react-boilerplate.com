@@ -124,7 +124,7 @@ const UserProfile = () => {
           serverSideRequired
           value={updatedUser.firstName}
         >
-          <TextInput name="firstName" value={updatedUser.firstName} />
+          <TextInput value={updatedUser.firstName} />
         </AutoSaveFormField>
 
         <AutoSaveFormField
@@ -135,7 +135,7 @@ const UserProfile = () => {
           serverSideRequired
           value={updatedUser.lastName}
         >
-          <TextInput name="lastName" value={updatedUser.lastName} />
+          <TextInput value={updatedUser.lastName} />
         </AutoSaveFormField>
 
         {/* We don't support the user changing their email address yet, so this is
@@ -156,7 +156,7 @@ const UserProfile = () => {
           ]}
           value={updatedUser.email}
         >
-          <TextInput disabled name="email" value={updatedUser.email} />
+          <TextInput disabled value={updatedUser.email} />
         </AutoSaveFormField>
 
         <AutoSaveFormField
@@ -195,7 +195,6 @@ const UserProfile = () => {
                 placeholder: 'xxxx',
               },
             ]}
-            name="phone"
             value={updatedUser.phone || ''}
             validate={[
               phone => {
