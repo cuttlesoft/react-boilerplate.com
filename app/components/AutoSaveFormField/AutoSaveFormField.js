@@ -39,21 +39,41 @@ const AutoSaveFormField = ({ onSave, name, value, ...rest }) => {
   const Status = () => {
     if (success)
       return (
-        <Box animation={{ type: 'fadeIn', delay: 0, duration: 200 }} width="60px">
+        <Box
+          animation={{
+            type: 'fadeIn',
+            delay: 0,
+            duration: 200,
+          }}
+          width="60px"
+        >
           <StatusGood
             data-testid={`success-${name}`}
             color="status-ok"
-            style={{ marginLeft: 10, marginBottom: 22 }}
+            style={{
+              marginLeft: 10,
+              marginBottom: 22,
+            }}
           />
         </Box>
       )
     if (error)
       return (
-        <Box animation={{ type: 'fadeIn', delay: 0, duration: 200 }} width="60px">
+        <Box
+          animation={{
+            type: 'fadeIn',
+            delay: 0,
+            duration: 200,
+          }}
+          width="60px"
+        >
           <StatusCritical
             data-testid={`error-${name}`}
             color="status-error"
-            style={{ marginLeft: 10, marginBottom: 58 }}
+            style={{
+              marginLeft: 10,
+              marginBottom: 58,
+            }}
           />
         </Box>
       )
