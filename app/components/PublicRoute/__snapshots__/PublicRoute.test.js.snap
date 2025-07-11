@@ -36,13 +36,17 @@ exports[`<PublicRoute /> renders Login if user is not authenticated 1`] = `
         >
           Login
         </h2>
-        <a
-          class="Link__StyledLink-sc-1vpl4pu-0 gEErvb"
-          href="/register"
-          theme="[object Object]"
+        <button
+          class="StyledButton-sc-323bzc-0 liUmex Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+          style="background: transparent;"
+          type="button"
         >
-          or Create An Account
-        </a>
+          <span
+            class="StyledText-sc-1sadyjn-0 iNHOlp Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+          >
+            or Create An Account
+          </span>
+        </button>
       </div>
       <form
         id="login-form"
@@ -160,13 +164,17 @@ exports[`<PublicRoute /> renders Login if user is not authenticated 1`] = `
             Login
           </button>
         </div>
-        <a
-          class="Link__StyledLink-sc-1vpl4pu-0 gEErvb"
-          href="/password-reset-request"
-          theme="[object Object]"
+        <button
+          class="StyledButton-sc-323bzc-0 liUmex Button__StyledGrommetButton-sc-5cxguj-0 liIZVq"
+          style="background: transparent;"
+          type="button"
         >
-          Forgot Password?
-        </a>
+          <span
+            class="StyledText-sc-1sadyjn-0 iNHOlp Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+          >
+            Forgot Password?
+          </span>
+        </button>
         <div
           class="StyledBox-sc-13pk1d4-0 bFwQzJ"
         />

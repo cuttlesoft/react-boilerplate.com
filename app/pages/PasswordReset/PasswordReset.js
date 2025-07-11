@@ -31,11 +31,15 @@ import { RootStoreContext } from '../../stores/RootStore'
  *
  */
 const PasswordReset = observer(({ location }) => {
+  // Message
+  const { message: error, showMessage: showError } = useFlashMessage(null)
+
+  // State
   const [loading, setLoading] = useState(false)
   const [redirect, setRedirect] = useState(false)
   const [tokenError, setTokenError] = useState(false)
-  const { message: error, showMessage: showError } = useFlashMessage(null)
 
+  // Context
   const {
     clearStore,
     user: { isAuthenticated },
