@@ -1,6 +1,13 @@
 module.exports = {
   presets: [
-    ['@babel/preset-env', { modules: false, shippedProposals: true, loose: true }],
+    [
+      '@babel/preset-env',
+      {
+        modules: false,
+        shippedProposals: true,
+        loose: true,
+      },
+    ],
     '@babel/preset-react',
     '@babel/preset-flow',
   ],

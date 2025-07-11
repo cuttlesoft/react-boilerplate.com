@@ -86,7 +86,9 @@ describe('PasswordReset', () => {
     })
 
     it('requires all fields', () => {
-      cy.findByRole('button', { name: /Submit/i })
+      cy.findByRole('button', {
+        name: /Submit/i,
+      })
         .should('exist')
         .click()
 
@@ -98,9 +100,7 @@ describe('PasswordReset', () => {
 
     it('validates the password field', () => {
       // Enter an invalid password
-      cy.get('input[name=password]')
-        .type('a')
-        .blur()
+      cy.get('input[name=password]').type('a').blur()
 
       // Ensure that the error is shown
       cy.findByText('Please enter more than 8 characters').should('be.visible')

@@ -3,10 +3,10 @@
 exports[`Link renders and matches snapshot 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 fXgXKw"
+    class="StyledGrommet-sc-19lkkz7-0 cfKHaq"
   >
     <a
-      class="Link__StyledLink-sc-1vpl4pu-0 gEErvb"
+      class="Link__StyledLink-sc-1vpl4pu-0 gBiCSt"
       href="/login"
       theme="[object Object]"
     />

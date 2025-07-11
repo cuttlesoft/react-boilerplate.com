@@ -14,7 +14,10 @@ export const backgroundPropType = PropTypes.oneOfType([
 
 export const colorPropType = PropTypes.oneOfType([
   PropTypes.string,
-  PropTypes.shape({ dark: PropTypes.string, light: PropTypes.string }),
+  PropTypes.shape({
+    dark: PropTypes.string,
+    light: PropTypes.string,
+  }),
 ])
 
 const MARGIN_SIZES = ['xxsmall', 'xsmall', 'small', 'medium', 'large', 'xlarge']

@@ -1,12 +1,10 @@
 import { describe, PropTypes } from 'react-desc'
 
 export const doc = Modal => {
-  const DocumentedModal = describe(Modal)
-    .description('A Modal')
-    .usage(
-      `import { Modal } from 'components/Modal';
+  const DocumentedModal = describe(Modal).description('A Modal').usage(
+    `import { Modal } from 'components/Modal';
 <Modal />`,
-    )
+  )
 
   DocumentedModal.propTypes = {
     id: PropTypes.string

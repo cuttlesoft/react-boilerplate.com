@@ -3,32 +3,28 @@
 exports[`AutoSaveFormField renders and matches snapshot 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 fXgXKw"
+    class="StyledGrommet-sc-19lkkz7-0 cfKHaq"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 gGqmMH"
+      class="StyledBox-sc-13pk1d4-0 frYYLR"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 kCeiYn FormField__FormFieldBox-m9hood-0 eenrNp FormField__StyledFormField-g4wt0p-0 feezXd"
+        class="StyledBox-sc-13pk1d4-0 cYSZtx FormField__FormFieldBox-m9hood-0 jGEMXj FormField__StyledFormField-g4wt0p-0 iWBsdv"
         value="Test Value"
       >
         <label
-          class="StyledText-sc-1sadyjn-0 enbIRN"
+          class="StyledText-sc-1sadyjn-0 drTEXR"
         >
           <span
-            class="StyledText-sc-1sadyjn-0 lmFPCJ Text__StyledGrommetText-sc-1qclgcc-0 lkunaY"
+            class="StyledText-sc-1sadyjn-0 fHOLAh Text__StyledGrommetText-sc-1qclgcc-0 bTNLcC"
           />
         </label>
         <div
-          class="StyledBox-sc-13pk1d4-0 kGPDbB FormField__FormFieldContentBox-m9hood-1 ckZStK"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-          />
-        </div>
+          class="StyledBox-sc-13pk1d4-0 gmReJc FormField__FormFieldContentBox-m9hood-1"
+        />
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 kcIJqo"
+        class="StyledBox-sc-13pk1d4-0 cQQyAG"
       />
     </div>
   </div>

@@ -128,7 +128,7 @@ const ImageEditor = ({ showError, setEditProfileImage, setIsLoading }) => {
       {isOpen && (
         <Layer onClickOutside={() => setOpen(false)}>
           <Box width="500px" align="center" pad="medium">
-            <AvatarEditor.default
+            <AvatarEditor
               border={50}
               borderRadius={150}
               color={[255, 255, 255, 0.6]} // RGBA

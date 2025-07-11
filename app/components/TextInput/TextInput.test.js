@@ -31,7 +31,9 @@ describe('TextInput', () => {
 
     expect(input.value).toBe('') // empty before
 
-    fireEvent.change(input, { target: { value: 'Good Day' } })
+    fireEvent.change(input, {
+      target: { value: 'Good Day' },
+    })
 
     expect(input.value).toBe('Good Day')
   })

@@ -34,9 +34,7 @@ describe('PasswordResetRequest', () => {
 
     it('validates the email field', () => {
       // Enter an invalid email
-      cy.get('input[name=email]')
-        .type('engineering')
-        .blur()
+      cy.get('input[name=email]').type('engineering').blur()
 
       // Ensure that the error is shown
       cy.findByText('Please enter a valid email address').should('be.visible')

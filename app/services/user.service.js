@@ -89,7 +89,10 @@ export const updateUser = async (
     setSuccess(true)
     return data
   } catch (err) {
-    setError({ message: getErrorMessage(err), details: err.response ? err.response.data : null })
+    setError({
+      message: getErrorMessage(err),
+      details: err.response ? err.response.data : null,
+    })
     setLoading(false)
     return null
   }
@@ -116,7 +119,9 @@ export async function forgotPassword({ email }, setError, setLoading, setSuccess
   setLoading(true)
 
   try {
-    const { data } = await axios.post('/reset-password/', { email })
+    const { data } = await axios.post('/reset-password/', {
+      email,
+    })
     setSuccess(true)
     setLoading(false)
     return data
@@ -131,7 +136,10 @@ export async function resetPassword({ token, password }, setError, setLoading) {
   setLoading(true)
 
   try {
-    await axios.post('/reset-password/confirm/', { token, password })
+    await axios.post('/reset-password/confirm/', {
+      token,
+      password,
+    })
     setLoading(false)
     return true
   } catch (err) {
@@ -152,7 +160,9 @@ export async function validateResetToken(token) {
 
 export async function refreshAccessToken(refresh) {
   try {
-    return axios.post('/token/refresh/', { refresh })
+    return axios.post('/token/refresh/', {
+      refresh,
+    })
   } catch (err) {
     throw {
       error: true,

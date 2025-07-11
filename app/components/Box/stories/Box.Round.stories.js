@@ -46,7 +46,14 @@ storiesOf('Box', module)
             </Box>
           ))}
 
-          <Box background="brand" pad="small" round={{ corner: 'left', size: '15px' }}>
+          <Box
+            background="brand"
+            pad="small"
+            round={{
+              corner: 'left',
+              size: '15px',
+            }}
+          >
             left rounded corner px value
           </Box>
         </Grid>

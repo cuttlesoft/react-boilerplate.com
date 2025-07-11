@@ -3,10 +3,10 @@
 exports[`GenericLoading renders and matches snapshot 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 kibWqE"
+    class="StyledBox-sc-13pk1d4-0 fUrEgW"
   >
     <h1
-      class="StyledHeading-sc-1rdh4aw-0 bgWVVT"
+      class="StyledHeading-sc-1rdh4aw-0 ieUlYN"
       style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
     >
       <span
@@ -17,7 +17,7 @@ exports[`GenericLoading renders and matches snapshot 1`] = `
       </span>
     </h1>
     <h2
-      class="StyledHeading-sc-1rdh4aw-0 ghwJhK"
+      class="StyledHeading-sc-1rdh4aw-0 bvkbZQ"
       style="font-family: soleil, 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 100vw; text-transform: false;"
     >
       Loading...

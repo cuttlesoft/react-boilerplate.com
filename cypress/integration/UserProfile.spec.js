@@ -53,9 +53,7 @@ describe('UserProfile', () => {
       })
 
       // Enter a valid name
-      cy.get('input[name=firstName]')
-        .type('Emily')
-        .blur()
+      cy.get('input[name=firstName]').type('Emily').blur()
 
       cy.findByTestId('success-firstName')
     })

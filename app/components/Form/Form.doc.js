@@ -21,7 +21,10 @@ export const doc = Form => {
       required: PropTypes.string,
     })
       .description('Custom validation messages.')
-      .defaultValue({ invalid: 'invalid', required: 'required' }),
+      .defaultValue({
+        invalid: 'invalid',
+        required: 'required',
+      }),
     onChange: PropTypes.func.description(
       'Function that will be called when any fields are updated.',
     ),

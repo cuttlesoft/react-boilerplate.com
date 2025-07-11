@@ -3,13 +3,13 @@
 exports[`LogoHeader renders and matches snapshot 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 fXgXKw"
+    class="StyledGrommet-sc-19lkkz7-0 cfKHaq"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 iHTcTt"
+      class="StyledBox-sc-13pk1d4-0 eeiBIP"
     >
       <img
-        class="StyledImage-ey4zx9-0 cHpGKY"
+        class="StyledImage-ey4zx9-0 iBeQsm"
         src="IMAGE_MOCK"
         style="width: 300px;"
       />

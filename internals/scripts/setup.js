@@ -96,11 +96,7 @@ function askUserIfWeShouldRemoveRepo() {
     process.stdout.write('\nDo you want to start with a new repository? [Y/n] ')
     process.stdin.resume()
     process.stdin.on('data', pData => {
-      const answer =
-        pData
-          .toString()
-          .trim()
-          .toLowerCase() || 'y'
+      const answer = pData.toString().trim().toLowerCase() || 'y'
 
       /* eslint-disable-next-line no-unused-expressions */
       answer === 'y' ? resolve(true) : resolve(false)

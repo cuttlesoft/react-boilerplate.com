@@ -34,7 +34,12 @@ test('Grid columns renders', () => {
       <Grid columns={['1/4', '3/4']} />
       <Grid columns="small" />
       <Grid columns={{ count: 'fit', size: 'small' }} />
-      <Grid columns={{ count: 'fill', size: ['small', 'medium'] }} />
+      <Grid
+        columns={{
+          count: 'fill',
+          size: ['small', 'medium'],
+        }}
+      />
     </Grommet>,
   )
   const tree = component.toJSON()
@@ -48,10 +53,26 @@ test('Grid areas renders', () => {
         rows={['xxsmall', 'medium', 'xsmall']}
         columns={['3/4', '1/4']}
         areas={[
-          { name: 'header', start: [0, 0], end: [0, 1] },
-          { name: 'main', start: [1, 0], end: [1, 0] },
-          { name: 'sidebar', start: [1, 1], end: [1, 1] },
-          { name: 'footer', start: [2, 0], end: [2, 1] },
+          {
+            name: 'header',
+            start: [0, 0],
+            end: [0, 1],
+          },
+          {
+            name: 'main',
+            start: [1, 0],
+            end: [1, 0],
+          },
+          {
+            name: 'sidebar',
+            start: [1, 1],
+            end: [1, 1],
+          },
+          {
+            name: 'footer',
+            start: [2, 0],
+            end: [2, 1],
+          },
         ]}
       />
     </Grommet>,

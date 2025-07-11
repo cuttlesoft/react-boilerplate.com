@@ -1,12 +1,10 @@
 import { describe, PropTypes } from 'react-desc'
 
 export const doc = Container => {
-  const DocumentedContainer = describe(Container)
-    .description('A Container')
-    .usage(
-      `import { Container } from 'components/Container';
+  const DocumentedContainer = describe(Container).description('A Container').usage(
+    `import { Container } from 'components/Container';
 <Container />`,
-    )
+  )
 
   DocumentedContainer.propTypes = {
     id: PropTypes.string

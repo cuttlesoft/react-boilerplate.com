@@ -110,21 +110,6 @@ exports[`Form with field 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow: hidden;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
 }
 
 .c3 {
@@ -142,7 +127,7 @@ exports[`Form with field 1`] = `
   font-weight: bold;
 }
 
-.c8 {
+.c7 {
   box-sizing: border-box;
   font-size: inherit;
   font-family: inherit;
@@ -150,38 +135,43 @@ exports[`Form with field 1`] = `
   -webkit-appearance: none;
   background: transparent;
   color: inherit;
+  width: 100%;
   padding: 11px;
   font-weight: 600;
   margin: 0;
   border: 1px solid rgba(0,0,0,0.33);
   border-radius: 4px;
-  width: 100%;
   outline: none;
   border: none;
 }
 
-.c8::-webkit-search-decoration {
+.c7::-webkit-input-placeholder {
+  color: #AAAAAA;
+}
+
+.c7::-moz-placeholder {
+  color: #AAAAAA;
+}
+
+.c7:-ms-input-placeholder {
+  color: #AAAAAA;
+}
+
+.c7::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-.c8::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c8::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c8:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c8::-moz-focus-inner {
+.c7::-moz-focus-inner {
   border: none;
   outline: none;
 }
 
-.c7 {
+.c7:-moz-placeholder,
+.c7::-moz-placeholder {
+  opacity: 1;
+}
+
+.c6 {
   position: relative;
   width: 100%;
 }
@@ -230,28 +220,23 @@ exports[`Form with field 1`] = `
       >
         <span
           className="c4 "
-          size="xsmall"
         />
       </label>
       <div
-        className="c5 "
+        className="c5 FormField__FormFieldContentBox-m9hood-1"
       >
         <div
           className="c6"
         >
-          <div
+          <input
+            autoComplete="off"
             className="c7"
-          >
-            <input
-              autoComplete="off"
-              className="c8"
-              name="test"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-            />
-          </div>
+            name="test"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+          />
         </div>
       </div>
     </div>

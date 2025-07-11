@@ -24,7 +24,10 @@ storiesOf('Box', module)
           align="center"
           justify="center"
           background="brand"
-          overflow={{ horizontal: 'hidden', vertical: 'scroll' }}
+          overflow={{
+            horizontal: 'hidden',
+            vertical: 'scroll',
+          }}
         >
           {Array(20)
             .fill()
